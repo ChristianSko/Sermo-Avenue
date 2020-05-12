@@ -47,40 +47,44 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     // MARK: - CreteEngine for Haptics
     func creteEngine() {
-        // Create and configure a haptic engine.
-        do {
-            engine = try CHHapticEngine()
-        } catch let error {
-            print("Engine Creation Error: \(error)")
-        }
-        
-        if engine == nil {
-            print("Failed to create engine!")
-        }
-        
-        // The stopped handler alerts you of engine stoppage due to external causes.
-        engine.stoppedHandler = { reason in
-            print("The engine stopped for reason: \(reason.rawValue)")
-            switch reason {
-            case .audioSessionInterrupt: print("Audio session interrupt")
-            case .applicationSuspended: print("Application suspended")
-            case .idleTimeout: print("Idle timeout")
-            case .systemError: print("System error")
-            case .notifyWhenFinished: print("Playback finished")
-            @unknown default:
-                print("Unknown error")
-            }
-        }
-        
-        // The reset handler provides an opportunity for your app to restart the engine in case of failure.
-        engine.resetHandler = {
-            // Try restarting the engine.
-            print("The engine reset --> Restarting now!")
-            do {
-                try self.engine.start()
-            } catch {
-                print("Failed to restart the engine: \(error)")
-            }
+        if !supportsHaptics {
+            return
+        } else {
+            // Create and configure a haptic engine.
+             do {
+                 engine = try CHHapticEngine()
+             } catch let error {
+                 print("Engine Creation Error: \(error)")
+             }
+             
+             if engine == nil {
+                 print("Failed to create engine!")
+             }
+             
+             // The stopped handler alerts you of engine stoppage due to external causes.
+             engine.stoppedHandler = { reason in
+                 print("The engine stopped for reason: \(reason.rawValue)")
+                 switch reason {
+                 case .audioSessionInterrupt: print("Audio session interrupt")
+                 case .applicationSuspended: print("Application suspended")
+                 case .idleTimeout: print("Idle timeout")
+                 case .systemError: print("System error")
+                 case .notifyWhenFinished: print("Playback finished")
+                 @unknown default:
+                     print("Unknown error")
+                 }
+             }
+             
+             // The reset handler provides an opportunity for your app to restart the engine in case of failure.
+             engine.resetHandler = {
+                 // Try restarting the engine.
+                 print("The engine reset --> Restarting now!")
+                 do {
+                     try self.engine.start()
+                 } catch {
+                     print("Failed to restart the engine: \(error)")
+                 }
+             }
         }
     }
     
