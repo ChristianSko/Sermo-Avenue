@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BdV-ba-3pF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BdV-ba-3pF">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -73,31 +73,32 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lel-4A-qau">
                                 <rect key="frame" x="60" y="64" width="776" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8AD-fb-3F9">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="O5X-Nk-MK3">
+                                    <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="P53-xd-kab" customClass="CustomCollectionViewCell" customModule="AlphaBeez" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KmP-QZ-Njq">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M8d-Yw-JCk">
-                                                    <rect key="frame" x="1" y="1" width="48" height="48"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="M8d-Yw-JCk" firstAttribute="leading" secondItem="KmP-QZ-Njq" secondAttribute="leading" constant="1" id="CXS-4j-DyB"/>
-                                                <constraint firstItem="M8d-Yw-JCk" firstAttribute="top" secondItem="KmP-QZ-Njq" secondAttribute="top" constant="1" id="TAh-Zp-ltN"/>
-                                                <constraint firstAttribute="trailing" secondItem="M8d-Yw-JCk" secondAttribute="trailing" constant="1" id="X7d-86-Ade"/>
-                                                <constraint firstAttribute="bottom" secondItem="M8d-Yw-JCk" secondAttribute="bottom" constant="1" id="upS-zB-yV3"/>
+                                                <constraint firstItem="M8d-Yw-JCk" firstAttribute="leading" secondItem="KmP-QZ-Njq" secondAttribute="leading" id="CXS-4j-DyB"/>
+                                                <constraint firstItem="M8d-Yw-JCk" firstAttribute="top" secondItem="KmP-QZ-Njq" secondAttribute="top" id="TAh-Zp-ltN"/>
+                                                <constraint firstAttribute="trailing" secondItem="M8d-Yw-JCk" secondAttribute="trailing" id="X7d-86-Ade"/>
+                                                <constraint firstAttribute="bottom" secondItem="M8d-Yw-JCk" secondAttribute="bottom" id="upS-zB-yV3"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="100" height="100"/>
                                         <connections>
                                             <outlet property="imageView" destination="M8d-Yw-JCk" id="Vtc-0K-Zv9"/>
                                         </connections>
@@ -119,6 +120,9 @@
                         <viewLayoutGuide key="safeArea" id="m87-Dg-CtI"/>
                     </view>
                     <navigationItem key="navigationItem" id="GBR-9n-VrA"/>
+                    <connections>
+                        <outlet property="collectionView" destination="lel-4A-qau" id="bou-mr-s1b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sw0-Pu-5In" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
