@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BdV-ba-3pF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BdV-ba-3pF">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -61,40 +61,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="881" y="138"/>
-        </scene>
-        <!--Green Carousel Collection View-->
-        <scene sceneID="nuq-Os-p0I">
-            <objects>
-                <viewController id="AWI-r2-yIq" customClass="GreenCarouselCollectionView" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gq4-XW-rEd">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vht-bA-X8D" customClass="iCarousel">
-                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="AWI-r2-yIq" id="aPI-ft-WDT"/>
-                                    <outlet property="delegate" destination="AWI-r2-yIq" id="UF1-rE-Hki"/>
-                                </connections>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="Vht-bA-X8D" firstAttribute="top" secondItem="P7z-iE-WZ9" secondAttribute="top" id="69Y-t3-rCx"/>
-                            <constraint firstItem="Vht-bA-X8D" firstAttribute="leading" secondItem="gq4-XW-rEd" secondAttribute="leading" id="G9r-uF-CDM"/>
-                            <constraint firstAttribute="bottom" secondItem="Vht-bA-X8D" secondAttribute="bottom" id="NNi-ZN-usC"/>
-                            <constraint firstAttribute="trailing" secondItem="Vht-bA-X8D" secondAttribute="trailing" id="uJ7-eE-6ki"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="P7z-iE-WZ9"/>
-                    </view>
-                    <connections>
-                        <outlet property="iCarouselGreenView" destination="Vht-bA-X8D" id="A39-Ko-7QY"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tct-Ue-VaO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="880.58035714285711" y="992.75362318840587"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="AGD-fk-CUZ">
