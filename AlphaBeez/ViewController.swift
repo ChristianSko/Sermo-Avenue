@@ -10,6 +10,7 @@ import UIKit
 
 //Testing commit for GIT repo
 //This a second test for pushing
+//This a third test for pushing
 
 // This is the main menu screen with the categories inside
 class ViewController: UIViewController {
