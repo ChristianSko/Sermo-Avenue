@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		28FDD9E5246C402E0035F56B /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FDD9E4246C402E0035F56B /* iCarousel.m */; };
-		28FDD9E7246C405E0035F56B /* GreenCarouselCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDD9E6246C405E0035F56B /* GreenCarouselCollectionView.swift */; };
 		FA020061246B534D00A2F0BD /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA020060246B534D00A2F0BD /* CustomCollectionViewCell.swift */; };
 		FA020063246B53DC00A2F0BD /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA020062246B53DC00A2F0BD /* CategoryViewController.swift */; };
 		FA020065246B56AB00A2F0BD /* AHAP in Resources */ = {isa = PBXBuildFile; fileRef = FA020064246B56AB00A2F0BD /* AHAP */; };
@@ -22,10 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		28FDD9E2246C402E0035F56B /* AlphaBeez-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlphaBeez-Bridging-Header.h"; sourceTree = "<group>"; };
-		28FDD9E3246C402E0035F56B /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
-		28FDD9E4246C402E0035F56B /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
-		28FDD9E6246C405E0035F56B /* GreenCarouselCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenCarouselCollectionView.swift; sourceTree = "<group>"; };
 		FA020060246B534D00A2F0BD /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA020062246B53DC00A2F0BD /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		FA020064246B56AB00A2F0BD /* AHAP */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AHAP; sourceTree = "<group>"; };
@@ -70,12 +64,9 @@
 		FA1A98E5246ADAEC0088B4E9 /* AlphaBeez */ = {
 			isa = PBXGroup;
 			children = (
-				28FDD9E3246C402E0035F56B /* iCarousel.h */,
-				28FDD9E4246C402E0035F56B /* iCarousel.m */,
 				FA1A98EC246ADAEC0088B4E9 /* Main.storyboard */,
 				FA1A98E6246ADAEC0088B4E9 /* AppDelegate.swift */,
 				FA1A98E8246ADAEC0088B4E9 /* SceneDelegate.swift */,
-				28FDD9E6246C405E0035F56B /* GreenCarouselCollectionView.swift */,
 				FA020060246B534D00A2F0BD /* CustomCollectionViewCell.swift */,
 				FA1A98EA246ADAEC0088B4E9 /* ViewController.swift */,
 				FA020062246B53DC00A2F0BD /* CategoryViewController.swift */,
@@ -84,7 +75,6 @@
 				FA1A98F4246ADAED0088B4E9 /* LaunchScreen.storyboard */,
 				FA1A98F7246ADAED0088B4E9 /* Info.plist */,
 				FA1A98EF246ADAEC0088B4E9 /* AlphaBeez.xcdatamodeld */,
-				28FDD9E2246C402E0035F56B /* AlphaBeez-Bridging-Header.h */,
 			);
 			path = AlphaBeez;
 			sourceTree = "<group>";
@@ -121,7 +111,6 @@
 				TargetAttributes = {
 					FA1A98E2246ADAEC0088B4E9 = {
 						CreatedOnToolsVersion = 11.3;
-						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -167,8 +156,6 @@
 				FA1A98E7246ADAEC0088B4E9 /* AppDelegate.swift in Sources */,
 				FA1A98F1246ADAEC0088B4E9 /* AlphaBeez.xcdatamodeld in Sources */,
 				FA020063246B53DC00A2F0BD /* CategoryViewController.swift in Sources */,
-				28FDD9E5246C402E0035F56B /* iCarousel.m in Sources */,
-				28FDD9E7246C405E0035F56B /* GreenCarouselCollectionView.swift in Sources */,
 				FA1A98E9246ADAEC0088B4E9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,7 +300,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T7664565ZX;
 				INFOPLIST_FILE = AlphaBeez/Info.plist;
@@ -323,8 +309,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.IvanTilev.AlphaBeez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AlphaBeez/AlphaBeez-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -334,7 +318,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T7664565ZX;
 				INFOPLIST_FILE = AlphaBeez/Info.plist;
@@ -344,7 +327,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.IvanTilev.AlphaBeez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AlphaBeez/AlphaBeez-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
