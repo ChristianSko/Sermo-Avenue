@@ -29,6 +29,12 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         "AHAP/Talk"
     ]
     
+    // CollectionView Outlets, so I can add the custom FlowLayout
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    // CustomFlowLayOut that will determine the
+    let layout = UICollectionViewFlowLayout()
+    
     // A haptic engine manages the connection to the haptic server.
     var engine: CHHapticEngine!
     
@@ -42,6 +48,10 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         creteEngine()
+        // Defining the custom layout and then adding it to the collectionView
+        layout.itemSize = CGSize(width: 250, height: 250)
+        layout.scrollDirection = .horizontal
+        collectionView.collectionViewLayout = layout
         
     }
     
@@ -111,17 +121,6 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
             print("An error occured playing \(filename): \(error).")
         }
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     // MARK: - Required methods for the UICollectionViewDataSourcer
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
