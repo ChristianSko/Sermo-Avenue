@@ -8,7 +8,7 @@
 
 import UIKit
 
-//Testing commit for GIT
+//Testing commit for GIT repo
 
 // This is the main menu screen with the categories inside
 class ViewController: UIViewController {
