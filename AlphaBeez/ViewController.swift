@@ -8,6 +8,8 @@
 
 import UIKit
 
+//Testing commit for GIT
+
 // This is the main menu screen with the categories inside
 class ViewController: UIViewController {
     
