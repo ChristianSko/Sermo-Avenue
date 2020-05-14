@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		28737685246C8AE3003AD4F5 /* RedFlashCardViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = 28737684246C8AE3003AD4F5 /* RedFlashCardViewController .swift */; };
-		28737689246C8B21003AD4F5 /* GreenFlashCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28737688246C8B21003AD4F5 /* GreenFlashCardViewController.swift */; };
-		2873768B246C8B3C003AD4F5 /* BlueFlashCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2873768A246C8B3C003AD4F5 /* BlueFlashCardViewController.swift */; };
 		D62373E1246C7BC7004652CA /* AHAP in Resources */ = {isa = PBXBuildFile; fileRef = D62373E0246C7BC7004652CA /* AHAP */; };
 		FA020061246B534D00A2F0BD /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA020060246B534D00A2F0BD /* CustomCollectionViewCell.swift */; };
 		FA020063246B53DC00A2F0BD /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA020062246B53DC00A2F0BD /* CategoryViewController.swift */; };
@@ -20,12 +17,11 @@
 		FA1A98F1246ADAEC0088B4E9 /* AlphaBeez.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA1A98EF246ADAEC0088B4E9 /* AlphaBeez.xcdatamodeld */; };
 		FA1A98F3246ADAED0088B4E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1A98F2246ADAED0088B4E9 /* Assets.xcassets */; };
 		FA1A98F6246ADAED0088B4E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1A98F4246ADAED0088B4E9 /* LaunchScreen.storyboard */; };
+		FABF36FB246CA42500F83300 /* FlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF36FA246CA42500F83300 /* FlashcardViewController.swift */; };
+		FABF36FD246CB44200F83300 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF36FC246CB44200F83300 /* Flashcard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		28737684246C8AE3003AD4F5 /* RedFlashCardViewController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RedFlashCardViewController .swift"; sourceTree = "<group>"; };
-		28737688246C8B21003AD4F5 /* GreenFlashCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenFlashCardViewController.swift; sourceTree = "<group>"; };
-		2873768A246C8B3C003AD4F5 /* BlueFlashCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueFlashCardViewController.swift; sourceTree = "<group>"; };
 		D62373E0246C7BC7004652CA /* AHAP */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AHAP; sourceTree = "<group>"; };
 		FA020060246B534D00A2F0BD /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA020062246B53DC00A2F0BD /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +34,8 @@
 		FA1A98F2246ADAED0088B4E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA1A98F5246ADAED0088B4E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA1A98F7246ADAED0088B4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABF36FA246CA42500F83300 /* FlashcardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewController.swift; sourceTree = "<group>"; };
+		FABF36FC246CB44200F83300 /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +71,11 @@
 				FA1A98EC246ADAEC0088B4E9 /* Main.storyboard */,
 				FA1A98E6246ADAEC0088B4E9 /* AppDelegate.swift */,
 				FA1A98E8246ADAEC0088B4E9 /* SceneDelegate.swift */,
+				FA020060246B534D00A2F0BD /* CustomCollectionViewCell.swift */,
+				FABF36FC246CB44200F83300 /* Flashcard.swift */,
 				FA1A98EA246ADAEC0088B4E9 /* ViewController.swift */,
 				FA020062246B53DC00A2F0BD /* CategoryViewController.swift */,
-				FA020060246B534D00A2F0BD /* CustomCollectionViewCell.swift */,
-				28737684246C8AE3003AD4F5 /* RedFlashCardViewController .swift */,
-				28737688246C8B21003AD4F5 /* GreenFlashCardViewController.swift */,
-				2873768A246C8B3C003AD4F5 /* BlueFlashCardViewController.swift */,
+				FABF36FA246CA42500F83300 /* FlashcardViewController.swift */,
 				FA1A98F2246ADAED0088B4E9 /* Assets.xcassets */,
 				D62373E0246C7BC7004652CA /* AHAP */,
 				FA1A98F4246ADAED0088B4E9 /* LaunchScreen.storyboard */,
@@ -160,13 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2873768B246C8B3C003AD4F5 /* BlueFlashCardViewController.swift in Sources */,
+				FABF36FB246CA42500F83300 /* FlashcardViewController.swift in Sources */,
 				FA1A98EB246ADAEC0088B4E9 /* ViewController.swift in Sources */,
-				28737689246C8B21003AD4F5 /* GreenFlashCardViewController.swift in Sources */,
+				FABF36FD246CB44200F83300 /* Flashcard.swift in Sources */,
 				FA020061246B534D00A2F0BD /* CustomCollectionViewCell.swift in Sources */,
 				FA1A98E7246ADAEC0088B4E9 /* AppDelegate.swift in Sources */,
 				FA1A98F1246ADAEC0088B4E9 /* AlphaBeez.xcdatamodeld in Sources */,
-				28737685246C8AE3003AD4F5 /* RedFlashCardViewController .swift in Sources */,
 				FA020063246B53DC00A2F0BD /* CategoryViewController.swift in Sources */,
 				FA1A98E9246ADAEC0088B4E9 /* SceneDelegate.swift in Sources */,
 			);
@@ -313,7 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U68AWG975G;
+				DEVELOPMENT_TEAM = T7664565ZX;
 				INFOPLIST_FILE = AlphaBeez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -331,7 +327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U68AWG975G;
+				DEVELOPMENT_TEAM = T7664565ZX;
 				INFOPLIST_FILE = AlphaBeez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
