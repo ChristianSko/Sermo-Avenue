@@ -156,20 +156,33 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AhY-Ap-teG">
-                                        <rect key="frame" x="726" y="11" width="50" height="130"/>
+                                        <rect key="frame" x="726" y="0.0" width="50" height="152"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMq-s1-syi">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" image="camera.fill" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77e-ce-hAh">
-                                                <rect key="frame" x="0.0" y="50" width="50" height="30"/>
+                                                <rect key="frame" x="0.0" y="43" width="50" height="23"/>
                                                 <state key="normal" image="mic.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="recordAudio:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="4DB-mO-zWW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyS-rp-phs">
+                                                <rect key="frame" x="0.0" y="86" width="50" height="23"/>
+                                                <state key="normal" image="stop.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="stopAudio:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="AyH-T0-SV9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jj3-vZ-5X7">
-                                                <rect key="frame" x="0.0" y="100" width="50" height="30"/>
+                                                <rect key="frame" x="0.0" y="129" width="50" height="23"/>
                                                 <state key="normal" image="play.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="playAudio:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="klX-aw-yzj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -198,6 +211,7 @@
                         <outlet property="hapticButton" destination="UH6-ev-hnO" id="Q2c-nO-4JQ"/>
                         <outlet property="playButton" destination="jj3-vZ-5X7" id="rQE-Fe-opv"/>
                         <outlet property="recordButton" destination="77e-ce-hAh" id="ESz-s1-rIk"/>
+                        <outlet property="stopButton" destination="dyS-rp-phs" id="xZ0-j4-Jr2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Zj-t3-EaW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -227,5 +241,6 @@
         <image name="camera.fill" catalog="system" width="128" height="96"/>
         <image name="mic.fill" catalog="system" width="108" height="128"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="stop.fill" catalog="system" width="128" height="113"/>
     </resources>
 </document>
