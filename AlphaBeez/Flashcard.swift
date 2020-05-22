@@ -14,11 +14,13 @@ struct Flashcard {
     var name: String?
     var image: UIImage?
     var hapticPath: String?
+    var numberOfSyllables: Int?
     
     // Initializing, because we need in some places to just have empty Flashcard object!
-    init(name: String? = nil, image: UIImage? = nil, hapticPath: String? = nil) {
+    init(name: String? = nil, image: UIImage? = nil, hapticPath: String? = nil, numberOfSyllables: Int? = 0) {
         self.name = name
         self.image = image
         self.hapticPath = hapticPath
+        self.numberOfSyllables = numberOfSyllables
     }
 }

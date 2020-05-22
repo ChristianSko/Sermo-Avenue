@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BdV-ba-3pF">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="soa-2a-JN5">
-                                <rect key="frame" x="94" y="144" width="708" height="149"/>
+                                <rect key="frame" x="50" y="132" width="567" height="143"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRk-K1-PmI">
-                                        <rect key="frame" x="0.0" y="0.0" width="205.5" height="149"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="158.5" height="143"/>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -28,12 +28,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1T-5Z-p1n">
-                                        <rect key="frame" x="251.5" y="0.0" width="205" height="149"/>
+                                        <rect key="frame" x="204.5" y="0.0" width="158" height="143"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGs-MP-wZW">
-                                        <rect key="frame" x="502.5" y="0.0" width="205.5" height="149"/>
+                                        <rect key="frame" x="408.5" y="0.0" width="158.5" height="143"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                     </button>
@@ -67,11 +67,11 @@
             <objects>
                 <viewController id="Lr7-OM-ZfB" customClass="CategoryViewController" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LoZ-Ug-KXn">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lel-4A-qau">
-                                <rect key="frame" x="60" y="64" width="776" height="300"/>
+                                <rect key="frame" x="16" y="52" width="635" height="294"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="O5X-Nk-MK3">
                                     <size key="itemSize" width="128" height="128"/>
@@ -134,14 +134,14 @@
             <objects>
                 <viewController id="5GO-ch-8Hf" customClass="FlashcardViewController" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y6c-if-TE2">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="y00-zf-o6u">
-                                <rect key="frame" x="60" y="131" width="776" height="152"/>
+                                <rect key="frame" x="16" y="119" width="635" height="146"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UH6-ev-hnO">
-                                        <rect key="frame" x="0.0" y="1" width="150" height="150"/>
+                                        <rect key="frame" x="0.0" y="1" width="150" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="5aa-bE-Crx"/>
                                         </constraints>
@@ -150,43 +150,42 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43e-vk-5Ee">
-                                        <rect key="frame" x="300" y="66" width="276" height="20.5"/>
+                                        <rect key="frame" x="300" y="63" width="135" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AhY-Ap-teG">
-                                        <rect key="frame" x="726" y="0.0" width="50" height="152"/>
+                                        <rect key="frame" x="585" y="0.0" width="50" height="146"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCE-qi-OSv">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="13"/>
                                                 <state key="normal" title="Puzzle"/>
                                                 <connections>
                                                     <action selector="puzzleTouched:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="CGE-f2-rqP"/>
-                                                    <segue destination="syO-Qf-ldC" kind="presentation" identifier="puzzle1" id="3JX-FJ-oLa"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMq-s1-syi">
-                                                <rect key="frame" x="0.0" y="34.5" width="50" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="33" width="50" height="13.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" image="camera.fill" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77e-ce-hAh">
-                                                <rect key="frame" x="0.0" y="69" width="50" height="14"/>
+                                                <rect key="frame" x="0.0" y="66.5" width="50" height="13"/>
                                                 <state key="normal" image="mic.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="recordAudio:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="4DB-mO-zWW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyS-rp-phs">
-                                                <rect key="frame" x="0.0" y="103" width="50" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="99.5" width="50" height="13.5"/>
                                                 <state key="normal" image="stop.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="stopAudio:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="AyH-T0-SV9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jj3-vZ-5X7">
-                                                <rect key="frame" x="0.0" y="137.5" width="50" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="133" width="50" height="13"/>
                                                 <state key="normal" image="play.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="playAudio:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="klX-aw-yzj"/>
@@ -221,6 +220,9 @@
                         <outlet property="puzzleButton" destination="nCE-qi-OSv" id="LFR-Vo-fqf"/>
                         <outlet property="recordButton" destination="77e-ce-hAh" id="ESz-s1-rIk"/>
                         <outlet property="stopButton" destination="dyS-rp-phs" id="xZ0-j4-Jr2"/>
+                        <segue destination="syO-Qf-ldC" kind="show" identifier="puzzleOne" id="OBM-46-CrL"/>
+                        <segue destination="1mP-YR-Eha" kind="show" identifier="puzzleTwo" id="0DD-1n-XYm"/>
+                        <segue destination="UFO-OY-pgl" kind="show" identifier="puzzleThree" id="P3D-BD-CkI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Zj-t3-EaW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -232,45 +234,48 @@
             <objects>
                 <viewController storyboardIdentifier="puzzle1" id="syO-Qf-ldC" customClass="PuzzleViewController1s" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gYL-7w-dJP">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="IoH-NV-aF2"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ine-xc-HL3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXW-a9-VOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171" y="2706"/>
+            <point key="canvasLocation" x="774" y="2278"/>
         </scene>
-        <!--Puzzle View Controller 3s-->
+        <!--Puzzle View Controller 2s-->
         <scene sceneID="gfN-eg-gJF">
             <objects>
-                <viewController storyboardIdentifier="puzzle2" id="1mP-YR-Eha" customClass="PuzzleViewController3s" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="puzzle2" id="1mP-YR-Eha" customClass="PuzzleViewController2s" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IJw-ii-NNc">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="tc7-ge-t6z"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kIA-Qg-9uH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAV-IU-vuN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1852" y="2728"/>
+            <point key="canvasLocation" x="1540" y="2278"/>
         </scene>
         <!--Puzzle View Controller 3s-->
         <scene sceneID="rmb-vS-V41">
             <objects>
                 <viewController storyboardIdentifier="puzzle3" id="UFO-OY-pgl" customClass="PuzzleViewController3s" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iZs-55-Pei">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gQM-gA-y4G"/>
                     </view>
+                    <navigationItem key="navigationItem" id="atO-UF-Qcr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Av4-jl-qid" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2641" y="2728"/>
+            <point key="canvasLocation" x="2324" y="2278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tTd-HX-SEr">
@@ -278,7 +283,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BdV-ba-3pF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ANU-xe-p25">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

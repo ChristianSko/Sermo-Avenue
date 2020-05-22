@@ -13,12 +13,12 @@ import Foundation
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     // Creating a six object from the Flashcard structure and this is the data that we gonna work with
-    let dog = Flashcard(name: "dog", image: UIImage(named: "dog")!, hapticPath: "AHAP/Dog")
-    let food = Flashcard(name: "Food", image: UIImage(named: "food")!, hapticPath: "AHAP/Food")
-    let juice = Flashcard(name: "Juice", image:  UIImage(named: "juice")!, hapticPath: "AHAP/Juice")
-    let read = Flashcard(name: "Read", image: UIImage(named: "read")!, hapticPath:  "AHAP/Read")
-    let real = Flashcard(name: "Real", image: UIImage(named: "real")!, hapticPath: "AHAP/Real")
-    let talk = Flashcard(name: "Talk", image: UIImage(named: "talk")!, hapticPath: "AHAP/Talk")
+    let dog = Flashcard(name: "dog", image: UIImage(named: "dog")!, hapticPath: "AHAP/Dog", numberOfSyllables: 1)
+    let food = Flashcard(name: "Food", image: UIImage(named: "food")!, hapticPath: "AHAP/Food", numberOfSyllables: 1)
+    let juice = Flashcard(name: "Juice", image:  UIImage(named: "juice")!, hapticPath: "AHAP/Juice", numberOfSyllables: 2)
+    let read = Flashcard(name: "Read", image: UIImage(named: "read")!, hapticPath:  "AHAP/Read", numberOfSyllables: 2)
+    let real = Flashcard(name: "Real", image: UIImage(named: "real")!, hapticPath: "AHAP/Real", numberOfSyllables: 3)
+    let talk = Flashcard(name: "Talk", image: UIImage(named: "talk")!, hapticPath: "AHAP/Talk", numberOfSyllables: 3)
     
     // Initialize an empty array and will put all the above objects inside, when the viewDidLoad happends
     var allFlashcards = [Flashcard]()
