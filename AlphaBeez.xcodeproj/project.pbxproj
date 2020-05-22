@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D62373E1246C7BC7004652CA /* AHAP in Resources */ = {isa = PBXBuildFile; fileRef = D62373E0246C7BC7004652CA /* AHAP */; };
+		D6249AA0247825FE009B5BCB /* PuzzleViewController1s.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6249A9F247825FE009B5BCB /* PuzzleViewController1s.swift */; };
+		D6249AA224782613009B5BCB /* PuzzleViewController2s.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6249AA124782613009B5BCB /* PuzzleViewController2s.swift */; };
+		D6249AA424782629009B5BCB /* PuzzleViewController3s.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6249AA324782629009B5BCB /* PuzzleViewController3s.swift */; };
 		FA020061246B534D00A2F0BD /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA020060246B534D00A2F0BD /* CustomCollectionViewCell.swift */; };
 		FA020063246B53DC00A2F0BD /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA020062246B53DC00A2F0BD /* CategoryViewController.swift */; };
 		FA1A98E7246ADAEC0088B4E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A98E6246ADAEC0088B4E9 /* AppDelegate.swift */; };
@@ -23,6 +26,9 @@
 
 /* Begin PBXFileReference section */
 		D62373E0246C7BC7004652CA /* AHAP */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AHAP; sourceTree = "<group>"; };
+		D6249A9F247825FE009B5BCB /* PuzzleViewController1s.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController1s.swift; sourceTree = "<group>"; };
+		D6249AA124782613009B5BCB /* PuzzleViewController2s.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController2s.swift; sourceTree = "<group>"; };
+		D6249AA324782629009B5BCB /* PuzzleViewController3s.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController3s.swift; sourceTree = "<group>"; };
 		FA020060246B534D00A2F0BD /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA020062246B53DC00A2F0BD /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		FA1A98E3246ADAEC0088B4E9 /* AlphaBeez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaBeez.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +82,9 @@
 				FA1A98EA246ADAEC0088B4E9 /* ViewController.swift */,
 				FA020062246B53DC00A2F0BD /* CategoryViewController.swift */,
 				FABF36FA246CA42500F83300 /* FlashcardViewController.swift */,
+				D6249A9F247825FE009B5BCB /* PuzzleViewController1s.swift */,
+				D6249AA124782613009B5BCB /* PuzzleViewController2s.swift */,
+				D6249AA324782629009B5BCB /* PuzzleViewController3s.swift */,
 				FA1A98F2246ADAED0088B4E9 /* Assets.xcassets */,
 				D62373E0246C7BC7004652CA /* AHAP */,
 				FA1A98F4246ADAED0088B4E9 /* LaunchScreen.storyboard */,
@@ -158,13 +167,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FABF36FB246CA42500F83300 /* FlashcardViewController.swift in Sources */,
+				D6249AA0247825FE009B5BCB /* PuzzleViewController1s.swift in Sources */,
 				FA1A98EB246ADAEC0088B4E9 /* ViewController.swift in Sources */,
 				FABF36FD246CB44200F83300 /* Flashcard.swift in Sources */,
 				FA020061246B534D00A2F0BD /* CustomCollectionViewCell.swift in Sources */,
 				FA1A98E7246ADAEC0088B4E9 /* AppDelegate.swift in Sources */,
+				D6249AA424782629009B5BCB /* PuzzleViewController3s.swift in Sources */,
 				FA1A98F1246ADAEC0088B4E9 /* AlphaBeez.xcdatamodeld in Sources */,
 				FA020063246B53DC00A2F0BD /* CategoryViewController.swift in Sources */,
 				FA1A98E9246ADAEC0088B4E9 /* SceneDelegate.swift in Sources */,
+				D6249AA224782613009B5BCB /* PuzzleViewController2s.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

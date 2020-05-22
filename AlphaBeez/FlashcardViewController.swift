@@ -19,6 +19,10 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var puzzleButton: UIButton!
+    
+//    Based on whether this variable is 1,2 or 3 it should point PuzzleViewcontroller 1,2 or 3
+    var puzzleSyllableType = 1
     
     // This is he Flashcard that is transferred from CategoryViewController (the one that the user tapped)
     var selectedFlashcard = Flashcard()
@@ -226,4 +230,37 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         print("Audio Record Encode Error")
     }
     
+    
+//    The idea is to send to PuzzleViewController1s, PuzzleViewController2s or PuzzleViewController3s based on puzzleSyllableType
+
+//    To Test Try 1 comment it and then uncomment Try 2
+    
+    @IBAction func puzzleTouched(_ sender: UIButton) {
+
+//Try 1: Trying to send based on segue but I can only set 1 segue at a time
+    
+        if puzzleSyllableType == 1 {
+            performSegue(withIdentifier: "puzzle1", sender: self)
+        } else if puzzleSyllableType == 2 {
+            performSegue(withIdentifier: "puzzle2", sender: self)
+        } else {
+            performSegue(withIdentifier: "puzzle3", sender: self)
+        }
+        
+        
+// Try 2: Trying to push Viewcontroller by instanciating through storyboard ID
+        
+//        let newViewController1 = storyboard?.instantiateViewController(withIdentifier: "puzzle1") as! ViewController
+//        let newViewController2 = storyboard?.instantiateViewController(withIdentifier: "puzzle2") as! ViewController
+//        let newViewController3 = storyboard?.instantiateViewController(withIdentifier: "puzzle3") as! ViewController
+//
+//        if puzzleSyllableType == 1 {
+//            navigationController?.pushViewController(newViewController1, animated: true)
+//        } else if puzzleSyllableType == 2 {
+//            navigationController?.pushViewController(newViewController2, animated: true)
+//        } else {
+//            navigationController?.pushViewController(newViewController3, animated: true)
+//        }
+        
+    }
 }

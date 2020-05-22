@@ -158,27 +158,35 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AhY-Ap-teG">
                                         <rect key="frame" x="726" y="0.0" width="50" height="152"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCE-qi-OSv">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="14.5"/>
+                                                <state key="normal" title="Puzzle"/>
+                                                <connections>
+                                                    <action selector="puzzleTouched:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="CGE-f2-rqP"/>
+                                                    <segue destination="syO-Qf-ldC" kind="presentation" identifier="puzzle1" id="3JX-FJ-oLa"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMq-s1-syi">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="23"/>
+                                                <rect key="frame" x="0.0" y="34.5" width="50" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" image="camera.fill" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77e-ce-hAh">
-                                                <rect key="frame" x="0.0" y="43" width="50" height="23"/>
+                                                <rect key="frame" x="0.0" y="69" width="50" height="14"/>
                                                 <state key="normal" image="mic.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="recordAudio:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="4DB-mO-zWW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyS-rp-phs">
-                                                <rect key="frame" x="0.0" y="86" width="50" height="23"/>
+                                                <rect key="frame" x="0.0" y="103" width="50" height="14.5"/>
                                                 <state key="normal" image="stop.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="stopAudio:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="AyH-T0-SV9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jj3-vZ-5X7">
-                                                <rect key="frame" x="0.0" y="129" width="50" height="23"/>
+                                                <rect key="frame" x="0.0" y="137.5" width="50" height="14.5"/>
                                                 <state key="normal" image="play.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="playAudio:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="klX-aw-yzj"/>
@@ -210,6 +218,7 @@
                         <outlet property="cardNameLabel" destination="43e-vk-5Ee" id="hh4-u7-7y2"/>
                         <outlet property="hapticButton" destination="UH6-ev-hnO" id="Q2c-nO-4JQ"/>
                         <outlet property="playButton" destination="jj3-vZ-5X7" id="rQE-Fe-opv"/>
+                        <outlet property="puzzleButton" destination="nCE-qi-OSv" id="LFR-Vo-fqf"/>
                         <outlet property="recordButton" destination="77e-ce-hAh" id="ESz-s1-rIk"/>
                         <outlet property="stopButton" destination="dyS-rp-phs" id="xZ0-j4-Jr2"/>
                     </connections>
@@ -217,6 +226,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Zj-t3-EaW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1540.8482142857142" y="944.92753623188412"/>
+        </scene>
+        <!--Puzzle View Controller 1s-->
+        <scene sceneID="Zd6-fK-43O">
+            <objects>
+                <viewController storyboardIdentifier="puzzle1" id="syO-Qf-ldC" customClass="PuzzleViewController1s" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gYL-7w-dJP">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="IoH-NV-aF2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXW-a9-VOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1171" y="2706"/>
+        </scene>
+        <!--Puzzle View Controller 3s-->
+        <scene sceneID="gfN-eg-gJF">
+            <objects>
+                <viewController storyboardIdentifier="puzzle2" id="1mP-YR-Eha" customClass="PuzzleViewController3s" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IJw-ii-NNc">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tc7-ge-t6z"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAV-IU-vuN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="2728"/>
+        </scene>
+        <!--Puzzle View Controller 3s-->
+        <scene sceneID="rmb-vS-V41">
+            <objects>
+                <viewController storyboardIdentifier="puzzle3" id="UFO-OY-pgl" customClass="PuzzleViewController3s" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iZs-55-Pei">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gQM-gA-y4G"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Av4-jl-qid" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2641" y="2728"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tTd-HX-SEr">
