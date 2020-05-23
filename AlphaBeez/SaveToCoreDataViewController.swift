@@ -19,7 +19,14 @@ class SaveToCoreDataViewController: UIViewController {
     @IBOutlet weak var categoryTextField: UITextField!
     @IBOutlet weak var imageTextField: UITextField!
     @IBOutlet weak var hapticTextField: UITextField!
+    @IBOutlet weak var syllablesTextField: UITextField!
     
+    // Properties to keep the value from the textFields
+    var name = String()
+    var category = String()
+    var image = String()
+    var hapticPath = String()
+    var syllables = Int()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +46,10 @@ class SaveToCoreDataViewController: UIViewController {
     
     @IBAction func saveHapticButtonPressed(_ sender: UIButton) {
     }
+    
+    @IBAction func saveSyllablesButtonPressed(_ sender: UIButton) {
+    }
+    
     
 
     // MARK: - Action that will save the Flashcard item to CoreData Model

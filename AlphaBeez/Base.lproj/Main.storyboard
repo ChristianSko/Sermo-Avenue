@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="qM8-nh-2UM">
-                                <rect key="frame" x="298" y="102.5" width="300" height="209"/>
+                                <rect key="frame" x="298" y="75" width="300" height="264"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FYU-hg-Rqa">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
@@ -151,6 +151,30 @@
                                             <constraint firstAttribute="trailing" secondItem="bqf-dM-2CZ" secondAttribute="trailing" id="t0S-jn-fuI"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7mW-vi-6oQ">
+                                        <rect key="frame" x="0.0" y="220" width="300" height="44"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Syllables" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aiM-mg-80M">
+                                                <rect key="frame" x="0.0" y="0.0" width="244" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9v-0W-NBt">
+                                                <rect key="frame" x="252" y="0.0" width="48" height="44"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="saveSyllablesButtonPressed:" destination="wNL-4f-hrl" eventType="touchUpInside" id="xPF-Mk-enX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="RVO-Z4-UXQ"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -173,6 +197,7 @@
                         <outlet property="hapticTextField" destination="Odl-nJ-mJM" id="EdX-SF-FY9"/>
                         <outlet property="imageTextField" destination="jad-VW-BJ8" id="OOZ-Y2-h6u"/>
                         <outlet property="nameTextField" destination="EvV-Tc-Hlk" id="gdw-gl-OqS"/>
+                        <outlet property="syllablesTextField" destination="aiM-mg-80M" id="6JM-IA-zsi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ew-ol-Wtx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
