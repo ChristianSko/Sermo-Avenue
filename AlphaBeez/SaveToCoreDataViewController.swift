@@ -21,6 +21,9 @@ class SaveToCoreDataViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var hapticTextField: UITextField!
     @IBOutlet weak var syllablesTextField: UITextField!
     
+    // Tapping into the singleton of AppDelegate to fetch the instance of the context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     // Properties to keep the value from the textFields
     var name: String = ""
     var category: String = ""
@@ -63,8 +66,23 @@ class SaveToCoreDataViewController: UIViewController, UITextFieldDelegate {
     
 
     // MARK: - Action that will save the Flashcard item to CoreData Model
-    
     @IBAction func saveFlashcardPressed(_ sender: UIBarButtonItem) {
+        // Creating a new instance of the Flashcard Entity inside xcdatamodeld
+        let flashcard = Flashcard(context: context)
+        // Assign the properties to the results form the input
+        flashcard.name = name
+        flashcard.category = category
+        flashcard.image = image
+        flashcard.hapticPath = hapticPath
+        flashcard.syllables = Int16(syllables)
+        
+        // Saving the Flashcard to our data base
+        do {
+            try context.save()
+            print("Saving flashcard to the Database!")
+        } catch {
+            print("Error saving context \(error)")
+        }
     }
     
     // Will determine which texField is typing on and will assign the value to the proper property

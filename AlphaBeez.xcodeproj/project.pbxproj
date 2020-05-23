@@ -22,7 +22,6 @@
 		FA1A98F6246ADAED0088B4E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1A98F4246ADAED0088B4E9 /* LaunchScreen.storyboard */; };
 		FA90FCEB2479855C00E87B69 /* SaveToCoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90FCEA2479855C00E87B69 /* SaveToCoreDataViewController.swift */; };
 		FABF36FB246CA42500F83300 /* FlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF36FA246CA42500F83300 /* FlashcardViewController.swift */; };
-		FABF36FD246CB44200F83300 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF36FC246CB44200F83300 /* Flashcard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +42,6 @@
 		FA1A98F7246ADAED0088B4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA90FCEA2479855C00E87B69 /* SaveToCoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToCoreDataViewController.swift; sourceTree = "<group>"; };
 		FABF36FA246CA42500F83300 /* FlashcardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewController.swift; sourceTree = "<group>"; };
-		FABF36FC246CB44200F83300 /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +78,6 @@
 				FA1A98E6246ADAEC0088B4E9 /* AppDelegate.swift */,
 				FA1A98E8246ADAEC0088B4E9 /* SceneDelegate.swift */,
 				FA020060246B534D00A2F0BD /* CustomCollectionViewCell.swift */,
-				FABF36FC246CB44200F83300 /* Flashcard.swift */,
 				FA90FCEA2479855C00E87B69 /* SaveToCoreDataViewController.swift */,
 				FA1A98EA246ADAEC0088B4E9 /* ViewController.swift */,
 				FA020062246B53DC00A2F0BD /* CategoryViewController.swift */,
@@ -172,7 +169,6 @@
 				FABF36FB246CA42500F83300 /* FlashcardViewController.swift in Sources */,
 				D6249AA0247825FE009B5BCB /* PuzzleViewController1s.swift in Sources */,
 				FA1A98EB246ADAEC0088B4E9 /* ViewController.swift in Sources */,
-				FABF36FD246CB44200F83300 /* Flashcard.swift in Sources */,
 				FA020061246B534D00A2F0BD /* CustomCollectionViewCell.swift in Sources */,
 				FA90FCEB2479855C00E87B69 /* SaveToCoreDataViewController.swift in Sources */,
 				FA1A98E7246ADAEC0088B4E9 /* AppDelegate.swift in Sources */,

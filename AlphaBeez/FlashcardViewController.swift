@@ -46,7 +46,7 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         creteEngine()
 
         // Set the image and the label of the selected Flashcard
-        hapticButton.setImage(selectedFlashcard.image, for: .normal)
+        hapticButton.setImage(UIImage(named: selectedFlashcard.image!), for: .normal)
         cardNameLabel.text = selectedFlashcard.name
         
 //        Disable play and stop button, in order to enable the record one
@@ -237,7 +237,7 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
 
 //Try 1: Trying to send based on segue but I can only set 1 segue at a time
         
-        if let syllables: Int = selectedFlashcard.numberOfSyllables {
+        if let syllables: Int = Int(selectedFlashcard.syllables) {
             print(syllables)
             if syllables == 1 {
                 performSegue(withIdentifier: "puzzleOne", sender: self)

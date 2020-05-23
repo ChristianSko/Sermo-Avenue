@@ -9,16 +9,17 @@
 import UIKit
 import CoreHaptics
 import Foundation
+import CoreData
 
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     // Creating a six object from the Flashcard structure and this is the data that we gonna work with
-    let dog = Flashcard(name: "dog", image: UIImage(named: "bedroom")!, hapticPath: "AHAP/Dog", numberOfSyllables: 1)
-    let food = Flashcard(name: "Food", image: UIImage(named: "dinner")!, hapticPath: "AHAP/Food", numberOfSyllables: 1)
-    let juice = Flashcard(name: "Juice", image:  UIImage(named: "fork")!, hapticPath: "AHAP/Juice", numberOfSyllables: 2)
-    let read = Flashcard(name: "Read", image: UIImage(named: "pillow")!, hapticPath:  "AHAP/Read", numberOfSyllables: 2)
-    let real = Flashcard(name: "Real", image: UIImage(named: "spoon")!, hapticPath: "AHAP/Real", numberOfSyllables: 3)
-    let talk = Flashcard(name: "Talk", image: UIImage(named: "table")!, hapticPath: "AHAP/Talk", numberOfSyllables: 3)
+//    let dog = Flashcard(name: "dog", image: UIImage(named: "bedroom")!, hapticPath: "AHAP/Dog", numberOfSyllables: 1)
+//    let food = Flashcard(name: "Food", image: UIImage(named: "dinner")!, hapticPath: "AHAP/Food", numberOfSyllables: 1)
+//    let juice = Flashcard(name: "Juice", image:  UIImage(named: "fork")!, hapticPath: "AHAP/Juice", numberOfSyllables: 2)
+//    let read = Flashcard(name: "Read", image: UIImage(named: "pillow")!, hapticPath:  "AHAP/Read", numberOfSyllables: 2)
+//    let real = Flashcard(name: "Real", image: UIImage(named: "spoon")!, hapticPath: "AHAP/Real", numberOfSyllables: 3)
+//    let talk = Flashcard(name: "Talk", image: UIImage(named: "table")!, hapticPath: "AHAP/Talk", numberOfSyllables: 3)
     
     // Initialize an empty array and will put all the above objects inside, when the viewDidLoad happends
     var allFlashcards = [Flashcard]()
@@ -36,13 +37,13 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         layout.scrollDirection = .horizontal
         collectionView.collectionViewLayout = layout
         
-        // Adding the created Flashcards objects to the array of Flashcards
-        allFlashcards.append(dog)
-        allFlashcards.append(food)
-        allFlashcards.append(juice)
-        allFlashcards.append(read)
-        allFlashcards.append(real)
-        allFlashcards.append(talk)
+//        // Adding the created Flashcards objects to the array of Flashcards
+//        allFlashcards.append(dog)
+//        allFlashcards.append(food)
+//        allFlashcards.append(juice)
+//        allFlashcards.append(read)
+//        allFlashcards.append(real)
+//        allFlashcards.append(talk)
         
     }
     // MARK: - Required methods for the UICollectionViewDataSource Protocol
@@ -53,7 +54,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCollectionViewCell
         let flashcard = allFlashcards[indexPath.row]
-        cell.imageView.image = flashcard.image
+        cell.imageView.image = UIImage(named: flashcard.image!)
         return cell
     }
     
