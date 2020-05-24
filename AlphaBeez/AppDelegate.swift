@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let hapticCapability = CHHapticEngine.capabilitiesForHardware()
         supportsHaptics = hapticCapability.supportsHaptics
         
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
         return true
     }
 
