@@ -13,15 +13,7 @@ import CoreData
 
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    // Creating a six object from the Flashcard structure and this is the data that we gonna work with
-//    let dog = Flashcard(name: "dog", image: UIImage(named: "bedroom")!, hapticPath: "AHAP/Dog", numberOfSyllables: 1)
-//    let food = Flashcard(name: "Food", image: UIImage(named: "dinner")!, hapticPath: "AHAP/Food", numberOfSyllables: 1)
-//    let juice = Flashcard(name: "Juice", image:  UIImage(named: "fork")!, hapticPath: "AHAP/Juice", numberOfSyllables: 2)
-//    let read = Flashcard(name: "Read", image: UIImage(named: "pillow")!, hapticPath:  "AHAP/Read", numberOfSyllables: 2)
-//    let real = Flashcard(name: "Real", image: UIImage(named: "spoon")!, hapticPath: "AHAP/Real", numberOfSyllables: 3)
-//    let talk = Flashcard(name: "Talk", image: UIImage(named: "table")!, hapticPath: "AHAP/Talk", numberOfSyllables: 3)
-    
-    // Initialize an empty array and will put all the above objects inside, when the viewDidLoad happends
+    // Initialize an empty array and will hold the chosen category arrays
     var allFlashcards = [Flashcard]()
     
     // CollectionView Outlets, so I can add the custom FlowLayout
@@ -36,14 +28,6 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         layout.itemSize = CGSize(width: 250, height: 250)
         layout.scrollDirection = .horizontal
         collectionView.collectionViewLayout = layout
-        
-//        // Adding the created Flashcards objects to the array of Flashcards
-//        allFlashcards.append(dog)
-//        allFlashcards.append(food)
-//        allFlashcards.append(juice)
-//        allFlashcards.append(read)
-//        allFlashcards.append(real)
-//        allFlashcards.append(talk)
         
     }
     // MARK: - Required methods for the UICollectionViewDataSource Protocol

@@ -28,10 +28,31 @@ class ViewController: UIViewController {
         
         loadFlashcards()
     }
+    
+    // MARK: - PrepareForSegue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let button = sender as? UIButton, let controller = segue.destination as? CategoryViewController,
+            segue.identifier == "toCategory" {
+            var chosenCategory = [Flashcard]()
+            
+            switch button {
+            case homeButton:
+                chosenCategory = getFlashcardsForCategory(category: "home")
+            case marketButton:
+                chosenCategory = getFlashcardsForCategory(category: "market")
+            case parkButton:
+                chosenCategory = getFlashcardsForCategory(category: "park")
+            default:
+                break
+            }
+            controller.allFlashcards = chosenCategory
+        }
+    }
 
     // Will transfer to the chosen category screen with the flashcards
     @IBAction func categoryButtonTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "toCategory", sender: self)
+        performSegue(withIdentifier: "toCategory", sender: sender)
     }
     
     //MARK: -  Will load all the items from our Database
@@ -42,6 +63,16 @@ class ViewController: UIViewController {
         } catch {
             print("Error fetching data from context \(error)")
         }
+    }
+    
+    func getFlashcardsForCategory(category: String) -> [Flashcard] {
+        var array = [Flashcard]()
+        for flashcard in allFlashcards {
+            if flashcard.category == category {
+                array.append(flashcard)
+            }
+        }
+        return array
     }
     
 }

@@ -218,7 +218,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRk-K1-PmI">
                                         <rect key="frame" x="0.0" y="0.0" width="205.5" height="149"/>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <state key="normal" title="Home">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="categoryButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iH3-pg-2lS"/>
                                         </connections>
@@ -226,12 +229,24 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1T-5Z-p1n">
                                         <rect key="frame" x="251.5" y="0.0" width="205" height="149"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <state key="normal" title="Market">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="categoryButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZe-ld-g30"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGs-MP-wZW">
                                         <rect key="frame" x="502.5" y="0.0" width="205.5" height="149"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <state key="normal" title="Park">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="categoryButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILx-hr-pn1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -329,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sw0-Pu-5In" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1540.8482142857142" y="137.68115942028987"/>
+            <point key="canvasLocation" x="1656" y="138"/>
         </scene>
         <!--Flashcard View Controller-->
         <scene sceneID="1X2-rD-kHg">
@@ -429,7 +444,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Zj-t3-EaW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1540.8482142857142" y="944.92753623188412"/>
+            <point key="canvasLocation" x="1655" y="1074"/>
         </scene>
         <!--Puzzle View Controller 1s-->
         <scene sceneID="Zd6-fK-43O">
@@ -445,7 +460,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXW-a9-VOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="2278"/>
+            <point key="canvasLocation" x="930" y="2448"/>
         </scene>
         <!--Puzzle View Controller 2s-->
         <scene sceneID="gfN-eg-gJF">
@@ -461,7 +476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAV-IU-vuN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1540" y="2278"/>
+            <point key="canvasLocation" x="1655" y="2448"/>
         </scene>
         <!--Puzzle View Controller 3s-->
         <scene sceneID="rmb-vS-V41">
@@ -477,7 +492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Av4-jl-qid" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2324" y="2278"/>
+            <point key="canvasLocation" x="2386" y="2448"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tTd-HX-SEr">
