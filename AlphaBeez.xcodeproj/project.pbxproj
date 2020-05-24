@@ -21,6 +21,7 @@
 		FA1A98F3246ADAED0088B4E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1A98F2246ADAED0088B4E9 /* Assets.xcassets */; };
 		FA1A98F6246ADAED0088B4E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1A98F4246ADAED0088B4E9 /* LaunchScreen.storyboard */; };
 		FA90FCEB2479855C00E87B69 /* SaveToCoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90FCEA2479855C00E87B69 /* SaveToCoreDataViewController.swift */; };
+		FAA28E31247AC0AD00A2FCD2 /* database in Resources */ = {isa = PBXBuildFile; fileRef = FAA28E30247AC0AD00A2FCD2 /* database */; };
 		FABF36FB246CA42500F83300 /* FlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF36FA246CA42500F83300 /* FlashcardViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		FA1A98F5246ADAED0088B4E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA1A98F7246ADAED0088B4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA90FCEA2479855C00E87B69 /* SaveToCoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToCoreDataViewController.swift; sourceTree = "<group>"; };
+		FAA28E30247AC0AD00A2FCD2 /* database */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database; sourceTree = SOURCE_ROOT; };
 		FABF36FA246CA42500F83300 /* FlashcardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				D62373E0246C7BC7004652CA /* AHAP */,
 				FA1A98F4246ADAED0088B4E9 /* LaunchScreen.storyboard */,
 				FA1A98F7246ADAED0088B4E9 /* Info.plist */,
+				FAA28E30247AC0AD00A2FCD2 /* database */,
 				FA1A98EF246ADAEC0088B4E9 /* AlphaBeez.xcdatamodeld */,
 			);
 			path = AlphaBeez;
@@ -156,6 +159,7 @@
 				D62373E1246C7BC7004652CA /* AHAP in Resources */,
 				FA1A98F3246ADAED0088B4E9 /* Assets.xcassets in Resources */,
 				FA1A98EE246ADAEC0088B4E9 /* Main.storyboard in Resources */,
+				FAA28E31247AC0AD00A2FCD2 /* database in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

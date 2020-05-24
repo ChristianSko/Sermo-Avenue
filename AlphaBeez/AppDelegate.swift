@@ -43,7 +43,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     lazy var persistentContainer: NSPersistentContainer = {
         
+        // Creating a reference to our database inside the app and will not create new database for each device.
+        let myUrl = URL(fileURLWithPath: Bundle.main.path(forResource: "database/AlphaBeez", ofType: "sqlite")!)
+        let description = NSPersistentStoreDescription(url: myUrl)
         let container = NSPersistentContainer(name: "AlphaBeez")
+        container.persistentStoreDescriptions = [description]
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
