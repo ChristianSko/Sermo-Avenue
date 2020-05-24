@@ -10,22 +10,68 @@ import UIKit
 
 class PuzzleViewController1s: UIViewController {
 
-    var puzzle1Button: UIButton!
+    var oneSyllablePuzzleButton: UIButton!
+    var currentAnimation = 0
+    
+    @IBOutlet weak var fullImagePuzzleOne: UIImageView!
+    @IBOutlet weak var oneSyllablePuzzle: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Properties for centered blurred image of puzzle 1
+        fullImagePuzzleOne.image = UIImage(named: "bench")
+        fullImagePuzzleOne.alpha = 0.2
         
-//       This simply adds a button that helps me see if it was sent to viewcontroller I wanted it to go
-        puzzle1Button = UIButton(type: .system)
-        puzzle1Button.setTitle("this is puzzle1", for: .normal)
-        puzzle1Button.tintColor = .red
-        puzzle1Button.frame = CGRect(x: 400, y: 200, width: 200, height: 200)
-        view.addSubview(puzzle1Button)
+        // Properties of puzzle Piece
+        oneSyllablePuzzle.image = UIImage(named: "bench")
         
+        //Invisible Buttton behind the Puzzle Piece that triggers animation
+        oneSyllablePuzzleButton = UIButton()
+        oneSyllablePuzzleButton.frame.size.width = oneSyllablePuzzle.frame.size.width
+        oneSyllablePuzzleButton.frame.size.height = oneSyllablePuzzle.frame.size.height
+        oneSyllablePuzzleButton.center = oneSyllablePuzzle.center
+        oneSyllablePuzzleButton.addTarget(self, action: #selector(self.oneSyllablePuzzleTapped(sender:)), for: .touchUpInside)
+        view.addSubview(oneSyllablePuzzleButton)
+                
     }
     
 
+    @objc func oneSyllablePuzzleTapped(sender: UIButton) {
+                    sender.isHidden = true
+                    
+                    UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
+
+                    switch self.currentAnimation {
+                    case 0:
+                        
+                        var concatinatedAnimation = CGAffineTransform.identity
+                        concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
+                        concatinatedAnimation = concatinatedAnimation.translatedBy(x: -131, y: -6)
+                        self.oneSyllablePuzzle.transform = concatinatedAnimation
+
+                    case 1:
+                        self.oneSyllablePuzzle.transform = .identity
+                        
+                    default:
+                        break
+                        }
+                    }) { (finished) in
+                        print("Test")
+                        
+//                        Uncomment for testing animation several times in arow
+                        sender.isHidden = false
+
+                    }
+                    
+                    currentAnimation += 1
+                    
+                    if currentAnimation > 1 {
+                        currentAnimation = 0
+                    }
+        }
+    
+    
     /*
     // MARK: - Navigation
 
