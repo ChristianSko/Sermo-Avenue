@@ -29,15 +29,26 @@ class PuzzleViewController3s: UIViewController {
         // Properties for centered blurred image of puzzle 1
         fullImagePuzzleThree.image = UIImage(named: "apple")
         fullImagePuzzleThree.alpha = 0.2
+        fullImagePuzzleThree.layer.borderWidth = 1
+        fullImagePuzzleThree.layer.borderColor =  UIColor.blue.cgColor
         
         // Image for right puzzle Piece
         rightPuzzlePiece.image = UIImage(named: "apple")
+        let maskRight = UIImageView(image: UIImage(named: "puzzle-1"))
+        rightPuzzlePiece.mask = maskRight
         
         // Image for upper left puzzle Piece
         upperLeftPuzzlePiece.image = UIImage(named: "apple")
+        let maskTop = UIImageView(image: UIImage(named: "puzzle-2"))
+        upperLeftPuzzlePiece.mask = maskTop
+        
         
         // Image for bottom left puzzle Piece
         bottomLeftPuzzlePiece.image = UIImage(named: "apple")
+        let maskLeft = UIImageView(image: UIImage(named: "puzzle-3"))
+        bottomLeftPuzzlePiece.mask = maskLeft
+    
+        
         
         //Invisible Buttton behind the right puzzle Piece that triggers animation
         rightPuzzlePieceButton = UIButton()
@@ -153,7 +164,7 @@ class PuzzleViewController3s: UIViewController {
                             
                             var concatinatedAnimation = CGAffineTransform.identity
                             concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                            concatinatedAnimation = concatinatedAnimation.translatedBy(x: 131, y: -40)
+                            concatinatedAnimation = concatinatedAnimation.translatedBy(x: 131, y: -42)
                             self.bottomLeftPuzzlePiece.transform = concatinatedAnimation
 
                         case 1:

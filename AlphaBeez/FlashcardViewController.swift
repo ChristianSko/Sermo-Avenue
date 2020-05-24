@@ -229,13 +229,10 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
     }
     
     
-//    The idea is to send to PuzzleViewController1s, PuzzleViewController2s or PuzzleViewController3s based on puzzleSyllableType
 
-//    To Test Try 1 comment it and then uncomment Try 2
-    
     @IBAction func puzzleTouched(_ sender: UIButton) {
 
-//Try 1: Trying to send based on segue but I can only set 1 segue at a time
+// sending to PuzzleViewController1s, PuzzleViewController2s or PuzzleViewController3s based on puzzleSyllableType
         
         if let syllables: Int = Int(selectedFlashcard.syllables) {
             print(syllables)

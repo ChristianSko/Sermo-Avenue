@@ -10,8 +10,10 @@ import UIKit
 
 class PuzzleViewController1s: UIViewController {
 
+    
     var oneSyllablePuzzleButton: UIButton!
     var currentAnimation = 0
+    var selectedFlashcard = Flashcard()
     
     @IBOutlet weak var fullImagePuzzleOne: UIImageView!
     @IBOutlet weak var oneSyllablePuzzle: UIImageView!
@@ -22,6 +24,8 @@ class PuzzleViewController1s: UIViewController {
         // Properties for centered blurred image of puzzle 1
         fullImagePuzzleOne.image = UIImage(named: "bench")
         fullImagePuzzleOne.alpha = 0.2
+        fullImagePuzzleOne.layer.borderWidth = 1
+        fullImagePuzzleOne.layer.borderColor =  UIColor.blue.cgColor
         
         // Properties of puzzle Piece
         oneSyllablePuzzle.image = UIImage(named: "bench")

@@ -10,8 +10,6 @@ import UIKit
 
 class PuzzleViewController2s: UIViewController {
     
-
-    
     //Image Outlets
     @IBOutlet weak var fullImagePuzzleTwo: UIImageView!
     @IBOutlet weak var rightPuzzlePiece: UIImageView!
@@ -27,12 +25,18 @@ class PuzzleViewController2s: UIViewController {
         // Properties for centered blurred image of puzzle 1
         fullImagePuzzleTwo.image = UIImage(named: "apple")
         fullImagePuzzleTwo.alpha = 0.2
+        fullImagePuzzleTwo.layer.borderWidth = 1
+        fullImagePuzzleTwo.layer.borderColor =  UIColor.blue.cgColor
         
         // Image for right puzzle Piece
         rightPuzzlePiece.image = UIImage(named: "apple")
+        let maskRight = UIImageView(image: UIImage(named: "puzzle-1"))
+        rightPuzzlePiece.mask = maskRight
         
         // Image for left puzzle Piece
         leftPuzzlePiece.image = UIImage(named: "apple")
+        let maskLeft = UIImageView(image: UIImage(named: "puzzle-2"))
+        leftPuzzlePiece.mask = maskLeft
         
         //Invisible Buttton behind the right puzzle Piece that triggers animation
         rightPuzzlePieceButton = UIButton()
@@ -69,7 +73,7 @@ class PuzzleViewController2s: UIViewController {
                             
                             var concatinatedAnimation = CGAffineTransform.identity
                             concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                            concatinatedAnimation = concatinatedAnimation.translatedBy(x: -131, y: -6)
+                            concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: -6)
                             self.rightPuzzlePiece.transform = concatinatedAnimation
 
                         case 1:
@@ -104,7 +108,7 @@ class PuzzleViewController2s: UIViewController {
                             
                             var concatinatedAnimation = CGAffineTransform.identity
                             concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                            concatinatedAnimation = concatinatedAnimation.translatedBy(x: 131, y: -6)
+                            concatinatedAnimation = concatinatedAnimation.translatedBy(x: 132, y: -6)
                             self.leftPuzzlePiece.transform = concatinatedAnimation
 
                         case 1:
