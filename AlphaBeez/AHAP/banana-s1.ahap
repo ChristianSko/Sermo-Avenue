@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "Metadata": {
+    "Project": "",
+    "Created": ""
+  },
+  "Pattern": [
+    {
+      "Event": {
+        "Time": 0,
+        "EventType": "HapticContinuous",
+        "EventDuration": 1.9886621315192743,
+        "EventParameters": [
+          {
+            "ParameterID": "HapticIntensity",
+            "ParameterValue": 1
+          },
+          {
+            "ParameterID": "HapticSharpness",
+            "ParameterValue": 0
+          }
+        ]
+      }
+    },
+    {
+      "ParameterCurve": {
+        "ParameterID": "HapticIntensityControl",
+        "Time": 0,
+        "ParameterCurveControlPoints": [
+          {
+            "Time": 0,
+            "ParameterValue": 0.028490391228052372
+          },
+          {
+            "Time": 0.10748299319727891,
+            "ParameterValue": 0.04161674599853389
+          },
+          {
+            "Time": 0.1414965986394558,
+            "ParameterValue": 0.4018156330503015
+          },
+          {
+            "Time": 0.14875283446712018,
+            "ParameterValue": 0.8903543035478398
+          },
+          {
+            "Time": 0.20816326530612245,
+            "ParameterValue": 0.872050645198929
+          },
+          {
+            "Time": 0.23219954648526078,
+            "ParameterValue": 0.5019963437693842
+          },
+          {
+            "Time": 0.27573696145124715,
+            "ParameterValue": 0.18445860505220138
+          },
+          {
+            "Time": 0.3918367346938776,
+            "ParameterValue": 0.014855841851376431
+          },
+          {
+            "Time": 1.9882086167800455,
+            "ParameterValue": 0.007672363640610258
+          }
+        ]
+      }
+    },
+    {
+      "ParameterCurve": {
+        "ParameterID": "HapticSharpnessControl",
+        "Time": 0,
+        "ParameterCurveControlPoints": [
+          {
+            "Time": 0,
+            "ParameterValue": 0.011056070180385397
+          },
+          {
+            "Time": 0.1414965986394558,
+            "ParameterValue": 0.26825665237420476
+          },
+          {
+            "Time": 0.20045351473922904,
+            "ParameterValue": 0.7545083562358751
+          },
+          {
+            "Time": 0.27392290249433104,
+            "ParameterValue": 0.3387622128996038
+          },
+          {
+            "Time": 0.5351473922902494,
+            "ParameterValue": 0.017926418564636396
+          },
+          {
+            "Time": 1.9882086167800455,
+            "ParameterValue": 0.006419159970759889
+          }
+        ]
+      }
+    },
+    {"Event":
+        {
+            "Time":0,
+            "EventType":"AudioCustom",
+            "EventWaveformPath":"AHAP/banana-s1.wav",
+            "EventParameters":
+            [
+                {"ParameterID":"AudioVolume","ParameterValue":0.75}
+            ]
+        }
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "Version": 1,
+  "Metadata": {
+    "Project": "",
+    "Created": ""
+  },
+  "Pattern": [
+    {
+      "Event": {
+        "Time": 0,
+        "EventType": "HapticContinuous",
+        "EventDuration": 1.5416326530612245,
+        "EventParameters": [
+          {
+            "ParameterID": "HapticIntensity",
+            "ParameterValue": 1
+          },
+          {
+            "ParameterID": "HapticSharpness",
+            "ParameterValue": 0
+          }
+        ]
+      }
+    },
+    {
+      "ParameterCurve": {
+        "ParameterID": "HapticIntensityControl",
+        "Time": 0,
+        "ParameterCurveControlPoints": [
+          {
+            "Time": 0,
+            "ParameterValue": 0.02488089179134199
+          },
+          {
+            "Time": 0.06258503401360545,
+            "ParameterValue": 0.11561322143042108
+          },
+          {
+            "Time": 0.08616780045351474,
+            "ParameterValue": 0.40917853290476486
+          },
+          {
+            "Time": 0.09297052154195011,
+            "ParameterValue": 0.8086248678183071
+          },
+          {
+            "Time": 0.0979591836734694,
+            "ParameterValue": 0.8279709415455678
+          },
+          {
+            "Time": 0.12108843537414966,
+            "ParameterValue": 0.5956831347955676
+          },
+          {
+            "Time": 0.1383219954648526,
+            "ParameterValue": 0.6442176909901117
+          },
+          {
+            "Time": 0.15510204081632653,
+            "ParameterValue": 0.9387228973015511
+          },
+          {
+            "Time": 0.16145124716553289,
+            "ParameterValue": 0.9803224293446225
+          },
+          {
+            "Time": 0.18140589569160998,
+            "ParameterValue": 0.9642398964065979
+          },
+          {
+            "Time": 0.19954648526077098,
+            "ParameterValue": 0.7841664134529976
+          },
+          {
+            "Time": 0.22267573696145126,
+            "ParameterValue": 0.5889136229224095
+          },
+          {
+            "Time": 0.2693877551020408,
+            "ParameterValue": 0.30734089800351905
+          },
+          {
+            "Time": 0.3142857142857143,
+            "ParameterValue": 0.14484206782286782
+          },
+          {
+            "Time": 0.3705215419501134,
+            "ParameterValue": 0.06050560741107255
+          },
+          {
+            "Time": 0.5582766439909297,
+            "ParameterValue": 0.004062187752654305
+          }
+        ]
+      }
+    },
+    {
+      "ParameterCurve": {
+        "ParameterID": "HapticIntensityControl",
+        "Time": 0.5582766439909297,
+        "ParameterCurveControlPoints": [
+          {
+            "Time": 0.5582766439909297,
+            "ParameterValue": 0.004062187752654305
+          },
+          {
+            "Time": 1.5414965986394558,
+            "ParameterValue": 0.0038430985330044063
+          }
+        ]
+      }
+    },
+    {
+      "ParameterCurve": {
+        "ParameterID": "HapticSharpnessControl",
+        "Time": 0,
+        "ParameterCurveControlPoints": [
+          {
+            "Time": 0,
+            "ParameterValue": 0.009655356558417365
+          },
+          {
+            "Time": 0.08616780045351474,
+            "ParameterValue": 0.29210458917918974
+          },
+          {
+            "Time": 0.09750566893424037,
+            "ParameterValue": 0.6667557550094454
+          },
+          {
+            "Time": 0.1383219954648526,
+            "ParameterValue": 0.5347418771316981
+          },
+          {
+            "Time": 0.16462585034013605,
+            "ParameterValue": 0.8033856407510664
+          },
+          {
+            "Time": 0.23764172335600908,
+            "ParameterValue": 0.5242373270519257
+          },
+          {
+            "Time": 0.32108843537414966,
+            "ParameterValue": 0.22393285397336363
+          },
+          {
+            "Time": 0.4326530612244898,
+            "ParameterValue": 0.06574126203158315
+          },
+          {
+            "Time": 1.5414965986394558,
+            "ParameterValue": 0.003215366920596533
+          }
+        ]
+      }
+    },
+    {"Event":
+        {
+            "Time":0,
+            "EventType":"AudioCustom",
+            "EventWaveformPath":"AHAP/apple-s2.wav",
+            "EventParameters":
+            [
+                {"ParameterID":"AudioVolume","ParameterValue":0.75}
+            ]
+        }
+    }
+  ]
+}
