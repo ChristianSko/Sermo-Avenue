@@ -65,6 +65,7 @@ class PuzzleViewController3s: UIViewController {
         upperLeftPuzzlePieceButton.frame.size.width = upperLeftPuzzlePiece.frame.size.width
         upperLeftPuzzlePieceButton.frame.size.height = upperLeftPuzzlePiece.frame.size.height
         upperLeftPuzzlePieceButton.center = upperLeftPuzzlePiece.center
+        //Adding Border for testing purpose
         upperLeftPuzzlePieceButton.layer.borderWidth = 3
         upperLeftPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
         upperLeftPuzzlePieceButton.addTarget(self, action: #selector(self.tappedUpperLeftPuzzlePiece(sender:)), for: .touchUpInside)
@@ -75,6 +76,7 @@ class PuzzleViewController3s: UIViewController {
         bottomLeftPuzzlePieceButton.frame.size.width = bottomLeftPuzzlePiece.frame.size.width
         bottomLeftPuzzlePieceButton.frame.size.height = bottomLeftPuzzlePiece.frame.size.height
         bottomLeftPuzzlePieceButton.center = bottomLeftPuzzlePiece.center
+        //Adding Border for testing purpose
         bottomLeftPuzzlePieceButton.layer.borderWidth = 3
         bottomLeftPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
         bottomLeftPuzzlePieceButton.addTarget(self, action: #selector(self.tappedBotttomLeftPuzzlePiece(sender:)), for: .touchUpInside)
@@ -82,6 +84,7 @@ class PuzzleViewController3s: UIViewController {
         
     }
     
+        // Animation function for right puzzle piece get triggered en tapping button
         @objc func tappedRightPuzzlePiece(sender: UIButton) {
                         
                         sender.isHidden = true
@@ -91,6 +94,7 @@ class PuzzleViewController3s: UIViewController {
                         switch self.currentAnimation {
                         case 0:
                             
+                            // This merges two animations scale & move
                             var concatinatedAnimation = CGAffineTransform.identity
                             concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
                             concatinatedAnimation = concatinatedAnimation.translatedBy(x: -131, y: -6)
@@ -117,7 +121,7 @@ class PuzzleViewController3s: UIViewController {
                         }
             }
     
-    
+         // Animation function for upper left puzzle piece get triggered en tapping button
         @objc func tappedUpperLeftPuzzlePiece(sender: UIButton) {
                             
                             sender.isHidden = true
@@ -126,7 +130,7 @@ class PuzzleViewController3s: UIViewController {
 
                             switch self.currentAnimation {
                             case 0:
-                                
+                                // This merges two animations scale & move
                                 var concatinatedAnimation = CGAffineTransform.identity
                                 concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
                                 concatinatedAnimation = concatinatedAnimation.translatedBy(x: 131, y: 30)
@@ -153,6 +157,7 @@ class PuzzleViewController3s: UIViewController {
                             }
                 }
     
+     // Animation function for bottom left puzzle piece get triggered en tapping button
     @objc func tappedBotttomLeftPuzzlePiece(sender: UIButton) {
                         
                         sender.isHidden = true
@@ -161,7 +166,7 @@ class PuzzleViewController3s: UIViewController {
 
                         switch self.currentAnimation {
                         case 0:
-                            
+                            // This merges two animations scale & move
                             var concatinatedAnimation = CGAffineTransform.identity
                             concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
                             concatinatedAnimation = concatinatedAnimation.translatedBy(x: 131, y: -42)

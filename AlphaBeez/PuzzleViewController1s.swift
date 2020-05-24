@@ -40,7 +40,7 @@ class PuzzleViewController1s: UIViewController {
                 
     }
     
-
+    //  Animation function for right puzzle piece get triggered en tapping button
     @objc func oneSyllablePuzzleTapped(sender: UIButton) {
                     sender.isHidden = true
                     
@@ -48,7 +48,7 @@ class PuzzleViewController1s: UIViewController {
 
                     switch self.currentAnimation {
                     case 0:
-                        
+                        // This merges two animations scale & move
                         var concatinatedAnimation = CGAffineTransform.identity
                         concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
                         concatinatedAnimation = concatinatedAnimation.translatedBy(x: -131, y: -6)
