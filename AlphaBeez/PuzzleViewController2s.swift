@@ -26,13 +26,13 @@ class PuzzleViewController2s: UIViewController {
         super.viewDidLoad()
         
         // Properties for centered blurred image of puzzle 1
-        fullImagePuzzleTwo.image = UIImage(named: "apple")
+        fullImagePuzzleTwo.image = UIImage(named: selectedFlashcard.image!)
         fullImagePuzzleTwo.alpha = 0.2
         fullImagePuzzleTwo.layer.borderWidth = 1
         fullImagePuzzleTwo.layer.borderColor =  UIColor.blue.cgColor
         
         // Image for right puzzle Piece
-        rightPuzzlePiece.image = UIImage(named: "apple")
+        rightPuzzlePiece.image = UIImage(named: selectedFlashcard.image!)
         let maskRight = UIImageView()
 //        maskRight.contentMode = .scaleAspectFit
         maskRight.image = UIImage(named: "puzzle-2pc-2")
@@ -40,7 +40,7 @@ class PuzzleViewController2s: UIViewController {
         rightPuzzlePiece.mask = maskRight
         
         // Image for left puzzle Piece
-        leftPuzzlePiece.image = UIImage(named: "apple")
+        leftPuzzlePiece.image = UIImage(named: selectedFlashcard.image!)
         let maskLeft = UIImageView()
         maskLeft.contentMode = .scaleToFill
         maskLeft.image = UIImage(named: "puzzle-2pc-1")

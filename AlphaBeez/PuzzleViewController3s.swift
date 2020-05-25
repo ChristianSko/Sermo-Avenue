@@ -30,13 +30,13 @@ class PuzzleViewController3s: UIViewController {
         super.viewDidLoad()
 
         // Properties for centered blurred image of puzzle 1
-        fullImagePuzzleThree.image = UIImage(named: "apple")
+        fullImagePuzzleThree.image = UIImage(named: selectedFlashcard.image!)
         fullImagePuzzleThree.alpha = 0.2
         fullImagePuzzleThree.layer.borderWidth = 1
         fullImagePuzzleThree.layer.borderColor =  UIColor.blue.cgColor
         
         // Image for right puzzle Piece
-        rightPuzzlePiece.image = UIImage(named: "apple")
+        rightPuzzlePiece.image = UIImage(named: selectedFlashcard.image!)
         let maskRight = UIImageView()
         maskRight.contentMode = .scaleAspectFit
         maskRight.image = UIImage(named: "puzzle-3pc-1")
@@ -44,7 +44,7 @@ class PuzzleViewController3s: UIViewController {
         rightPuzzlePiece.mask = maskRight
         
         // Image for upper left puzzle Piece
-        upperLeftPuzzlePiece.image = UIImage(named: "apple")
+        upperLeftPuzzlePiece.image = UIImage(named: selectedFlashcard.image!)
         let maskTopLeft = UIImageView()
         maskTopLeft.contentMode = .scaleAspectFit
         maskTopLeft.image = UIImage(named: "puzzle-3pc-2")
@@ -52,7 +52,7 @@ class PuzzleViewController3s: UIViewController {
         upperLeftPuzzlePiece.mask = maskTopLeft
         
         // Image for bottom left puzzle Piece
-        bottomLeftPuzzlePiece.image = UIImage(named: "apple")
+        bottomLeftPuzzlePiece.image = UIImage(named: selectedFlashcard.image!)
         let maskBottomLeft = UIImageView()
         maskBottomLeft.contentMode = .scaleAspectFit
         maskBottomLeft.image = UIImage(named: "puzzle-3pc-3")
