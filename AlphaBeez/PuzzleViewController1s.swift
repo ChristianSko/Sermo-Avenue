@@ -10,7 +10,7 @@ import UIKit
 
 class PuzzleViewController1s: UIViewController {
 
-    
+
     var oneSyllablePuzzleButton: UIButton!
     var currentAnimation = 0
     var selectedFlashcard = Flashcard()
@@ -22,15 +22,15 @@ class PuzzleViewController1s: UIViewController {
         super.viewDidLoad()
         
         // Properties for centered blurred image of puzzle 1
-        fullImagePuzzleOne.image = UIImage(named: "bench")
+        fullImagePuzzleOne.image = UIImage(named: selectedFlashcard.image!)
         fullImagePuzzleOne.alpha = 0.2
         fullImagePuzzleOne.layer.borderWidth = 1
         fullImagePuzzleOne.layer.borderColor =  UIColor.blue.cgColor
         
         // Properties of puzzle Piece
-        oneSyllablePuzzle.image = UIImage(named: "bench")
+        oneSyllablePuzzle.image = UIImage(named: selectedFlashcard.image!)
         
-        //Invisible Buttton behind the Puzzle Piece that triggers animation
+        //Invisible Buttton behind the Puzzle Piece that triggers animation set programtically
         oneSyllablePuzzleButton = UIButton()
         oneSyllablePuzzleButton.frame.size.width = oneSyllablePuzzle.frame.size.width
         oneSyllablePuzzleButton.frame.size.height = oneSyllablePuzzle.frame.size.height

@@ -30,12 +30,18 @@ class PuzzleViewController2s: UIViewController {
         
         // Image for right puzzle Piece
         rightPuzzlePiece.image = UIImage(named: "apple")
-        let maskRight = UIImageView(image: UIImage(named: "puzzle-1"))
+        let maskRight = UIImageView()
+//        maskRight.contentMode = .scaleAspectFit
+        maskRight.image = UIImage(named: "puzzle-2pc-2")
+        maskRight.frame = rightPuzzlePiece.bounds
         rightPuzzlePiece.mask = maskRight
         
         // Image for left puzzle Piece
         leftPuzzlePiece.image = UIImage(named: "apple")
-        let maskLeft = UIImageView(image: UIImage(named: "puzzle-2"))
+        let maskLeft = UIImageView()
+        maskLeft.contentMode = .scaleToFill
+        maskLeft.image = UIImage(named: "puzzle-2pc-1")
+        maskLeft.frame = leftPuzzlePiece.bounds
         leftPuzzlePiece.mask = maskLeft
         
         //Invisible Buttton behind the right puzzle Piece that triggers animation

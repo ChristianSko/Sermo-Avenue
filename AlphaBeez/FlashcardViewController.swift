@@ -245,4 +245,5 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
             }
         }
     }
+    
 }
