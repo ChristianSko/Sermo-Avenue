@@ -17,7 +17,7 @@ class PuzzleViewController3s: UIViewController {
     @IBOutlet weak var bottomLeftPuzzlePiece: UIImageView!
     @IBOutlet weak var fullImagePuzzleThree: UIImageView!
     
-    
+    // Invisibles buttons set programtically
     var upperLeftPuzzlePieceButton: UIButton!
     var bottomLeftPuzzlePieceButton: UIButton!
     var rightPuzzlePieceButton: UIButton!
@@ -34,22 +34,28 @@ class PuzzleViewController3s: UIViewController {
         
         // Image for right puzzle Piece
         rightPuzzlePiece.image = UIImage(named: "apple")
-        let maskRight = UIImageView(image: UIImage(named: "puzzle-1"))
+        let maskRight = UIImageView()
+        maskRight.contentMode = .scaleAspectFit
+        maskRight.image = UIImage(named: "puzzle-3pc-1")
+        maskRight.frame = rightPuzzlePiece.bounds
         rightPuzzlePiece.mask = maskRight
         
         // Image for upper left puzzle Piece
         upperLeftPuzzlePiece.image = UIImage(named: "apple")
-        let maskTop = UIImageView(image: UIImage(named: "puzzle-2"))
-        upperLeftPuzzlePiece.mask = maskTop
-        
+        let maskTopLeft = UIImageView()
+        maskTopLeft.contentMode = .scaleAspectFit
+        maskTopLeft.image = UIImage(named: "puzzle-3pc-2")
+        maskTopLeft.frame = upperLeftPuzzlePiece.bounds
+        upperLeftPuzzlePiece.mask = maskTopLeft
         
         // Image for bottom left puzzle Piece
         bottomLeftPuzzlePiece.image = UIImage(named: "apple")
-        let maskLeft = UIImageView(image: UIImage(named: "puzzle-3"))
-        bottomLeftPuzzlePiece.mask = maskLeft
+        let maskBottomLeft = UIImageView()
+        maskBottomLeft.contentMode = .scaleAspectFit
+        maskBottomLeft.image = UIImage(named: "puzzle-3pc-3")
+        maskBottomLeft.frame = bottomLeftPuzzlePiece.bounds
+        bottomLeftPuzzlePiece.mask = maskBottomLeft
     
-        
-        
         //Invisible Buttton behind the right puzzle Piece that triggers animation
         rightPuzzlePieceButton = UIButton()
         rightPuzzlePieceButton.frame.size.width = rightPuzzlePiece.frame.size.width
@@ -97,7 +103,7 @@ class PuzzleViewController3s: UIViewController {
                             // This merges two animations scale & move
                             var concatinatedAnimation = CGAffineTransform.identity
                             concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                            concatinatedAnimation = concatinatedAnimation.translatedBy(x: -131, y: -6)
+                            concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: -6)
                             self.rightPuzzlePiece.transform = concatinatedAnimation
 
                         case 1:
@@ -133,7 +139,7 @@ class PuzzleViewController3s: UIViewController {
                                 // This merges two animations scale & move
                                 var concatinatedAnimation = CGAffineTransform.identity
                                 concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                                concatinatedAnimation = concatinatedAnimation.translatedBy(x: 131, y: 30)
+                                concatinatedAnimation = concatinatedAnimation.translatedBy(x: 132, y: 31)
                                 self.upperLeftPuzzlePiece.transform = concatinatedAnimation
 
                             case 1:
@@ -169,7 +175,7 @@ class PuzzleViewController3s: UIViewController {
                             // This merges two animations scale & move
                             var concatinatedAnimation = CGAffineTransform.identity
                             concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                            concatinatedAnimation = concatinatedAnimation.translatedBy(x: 131, y: -42)
+                            concatinatedAnimation = concatinatedAnimation.translatedBy(x: 131, y: -43)
                             self.bottomLeftPuzzlePiece.transform = concatinatedAnimation
 
                         case 1:

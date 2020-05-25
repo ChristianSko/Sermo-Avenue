@@ -30,7 +30,7 @@ class PuzzleViewController1s: UIViewController {
         // Properties of puzzle Piece
         oneSyllablePuzzle.image = UIImage(named: "bench")
         
-        //Invisible Buttton behind the Puzzle Piece that triggers animation
+        //Invisible Buttton behind the Puzzle Piece that triggers animation set programtically
         oneSyllablePuzzleButton = UIButton()
         oneSyllablePuzzleButton.frame.size.width = oneSyllablePuzzle.frame.size.width
         oneSyllablePuzzleButton.frame.size.height = oneSyllablePuzzle.frame.size.height
