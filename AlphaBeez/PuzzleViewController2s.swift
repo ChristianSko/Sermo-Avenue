@@ -49,9 +49,9 @@ class PuzzleViewController2s: UIViewController {
         rightPuzzlePieceButton.frame.size.width = rightPuzzlePiece.frame.size.width
         rightPuzzlePieceButton.frame.size.height = rightPuzzlePiece.frame.size.height
         rightPuzzlePieceButton.center = rightPuzzlePiece.center
-        //Adding Border for testing purpose
-        rightPuzzlePieceButton.layer.borderWidth = 3
-        rightPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
+        //Adding Border for testing purpose, uncomment for testing size
+//        rightPuzzlePieceButton.layer.borderWidth = 3
+//        rightPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
         rightPuzzlePieceButton.addTarget(self, action: #selector(self.tappedRightPuzzlePiece(sender:)), for: .touchUpInside)
         view.addSubview(rightPuzzlePieceButton)
         
@@ -60,9 +60,9 @@ class PuzzleViewController2s: UIViewController {
         leftPuzzlePieceButton.frame.size.width = leftPuzzlePiece.frame.size.width
         leftPuzzlePieceButton.frame.size.height = leftPuzzlePiece.frame.size.height
         leftPuzzlePieceButton.center = leftPuzzlePiece.center
-        //Adding Border for testing purpose
-        leftPuzzlePieceButton.layer.borderWidth = 3
-        leftPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
+        //Adding Border for testing purpose, uncomment for testing size
+//        leftPuzzlePieceButton.layer.borderWidth = 3
+//        leftPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
         leftPuzzlePieceButton.addTarget(self, action: #selector(self.tappedLeftPuzzlePiece(sender:)), for: .touchUpInside)
         view.addSubview(leftPuzzlePieceButton)
         
