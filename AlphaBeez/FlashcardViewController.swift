@@ -228,13 +228,27 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         print("Audio Record Encode Error")
     }
     
-    
+    // Prepare for the segue and passing the selected Flashcard to one of the three puzzles
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let syllables: Int = Int(selectedFlashcard.syllables)
+            print(syllables)
+            if syllables == 1 {
+                let vcOne = segue.destination as! PuzzleViewController1s
+                vcOne.selectedFlashcard = selectedFlashcard
+            } else if syllables == 2 {
+                let vcTwo = segue.destination as! PuzzleViewController2s
+                vcTwo.selectedFlashcard = selectedFlashcard
+            } else if syllables == 3 {
+                let vcThree = segue.destination as! PuzzleViewController3s
+                vcThree.selectedFlashcard = selectedFlashcard
+            }
+        
+    }
 
     @IBAction func puzzleTouched(_ sender: UIButton) {
-
 // sending to PuzzleViewController1s, PuzzleViewController2s or PuzzleViewController3s based on puzzleSyllableType
+        let syllables: Int = Int(selectedFlashcard.syllables)
         
-        if let syllables: Int = Int(selectedFlashcard.syllables) {
             print(syllables)
             if syllables == 1 {
                 performSegue(withIdentifier: "puzzleOne", sender: self)
@@ -243,7 +257,7 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
             } else if syllables == 3 {
                 performSegue(withIdentifier: "puzzleThree", sender: self)
             }
-        }
+        
     }
     
 }

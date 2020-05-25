@@ -19,6 +19,9 @@ class PuzzleViewController2s: UIViewController {
     var rightPuzzlePieceButton: UIButton!
     var currentAnimation = 0
     
+    // The Flashcard that the user have picked from the collectionView
+    var selectedFlashcard = Flashcard()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
