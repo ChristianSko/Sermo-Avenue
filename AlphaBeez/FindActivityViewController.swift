@@ -22,6 +22,7 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
                 imagePicker.allowsEditing = true
     }
     
+//    update the square image view with the image picked (from gallery or camera)
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 
           let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
