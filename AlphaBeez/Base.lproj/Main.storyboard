@@ -535,7 +535,6 @@
         <!--Puzzle View Controller 3s-->
         <scene sceneID="rmb-vS-V41">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Av4-jl-qid" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="puzzle3" id="UFO-OY-pgl" customClass="PuzzleViewController3s" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iZs-55-Pei">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
@@ -588,6 +587,7 @@
                         <outlet property="upperLeftPuzzlePiece" destination="Ksq-2C-q9K" id="maK-wr-nWu"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Av4-jl-qid" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2386" y="2448"/>
         </scene>
@@ -608,6 +608,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUx-kE-mO1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138.61607142857142" y="137.68115942028987"/>
+        </scene>
+        <!--Find Activity View Controller-->
+        <scene sceneID="w7b-lz-372">
+            <objects>
+                <viewController id="zne-IW-B5U" customClass="FindActivityViewController" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="esy-fN-rfc">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="SrP-qX-pBx">
+                                <rect key="frame" x="115" y="157" width="666" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="97e-jk-3bK">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <color key="backgroundColor" red="0.14901960784313725" green="0.72156862745098038" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="344-TN-Dwg"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="9xz-3f-fBq" appends="YES" id="c4K-A1-Cdb"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ji1-Pn-3h6">
+                                        <rect key="frame" x="233" y="0.0" width="200" height="200"/>
+                                        <color key="backgroundColor" red="0.94901960784313721" green="0.1803921568627451" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="FJ4-K2-Gj3"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="doz-xp-f3d" appends="YES" id="Ngh-7N-a2H"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6RT-LX-aVP">
+                                        <rect key="frame" x="466" y="0.0" width="200" height="200"/>
+                                        <color key="backgroundColor" red="1" green="0.96862745098039216" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="C51-UB-vXs"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="hk2-rB-jbA" appends="YES" id="RwU-oP-0kY"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SrP-qX-pBx" firstAttribute="top" secondItem="0cK-J5-cGD" secondAttribute="top" constant="157" id="3Re-7x-zAo"/>
+                            <constraint firstItem="0cK-J5-cGD" firstAttribute="bottom" secondItem="SrP-qX-pBx" secondAttribute="bottom" constant="36" id="nLJ-HF-7Nz"/>
+                            <constraint firstItem="SrP-qX-pBx" firstAttribute="centerX" secondItem="esy-fN-rfc" secondAttribute="centerX" id="ssP-sQ-eXB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0cK-J5-cGD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5k1-7q-jDp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9xz-3f-fBq">
+                    <connections>
+                        <action selector="tap:" destination="zne-IW-B5U" id="5kt-4j-pSW"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="doz-xp-f3d">
+                    <connections>
+                        <action selector="tap:" destination="zne-IW-B5U" id="P6R-Tk-tCV"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hk2-rB-jbA">
+                    <connections>
+                        <action selector="tap:" destination="zne-IW-B5U" id="Izz-KQ-ljf"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1511" y="3468"/>
         </scene>
     </scenes>
     <resources>

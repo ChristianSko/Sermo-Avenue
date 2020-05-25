@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28410934247BFD16006959A9 /* FindActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28410933247BFD16006959A9 /* FindActivityViewController.swift */; };
 		D62373E1246C7BC7004652CA /* AHAP in Resources */ = {isa = PBXBuildFile; fileRef = D62373E0246C7BC7004652CA /* AHAP */; };
 		D6249AA0247825FE009B5BCB /* PuzzleViewController1s.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6249A9F247825FE009B5BCB /* PuzzleViewController1s.swift */; };
 		D6249AA224782613009B5BCB /* PuzzleViewController2s.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6249AA124782613009B5BCB /* PuzzleViewController2s.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28410933247BFD16006959A9 /* FindActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindActivityViewController.swift; sourceTree = "<group>"; };
 		D62373E0246C7BC7004652CA /* AHAP */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AHAP; sourceTree = "<group>"; };
 		D6249A9F247825FE009B5BCB /* PuzzleViewController1s.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController1s.swift; sourceTree = "<group>"; };
 		D6249AA124782613009B5BCB /* PuzzleViewController2s.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController2s.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				D6249A9F247825FE009B5BCB /* PuzzleViewController1s.swift */,
 				D6249AA124782613009B5BCB /* PuzzleViewController2s.swift */,
 				D6249AA324782629009B5BCB /* PuzzleViewController3s.swift */,
+				28410933247BFD16006959A9 /* FindActivityViewController.swift */,
 				FA1A98F2246ADAED0088B4E9 /* Assets.xcassets */,
 				D62373E0246C7BC7004652CA /* AHAP */,
 				FA1A98F4246ADAED0088B4E9 /* LaunchScreen.storyboard */,
@@ -178,6 +181,7 @@
 				FA1A98E7246ADAEC0088B4E9 /* AppDelegate.swift in Sources */,
 				D6249AA424782629009B5BCB /* PuzzleViewController3s.swift in Sources */,
 				FA1A98F1246ADAEC0088B4E9 /* AlphaBeez.xcdatamodeld in Sources */,
+				28410934247BFD16006959A9 /* FindActivityViewController.swift in Sources */,
 				FA020063246B53DC00A2F0BD /* CategoryViewController.swift in Sources */,
 				FA1A98E9246ADAEC0088B4E9 /* SceneDelegate.swift in Sources */,
 				D6249AA224782613009B5BCB /* PuzzleViewController2s.swift in Sources */,
@@ -325,7 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T7664565ZX;
+				DEVELOPMENT_TEAM = 38AW9Y426V;
 				INFOPLIST_FILE = AlphaBeez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -343,7 +347,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T7664565ZX;
+				DEVELOPMENT_TEAM = 38AW9Y426V;
 				INFOPLIST_FILE = AlphaBeez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
