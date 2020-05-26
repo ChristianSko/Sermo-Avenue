@@ -34,6 +34,9 @@ class ViewController: UIViewController {
         
         loadFlashcards()
         
+        // Will hide the navigationController and leave only the back button!
+        navigationController!.hideNavigationItemBackground()
+        
 //        set Menù background image
         let backgroundMenuImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundMenuImage.image = UIImage(named: "background-menu")

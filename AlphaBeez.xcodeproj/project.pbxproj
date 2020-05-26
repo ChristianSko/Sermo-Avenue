@@ -25,6 +25,7 @@
 		FA90FCEB2479855C00E87B69 /* SaveToCoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90FCEA2479855C00E87B69 /* SaveToCoreDataViewController.swift */; };
 		FAA28E31247AC0AD00A2FCD2 /* database in Resources */ = {isa = PBXBuildFile; fileRef = FAA28E30247AC0AD00A2FCD2 /* database */; };
 		FABF36FB246CA42500F83300 /* FlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF36FA246CA42500F83300 /* FlashcardViewController.swift */; };
+		FAF3B497247D809000D2EE7E /* NavigationBarExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3B496247D809000D2EE7E /* NavigationBarExtention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		FA90FCEA2479855C00E87B69 /* SaveToCoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToCoreDataViewController.swift; sourceTree = "<group>"; };
 		FAA28E30247AC0AD00A2FCD2 /* database */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database; sourceTree = SOURCE_ROOT; };
 		FABF36FA246CA42500F83300 /* FlashcardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewController.swift; sourceTree = "<group>"; };
+		FAF3B496247D809000D2EE7E /* NavigationBarExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +94,7 @@
 				D6249AA124782613009B5BCB /* PuzzleViewController2s.swift */,
 				D6249AA324782629009B5BCB /* PuzzleViewController3s.swift */,
 				28410933247BFD16006959A9 /* FindActivityViewController.swift */,
-				28310EB2247D1DB0004BE772 /* ColourStruct.swift */,
+				FAF3B495247D7C5A00D2EE7E /* Extentions */,
 				FA1A98F2246ADAED0088B4E9 /* Assets.xcassets */,
 				D62373E0246C7BC7004652CA /* AHAP */,
 				FA1A98F4246ADAED0088B4E9 /* LaunchScreen.storyboard */,
@@ -101,6 +103,15 @@
 				FA1A98EF246ADAEC0088B4E9 /* AlphaBeez.xcdatamodeld */,
 			);
 			path = AlphaBeez;
+			sourceTree = "<group>";
+		};
+		FAF3B495247D7C5A00D2EE7E /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				28310EB2247D1DB0004BE772 /* ColourStruct.swift */,
+				FAF3B496247D809000D2EE7E /* NavigationBarExtention.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 				28310EB3247D1DB0004BE772 /* ColourStruct.swift in Sources */,
 				D6249AA0247825FE009B5BCB /* PuzzleViewController1s.swift in Sources */,
 				FA1A98EB246ADAEC0088B4E9 /* ViewController.swift in Sources */,
+				FAF3B497247D809000D2EE7E /* NavigationBarExtention.swift in Sources */,
 				FA020061246B534D00A2F0BD /* CustomCollectionViewCell.swift in Sources */,
 				FA90FCEB2479855C00E87B69 /* SaveToCoreDataViewController.swift in Sources */,
 				FA1A98E7246ADAEC0088B4E9 /* AppDelegate.swift in Sources */,
