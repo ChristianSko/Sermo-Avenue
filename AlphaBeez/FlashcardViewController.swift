@@ -21,6 +21,9 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
     // This is he Flashcard that is transferred from CategoryViewController (the one that the user tapped)
     var selectedFlashcard = Flashcard()
     
+    // Image that will replace the back button on the NavigationBar
+    let backImage = UIImage(named: "world")
+    
     // A haptic engine manages the connection to the haptic server.
     var engine: CHHapticEngine!
     
@@ -30,11 +33,17 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         return appDelegate.supportsHaptics
     }()
     
-  
+    // Back Button Image
+    let backButton = UIImage(named: "back")
     
-
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Changing the native back button with our custom one
+        self.navigationController?.navigationBar.backIndicatorImage = backButton
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButton
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         
         // Creating the HapticEngine
         creteEngine()

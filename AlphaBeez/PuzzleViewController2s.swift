@@ -41,8 +41,17 @@ class PuzzleViewController2s: UIViewController {
     //    To handle the playback
     var audioPlayer : AVAudioPlayer?
     
+    // Back Button Image
+    let backButton = UIImage(named: "back")
+    
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Changing the native back button with our custom one
+        self.navigationController?.navigationBar.backIndicatorImage = backButton
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButton
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         
         // Creating the HapticEngine
         creteEngine()

@@ -23,12 +23,24 @@ class ViewController: UIViewController {
     // Array that will hold all the Flashcards that we got back from the FetchRequest
     var allFlashcards = [Flashcard]()
     
+    // Back Button Image
+    let backButton = UIImage(named: "world")
+    
     var backgroundImage : [UIImage] = [
     UIImage(named: "background-home")!,
     UIImage(named: "background-market")!,
     UIImage(named: "background-park")!
     ]
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Changing the native back button with our custom one
+        self.navigationController?.navigationBar.backIndicatorImage = backButton
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButton
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+    }
 
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         

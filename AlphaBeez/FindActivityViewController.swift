@@ -11,9 +11,23 @@ import UIKit
 class FindActivityViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var currentImageView: UIImageView? = nil
+    
     var imagePicker = UIImagePickerController()
+    
     var selectedFlashcard = Flashcard()
+    
+    // Back Button Image
+    let backButton = UIImage(named: "back")
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Changing the native back button with our custom one
+        self.navigationController?.navigationBar.backIndicatorImage = backButton
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButton
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+    }
+    
+    // MARK: - ViewDiLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         

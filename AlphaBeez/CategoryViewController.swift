@@ -22,11 +22,24 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     // CustomFlowLayOut that will determine the
     let layout = UICollectionViewFlowLayout()
     
-//    cat background
+   // category background
     var categoryBackground = UIImage()
     
+    // Back Button Image
+    let backButton = UIImage(named: "world")
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Changing the native back button with our custom one
+        self.navigationController?.navigationBar.backIndicatorImage = backButton
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButton
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+    }
+    
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Defining the custom layout and then adding it to the collectionView
         layout.itemSize = CGSize(width: 200, height: 200)
         layout.scrollDirection = .horizontal
