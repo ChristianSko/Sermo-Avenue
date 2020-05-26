@@ -16,9 +16,6 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
     @IBOutlet weak var hapticButton: UIButton!
     @IBOutlet weak var cardNameLabel: UILabel!
     @IBOutlet weak var cameraButton: UIButton!
-    @IBOutlet weak var recordButton: UIButton!
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var puzzleButton: UIButton!
     
     // This is he Flashcard that is transferred from CategoryViewController (the one that the user tapped)
@@ -48,13 +45,13 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         
         if selectedFlashcard.category == "home" {
             puzzleButton.tintColor = .purple
-//            cameraButton.tintColor = .purple
+            cameraButton.tintColor = .purple
         } else if selectedFlashcard.category == "park" {
              puzzleButton.tintColor = .red
-//             cameraButton.tintColor = .red
+             cameraButton.tintColor = .red
         } else {
             puzzleButton.tintColor = .orange
-//            cameraButton.tintColor = .orange
+            cameraButton.tintColor = .orange
         }
     }
     
@@ -135,7 +132,13 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
     
     // Prepare for the segue and passing the selected Flashcard to one of the three puzzles
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let syllables: Int = Int(selectedFlashcard.syllables)
+        if segue.identifier == "camera" {
+            
+            let vc = segue.destination as! FindActivityViewController
+            vc.selectedFlashcard = selectedFlashcard
+        } else {
+            
+            let syllables: Int = Int(selectedFlashcard.syllables)
             print(syllables)
             if syllables == 1 {
                 let vcOne = segue.destination as! PuzzleViewController1s
@@ -147,7 +150,9 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
                 let vcThree = segue.destination as! PuzzleViewController3s
                 vcThree.selectedFlashcard = selectedFlashcard
             }
+        }
     }
+
 
     @IBAction func puzzleTouched(_ sender: UIButton) {
 // sending to PuzzleViewController1s, PuzzleViewController2s or PuzzleViewController3s based on puzzleSyllableType
@@ -161,6 +166,10 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
             } else if syllables == 3 {
                 performSegue(withIdentifier: "puzzleThree", sender: self)
             }
+    }
+    
+    @IBAction func cameraTouched(_ sender: UIButton) {
+        performSegue(withIdentifier: "camera", sender: self)
     }
     
 }

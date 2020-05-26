@@ -12,9 +12,12 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     
     var currentImageView: UIImageView? = nil
     var imagePicker = UIImagePickerController()
+    var selectedFlashcard = Flashcard()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(selectedFlashcard.name!)
         //        show picker
         imagePicker.delegate = self
                 
