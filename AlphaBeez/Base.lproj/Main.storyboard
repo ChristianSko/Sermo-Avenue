@@ -212,52 +212,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="soa-2a-JN5">
-                                <rect key="frame" x="94" y="144" width="708" height="149"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRk-K1-PmI">
-                                        <rect key="frame" x="0.0" y="0.0" width="205.5" height="149"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <state key="normal" title="Home">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="categoryButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iH3-pg-2lS"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1T-5Z-p1n">
-                                        <rect key="frame" x="251.5" y="0.0" width="205" height="149"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <state key="normal" title="Market">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="categoryButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZe-ld-g30"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGs-MP-wZW">
-                                        <rect key="frame" x="502.5" y="0.0" width="205.5" height="149"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <state key="normal" title="Park">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="categoryButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILx-hr-pn1"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1T-5Z-p1n">
+                                <rect key="frame" x="12" y="168" width="336" height="246"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="21"/>
+                                <state key="normal" image="category-market">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="categoryButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZe-ld-g30"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGs-MP-wZW">
+                                <rect key="frame" x="307" y="72" width="283" height="220"/>
+                                <state key="normal" image="category-park">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="categoryButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILx-hr-pn1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRk-K1-PmI">
+                                <rect key="frame" x="551" y="158" width="317" height="235"/>
+                                <state key="normal" image="category-home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="categoryButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iH3-pg-2lS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="soa-2a-JN5" secondAttribute="bottom" constant="100" id="Jo7-C0-Nv0"/>
-                            <constraint firstItem="soa-2a-JN5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Nya-7c-Eqw"/>
-                            <constraint firstItem="soa-2a-JN5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Pcr-nj-IPC"/>
-                            <constraint firstItem="soa-2a-JN5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aMX-mG-dab"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="soa-2a-JN5" secondAttribute="trailing" constant="50" id="ekt-PZ-zxU"/>
+                            <constraint firstItem="sRk-K1-PmI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="114" id="9cT-rf-eAa"/>
+                            <constraint firstItem="sRk-K1-PmI" firstAttribute="leading" secondItem="U1T-5Z-p1n" secondAttribute="trailing" constant="208" id="AZi-Ni-RPD"/>
+                            <constraint firstAttribute="trailing" secondItem="sRk-K1-PmI" secondAttribute="trailing" constant="28" id="Adb-MS-0SN"/>
+                            <constraint firstItem="U1T-5Z-p1n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="Cuu-xy-NRC"/>
+                            <constraint firstItem="KGs-MP-wZW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="263" id="IDC-5D-aNA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KGs-MP-wZW" secondAttribute="bottom" constant="101" id="IkI-2d-A1g"/>
+                            <constraint firstItem="KGs-MP-wZW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="Raf-qJ-9Kf"/>
+                            <constraint firstAttribute="bottom" secondItem="U1T-5Z-p1n" secondAttribute="bottom" id="Waw-te-6NE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KGs-MP-wZW" secondAttribute="trailing" constant="262" id="WtA-Ac-T4H"/>
+                            <constraint firstItem="U1T-5Z-p1n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="124" id="jtN-Nb-tQG"/>
+                            <constraint firstItem="sRk-K1-PmI" firstAttribute="leading" secondItem="U1T-5Z-p1n" secondAttribute="trailing" constant="203" id="wGj-sE-iHf"/>
+                            <constraint firstItem="sRk-K1-PmI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yJ3-1I-vqG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -373,37 +370,18 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AhY-Ap-teG">
-                                        <rect key="frame" x="726" y="0.0" width="50" height="152"/>
+                                        <rect key="frame" x="726" y="16" width="50" height="120"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCE-qi-OSv">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <state key="normal" title="Puzzle"/>
                                                 <connections>
                                                     <action selector="puzzleTouched:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="CGE-f2-rqP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMq-s1-syi">
-                                                <rect key="frame" x="0.0" y="34.5" width="50" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" image="camera.fill" catalog="system"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77e-ce-hAh">
-                                                <rect key="frame" x="0.0" y="69" width="50" height="14"/>
-                                                <state key="normal" image="mic.fill" catalog="system"/>
-                                                <connections>
-                                                    <action selector="recordAudio:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="4DB-mO-zWW"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyS-rp-phs">
-                                                <rect key="frame" x="0.0" y="103" width="50" height="14.5"/>
-                                                <state key="normal" image="stop.fill" catalog="system"/>
-                                                <connections>
-                                                    <action selector="stopAudio:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="AyH-T0-SV9"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jj3-vZ-5X7">
-                                                <rect key="frame" x="0.0" y="137.5" width="50" height="14.5"/>
-                                                <state key="normal" image="play.fill" catalog="system"/>
+                                                <rect key="frame" x="0.0" y="70" width="50" height="50"/>
+                                                <state key="normal" image="search"/>
                                                 <connections>
                                                     <action selector="playAudio:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="klX-aw-yzj"/>
                                                 </connections>
@@ -430,13 +408,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Jf9-Cx-j0L"/>
                     <connections>
-                        <outlet property="cameraButton" destination="fMq-s1-syi" id="UXY-ai-28O"/>
                         <outlet property="cardNameLabel" destination="43e-vk-5Ee" id="hh4-u7-7y2"/>
                         <outlet property="hapticButton" destination="UH6-ev-hnO" id="Q2c-nO-4JQ"/>
                         <outlet property="playButton" destination="jj3-vZ-5X7" id="rQE-Fe-opv"/>
                         <outlet property="puzzleButton" destination="nCE-qi-OSv" id="LFR-Vo-fqf"/>
-                        <outlet property="recordButton" destination="77e-ce-hAh" id="ESz-s1-rIk"/>
-                        <outlet property="stopButton" destination="dyS-rp-phs" id="xZ0-j4-Jr2"/>
                         <segue destination="syO-Qf-ldC" kind="show" identifier="puzzleOne" id="OBM-46-CrL"/>
                         <segue destination="1mP-YR-Eha" kind="show" identifier="puzzleTwo" id="0DD-1n-XYm"/>
                         <segue destination="UFO-OY-pgl" kind="show" identifier="puzzleThree" id="P3D-BD-CkI"/>
@@ -686,9 +661,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera.fill" catalog="system" width="128" height="96"/>
-        <image name="mic.fill" catalog="system" width="108" height="128"/>
-        <image name="play.fill" catalog="system" width="116" height="128"/>
-        <image name="stop.fill" catalog="system" width="128" height="113"/>
+        <image name="category-home" width="317" height="245"/>
+        <image name="category-market" width="316" height="233"/>
+        <image name="category-park" width="300" height="227"/>
+        <image name="search" width="50" height="50"/>
     </resources>
 </document>

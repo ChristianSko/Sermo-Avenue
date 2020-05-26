@@ -27,6 +27,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         loadFlashcards()
+        
+//        set background image
+        let backgroundMenuImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundMenuImage.image = UIImage(named: "background-menu")
+        backgroundMenuImage.contentMode = UIView.ContentMode.scaleAspectFit
+        self.view.insertSubview(backgroundMenuImage, at: 0)
+
     }
     
     // MARK: - PrepareForSegue

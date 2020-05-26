@@ -110,7 +110,7 @@ class PuzzleViewController3s: UIViewController {
                 concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: -6)
                 self.rightPuzzlePiece.transform = concatinatedAnimation
                 
-                selectedFlashcard.
+//                selectedFlashcard.
                 
             case 1:
                 self.rightPuzzlePiece.transform = .identity
