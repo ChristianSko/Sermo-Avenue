@@ -204,7 +204,7 @@
             </objects>
             <point key="canvasLocation" x="879.91071428571422" y="-778.26086956521749"/>
         </scene>
-        <!--Categories-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
@@ -244,7 +244,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="sRk-K1-PmI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="114" id="9cT-rf-eAa"/>
-                            <constraint firstItem="sRk-K1-PmI" firstAttribute="leading" secondItem="U1T-5Z-p1n" secondAttribute="trailing" constant="208" id="AZi-Ni-RPD"/>
+                            <constraint firstItem="sRk-K1-PmI" firstAttribute="leading" secondItem="U1T-5Z-p1n" secondAttribute="trailing" constant="203" id="AZi-Ni-RPD"/>
                             <constraint firstAttribute="trailing" secondItem="sRk-K1-PmI" secondAttribute="trailing" constant="28" id="Adb-MS-0SN"/>
                             <constraint firstItem="U1T-5Z-p1n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="Cuu-xy-NRC"/>
                             <constraint firstItem="KGs-MP-wZW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="263" id="IDC-5D-aNA"/>
@@ -258,7 +258,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Categories" id="qin-SW-eDu">
+                    <navigationItem key="navigationItem" id="qin-SW-eDu">
                         <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="cy8-i2-Vrq">
                             <connections>
                                 <segue destination="wNL-4f-hrl" kind="show" identifier="ss" id="k0h-ru-aUh"/>
