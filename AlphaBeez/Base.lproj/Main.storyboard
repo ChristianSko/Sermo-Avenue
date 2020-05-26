@@ -370,18 +370,18 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AhY-Ap-teG">
-                                        <rect key="frame" x="726" y="16" width="50" height="120"/>
+                                        <rect key="frame" x="726" y="11" width="50" height="130"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCE-qi-OSv">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                <state key="normal" title="Puzzle"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCE-qi-OSv">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="55"/>
+                                                <state key="normal" title="Puzzle" image="puzzle-button"/>
                                                 <connections>
                                                     <action selector="puzzleTouched:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="CGE-f2-rqP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jj3-vZ-5X7">
-                                                <rect key="frame" x="0.0" y="70" width="50" height="50"/>
-                                                <state key="normal" image="search"/>
+                                                <rect key="frame" x="0.0" y="75" width="50" height="55"/>
+                                                <state key="normal" image="search-button"/>
                                                 <connections>
                                                     <action selector="playAudio:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="klX-aw-yzj"/>
                                                 </connections>
@@ -664,6 +664,7 @@
         <image name="category-home" width="317" height="245"/>
         <image name="category-market" width="316" height="233"/>
         <image name="category-park" width="300" height="227"/>
-        <image name="search" width="50" height="50"/>
+        <image name="puzzle-button" width="50" height="55"/>
+        <image name="search-button" width="50" height="50"/>
     </resources>
 </document>
