@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreHaptics
+import AVFoundation
 
 class PuzzleViewController2s: UIViewController {
     
@@ -18,12 +20,29 @@ class PuzzleViewController2s: UIViewController {
     var leftPuzzlePieceButton: UIButton!
     var rightPuzzlePieceButton: UIButton!
     var currentAnimation = 0
+    var syllableCounter = 1
     
     // The Flashcard that the user have picked from the collectionView
     var selectedFlashcard = Flashcard()
     
+    
+    // A haptic engine manages the connection to the haptic server.
+    var engine: CHHapticEngine!
+    
+    // Maintain a variable to check for Core Haptics compatibility on device.
+    lazy var supportsHaptics: Bool = {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.supportsHaptics
+    }()
+    
+    //    To handle the playback
+    var audioPlayer : AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Creating the HapticEngine
+        creteEngine()
         
         // Properties for centered blurred image of puzzle 1
         fullImagePuzzleTwo.image = UIImage(named: selectedFlashcard.image!)
@@ -72,6 +91,75 @@ class PuzzleViewController2s: UIViewController {
 
 
     }
+    
+    
+    func creteEngine() {
+        if !supportsHaptics {
+            return
+        } else {
+            // Create and configure a haptic engine.
+             do {
+                 engine = try CHHapticEngine()
+             } catch let error {
+                 print("Engine Creation Error: \(error)")
+             }
+             
+             if engine == nil {
+                 print("Failed to create engine!")
+             }
+             
+             // The stopped handler alerts you of engine stoppage due to external causes.
+             engine.stoppedHandler = { reason in
+                 print("The engine stopped for reason: \(reason.rawValue)")
+                 switch reason {
+                 case .audioSessionInterrupt: print("Audio session interrupt")
+                 case .applicationSuspended: print("Application suspended")
+                 case .idleTimeout: print("Idle timeout")
+                 case .systemError: print("System error")
+                 case .notifyWhenFinished: print("Playback finished")
+                 @unknown default:
+                     print("Unknown error")
+                 }
+             }
+             
+             // The reset handler provides an opportunity for your app to restart the engine in case of failure.
+             engine.resetHandler = {
+                 // Try restarting the engine.
+                 print("The engine reset --> Restarting now!")
+                 do {
+                     try self.engine.start()
+                 } catch {
+                     print("Failed to restart the engine: \(error)")
+                 }
+             }
+        }
+    }
+    
+    func playHapticsFile(name filename: String) {
+        // If the device doesn't support Core Haptics, abort.
+        if !supportsHaptics {
+            return
+        }
+        
+        // Express the path to the AHAP file before attempting to load it.
+        guard let path = Bundle.main.path(forResource: filename, ofType: "ahap") else {
+            return
+        }
+        
+        do {
+            // Start the engine in case it's idle.
+            try engine.start()
+            
+            // Tell the engine to play a pattern.
+            try engine.playPattern(from: URL(fileURLWithPath: path))
+            
+        } catch { // Engine startup errors
+            print("An error occured playing \(filename): \(error).")
+        }
+    }
+
+    
+    
 //       Animation function for right puzzle piece get triggered en tapping button
         @objc func tappedRightPuzzlePiece(sender: UIButton) {
                         
@@ -86,7 +174,14 @@ class PuzzleViewController2s: UIViewController {
                             concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
                             concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: -6)
                             self.rightPuzzlePiece.transform = concatinatedAnimation
-
+                            
+                            if self.syllableCounter == 1 {
+                                self.playHapticsFile(name: self.selectedFlashcard.name! + "-s1")
+                                self.syllableCounter += 1
+                            } else {
+                                self.playHapticsFile(name: self.selectedFlashcard.name! + "-s2")
+                            }
+                            
                         case 1:
                             self.rightPuzzlePiece.transform = .identity
                             
@@ -122,6 +217,13 @@ class PuzzleViewController2s: UIViewController {
                             concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
                             concatinatedAnimation = concatinatedAnimation.translatedBy(x: 132, y: -6)
                             self.leftPuzzlePiece.transform = concatinatedAnimation
+                            
+                            if self.syllableCounter == 1 {
+                                self.playHapticsFile(name: self.selectedFlashcard.name! + "-s1")
+                                self.syllableCounter += 1
+                            } else {
+                                self.playHapticsFile(name: self.selectedFlashcard.name! + "-s2")
+                            }
 
                         case 1:
                             self.leftPuzzlePiece.transform = .identity

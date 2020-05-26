@@ -51,7 +51,7 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         
 //        Disable play and stop button, in order to enable the record one
         playButton.isEnabled = false
-        stopButton.isEnabled = false
+//        stopButton.isEnabled = false
                
 //              Getting URL path for audio
                let directoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
