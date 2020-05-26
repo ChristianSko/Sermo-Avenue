@@ -43,6 +43,7 @@ class ViewController: UIViewController {
             segue.identifier == "toCategory" {
             var chosenCategory = [Flashcard]()
             
+            
             switch button {
             case homeButton:
                 chosenCategory = getFlashcardsForCategory(category: "home")
@@ -60,6 +61,7 @@ class ViewController: UIViewController {
     // Will transfer to the chosen category screen with the flashcards
     @IBAction func categoryButtonTapped(_ sender: UIButton) {
         performSegue(withIdentifier: "toCategory", sender: sender)
+        
     }
     
     //MARK: -  Will load all the items from our Database
@@ -80,6 +82,15 @@ class ViewController: UIViewController {
             }
         }
         return array
+    }
+    
+    func changeBackground() {
+        //            category background image
+        let categoryBackground = UIImageView(frame: UIScreen.main.bounds)
+        categoryBackground.contentMode = UIView.ContentMode.scaleAspectFit
+        self.view.insertSubview(categoryBackground, at: 0)
+        categoryBackground.image = UIImage(named: "background-home")
+
     }
     
 }
