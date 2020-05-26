@@ -37,6 +37,14 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if selectedFlashcard.category == "home" {
+                   currentImageView?.layer.borderColor = UIColor.purple as! CGColor
+                     } else if selectedFlashcard.category == "park" {
+                   currentImageView?.layer.borderColor = UIColor.red as! CGColor
+                     } else {
+                   currentImageView?.layer.borderColor = UIColor.orange as! CGColor
+                     }
+        
 //        text label
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
         label.center = CGPoint(x: 414, y: 80)
@@ -64,6 +72,8 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
 
           let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
           currentImageView?.image = pickedImage
+          currentImageView?.layer.borderWidth = 20
+          currentImageView?.layer.cornerRadius = 20
           dismiss(animated: true, completion: nil)
       }
     

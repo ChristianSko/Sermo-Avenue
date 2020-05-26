@@ -626,9 +626,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="SrP-qX-pBx">
                                 <rect key="frame" x="115" y="201" width="666" height="156"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="97e-jk-3bK">
+                                    <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-faded" translatesAutoresizingMaskIntoConstraints="NO" id="97e-jk-3bK">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="156"/>
-                                        <color key="backgroundColor" red="0.14901960784313725" green="0.72156862745098038" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="344-TN-Dwg"/>
@@ -637,9 +637,8 @@
                                             <outletCollection property="gestureRecognizers" destination="9xz-3f-fBq" appends="YES" id="c4K-A1-Cdb"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ji1-Pn-3h6">
+                                    <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-faded" translatesAutoresizingMaskIntoConstraints="NO" id="ji1-Pn-3h6">
                                         <rect key="frame" x="233" y="0.0" width="200" height="156"/>
-                                        <color key="backgroundColor" red="0.94901960784313721" green="0.1803921568627451" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="FJ4-K2-Gj3"/>
@@ -648,9 +647,8 @@
                                             <outletCollection property="gestureRecognizers" destination="doz-xp-f3d" appends="YES" id="Ngh-7N-a2H"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6RT-LX-aVP">
+                                    <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-faded" translatesAutoresizingMaskIntoConstraints="NO" id="6RT-LX-aVP">
                                         <rect key="frame" x="466" y="0.0" width="200" height="156"/>
-                                        <color key="backgroundColor" red="1" green="0.96862745098039216" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="C51-UB-vXs"/>
@@ -726,6 +724,7 @@
     </scenes>
     <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
+        <image name="camera-faded" width="138" height="112"/>
         <image name="category-home" width="317" height="245"/>
         <image name="category-market" width="316" height="233"/>
         <image name="category-park" width="300" height="227"/>
