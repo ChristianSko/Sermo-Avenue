@@ -214,7 +214,7 @@ class PuzzleViewController3s: UIViewController {
             print("Test")
             
             //Uncomment for testing animation several times in arow
-            //sender.isHidden = false
+            sender.isHidden = false
             
         }
         
@@ -261,7 +261,7 @@ class PuzzleViewController3s: UIViewController {
             print("Test")
             
             // Uncomment for testing animation several times in arow
-            //  sender.isHidden = false
+              sender.isHidden = false
             
         }
         
@@ -307,7 +307,7 @@ class PuzzleViewController3s: UIViewController {
             print("Test")
             
             // Uncomment for testing animation several times in arow
-            //            sender.isHidden = false
+                        sender.isHidden = false
             
         }
         
