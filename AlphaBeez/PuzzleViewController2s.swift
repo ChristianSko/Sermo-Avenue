@@ -53,7 +53,7 @@ class PuzzleViewController2s: UIViewController {
         // Image for right puzzle Piece
         rightPuzzlePiece.image = UIImage(named: selectedFlashcard.image!)
         let maskRight = UIImageView()
-//        maskRight.contentMode = .scaleAspectFit
+        //        maskRight.contentMode = .scaleAspectFit
         maskRight.image = UIImage(named: "puzzle-2pc-2")
         maskRight.frame = rightPuzzlePiece.bounds
         rightPuzzlePiece.mask = maskRight
@@ -72,8 +72,8 @@ class PuzzleViewController2s: UIViewController {
         rightPuzzlePieceButton.frame.size.height = rightPuzzlePiece.frame.size.height
         rightPuzzlePieceButton.center = rightPuzzlePiece.center
         //Adding Border for testing purpose, uncomment for testing size
-//        rightPuzzlePieceButton.layer.borderWidth = 3
-//        rightPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
+        //        rightPuzzlePieceButton.layer.borderWidth = 3
+        //        rightPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
         rightPuzzlePieceButton.addTarget(self, action: #selector(self.tappedRightPuzzlePiece(sender:)), for: .touchUpInside)
         view.addSubview(rightPuzzlePieceButton)
         
@@ -83,13 +83,13 @@ class PuzzleViewController2s: UIViewController {
         leftPuzzlePieceButton.frame.size.height = leftPuzzlePiece.frame.size.height
         leftPuzzlePieceButton.center = leftPuzzlePiece.center
         //Adding Border for testing purpose, uncomment for testing size
-//        leftPuzzlePieceButton.layer.borderWidth = 3
-//        leftPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
+        //        leftPuzzlePieceButton.layer.borderWidth = 3
+        //        leftPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
         leftPuzzlePieceButton.addTarget(self, action: #selector(self.tappedLeftPuzzlePiece(sender:)), for: .touchUpInside)
         view.addSubview(leftPuzzlePieceButton)
         
-
-
+        
+        
     }
     
     
@@ -98,40 +98,40 @@ class PuzzleViewController2s: UIViewController {
             return
         } else {
             // Create and configure a haptic engine.
-             do {
-                 engine = try CHHapticEngine()
-             } catch let error {
-                 print("Engine Creation Error: \(error)")
-             }
-             
-             if engine == nil {
-                 print("Failed to create engine!")
-             }
-             
-             // The stopped handler alerts you of engine stoppage due to external causes.
-             engine.stoppedHandler = { reason in
-                 print("The engine stopped for reason: \(reason.rawValue)")
-                 switch reason {
-                 case .audioSessionInterrupt: print("Audio session interrupt")
-                 case .applicationSuspended: print("Application suspended")
-                 case .idleTimeout: print("Idle timeout")
-                 case .systemError: print("System error")
-                 case .notifyWhenFinished: print("Playback finished")
-                 @unknown default:
-                     print("Unknown error")
-                 }
-             }
-             
-             // The reset handler provides an opportunity for your app to restart the engine in case of failure.
-             engine.resetHandler = {
-                 // Try restarting the engine.
-                 print("The engine reset --> Restarting now!")
-                 do {
-                     try self.engine.start()
-                 } catch {
-                     print("Failed to restart the engine: \(error)")
-                 }
-             }
+            do {
+                engine = try CHHapticEngine()
+            } catch let error {
+                print("Engine Creation Error: \(error)")
+            }
+            
+            if engine == nil {
+                print("Failed to create engine!")
+            }
+            
+            // The stopped handler alerts you of engine stoppage due to external causes.
+            engine.stoppedHandler = { reason in
+                print("The engine stopped for reason: \(reason.rawValue)")
+                switch reason {
+                case .audioSessionInterrupt: print("Audio session interrupt")
+                case .applicationSuspended: print("Application suspended")
+                case .idleTimeout: print("Idle timeout")
+                case .systemError: print("System error")
+                case .notifyWhenFinished: print("Playback finished")
+                @unknown default:
+                    print("Unknown error")
+                }
+            }
+            
+            // The reset handler provides an opportunity for your app to restart the engine in case of failure.
+            engine.resetHandler = {
+                // Try restarting the engine.
+                print("The engine reset --> Restarting now!")
+                do {
+                    try self.engine.start()
+                } catch {
+                    print("Failed to restart the engine: \(error)")
+                }
+            }
         }
     }
     
@@ -157,106 +157,112 @@ class PuzzleViewController2s: UIViewController {
             print("An error occured playing \(filename): \(error).")
         }
     }
-
     
     
-//       Animation function for right puzzle piece get triggered en tapping button
-        @objc func tappedRightPuzzlePiece(sender: UIButton) {
-                        
-                        sender.isHidden = true
-                    
-                        UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
-
-                        switch self.currentAnimation {
-                        case 0:
-                            
-                            var concatinatedAnimation = CGAffineTransform.identity
-                            concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                            concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: -6)
-                            self.rightPuzzlePiece.transform = concatinatedAnimation
-                            
-                            if self.syllableCounter == 1 {
-                                self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
-                                self.syllableCounter += 1
-                                print(self.selectedFlashcard.hapticPath! + "-s1")
-                            } else {
-                                self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s2")
-                            }
-                            
-                        case 1:
-                            self.rightPuzzlePiece.transform = .identity
-                            
-                        default:
-                            break
-                            }
-                        }) { (finished) in
-                            print("Test")
-                            
-    //                        Uncomment for testing animation several times in arow
-                            sender.isHidden = false
-
-                        }
-                        
-                        currentAnimation += 1
-                        
-                        if currentAnimation > 1 {
-                            currentAnimation = 0
-                        }
+    
+    //       Animation function for right puzzle piece get triggered en tapping button
+    @objc func tappedRightPuzzlePiece(sender: UIButton) {
+        
+        sender.isHidden = true
+        
+        UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
+            
+            switch self.currentAnimation {
+            case 0:
+                
+                var concatinatedAnimation = CGAffineTransform.identity
+                concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
+                concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: -6)
+                self.rightPuzzlePiece.transform = concatinatedAnimation
+                
+                
+                //Calls animation + haptic sound based on condition
+                if self.syllableCounter == 1 {
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
+                    self.syllableCounter += 1
+                    print(self.selectedFlashcard.hapticPath! + "-s1")
+                } else {
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s2")
+                }
+                
+            case 1:
+                self.rightPuzzlePiece.transform = .identity
+                
+            default:
+                break
             }
-    
-        // Animation function for left puzzle piece get triggered en tapping button
-        @objc func tappedLeftPuzzlePiece(sender: UIButton) {
-                        
-                        sender.isHidden = true
-                    
-                        UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
-
-                        switch self.currentAnimation {
-                        case 0:
-                            
-                            var concatinatedAnimation = CGAffineTransform.identity
-                            concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                            concatinatedAnimation = concatinatedAnimation.translatedBy(x: 132, y: -6)
-                            self.leftPuzzlePiece.transform = concatinatedAnimation
-                            
-                            if self.syllableCounter == 1 {
-                                self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
-                                self.syllableCounter += 1
-                                print(self.selectedFlashcard.hapticPath! + "-s1")
-                            } else {
-                                self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s2")
-                            }
-
-                        case 1:
-                            self.leftPuzzlePiece.transform = .identity
-                            
-                        default:
-                            break
-                            }
-                        }) { (finished) in
-                            print("Test")
-                            
-    //                        Uncomment for testing animation several times in arow
-                            sender.isHidden = false
-
-                        }
-                        
-                        currentAnimation += 1
-                        
-                        if currentAnimation > 1 {
-                            currentAnimation = 0
-                        }
-            }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        }) { (finished) in
+            print("Test")
+            
+            // Uncomment for testing animation several times in arow
+            // sender.isHidden = false
+            
+        }
+        
+        currentAnimation += 1
+        
+        if currentAnimation > 1 {
+            currentAnimation = 0
+        }
     }
-    */
-
+    
+    // Animation function for left puzzle piece get triggered en tapping button
+    @objc func tappedLeftPuzzlePiece(sender: UIButton) {
+        
+        sender.isHidden = true
+        
+        UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
+            
+            switch self.currentAnimation {
+            case 0:
+                
+                var concatinatedAnimation = CGAffineTransform.identity
+                concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
+                concatinatedAnimation = concatinatedAnimation.translatedBy(x: 132, y: -6)
+                self.leftPuzzlePiece.transform = concatinatedAnimation
+                
+                
+                //Calls animation + haptic sound based on condition
+                if self.syllableCounter == 1 {
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
+                    self.syllableCounter += 1
+                    print(self.selectedFlashcard.hapticPath! + "-s1")
+                } else {
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s2")
+                }
+                
+                
+            // For Testing and repeating, only possible when sender isnt hidden
+            case 1:
+                self.leftPuzzlePiece.transform = .identity
+                
+            default:
+                break
+            }
+        }) { (finished) in
+            print("Test")
+            
+            //Uncomment for testing animation several times in arow
+            //sender.isHidden = false
+            
+        }
+        
+        currentAnimation += 1
+        
+        if currentAnimation > 1 {
+            currentAnimation = 0
+        }
+    }
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
