@@ -41,7 +41,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         cell.imageView.image = UIImage(named: flashcard.image!)
         return cell
     }
-    
+   
     // MARK: - PrepareForSegue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? FlashcardViewController,
@@ -81,31 +81,6 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
 //   }
 
 
-//1
-//func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-//
-//    //2
-//     self.performSegueWithIdentifier("mostraImmagine", sender: self)
-//
-// }
-//
-// //3
-// override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//
-//     //4
-//     if (segue.identifier == "mostraImmagine") {
-//
-//         //5
-//         let indexPath = collectionView!.indexPathsForSelectedItems()![0] as NSIndexPath
-//
-//         //6
-//         let ImmagineVC = segue.destinationViewController as! ImmagineViewController
-//
-//         //7
-//         ImmagineVC.immagine = self.immaginiProdotti[indexPath.row]!
-//
-//         ImmagineVC.title = self.prodottiApple[indexPath.row]
-//
-//     }
-//
+
+
 // }
