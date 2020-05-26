@@ -19,6 +19,8 @@ class PuzzleViewController1s: UIViewController {
     
     @IBOutlet weak var fullImagePuzzleOne: UIImageView!
     @IBOutlet weak var oneSyllablePuzzle: UIImageView!
+    @IBOutlet weak var flashcardWordLabel: UILabel!
+    var starsImage: UIImageView!
     
     
     // A haptic engine manages the connection to the haptic server.
@@ -57,6 +59,18 @@ class PuzzleViewController1s: UIViewController {
         oneSyllablePuzzleButton.addTarget(self, action: #selector(self.oneSyllablePuzzleTapped(sender:)), for: .touchUpInside)
         view.addSubview(oneSyllablePuzzleButton)
         
+        //Stars hidden on top of the centered blurred image
+        starsImage = UIImageView(image: UIImage(named: "stars-puzzle"))
+        starsImage.contentMode = UIView.ContentMode.scaleAspectFit
+        starsImage.frame.size.width = fullImagePuzzleOne.frame.size.width * 1.5
+        starsImage.frame.size.height = fullImagePuzzleOne.frame.size.height * 1.5
+        starsImage.center = self.view.center
+        starsImage.isHidden = true
+        view.addSubview(starsImage)
+        
+        
+        flashcardWordLabel.isHidden = true
+        flashcardWordLabel.text = selectedFlashcard.name!
     }
     
     // CreateEngine for Haptics
@@ -136,11 +150,16 @@ class PuzzleViewController1s: UIViewController {
                 // This merges two animations scale & move
                 var concatinatedAnimation = CGAffineTransform.identity
                 concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                concatinatedAnimation = concatinatedAnimation.translatedBy(x: -131, y: -6)
+                concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: -6)
                 
                 //Calls animation + haptic sound
                 self.oneSyllablePuzzle.transform = concatinatedAnimation
                 self.playHapticsFile(name: self.selectedFlashcard.hapticPath!)
+                
+                self.starsImage.isHidden = false
+                self.flashcardWordLabel.isHidden = false
+                self.starsImage.transform = CGAffineTransform(rotationAngle: .pi)
+                
                 
             // For Testing and repeating, only possible when sender isnt hidden
             case 1:

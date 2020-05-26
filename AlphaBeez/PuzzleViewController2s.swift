@@ -16,9 +16,12 @@ class PuzzleViewController2s: UIViewController {
     @IBOutlet weak var fullImagePuzzleTwo: UIImageView!
     @IBOutlet weak var rightPuzzlePiece: UIImageView!
     @IBOutlet weak var leftPuzzlePiece: UIImageView!
+    @IBOutlet weak var flashcardWordLabel: UILabel!
     
     var leftPuzzlePieceButton: UIButton!
     var rightPuzzlePieceButton: UIButton!
+    var starsImage: UIImageView!
+    
     var currentAnimation = 0
     var syllableCounter = 1
     
@@ -88,6 +91,17 @@ class PuzzleViewController2s: UIViewController {
         leftPuzzlePieceButton.addTarget(self, action: #selector(self.tappedLeftPuzzlePiece(sender:)), for: .touchUpInside)
         view.addSubview(leftPuzzlePieceButton)
         
+        //Stars hidden on top of the centered blurred image
+        starsImage = UIImageView(image: UIImage(named: "stars-puzzle"))
+        starsImage.contentMode = UIView.ContentMode.scaleAspectFit
+        starsImage.frame.size.width = fullImagePuzzleTwo.frame.size.width * 1.5
+        starsImage.frame.size.height = fullImagePuzzleTwo.frame.size.height * 1.5
+        starsImage.center = self.view.center
+        starsImage.isHidden = true
+        view.addSubview(starsImage)
+        
+        flashcardWordLabel.isHidden = true
+        flashcardWordLabel.text = selectedFlashcard.name!
         
         
     }
@@ -180,9 +194,11 @@ class PuzzleViewController2s: UIViewController {
                 if self.syllableCounter == 1 {
                     self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
                     self.syllableCounter += 1
-                    print(self.selectedFlashcard.hapticPath! + "-s1")
                 } else {
                     self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s2")
+                    self.starsImage.isHidden = false
+                    self.flashcardWordLabel.isHidden = false
+                    self.starsImage.transform = CGAffineTransform(rotationAngle: .pi)
                 }
                 
             case 1:
@@ -226,9 +242,11 @@ class PuzzleViewController2s: UIViewController {
                 if self.syllableCounter == 1 {
                     self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
                     self.syllableCounter += 1
-                    print(self.selectedFlashcard.hapticPath! + "-s1")
                 } else {
                     self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s2")
+                    self.starsImage.isHidden = false
+                    self.flashcardWordLabel.isHidden = false
+                    self.starsImage.transform = CGAffineTransform(rotationAngle: .pi)
                 }
                 
                 
