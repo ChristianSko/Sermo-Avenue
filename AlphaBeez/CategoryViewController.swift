@@ -22,12 +22,22 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     // CustomFlowLayOut that will determine the
     let layout = UICollectionViewFlowLayout()
     
+//    cat background
+    var categoryBackground = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Defining the custom layout and then adding it to the collectionView
-        layout.itemSize = CGSize(width: 250, height: 250)
+        layout.itemSize = CGSize(width: 200, height: 200)
         layout.scrollDirection = .horizontal
         collectionView.collectionViewLayout = layout
+        collectionView.backgroundColor = .clear
+        
+//        set category background
+         let categoryBackgroundImage = UIImageView(frame: CGRect(x: 0, y: 25, width: 896, height: 414))
+               categoryBackgroundImage.image = categoryBackground
+               categoryBackgroundImage.contentMode = UIView.ContentMode.scaleAspectFit
+               self.view.insertSubview(categoryBackgroundImage, at: 0)
         
     }
     // MARK: - Required methods for the UICollectionViewDataSource Protocol

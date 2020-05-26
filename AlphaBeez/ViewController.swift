@@ -22,13 +22,19 @@ class ViewController: UIViewController {
     
     // Array that will hold all the Flashcards that we got back from the FetchRequest
     var allFlashcards = [Flashcard]()
+    
+    var backgroundImage : [UIImage] = [
+    UIImage(named: "background-home")!,
+    UIImage(named: "background-market")!,
+    UIImage(named: "background-park")!
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadFlashcards()
         
-//        set background image
+//        set Menù background image
         let backgroundMenuImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundMenuImage.image = UIImage(named: "background-menu")
         backgroundMenuImage.contentMode = UIView.ContentMode.scaleAspectFit
@@ -47,10 +53,13 @@ class ViewController: UIViewController {
             switch button {
             case homeButton:
                 chosenCategory = getFlashcardsForCategory(category: "home")
+                controller.categoryBackground = backgroundImage[0]
             case marketButton:
                 chosenCategory = getFlashcardsForCategory(category: "market")
+                controller.categoryBackground = backgroundImage[1]
             case parkButton:
                 chosenCategory = getFlashcardsForCategory(category: "park")
+                controller.categoryBackground = backgroundImage[2]
             default:
                 break
             }
