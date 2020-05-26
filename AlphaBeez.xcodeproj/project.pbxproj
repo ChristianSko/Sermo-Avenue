@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28310EB3247D1DB0004BE772 /* ColourStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28310EB2247D1DB0004BE772 /* ColourStruct.swift */; };
 		28410934247BFD16006959A9 /* FindActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28410933247BFD16006959A9 /* FindActivityViewController.swift */; };
 		D62373E1246C7BC7004652CA /* AHAP in Resources */ = {isa = PBXBuildFile; fileRef = D62373E0246C7BC7004652CA /* AHAP */; };
 		D6249AA0247825FE009B5BCB /* PuzzleViewController1s.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6249A9F247825FE009B5BCB /* PuzzleViewController1s.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28310EB2247D1DB0004BE772 /* ColourStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourStruct.swift; sourceTree = "<group>"; };
 		28410933247BFD16006959A9 /* FindActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindActivityViewController.swift; sourceTree = "<group>"; };
 		D62373E0246C7BC7004652CA /* AHAP */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AHAP; sourceTree = "<group>"; };
 		D6249A9F247825FE009B5BCB /* PuzzleViewController1s.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController1s.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				D6249AA124782613009B5BCB /* PuzzleViewController2s.swift */,
 				D6249AA324782629009B5BCB /* PuzzleViewController3s.swift */,
 				28410933247BFD16006959A9 /* FindActivityViewController.swift */,
+				28310EB2247D1DB0004BE772 /* ColourStruct.swift */,
 				FA1A98F2246ADAED0088B4E9 /* Assets.xcassets */,
 				D62373E0246C7BC7004652CA /* AHAP */,
 				FA1A98F4246ADAED0088B4E9 /* LaunchScreen.storyboard */,
@@ -174,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FABF36FB246CA42500F83300 /* FlashcardViewController.swift in Sources */,
+				28310EB3247D1DB0004BE772 /* ColourStruct.swift in Sources */,
 				D6249AA0247825FE009B5BCB /* PuzzleViewController1s.swift in Sources */,
 				FA1A98EB246ADAEC0088B4E9 /* ViewController.swift in Sources */,
 				FA020061246B534D00A2F0BD /* CustomCollectionViewCell.swift in Sources */,
