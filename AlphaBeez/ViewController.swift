@@ -83,14 +83,7 @@ class ViewController: UIViewController {
         }
         return array
     }
-    
-    func changeBackground() {
-        //            category background image
-        let categoryBackground = UIImageView(frame: UIScreen.main.bounds)
-        categoryBackground.contentMode = UIView.ContentMode.scaleAspectFit
-        self.view.insertSubview(categoryBackground, at: 0)
-        categoryBackground.image = UIImage(named: "background-home")
 
     }
     
-}
+

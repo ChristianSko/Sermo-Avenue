@@ -51,3 +51,61 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
 
 }
+
+//func theme(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//       if let button = sender as? UIButton, let controller = segue.destination as? CategoryViewController,
+//           segue.identifier == "toCategory" {
+//
+//           let hBackground = UIImage(named: "background-home")!
+//           let pBackground = UIImage(named: "background-park")!
+//           let mBackground = UIImage(named: "background-market")!
+//
+//           var categoryBackground = UIImageView(frame: UIScreen.main.bounds)
+//           categoryBackground = UIImageView(frame: UIScreen.main.bounds)
+//                   categoryBackground.contentMode = UIView.ContentMode.scaleAspectFit
+//                   self.view.insertSubview(categoryBackground, at: 0)
+//
+//           switch button {
+//           case homeButton:
+//               categoryBackground.image = hBackground
+//           case marketButton:
+//               categoryBackground.image = pBackground
+//           case parkButton:
+//               categoryBackground.image = mBackground
+//           default:
+//               break
+//           }
+//           controller.allFlashcards = categoryBackground
+//       }
+//   }
+
+
+//1
+//func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+//
+//    //2
+//     self.performSegueWithIdentifier("mostraImmagine", sender: self)
+//
+// }
+//
+// //3
+// override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//
+//     //4
+//     if (segue.identifier == "mostraImmagine") {
+//
+//         //5
+//         let indexPath = collectionView!.indexPathsForSelectedItems()![0] as NSIndexPath
+//
+//         //6
+//         let ImmagineVC = segue.destinationViewController as! ImmagineViewController
+//
+//         //7
+//         ImmagineVC.immagine = self.immaginiProdotti[indexPath.row]!
+//
+//         ImmagineVC.title = self.prodottiApple[indexPath.row]
+//
+//     }
+//
+// }

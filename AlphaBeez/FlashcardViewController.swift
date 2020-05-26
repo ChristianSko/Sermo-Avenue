@@ -33,10 +33,7 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         return appDelegate.supportsHaptics
     }()
     
-    //    To handle the playback
-        var audioPlayer : AVAudioPlayer?
-    //    To handle the reading and saving of data
-        var audioRecorder : AVAudioRecorder?
+  
     
 
     override func viewDidLoad() {
@@ -48,41 +45,6 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         // Set the image and the label of the selected Flashcard
         hapticButton.setImage(UIImage(named: selectedFlashcard.image!), for: .normal)
         cardNameLabel.text = selectedFlashcard.name
-        
-//        Disable play and stop button, in order to enable the record one
-        playButton.isEnabled = false
-//        stopButton.isEnabled = false
-               
-//              Getting URL path for audio
-               let directoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-               let docDirectory = directoryPath[0]
-//        pass the url as a string
-               let soundFilePath = (docDirectory as NSString).appendingPathComponent("sound.caf")
-               let soundFileURL = NSURL(fileURLWithPath: soundFilePath)
-               print(soundFilePath)
-
-               //Recording audio setting (quality, bit rate, chanels, frequency in hertz)
-               let recordSettings = [AVEncoderAudioQualityKey: AVAudioQuality.min.rawValue,
-                   AVEncoderBitRateKey: 16,
-                   AVNumberOfChannelsKey : 2,
-                   AVSampleRateKey: 44100.0] as [String : Any] as [String : Any] as [String : Any] as [String : Any]
-        
-        
-               var error : NSError?
-               let audioSession = AVAudioSession.sharedInstance()
-               do {
-//                Set the category as playAndRecord
-                   try audioSession.setCategory(AVAudioSession.Category.playAndRecord)
-                   audioRecorder = try AVAudioRecorder(url: soundFileURL as URL, settings: recordSettings as [String : AnyObject])
-               } catch _ {
-                   print("Error")
-               }
-
-               if let err = error {
-                   print("audioSession error: \(err.localizedDescription)")
-               }else{
-                   audioRecorder?.prepareToRecord()
-               }
     }
     
     // MARK: - CreteEngine for Haptics
@@ -158,75 +120,7 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         // Will play haptics of the selected flashcard
         playHapticsFile(name: selectedFlashcard.hapticPath!)
     }
-    
-//    Record audio
-    @IBAction func recordAudio(_ sender: Any) {
-        if audioRecorder?.isRecording == false{
-                    playButton.isEnabled = false
-                    stopButton.isEnabled = true
-                    audioRecorder?.record()
-                }
-    }
-    
-//    Stop the recording
-    @IBAction func stopAudio(_ sender: Any) {
-        stopButton.isEnabled = false
-               playButton.isEnabled = true
-               recordButton.isEnabled = true
 
-               if audioRecorder?.isRecording == true{
-                   audioRecorder?.stop()
-               } else {
-                   audioPlayer?.stop()
-               }
-    }
-    
-//    Playback the recording
-    @IBAction func playAudio(_ sender: Any) {
-        if audioRecorder?.isRecording == false{
-                  stopButton.isEnabled = true
-                  recordButton.isEnabled = false
-
-                  var error : NSError?
-                  do {
-                      let player = try AVAudioPlayer(contentsOf: audioRecorder!.url)
-                       audioPlayer = player
-                   } catch {
-                       print(error)
-                   }
-
-                  audioPlayer?.delegate = self
-
-                  if let err = error{
-                      print("audioPlayer error: \(err.localizedDescription)")
-                  } else {
-                      audioPlayer?.play()
-                  }
-              }
-    }
-    
-    //    When the playback is finished, change the state of buttons
-    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        recordButton.isEnabled = true
-        stopButton.isEnabled = false
-    }
-    
-    //    MARK: To manage errors during record and playback (such as an incoming call)
-
-//    Decoding error during playback
-    private func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer!, error: NSError!) {
-        print("Audio Play Decode Error")
-    }
-
-//    When a recording is stopped or has finished due to reaching its time limit.
-    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        print("Recording is stopped due to reaching time limit")
-    }
-
-//    Encoding error during recording
-    private func audioRecorderEncodeErrorDidOccur(recorder: AVAudioRecorder!, error: NSError!) {
-        print("Audio Record Encode Error")
-    }
     
     // Prepare for the segue and passing the selected Flashcard to one of the three puzzles
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -242,7 +136,6 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
                 let vcThree = segue.destination as! PuzzleViewController3s
                 vcThree.selectedFlashcard = selectedFlashcard
             }
-        
     }
 
     @IBAction func puzzleTouched(_ sender: UIButton) {
@@ -257,7 +150,6 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
             } else if syllables == 3 {
                 performSegue(withIdentifier: "puzzleThree", sender: self)
             }
-        
     }
     
 }
