@@ -176,10 +176,11 @@ class PuzzleViewController2s: UIViewController {
                             self.rightPuzzlePiece.transform = concatinatedAnimation
                             
                             if self.syllableCounter == 1 {
-                                self.playHapticsFile(name: self.selectedFlashcard.name! + "-s1")
+                                self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
                                 self.syllableCounter += 1
+                                print(self.selectedFlashcard.hapticPath! + "-s1")
                             } else {
-                                self.playHapticsFile(name: self.selectedFlashcard.name! + "-s2")
+                                self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s2")
                             }
                             
                         case 1:
@@ -219,10 +220,11 @@ class PuzzleViewController2s: UIViewController {
                             self.leftPuzzlePiece.transform = concatinatedAnimation
                             
                             if self.syllableCounter == 1 {
-                                self.playHapticsFile(name: self.selectedFlashcard.name! + "-s1")
+                                self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
                                 self.syllableCounter += 1
+                                print(self.selectedFlashcard.hapticPath! + "-s1")
                             } else {
-                                self.playHapticsFile(name: self.selectedFlashcard.name! + "-s2")
+                                self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s2")
                             }
 
                         case 1:

@@ -193,7 +193,15 @@ class PuzzleViewController3s: UIViewController {
                 concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: -6)
                 self.rightPuzzlePiece.transform = concatinatedAnimation
                 
-//                selectedFlashcard.
+                if self.syllableCounter == 1 {
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
+                    self.syllableCounter += 1
+                } else if self.syllableCounter == 2 {
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s2")
+                    self.syllableCounter += 1
+                } else {
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s3")
+                }
                 
             case 1:
                 self.rightPuzzlePiece.transform = .identity
@@ -230,6 +238,16 @@ class PuzzleViewController3s: UIViewController {
                 concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
                 concatinatedAnimation = concatinatedAnimation.translatedBy(x: 132, y: 31)
                 self.upperLeftPuzzlePiece.transform = concatinatedAnimation
+                
+                if self.syllableCounter == 1 {
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
+                    self.syllableCounter += 1
+                } else if self.syllableCounter == 2 {
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s2")
+                    self.syllableCounter += 1
+                } else {
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s3")
+                }
                 
             case 1:
                 self.upperLeftPuzzlePiece.transform = .identity
@@ -268,13 +286,13 @@ class PuzzleViewController3s: UIViewController {
                 self.bottomLeftPuzzlePiece.transform = concatinatedAnimation
                 
                 if self.syllableCounter == 1 {
-                    self.playHapticsFile(name: self.selectedFlashcard.name! + "-s1")
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
                     self.syllableCounter += 1
                 } else if self.syllableCounter == 2 {
-                    self.playHapticsFile(name: self.selectedFlashcard.name! + "-s2")
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s2")
                     self.syllableCounter += 1
                 } else {
-                    self.playHapticsFile(name: self.selectedFlashcard.name! + "-s3")
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s3")
                 }
                 
             case 1:
