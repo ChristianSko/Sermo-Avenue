@@ -351,65 +351,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="y00-zf-o6u">
-                                <rect key="frame" x="60" y="131" width="776" height="152"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="O6E-FC-bnn">
+                                <rect key="frame" x="94" y="94" width="708" height="249"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UH6-ev-hnO">
-                                        <rect key="frame" x="0.0" y="1" width="150" height="150"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZoO-dM-rOl">
+                                        <rect key="frame" x="0.0" y="1" width="319" height="247"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="5aa-bE-Crx"/>
+                                            <constraint firstAttribute="width" constant="319" id="gkb-ig-u26"/>
                                         </constraints>
-                                        <connections>
-                                            <action selector="hapticButtonPressed:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="DGc-Ap-cd8"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43e-vk-5Ee">
-                                        <rect key="frame" x="300" y="66" width="276" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AhY-Ap-teG">
-                                        <rect key="frame" x="726" y="11" width="50" height="130"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="y00-zf-o6u">
+                                        <rect key="frame" x="369" y="0.0" width="339" height="249"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCE-qi-OSv">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="55"/>
-                                                <state key="normal" title="Puzzle" image="puzzle-button"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UH6-ev-hnO">
+                                                <rect key="frame" x="0.0" y="0.0" width="339" height="64.5"/>
                                                 <connections>
-                                                    <action selector="puzzleTouched:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="CGE-f2-rqP"/>
+                                                    <action selector="hapticButtonPressed:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="DGc-Ap-cd8"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jj3-vZ-5X7" userLabel="Camera Buttton">
-                                                <rect key="frame" x="0.0" y="75" width="50" height="55"/>
-                                                <state key="normal" image="search-button"/>
-                                                <connections>
-                                                    <action selector="cameraTouched:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="GZo-6x-dZ8"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="AhY-Ap-teG">
+                                                <rect key="frame" x="0.0" y="184.5" width="339" height="64.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCE-qi-OSv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="64.5"/>
+                                                        <state key="normal" image="puzzle-button"/>
+                                                        <connections>
+                                                            <action selector="puzzleTouched:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="CGE-f2-rqP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jj3-vZ-5X7" userLabel="Camera Buttton">
+                                                        <rect key="frame" x="219.5" y="0.0" width="119.5" height="64.5"/>
+                                                        <state key="normal" image="search-button"/>
+                                                        <connections>
+                                                            <action selector="cameraTouched:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="GZo-6x-dZ8"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="p58-xi-pEl"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="UH6-ev-hnO" firstAttribute="top" secondItem="y00-zf-o6u" secondAttribute="top" constant="1" id="i63-Zk-1Y4"/>
+                                    <constraint firstItem="ZoO-dM-rOl" firstAttribute="top" secondItem="O6E-FC-bnn" secondAttribute="top" constant="1" id="0OF-SW-GVP"/>
+                                    <constraint firstAttribute="trailing" secondItem="y00-zf-o6u" secondAttribute="trailing" id="AM7-al-ahS"/>
+                                    <constraint firstAttribute="bottom" secondItem="y00-zf-o6u" secondAttribute="bottom" id="Srq-ZW-YT9"/>
+                                    <constraint firstItem="y00-zf-o6u" firstAttribute="top" secondItem="O6E-FC-bnn" secondAttribute="top" id="lil-uf-omx"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="BG1-Ft-9vt" firstAttribute="bottom" secondItem="y00-zf-o6u" secondAttribute="bottom" constant="110" id="QLf-Pl-XaK"/>
-                            <constraint firstItem="y00-zf-o6u" firstAttribute="leading" secondItem="BG1-Ft-9vt" secondAttribute="leading" constant="16" id="akA-lM-lbG"/>
-                            <constraint firstItem="y00-zf-o6u" firstAttribute="top" secondItem="BG1-Ft-9vt" secondAttribute="top" constant="87" id="e7H-bh-NUq"/>
-                            <constraint firstItem="BG1-Ft-9vt" firstAttribute="trailing" secondItem="y00-zf-o6u" secondAttribute="trailing" constant="16" id="pGo-3l-Jjb"/>
+                            <constraint firstItem="O6E-FC-bnn" firstAttribute="leading" secondItem="BG1-Ft-9vt" secondAttribute="leading" constant="50" id="9IR-Nv-9I0"/>
+                            <constraint firstItem="O6E-FC-bnn" firstAttribute="top" secondItem="BG1-Ft-9vt" secondAttribute="top" constant="50" id="Jb6-eh-IzS"/>
+                            <constraint firstItem="BG1-Ft-9vt" firstAttribute="trailing" secondItem="O6E-FC-bnn" secondAttribute="trailing" constant="50" id="gyf-zP-oWN"/>
+                            <constraint firstItem="BG1-Ft-9vt" firstAttribute="bottom" secondItem="O6E-FC-bnn" secondAttribute="bottom" constant="50" id="xwD-3v-dLV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BG1-Ft-9vt"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jf9-Cx-j0L"/>
                     <connections>
                         <outlet property="cameraButton" destination="jj3-vZ-5X7" id="btu-Xd-spU"/>
-                        <outlet property="cardNameLabel" destination="43e-vk-5Ee" id="hh4-u7-7y2"/>
+                        <outlet property="flashcardImage" destination="ZoO-dM-rOl" id="D4K-qJ-gbO"/>
+                        <outlet property="flashcardStackView" destination="O6E-FC-bnn" id="mjQ-Uu-chJ"/>
                         <outlet property="hapticButton" destination="UH6-ev-hnO" id="Q2c-nO-4JQ"/>
                         <outlet property="puzzleButton" destination="nCE-qi-OSv" id="LFR-Vo-fqf"/>
                         <segue destination="syO-Qf-ldC" kind="show" identifier="puzzleOne" id="OBM-46-CrL"/>
@@ -420,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Zj-t3-EaW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1655" y="1074"/>
+            <point key="canvasLocation" x="1654.6875" y="1073.913043478261"/>
         </scene>
         <!--Puzzle View Controller 1s-->
         <scene sceneID="Zd6-fK-43O">

@@ -14,9 +14,10 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
     
     // Outlets
     @IBOutlet weak var hapticButton: UIButton!
-    @IBOutlet weak var cardNameLabel: UILabel!
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var puzzleButton: UIButton!
+    @IBOutlet weak var flashcardImage: UIImageView!
+    @IBOutlet weak var flashcardStackView: UIStackView!
     
     // This is he Flashcard that is transferred from CategoryViewController (the one that the user tapped)
     var selectedFlashcard = Flashcard()
@@ -39,7 +40,6 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Changing the native back button with our custom one
         self.navigationController?.navigationBar.backIndicatorImage = backButton
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButton
@@ -49,20 +49,30 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         creteEngine()
 
         // Set the image and the label of the selected Flashcard
-        hapticButton.setImage(UIImage(named: selectedFlashcard.image!), for: .normal)
-        cardNameLabel.text = selectedFlashcard.name
-        cardNameLabel.font = FontKit.roundedFont(ofSize: 58, weight: .regular)
- //        cardNameLabel.text = cardNameLabel.text?.uppercased()
+        flashcardImage.image = UIImage(named: selectedFlashcard.image!)
+        hapticButton.setTitle(selectedFlashcard.name?.uppercased(), for: .normal)
+        hapticButton.titleLabel?.font = FontKit.roundedFont(ofSize: 48, weight: .bold)
+        // Giving rounder corners to the buttons
+        hapticButton.layer.cornerRadius = 35
+        puzzleButton.layer.cornerRadius = 30
+        cameraButton.layer.cornerRadius = 30
+        
+        puzzleButton.tintColor = .white
+        cameraButton.tintColor = .white
+        
         
         if selectedFlashcard.category == "home" {
-            puzzleButton.tintColor = .purple
-            cameraButton.tintColor = .purple
+            puzzleButton.backgroundColor = .purple
+            cameraButton.backgroundColor = .purple
+            hapticButton.backgroundColor = .purple
         } else if selectedFlashcard.category == "park" {
-             puzzleButton.tintColor = .red
-             cameraButton.tintColor = .red
+             puzzleButton.backgroundColor = .red
+             cameraButton.backgroundColor = .red
+            hapticButton.backgroundColor = .red
         } else {
-            puzzleButton.tintColor = .orange
-            cameraButton.tintColor = .orange
+            puzzleButton.backgroundColor = .orange
+            cameraButton.backgroundColor = .orange
+            hapticButton.backgroundColor = .orange
         }
     }
     
