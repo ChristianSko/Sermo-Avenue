@@ -697,8 +697,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="zsH-rc-jX5"/>
                     <connections>
+                        <outlet property="colorGesture" destination="doz-xp-f3d" id="xCH-v2-9hg"/>
+                        <outlet property="colorImageView" destination="ji1-Pn-3h6" id="uGV-m2-orL"/>
                         <outlet property="colorLabel" destination="Xtc-Sr-7St" id="RxI-QY-QfR"/>
+                        <outlet property="shapeGesture" destination="9xz-3f-fBq" id="9Qa-ue-Vk5"/>
+                        <outlet property="shapeImageView" destination="97e-jk-3bK" id="Jt3-ld-1o1"/>
                         <outlet property="shapeLabel" destination="aY7-Tg-FNv" id="QP6-t0-rrK"/>
+                        <outlet property="textureGesture" destination="hk2-rB-jbA" id="nCQ-O6-MDX"/>
+                        <outlet property="textureImageView" destination="6RT-LX-aVP" id="qtq-ND-4Bl"/>
                         <outlet property="textureLabel" destination="4K7-oJ-kJj" id="UQg-Hg-xPk"/>
                     </connections>
                 </viewController>
