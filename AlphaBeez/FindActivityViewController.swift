@@ -10,6 +10,12 @@ import UIKit
 
 class FindActivityViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    
+    
+    @IBOutlet weak var textureLabel: UILabel!
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var shapeLabel: UILabel!
+    
     var currentImageView: UIImageView? = nil
     
     var imagePicker = UIImagePickerController()
@@ -37,6 +43,11 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
                 
         //        enable the editing of picked image (Why? since the phrase cards are squared, the image should fits them)
                 imagePicker.allowsEditing = true
+        
+//         set font
+            shapeLabel   .font = FontKit.roundedFont(ofSize: 15, weight: .regular)
+            colorLabel   .font = FontKit.roundedFont(ofSize: 15, weight: .regular)
+            textureLabel .font = FontKit.roundedFont(ofSize: 15, weight: .regular)
     }
     
 //    update the square image view with the image picked (from gallery or camera)

@@ -51,6 +51,8 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         // Set the image and the label of the selected Flashcard
         hapticButton.setImage(UIImage(named: selectedFlashcard.image!), for: .normal)
         cardNameLabel.text = selectedFlashcard.name
+        cardNameLabel.font = FontKit.roundedFont(ofSize: 58, weight: .regular)
+ //        cardNameLabel.text = cardNameLabel.text?.uppercased()
         
         if selectedFlashcard.category == "home" {
             puzzleButton.tintColor = .purple
