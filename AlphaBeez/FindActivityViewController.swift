@@ -37,6 +37,15 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        text label
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
+        label.center = CGPoint(x: 414, y: 80)
+        label.textAlignment = .center
+        label.text = "You just learned \(selectedFlashcard.name!).      Now, find something that has the same:"
+        label.numberOfLines = 2
+        label.font = FontKit.roundedFont(ofSize: 25, weight: .regular)
+        self.view.addSubview(label)
+        
         print(selectedFlashcard.name!)
         //        show picker
         imagePicker.delegate = self
