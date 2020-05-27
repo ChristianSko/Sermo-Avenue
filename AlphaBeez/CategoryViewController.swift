@@ -61,6 +61,16 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCollectionViewCell
         let flashcard = allFlashcards[indexPath.row]
+        
+        if flashcard.category == "home" {
+            cell.layer.borderColor = UIColor.purple.cgColor
+        } else if flashcard.category == "park" {
+            cell.layer.borderColor = UIColor.red.cgColor
+        } else if flashcard.category == "market" {
+            cell.layer.borderColor = UIColor.orange.cgColor
+        }
+        cell.layer.cornerRadius = 20
+        cell.layer.borderWidth = 10
         cell.imageView.image = UIImage(named: flashcard.image!)
         return cell
     }
