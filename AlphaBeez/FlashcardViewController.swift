@@ -57,6 +57,11 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         puzzleButton.layer.cornerRadius = 30
         cameraButton.layer.cornerRadius = 30
         
+        // Properties for the border and corner of the Flashcard
+        flashcardImage.layer.cornerRadius = 30
+        flashcardImage.layer.borderWidth = 5
+        flashcardImage.contentMode = .scaleAspectFill
+
         puzzleButton.tintColor = .white
         cameraButton.tintColor = .white
         
@@ -65,14 +70,17 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
             puzzleButton.backgroundColor = .purple
             cameraButton.backgroundColor = .purple
             hapticButton.backgroundColor = .purple
+            flashcardImage.layer.borderColor = UIColor.purple.cgColor
         } else if selectedFlashcard.category == "park" {
-             puzzleButton.backgroundColor = .red
-             cameraButton.backgroundColor = .red
+            puzzleButton.backgroundColor = .red
+            cameraButton.backgroundColor = .red
             hapticButton.backgroundColor = .red
+            flashcardImage.layer.borderColor = UIColor.red.cgColor
         } else {
             puzzleButton.backgroundColor = .orange
             cameraButton.backgroundColor = .orange
             hapticButton.backgroundColor = .orange
+            flashcardImage.layer.borderColor = UIColor.orange.cgColor
         }
     }
     

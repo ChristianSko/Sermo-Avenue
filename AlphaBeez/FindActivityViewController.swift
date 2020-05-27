@@ -25,12 +25,12 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet var colorGesture: UITapGestureRecognizer!
     @IBOutlet var textureGesture: UITapGestureRecognizer!
     
-    
-    
+    // Will keep a record what of the 3 imageViews was tapped
     var whatImageView = 0
     
     var imagePicker = UIImagePickerController()
     
+    // Will hold the selectedFlashcard of the users
     var selectedFlashcard = Flashcard()
     
     // Back Button Image
@@ -48,28 +48,50 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        text label
+        // text label
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
         label.center = CGPoint(x: 414, y: 80)
         label.textAlignment = .center
-        label.text = "You just learned \(selectedFlashcard.name!).      Now, find something that has the same:"
+        label.text = "You just learned \(selectedFlashcard.name!). Now, find something that has the same:"
         label.numberOfLines = 2
         label.font = FontKit.roundedFont(ofSize: 25, weight: .regular)
         self.view.addSubview(label)
         
-        //        show picker
+        // Giving rounded corners and borders to the 3 imageViews
+        shapeImageView.layer.cornerRadius = 20
+        colorImageView.layer.cornerRadius = 20
+        textureImageView.layer.cornerRadius = 20
+        shapeImageView.layer.borderWidth = 5
+        colorImageView.layer.borderWidth = 5
+        textureImageView.layer.borderWidth = 5
+        
+        if selectedFlashcard.category == "home" {
+            shapeImageView.layer.borderColor = UIColor.purple.cgColor
+            colorImageView.layer.borderColor = UIColor.purple.cgColor
+            textureImageView.layer.borderColor = UIColor.purple.cgColor
+        } else if selectedFlashcard.category == "park" {
+            shapeImageView.layer.borderColor = UIColor.red.cgColor
+            colorImageView.layer.borderColor = UIColor.red.cgColor
+            textureImageView.layer.borderColor = UIColor.red.cgColor
+        } else {
+            shapeImageView.layer.borderColor = UIColor.orange.cgColor
+            colorImageView.layer.borderColor = UIColor.orange.cgColor
+            textureImageView.layer.borderColor = UIColor.orange.cgColor
+        }
+        
+        // show picker
         imagePicker.delegate = self
         
-        //        enable the editing of picked image (Why? since the phrase cards are squared, the image should fits them)
+        // enable the editing of picked image (Why? since the phrase cards are squared, the image should fits them)
         imagePicker.allowsEditing = true
         
-        //         set font
+        // set font
         shapeLabel   .font = FontKit.roundedFont(ofSize: 15, weight: .regular)
         colorLabel   .font = FontKit.roundedFont(ofSize: 15, weight: .regular)
         textureLabel .font = FontKit.roundedFont(ofSize: 15, weight: .regular)
     }
     
-    //    update the square image view with the image picked (from gallery or camera)
+    // update the square image view with the image picked (from gallery or camera)
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
@@ -85,8 +107,8 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
         
+        // Will switch to check after tap, which of the 3 imageViews was tapped
         let gesture = sender
-        
         switch gesture {
         case shapeGesture:
             whatImageView = 1
