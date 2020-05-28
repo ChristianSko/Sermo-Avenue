@@ -375,18 +375,18 @@
                                                             <action selector="hapticButtonPressed:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="DGc-Ap-cd8"/>
                                                         </connections>
                                                     </button>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="AhY-Ap-teG">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="AhY-Ap-teG">
                                                         <rect key="frame" x="0.0" y="146.5" width="227" height="96.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCE-qi-OSv">
-                                                                <rect key="frame" x="0.0" y="0.0" width="63.5" height="96.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="96.5"/>
                                                                 <state key="normal" image="puzzle-button"/>
                                                                 <connections>
                                                                     <action selector="puzzleTouched:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="CGE-f2-rqP"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jj3-vZ-5X7" userLabel="Camera Buttton">
-                                                                <rect key="frame" x="163.5" y="0.0" width="63.5" height="96.5"/>
+                                                                <rect key="frame" x="143.5" y="0.0" width="83.5" height="96.5"/>
                                                                 <state key="normal" image="search-button"/>
                                                                 <connections>
                                                                     <action selector="cameraTouched:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="GZo-6x-dZ8"/>
@@ -640,10 +640,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="SrP-qX-pBx">
-                                <rect key="frame" x="5" y="202.5" width="657" height="112"/>
+                                <rect key="frame" x="5" y="199.5" width="657" height="115"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="camera-faded" translatesAutoresizingMaskIntoConstraints="NO" id="97e-jk-3bK">
-                                        <rect key="frame" x="0.0" y="0.0" width="197" height="112"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="115"/>
                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -651,20 +651,23 @@
                                         </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-faded" translatesAutoresizingMaskIntoConstraints="NO" id="ji1-Pn-3h6">
-                                        <rect key="frame" x="230" y="0.0" width="197" height="112"/>
+                                        <rect key="frame" x="230" y="0.0" width="197" height="115"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="doz-xp-f3d" appends="YES" id="Ngh-7N-a2H"/>
                                         </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-faded" translatesAutoresizingMaskIntoConstraints="NO" id="6RT-LX-aVP">
-                                        <rect key="frame" x="460" y="0.0" width="197" height="112"/>
+                                        <rect key="frame" x="460" y="0.0" width="197" height="115"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="hk2-rB-jbA" appends="YES" id="RwU-oP-0kY"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="dI4-c8-aJd"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="188" translatesAutoresizingMaskIntoConstraints="NO" id="4O5-JC-MOw">
                                 <rect key="frame" x="72" y="334.5" width="523" height="20.5"/>
@@ -690,7 +693,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlX-Ym-Amc">
-                                <rect key="frame" x="50" y="57" width="567" height="105.5"/>
+                                <rect key="frame" x="50" y="57" width="567" height="102.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
