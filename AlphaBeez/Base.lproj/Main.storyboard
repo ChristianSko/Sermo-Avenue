@@ -259,7 +259,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="qin-SW-eDu">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="cy8-i2-Vrq">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" id="cy8-i2-Vrq">
                             <connections>
                                 <segue destination="wNL-4f-hrl" kind="show" identifier="ss" id="k0h-ru-aUh"/>
                             </connections>
