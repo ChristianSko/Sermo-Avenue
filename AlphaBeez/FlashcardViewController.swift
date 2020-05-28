@@ -55,8 +55,8 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         hapticButton.titleLabel?.font = FontKit.roundedFont(ofSize: 48, weight: .bold)
         // Giving rounder corners to the buttons
         hapticButton.layer.cornerRadius = 50
-        puzzleButton.layer.cornerRadius = 50
-        cameraButton.layer.cornerRadius = 50
+        puzzleButton.layer.cornerRadius = 40
+        cameraButton.layer.cornerRadius = 40
         
         // Properties for the border and corner of the Flashcards
         flashcardImage.layer.borderWidth = 5
