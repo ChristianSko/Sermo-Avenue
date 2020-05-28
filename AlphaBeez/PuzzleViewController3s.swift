@@ -97,8 +97,8 @@ class PuzzleViewController3s: UIViewController {
         rightPuzzlePieceButton.frame.size.height = rightPuzzlePiece.frame.size.height
         rightPuzzlePieceButton.center = rightPuzzlePiece.center
         //Adding Border for testing purpose, uncomment for seing size
-        //        rightPuzzlePieceButton.layer.borderWidth = 3
-        //        rightPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
+//                rightPuzzlePieceButton.layer.borderWidth = 3
+//                rightPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
         rightPuzzlePieceButton.addTarget(self, action: #selector(self.tappedRightPuzzlePiece(sender:)), for: .touchUpInside)
         view.addSubview(rightPuzzlePieceButton)
         
@@ -108,8 +108,8 @@ class PuzzleViewController3s: UIViewController {
         upperLeftPuzzlePieceButton.frame.size.height = upperLeftPuzzlePiece.frame.size.height
         upperLeftPuzzlePieceButton.center = upperLeftPuzzlePiece.center
         //Adding Border for testing purpose, uncomment for seing size
-        //        upperLeftPuzzlePieceButton.layer.borderWidth = 3
-        //        upperLeftPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
+//                upperLeftPuzzlePieceButton.layer.borderWidth = 3
+//                upperLeftPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
         upperLeftPuzzlePieceButton.addTarget(self, action: #selector(self.tappedUpperLeftPuzzlePiece(sender:)), for: .touchUpInside)
         view.addSubview(upperLeftPuzzlePieceButton)
         
@@ -119,8 +119,8 @@ class PuzzleViewController3s: UIViewController {
         bottomLeftPuzzlePieceButton.frame.size.height = bottomLeftPuzzlePiece.frame.size.height
         bottomLeftPuzzlePieceButton.center = bottomLeftPuzzlePiece.center
         //Adding Border for testing purpose
-        //        bottomLeftPuzzlePieceButton.layer.borderWidth = 3
-        //        bottomLeftPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
+//                bottomLeftPuzzlePieceButton.layer.borderWidth = 3
+//                bottomLeftPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
         bottomLeftPuzzlePieceButton.addTarget(self, action: #selector(self.tappedBotttomLeftPuzzlePiece(sender:)), for: .touchUpInside)
         view.addSubview(bottomLeftPuzzlePieceButton)
         
@@ -217,7 +217,7 @@ class PuzzleViewController3s: UIViewController {
                 // This merges two animations scale & move
                 var concatinatedAnimation = CGAffineTransform.identity
                 concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: -6)
+                concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: 2.5)
                 self.rightPuzzlePiece.transform = concatinatedAnimation
                 
                 //Calls animation + haptic sound based on condition
