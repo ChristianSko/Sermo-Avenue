@@ -47,7 +47,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         collectionView.backgroundColor = .clear
         
 //        set category background
-         let categoryBackgroundImage = UIImageView(frame: CGRect(x: 0, y: 25, width: 896, height: 414))
+         let categoryBackgroundImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 896, height: 414))
                categoryBackgroundImage.image = categoryBackground
                categoryBackgroundImage.contentMode = UIView.ContentMode.scaleAspectFit
                self.view.insertSubview(categoryBackgroundImage, at: 0)
