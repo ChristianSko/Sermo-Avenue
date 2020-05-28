@@ -351,60 +351,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="O6E-FC-bnn">
-                                <rect key="frame" x="94" y="94" width="708" height="249"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JX5-AN-B5o">
+                                <rect key="frame" x="74" y="74" width="748" height="289"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZoO-dM-rOl">
-                                        <rect key="frame" x="0.0" y="1" width="319" height="247"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="319" id="gkb-ig-u26"/>
-                                        </constraints>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="y00-zf-o6u">
-                                        <rect key="frame" x="369" y="0.0" width="339" height="249"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="O6E-FC-bnn">
+                                        <rect key="frame" x="0.0" y="0.0" width="728" height="289"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UH6-ev-hnO">
-                                                <rect key="frame" x="0.0" y="0.0" width="339" height="64.5"/>
-                                                <connections>
-                                                    <action selector="hapticButtonPressed:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="DGc-Ap-cd8"/>
-                                                </connections>
-                                            </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="AhY-Ap-teG">
-                                                <rect key="frame" x="0.0" y="184.5" width="339" height="64.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="ZoO-dM-rOl">
+                                                <rect key="frame" x="0.0" y="1" width="350" height="287"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="gkb-ig-u26"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="y00-zf-o6u">
+                                                <rect key="frame" x="360" y="20" width="368" height="249"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCE-qi-OSv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="64.5"/>
-                                                        <state key="normal" image="puzzle-button"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UH6-ev-hnO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="368" height="99.5"/>
                                                         <connections>
-                                                            <action selector="puzzleTouched:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="CGE-f2-rqP"/>
+                                                            <action selector="hapticButtonPressed:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="DGc-Ap-cd8"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jj3-vZ-5X7" userLabel="Camera Buttton">
-                                                        <rect key="frame" x="219.5" y="0.0" width="119.5" height="64.5"/>
-                                                        <state key="normal" image="search-button"/>
-                                                        <connections>
-                                                            <action selector="cameraTouched:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="GZo-6x-dZ8"/>
-                                                        </connections>
-                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="AhY-Ap-teG">
+                                                        <rect key="frame" x="0.0" y="149.5" width="368" height="99.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCE-qi-OSv">
+                                                                <rect key="frame" x="0.0" y="0.0" width="134" height="99.5"/>
+                                                                <state key="normal" image="puzzle-button"/>
+                                                                <connections>
+                                                                    <action selector="puzzleTouched:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="CGE-f2-rqP"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jj3-vZ-5X7" userLabel="Camera Buttton">
+                                                                <rect key="frame" x="234" y="0.0" width="134" height="99.5"/>
+                                                                <state key="normal" image="search-button"/>
+                                                                <connections>
+                                                                    <action selector="cameraTouched:" destination="5GO-ch-8Hf" eventType="touchUpInside" id="GZo-6x-dZ8"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ZoO-dM-rOl" firstAttribute="top" secondItem="O6E-FC-bnn" secondAttribute="top" constant="1" id="0OF-SW-GVP"/>
+                                            <constraint firstItem="y00-zf-o6u" firstAttribute="top" secondItem="O6E-FC-bnn" secondAttribute="top" constant="20" id="8f4-gc-Jbc"/>
+                                            <constraint firstAttribute="bottom" secondItem="y00-zf-o6u" secondAttribute="bottom" constant="20" id="D7N-im-p4B"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="ZoO-dM-rOl" firstAttribute="top" secondItem="O6E-FC-bnn" secondAttribute="top" constant="1" id="0OF-SW-GVP"/>
-                                    <constraint firstAttribute="trailing" secondItem="y00-zf-o6u" secondAttribute="trailing" id="AM7-al-ahS"/>
-                                    <constraint firstAttribute="bottom" secondItem="y00-zf-o6u" secondAttribute="bottom" id="Srq-ZW-YT9"/>
-                                    <constraint firstItem="y00-zf-o6u" firstAttribute="top" secondItem="O6E-FC-bnn" secondAttribute="top" id="lil-uf-omx"/>
+                                    <constraint firstAttribute="bottom" secondItem="O6E-FC-bnn" secondAttribute="bottom" id="Npa-v1-pzN"/>
+                                    <constraint firstAttribute="trailing" secondItem="O6E-FC-bnn" secondAttribute="trailing" constant="20" id="OJk-s9-SaO"/>
+                                    <constraint firstItem="O6E-FC-bnn" firstAttribute="leading" secondItem="JX5-AN-B5o" secondAttribute="leading" id="mJu-z5-N2P"/>
+                                    <constraint firstItem="O6E-FC-bnn" firstAttribute="top" secondItem="JX5-AN-B5o" secondAttribute="top" id="xwQ-k1-aUQ"/>
                                 </constraints>
-                            </stackView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="O6E-FC-bnn" firstAttribute="leading" secondItem="BG1-Ft-9vt" secondAttribute="leading" constant="50" id="9IR-Nv-9I0"/>
-                            <constraint firstItem="O6E-FC-bnn" firstAttribute="top" secondItem="BG1-Ft-9vt" secondAttribute="top" constant="50" id="Jb6-eh-IzS"/>
-                            <constraint firstItem="BG1-Ft-9vt" firstAttribute="trailing" secondItem="O6E-FC-bnn" secondAttribute="trailing" constant="50" id="gyf-zP-oWN"/>
-                            <constraint firstItem="BG1-Ft-9vt" firstAttribute="bottom" secondItem="O6E-FC-bnn" secondAttribute="bottom" constant="50" id="xwD-3v-dLV"/>
+                            <constraint firstItem="JX5-AN-B5o" firstAttribute="top" secondItem="BG1-Ft-9vt" secondAttribute="top" constant="30" id="3hE-SJ-1ZB"/>
+                            <constraint firstItem="JX5-AN-B5o" firstAttribute="leading" secondItem="BG1-Ft-9vt" secondAttribute="leading" constant="30" id="5q3-SA-qii"/>
+                            <constraint firstItem="BG1-Ft-9vt" firstAttribute="bottom" secondItem="JX5-AN-B5o" secondAttribute="bottom" constant="30" id="gq4-SC-4SP"/>
+                            <constraint firstItem="BG1-Ft-9vt" firstAttribute="trailing" secondItem="JX5-AN-B5o" secondAttribute="trailing" constant="30" id="vfx-Jj-MqN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BG1-Ft-9vt"/>
                     </view>
@@ -414,6 +426,7 @@
                         <outlet property="flashcardImage" destination="ZoO-dM-rOl" id="D4K-qJ-gbO"/>
                         <outlet property="flashcardStackView" destination="O6E-FC-bnn" id="mjQ-Uu-chJ"/>
                         <outlet property="hapticButton" destination="UH6-ev-hnO" id="Q2c-nO-4JQ"/>
+                        <outlet property="innerViewForFlashcard" destination="JX5-AN-B5o" id="RdZ-NE-uZY"/>
                         <outlet property="puzzleButton" destination="nCE-qi-OSv" id="LFR-Vo-fqf"/>
                         <segue destination="syO-Qf-ldC" kind="show" identifier="puzzleOne" id="OBM-46-CrL"/>
                         <segue destination="1mP-YR-Eha" kind="show" identifier="puzzleTwo" id="0DD-1n-XYm"/>

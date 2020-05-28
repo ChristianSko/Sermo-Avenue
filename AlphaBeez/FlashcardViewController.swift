@@ -18,6 +18,7 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
     @IBOutlet weak var puzzleButton: UIButton!
     @IBOutlet weak var flashcardImage: UIImageView!
     @IBOutlet weak var flashcardStackView: UIStackView!
+    @IBOutlet weak var innerViewForFlashcard: UIView!
     
     // This is he Flashcard that is transferred from CategoryViewController (the one that the user tapped)
     var selectedFlashcard = Flashcard()
@@ -53,17 +54,27 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         hapticButton.setTitle(selectedFlashcard.name?.uppercased(), for: .normal)
         hapticButton.titleLabel?.font = FontKit.roundedFont(ofSize: 48, weight: .bold)
         // Giving rounder corners to the buttons
-        hapticButton.layer.cornerRadius = 35
-        puzzleButton.layer.cornerRadius = 30
-        cameraButton.layer.cornerRadius = 30
+        hapticButton.layer.cornerRadius = 50
+        puzzleButton.layer.cornerRadius = 50
+        cameraButton.layer.cornerRadius = 50
         
-        // Properties for the border and corner of the Flashcard
-        flashcardImage.layer.cornerRadius = 30
+        // Properties for the border and corner of the Flashcards
         flashcardImage.layer.borderWidth = 5
         flashcardImage.contentMode = .scaleAspectFill
 
         puzzleButton.tintColor = .white
         cameraButton.tintColor = .white
+        
+        // Giving the inner view inside the flashcard a border and a color
+        innerViewForFlashcard.layer.cornerRadius = 10
+        innerViewForFlashcard.layer.borderWidth = 10
+        if selectedFlashcard.category == "home" {
+            innerViewForFlashcard.layer.borderColor = UIColor.purple.cgColor
+        } else if selectedFlashcard.category == "park" {
+            innerViewForFlashcard.layer.borderColor = UIColor.red.cgColor
+        } else if selectedFlashcard.category == "market" {
+            innerViewForFlashcard.layer.borderColor = UIColor.orange.cgColor
+        }
         
         
         if selectedFlashcard.category == "home" {
