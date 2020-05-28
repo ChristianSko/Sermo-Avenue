@@ -14,6 +14,8 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var textureLabel: UILabel!
     @IBOutlet weak var colorLabel: UILabel!
     @IBOutlet weak var shapeLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    
     
     // Outlets for the imageViews
     @IBOutlet weak var shapeImageView: UIImageView!
@@ -49,13 +51,11 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
         super.viewDidLoad()
         
         // text label
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
-        label.center = CGPoint(x: 414, y: 80)
-        label.textAlignment = .center
-        label.text = "You just learned \(selectedFlashcard.name!). Now, find something that has the same:"
-        label.numberOfLines = 2
-        label.font = FontKit.roundedFont(ofSize: 25, weight: .regular)
-        self.view.addSubview(label)
+        titleLabel.text = """
+        You just learned \(selectedFlashcard.name!).
+        Now, find something that has the same:
+        """
+        titleLabel.font = FontKit.roundedFont(ofSize: 25, weight: .regular)
         
         // Giving rounded corners and borders to the 3 imageViews
         shapeImageView.layer.cornerRadius = 20
