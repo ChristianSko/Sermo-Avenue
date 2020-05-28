@@ -110,7 +110,7 @@ class PuzzleViewController2s: UIViewController {
         view.addSubview(starsImage)
         
         flashcardWordLabel.isHidden = true
-        flashcardWordLabel.text = selectedFlashcard.name!
+        flashcardWordLabel.text = selectedFlashcard.name!.uppercased()
         
         
     }

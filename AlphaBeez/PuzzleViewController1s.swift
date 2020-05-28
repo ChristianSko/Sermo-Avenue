@@ -78,8 +78,8 @@ class PuzzleViewController1s: UIViewController {
         
         
         flashcardWordLabel.isHidden = true
-        flashcardWordLabel.text = selectedFlashcard.name!
-    }
+        flashcardWordLabel.text = selectedFlashcard.name!.uppercased()
+        }
     
     // CreateEngine for Haptics
     func creteEngine() {
