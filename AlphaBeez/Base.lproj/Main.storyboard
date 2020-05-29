@@ -456,13 +456,17 @@
                                     <constraint firstAttribute="height" constant="250" id="liu-8a-SlJ"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VNH-sa-ZEk">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zo6-kt-mPt">
                                 <rect key="frame" x="649" y="144.5" width="125" height="125"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="8HD-vv-4og"/>
-                                    <constraint firstAttribute="width" constant="125" id="msh-RM-5b9"/>
+                                    <constraint firstAttribute="height" constant="125" id="NAR-r2-1ir"/>
+                                    <constraint firstAttribute="width" constant="125" id="Zs3-qJ-maS"/>
                                 </constraints>
-                            </imageView>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="oneSyllablePuzzleTapped:" destination="syO-Qf-ldC" eventType="touchUpInside" id="piu-LC-sFn"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9K-QH-lbr">
                                 <rect key="frame" x="385" y="178" width="126" height="58"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="48"/>
@@ -474,10 +478,10 @@
                         <constraints>
                             <constraint firstItem="K9K-QH-lbr" firstAttribute="centerX" secondItem="gYL-7w-dJP" secondAttribute="centerX" id="4Yq-YL-QaH"/>
                             <constraint firstItem="Nzi-Ix-Zjh" firstAttribute="centerY" secondItem="gYL-7w-dJP" secondAttribute="centerY" id="CCC-d6-vJ3"/>
-                            <constraint firstItem="VNH-sa-ZEk" firstAttribute="leading" secondItem="Nzi-Ix-Zjh" secondAttribute="trailing" constant="76" id="Z9f-RT-LNj"/>
+                            <constraint firstItem="Zo6-kt-mPt" firstAttribute="leading" secondItem="Nzi-Ix-Zjh" secondAttribute="trailing" constant="76" id="dPM-hW-xY8"/>
                             <constraint firstItem="K9K-QH-lbr" firstAttribute="centerY" secondItem="gYL-7w-dJP" secondAttribute="centerY" id="j6e-N9-5Xr"/>
-                            <constraint firstItem="VNH-sa-ZEk" firstAttribute="centerY" secondItem="gYL-7w-dJP" secondAttribute="centerY" id="kEp-OT-kij"/>
                             <constraint firstItem="Nzi-Ix-Zjh" firstAttribute="centerX" secondItem="gYL-7w-dJP" secondAttribute="centerX" id="yju-nQ-img"/>
+                            <constraint firstItem="Zo6-kt-mPt" firstAttribute="centerY" secondItem="gYL-7w-dJP" secondAttribute="centerY" id="zrG-cK-XGu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IoH-NV-aF2"/>
                     </view>
@@ -485,7 +489,7 @@
                     <connections>
                         <outlet property="flashcardWordLabel" destination="K9K-QH-lbr" id="yzM-tU-qIM"/>
                         <outlet property="fullImagePuzzleOne" destination="Nzi-Ix-Zjh" id="FvS-78-QvD"/>
-                        <outlet property="oneSyllablePuzzle" destination="VNH-sa-ZEk" id="35o-YF-DoK"/>
+                        <outlet property="oneSyllablePuzzle1" destination="Zo6-kt-mPt" id="OqH-PF-sb9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXW-a9-VOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

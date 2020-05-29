@@ -18,8 +18,8 @@ class PuzzleViewController1s: UIViewController {
     var selectedFlashcard = Flashcard()
     
     @IBOutlet weak var fullImagePuzzleOne: UIImageView!
-    @IBOutlet weak var oneSyllablePuzzle: UIImageView!
     @IBOutlet weak var flashcardWordLabel: UILabel!
+    @IBOutlet weak var oneSyllablePuzzle1: UIButton!
     var starsImage: UIImageView!
     
     
@@ -56,17 +56,6 @@ class PuzzleViewController1s: UIViewController {
         fullImagePuzzleOne.layer.borderWidth = 1
         fullImagePuzzleOne.layer.borderColor =  UIColor.blue.cgColor
         
-        // Properties of puzzle Piece
-        oneSyllablePuzzle.image = UIImage(named: selectedFlashcard.image!)
-        
-        //Invisible Buttton behind the Puzzle Piece that triggers animation set programtically
-        oneSyllablePuzzleButton = UIButton()
-        oneSyllablePuzzleButton.frame.size.width = oneSyllablePuzzle.frame.size.width
-        oneSyllablePuzzleButton.frame.size.height = oneSyllablePuzzle.frame.size.height
-        oneSyllablePuzzleButton.center = oneSyllablePuzzle.center
-        oneSyllablePuzzleButton.addTarget(self, action: #selector(self.oneSyllablePuzzleTapped(sender:)), for: .touchUpInside)
-        view.addSubview(oneSyllablePuzzleButton)
-        
         //Stars hidden on top of the centered blurred image
         starsImage = UIImageView(image: UIImage(named: "stars-puzzle"))
         starsImage.contentMode = UIView.ContentMode.scaleAspectFit
@@ -76,9 +65,14 @@ class PuzzleViewController1s: UIViewController {
         starsImage.isHidden = true
         view.addSubview(starsImage)
         
+        //Sets image for the puzzle piece
+         oneSyllablePuzzle1.setImage(UIImage(named: selectedFlashcard.image!), for: .normal)
         
+        // Hides label to make because we want it to appear after completing the puzzle
         flashcardWordLabel.isHidden = true
         flashcardWordLabel.text = selectedFlashcard.name!.uppercased()
+        
+       
         }
     
     // CreateEngine for Haptics
@@ -147,9 +141,9 @@ class PuzzleViewController1s: UIViewController {
         }
     }
     
-    //  Animation function for right puzzle piece get triggered en tapping button
-    @objc func oneSyllablePuzzleTapped(sender: UIButton) {
-        sender.isHidden = true
+
+    
+    @IBAction func oneSyllablePuzzleTapped(_ sender: UIButton) {
         
         UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
             
@@ -161,7 +155,7 @@ class PuzzleViewController1s: UIViewController {
                 concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: -6)
                 
                 //Calls animation + haptic sound
-                self.oneSyllablePuzzle.transform = concatinatedAnimation
+                self.oneSyllablePuzzle1.transform = concatinatedAnimation
                 self.playHapticsFile(name: self.selectedFlashcard.hapticPath!)
                 
                 self.starsImage.isHidden = false
@@ -171,7 +165,8 @@ class PuzzleViewController1s: UIViewController {
                 
             // For Testing and repeating, only possible when sender isnt hidden
             case 1:
-                self.oneSyllablePuzzle.transform = .identity
+                self.oneSyllablePuzzle1.transform = .identity
+                print("Hi")
                 
             default:
                 break
@@ -180,26 +175,9 @@ class PuzzleViewController1s: UIViewController {
             print("Test")
             
             //                        Uncomment for testing animation several times in arow
-            sender.isHidden = false
+//            sender.isHidden = false
             
         }
-        
-        currentAnimation += 1
-        
-        if currentAnimation > 1 {
-            currentAnimation = 0
-        }
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
