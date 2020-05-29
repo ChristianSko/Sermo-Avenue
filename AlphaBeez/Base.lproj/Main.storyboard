@@ -288,7 +288,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lel-4A-qau">
-                                <rect key="frame" x="49" y="144" width="798" height="219"/>
+                                <rect key="frame" x="49" y="164" width="798" height="219"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="50" minimumInteritemSpacing="50" id="O5X-Nk-MK3">
                                     <size key="itemSize" width="80" height="80"/>
@@ -330,9 +330,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="lel-4A-qau" firstAttribute="top" secondItem="m87-Dg-CtI" secondAttribute="top" constant="100" id="ASr-rm-1S2"/>
+                            <constraint firstItem="lel-4A-qau" firstAttribute="top" secondItem="m87-Dg-CtI" secondAttribute="top" constant="120" id="ASr-rm-1S2"/>
                             <constraint firstItem="lel-4A-qau" firstAttribute="leading" secondItem="m87-Dg-CtI" secondAttribute="leading" constant="5" id="Ki6-bx-mbv"/>
-                            <constraint firstItem="m87-Dg-CtI" firstAttribute="bottom" secondItem="lel-4A-qau" secondAttribute="bottom" constant="30" id="PpT-DA-ymY"/>
+                            <constraint firstItem="m87-Dg-CtI" firstAttribute="bottom" secondItem="lel-4A-qau" secondAttribute="bottom" constant="10" id="PpT-DA-ymY"/>
                             <constraint firstItem="m87-Dg-CtI" firstAttribute="trailing" secondItem="lel-4A-qau" secondAttribute="trailing" constant="5" id="odo-f0-XXm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m87-Dg-CtI"/>
