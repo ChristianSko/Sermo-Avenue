@@ -19,12 +19,11 @@ class PuzzleViewController3s: UIViewController {
     @IBOutlet weak var bottomLeftPuzzlePiece: UIImageView!
     @IBOutlet weak var fullImagePuzzleThree: UIImageView!
     @IBOutlet weak var flashcardWordLabel: UILabel!
+    @IBOutlet weak var rightPuzzlePieceButton: UIButton!
+    @IBOutlet weak var upperLeftPuzzlePieceButton: UIButton!
+    @IBOutlet weak var bottomLeftPuzzlePieceButton: UIButton!
     
-    
-    // Invisibles buttons & Images set programtically
-    var upperLeftPuzzlePieceButton: UIButton!
-    var bottomLeftPuzzlePieceButton: UIButton!
-    var rightPuzzlePieceButton: UIButton!
+    // Images set programtically
     var starsImage: UIImageView!
     
     //Counters
@@ -90,41 +89,7 @@ class PuzzleViewController3s: UIViewController {
         maskBottomLeft.image = UIImage(named: "puzzle-3pc-3")
         maskBottomLeft.frame = bottomLeftPuzzlePiece.bounds
         bottomLeftPuzzlePiece.mask = maskBottomLeft
-        
-        //Invisible Buttton behind the right puzzle Piece that triggers animation
-        rightPuzzlePieceButton = UIButton()
-        rightPuzzlePieceButton.frame.size.width = rightPuzzlePiece.frame.size.width
-        rightPuzzlePieceButton.frame.size.height = rightPuzzlePiece.frame.size.height
-        rightPuzzlePieceButton.center = rightPuzzlePiece.center
-        //Adding Border for testing purpose, uncomment for seing size
-//                rightPuzzlePieceButton.layer.borderWidth = 3
-//                rightPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
-        rightPuzzlePieceButton.addTarget(self, action: #selector(self.tappedRightPuzzlePiece(sender:)), for: .touchUpInside)
-        view.addSubview(rightPuzzlePieceButton)
-        
-        //Invisible Buttton behind the upper left puzzle Piece that triggers animation
-        upperLeftPuzzlePieceButton = UIButton()
-        upperLeftPuzzlePieceButton.frame.size.width = upperLeftPuzzlePiece.frame.size.width
-        upperLeftPuzzlePieceButton.frame.size.height = upperLeftPuzzlePiece.frame.size.height
-        upperLeftPuzzlePieceButton.center = upperLeftPuzzlePiece.center
-        //Adding Border for testing purpose, uncomment for seing size
-//                upperLeftPuzzlePieceButton.layer.borderWidth = 3
-//                upperLeftPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
-        upperLeftPuzzlePieceButton.addTarget(self, action: #selector(self.tappedUpperLeftPuzzlePiece(sender:)), for: .touchUpInside)
-        view.addSubview(upperLeftPuzzlePieceButton)
-        
-        //Invisible Buttton behind the right puzzle Piece that triggers animation
-        bottomLeftPuzzlePieceButton = UIButton()
-        bottomLeftPuzzlePieceButton.frame.size.width = bottomLeftPuzzlePiece.frame.size.width
-        bottomLeftPuzzlePieceButton.frame.size.height = bottomLeftPuzzlePiece.frame.size.height
-        bottomLeftPuzzlePieceButton.center = bottomLeftPuzzlePiece.center
-        //Adding Border for testing purpose
-//                bottomLeftPuzzlePieceButton.layer.borderWidth = 3
-//                bottomLeftPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
-        bottomLeftPuzzlePieceButton.addTarget(self, action: #selector(self.tappedBotttomLeftPuzzlePiece(sender:)), for: .touchUpInside)
-        view.addSubview(bottomLeftPuzzlePieceButton)
-        
-        
+                
         //Stars hidden on top of the centered blurred image
         starsImage = UIImageView(image: UIImage(named: "stars-puzzle"))
         starsImage.contentMode = UIView.ContentMode.scaleAspectFit
@@ -204,10 +169,9 @@ class PuzzleViewController3s: UIViewController {
         }
     }
     
-    // Animation function for right puzzle piece get triggered en tapping button
-    @objc func tappedRightPuzzlePiece(sender: UIButton) {
+    @IBAction func tappedRightPuzzlePiece(_ sender: UIButton) {
         
-        sender.isHidden = true
+//        sender.isHidden = true
         
         UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
             
@@ -255,59 +219,55 @@ class PuzzleViewController3s: UIViewController {
         }
     }
     
-    // Animation function for upper left puzzle piece get triggered en tapping button
-    @objc func tappedUpperLeftPuzzlePiece(sender: UIButton) {
-        
+    @IBAction func tappedUpperLeftPuzzlePiece(_ sender: UIButton) {
         sender.isHidden = true
-        
-        UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
-            
-            switch self.currentAnimation {
-            case 0:
-                // This merges two animations scale & move
-                var concatinatedAnimation = CGAffineTransform.identity
-                concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                concatinatedAnimation = concatinatedAnimation.translatedBy(x: 132, y: 31)
-                self.upperLeftPuzzlePiece.transform = concatinatedAnimation
-                
-                //Calls animation + haptic sound based on condition
-                if self.syllableCounter == 1 {
-                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
-                    self.syllableCounter += 1
-                } else if self.syllableCounter == 2 {
-                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s2")
-                    self.syllableCounter += 1
-                } else {
-                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s3")
-                    self.starsImage.isHidden = false
-                    self.flashcardWordLabel.isHidden = false
-                    self.starsImage.transform = CGAffineTransform(rotationAngle: .pi)
-                }
-                
-            case 1:
-                self.upperLeftPuzzlePiece.transform = .identity
-                
-            default:
-                break
-            }
-        }) { (finished) in
-            print("Test")
-            
-            // Uncomment for testing animation several times in arow
-              sender.isHidden = false
-            
-        }
-        
-        currentAnimation += 1
-        
-        if currentAnimation > 1 {
-            currentAnimation = 0
-        }
+         
+         UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
+             
+             switch self.currentAnimation {
+             case 0:
+                 // This merges two animations scale & move
+                 var concatinatedAnimation = CGAffineTransform.identity
+                 concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
+                 concatinatedAnimation = concatinatedAnimation.translatedBy(x: 132, y: 31)
+                 self.upperLeftPuzzlePiece.transform = concatinatedAnimation
+                 
+                 //Calls animation + haptic sound based on condition
+                 if self.syllableCounter == 1 {
+                     self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
+                     self.syllableCounter += 1
+                 } else if self.syllableCounter == 2 {
+                     self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s2")
+                     self.syllableCounter += 1
+                 } else {
+                     self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s3")
+                     self.starsImage.isHidden = false
+                     self.flashcardWordLabel.isHidden = false
+                     self.starsImage.transform = CGAffineTransform(rotationAngle: .pi)
+                 }
+                 
+             case 1:
+                 self.upperLeftPuzzlePiece.transform = .identity
+                 
+             default:
+                 break
+             }
+         }) { (finished) in
+             print("Test")
+             
+             // Uncomment for testing animation several times in arow
+               sender.isHidden = false
+             
+         }
+         
+         currentAnimation += 1
+         
+         if currentAnimation > 1 {
+             currentAnimation = 0
+         }
     }
     
-    // Animation function for bottom left puzzle piece get triggered en tapping button
-    @objc func tappedBotttomLeftPuzzlePiece(sender: UIButton) {
-        
+    @IBAction func tappedBottomLeftPuzzlePiece(_ sender: UIButton) {
         sender.isHidden = true
         
         UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
@@ -354,15 +314,5 @@ class PuzzleViewController3s: UIViewController {
         }
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

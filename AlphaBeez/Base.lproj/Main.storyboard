@@ -605,6 +605,16 @@
                                     <constraint firstAttribute="width" constant="125" id="woh-WT-e0I"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y37-7K-Fdn">
+                                <rect key="frame" x="649" y="144.5" width="125" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="AXx-h4-mF5"/>
+                                    <constraint firstAttribute="height" constant="125" id="ZJC-NC-uZv"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="tappedRightPuzzlePiece:" destination="UFO-OY-pgl" eventType="touchUpInside" id="KNf-6L-OTn"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ksq-2C-q9K">
                                 <rect key="frame" x="122" y="82" width="125" height="125"/>
                                 <constraints>
@@ -625,29 +635,58 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4P9-cn-coY">
+                                <rect key="frame" x="122" y="230" width="125" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="Lbg-XW-wqh"/>
+                                    <constraint firstAttribute="height" constant="125" id="daT-FO-m2Y"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="tappedBottomLeftPuzzlePiece:" destination="UFO-OY-pgl" eventType="touchUpInside" id="b6i-oB-JtC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKs-tl-XA9">
+                                <rect key="frame" x="122" y="82" width="125" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="4eo-oq-aSX"/>
+                                    <constraint firstAttribute="height" constant="125" id="ftK-zO-LhH"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="tappedUpperLeftPuzzlePiece:" destination="UFO-OY-pgl" eventType="touchUpInside" id="0dV-Pd-hzC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="tTP-vw-zJu" firstAttribute="leading" secondItem="Ksq-2C-q9K" secondAttribute="trailing" constant="76" id="2mn-9V-8av"/>
                             <constraint firstItem="tTP-vw-zJu" firstAttribute="centerX" secondItem="iZs-55-Pei" secondAttribute="centerX" id="3Ay-Cf-kWS"/>
+                            <constraint firstItem="tTP-vw-zJu" firstAttribute="leading" secondItem="4P9-cn-coY" secondAttribute="trailing" constant="76" id="Cwe-8Z-e1d"/>
                             <constraint firstItem="336-ES-2Y3" firstAttribute="centerY" secondItem="iZs-55-Pei" secondAttribute="centerY" id="D83-kq-53h"/>
                             <constraint firstItem="Ksq-2C-q9K" firstAttribute="top" secondItem="gQM-gA-y4G" secondAttribute="top" constant="38" id="E8H-Gr-QbP"/>
                             <constraint firstItem="336-ES-2Y3" firstAttribute="leading" secondItem="tTP-vw-zJu" secondAttribute="trailing" constant="76" id="Fqs-TH-l9O"/>
+                            <constraint firstItem="y37-7K-Fdn" firstAttribute="centerY" secondItem="iZs-55-Pei" secondAttribute="centerY" id="MS3-aB-sw5"/>
+                            <constraint firstItem="4P9-cn-coY" firstAttribute="top" secondItem="Ksq-2C-q9K" secondAttribute="bottom" constant="23" id="QtK-tC-R1i"/>
                             <constraint firstItem="fOo-Dy-XfR" firstAttribute="centerX" secondItem="iZs-55-Pei" secondAttribute="centerX" id="U2m-Fa-2Ud"/>
                             <constraint firstItem="tTP-vw-zJu" firstAttribute="leading" secondItem="2vM-71-dmC" secondAttribute="trailing" constant="76" id="Vo6-RO-9Vi"/>
                             <constraint firstItem="tTP-vw-zJu" firstAttribute="centerY" secondItem="iZs-55-Pei" secondAttribute="centerY" id="aSd-4e-KvR"/>
+                            <constraint firstItem="y37-7K-Fdn" firstAttribute="leading" secondItem="tTP-vw-zJu" secondAttribute="trailing" constant="76" id="f5u-UH-7PC"/>
                             <constraint firstItem="2vM-71-dmC" firstAttribute="top" secondItem="Ksq-2C-q9K" secondAttribute="bottom" constant="23" id="fOW-Wx-t2e"/>
                             <constraint firstItem="fOo-Dy-XfR" firstAttribute="centerY" secondItem="iZs-55-Pei" secondAttribute="centerY" id="iNb-YS-yf0"/>
+                            <constraint firstItem="tTP-vw-zJu" firstAttribute="leading" secondItem="QKs-tl-XA9" secondAttribute="trailing" constant="76" id="ik0-wd-nGi"/>
+                            <constraint firstItem="2vM-71-dmC" firstAttribute="top" secondItem="QKs-tl-XA9" secondAttribute="bottom" constant="23" id="ywF-M7-jho"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gQM-gA-y4G"/>
                     </view>
                     <navigationItem key="navigationItem" id="atO-UF-Qcr"/>
                     <connections>
                         <outlet property="bottomLeftPuzzlePiece" destination="2vM-71-dmC" id="06y-YL-X2o"/>
+                        <outlet property="bottomLeftPuzzlePieceButton" destination="4P9-cn-coY" id="mw1-xv-X7a"/>
                         <outlet property="flashcardWordLabel" destination="fOo-Dy-XfR" id="SEa-n2-XMW"/>
                         <outlet property="fullImagePuzzleThree" destination="tTP-vw-zJu" id="kyh-5V-wAw"/>
                         <outlet property="rightPuzzlePiece" destination="336-ES-2Y3" id="Qlh-ik-tnc"/>
+                        <outlet property="rightPuzzlePieceButton" destination="y37-7K-Fdn" id="N7n-LV-tgy"/>
                         <outlet property="upperLeftPuzzlePiece" destination="Ksq-2C-q9K" id="maK-wr-nWu"/>
+                        <outlet property="upperLeftPuzzlePieceButton" destination="QKs-tl-XA9" id="YPr-RG-eyz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Av4-jl-qid" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
