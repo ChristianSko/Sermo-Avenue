@@ -16,19 +16,18 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var shapeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
-    
     // Outlets for the imageViews
     @IBOutlet weak var shapeImageView: UIImageView!
     @IBOutlet weak var colorImageView: UIImageView!
     @IBOutlet weak var textureImageView: UIImageView!
     
-//    // Outlets of the Gesture regonizers
-//    @IBOutlet var shapeGesture: UITapGestureRecognizer!
-//    @IBOutlet var colorGesture: UITapGestureRecognizer!
-//    @IBOutlet var textureGesture: UITapGestureRecognizer!
+    // Outlets for the 3 buttons:
+    @IBOutlet weak var shapeButton: UIButton!
+    @IBOutlet weak var colorButton: UIButton!
+    @IBOutlet weak var textureButton: UIButton!
     
     // Will keep a record what of the 3 imageViews was tapped
-    var whatImageView = 0
+    var whatButtonPressed = 0
     
     var imagePicker = UIImagePickerController()
     
@@ -61,25 +60,22 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
         titleLabel.font = FontKit.roundedFont(ofSize: 25, weight: .regular)
         
         // Giving rounded corners and borders to the 3 imageViews
-        shapeImageView.layer.cornerRadius = 20
-        colorImageView.layer.cornerRadius = 20
-        textureImageView.layer.cornerRadius = 20
-//        shapeImageView.layer.borderWidth = 5
-//        colorImageView.layer.borderWidth = 5
-//        textureImageView.layer.borderWidth = 5
+        shapeButton.layer.cornerRadius = 20
+        colorButton.layer.cornerRadius = 20
+        textureButton.layer.cornerRadius = 20
         
         if selectedFlashcard.category == "home" {
-            shapeImageView.backgroundColor = UIColor.homeColor
-            colorImageView.backgroundColor = UIColor.homeColor
-            textureImageView.backgroundColor = UIColor.homeColor
+            shapeButton.backgroundColor = UIColor.homeColor
+            colorButton.backgroundColor = UIColor.homeColor
+            textureButton.backgroundColor = UIColor.homeColor
         } else if selectedFlashcard.category == "park" {
-            shapeImageView.backgroundColor = UIColor.parkColor
-            colorImageView.backgroundColor = UIColor.parkColor
-            textureImageView.backgroundColor = UIColor.parkColor
+            shapeButton.backgroundColor = UIColor.parkColor
+            colorButton.backgroundColor = UIColor.parkColor
+            textureButton.backgroundColor = UIColor.parkColor
         } else {
-            shapeImageView.backgroundColor = UIColor.marketColor
-            colorImageView.backgroundColor = UIColor.marketColor
-            textureImageView.backgroundColor = UIColor.marketColor
+            shapeButton.backgroundColor = UIColor.marketColor
+            colorButton.backgroundColor = UIColor.marketColor
+            textureButton.backgroundColor = UIColor.marketColor
         }
         
         // show picker
@@ -98,35 +94,36 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
-        if whatImageView == 1 {
-            shapeImageView.image = pickedImage
-        } else if whatImageView == 2 {
-            colorImageView.image = pickedImage
-        } else if whatImageView == 3 {
-            textureImageView.image = pickedImage
+        if whatButtonPressed == 1 {
+            shapeButton.setImage(pickedImage, for: .normal)
+            shapeButton.imageView?.contentMode = .scaleAspectFill
+        } else if whatButtonPressed == 2 {
+            colorButton.setImage(pickedImage, for: .normal)
+            colorButton.imageView?.contentMode = .scaleAspectFill
+        } else if whatButtonPressed == 3 {
+            textureButton.setImage(pickedImage, for: .normal)
+            colorButton.imageView?.contentMode = .scaleAspectFill
         }
         dismiss(animated: true, completion: nil)
     }
     
-
-        
-        
-    @IBAction func addPhoto(_ sender: Any) {
     
-        // Will switch to check after tap, which of the 3 imageViews was tapped
-        
-//        let tap = sender
-//        switch tap {
-//        case shapeGesture:
-//            whatImageView = 1
-//        case colorGesture:
-//            whatImageView = 2
-//        case textureGesture:
-//            whatImageView = 3
-//        default:
-//            break
-//        }
     
+    
+    @IBAction func addPhoto(_ sender: UIButton) {
+        // Checks which buttons is pressed
+        let button = sender
+        switch button {
+        case shapeButton:
+            whatButtonPressed = 1
+        case colorButton:
+            whatButtonPressed = 2
+        case textureButton:
+            whatButtonPressed = 3
+        default:
+            break
+        }
+        
         // create the alert with two buttons
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
@@ -152,11 +149,4 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     @IBAction func exitButtonPressed(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
     }
-    
-    @IBAction func didHide(_ sender: Any) {
-        let pressedButton : UIButton = sender as! UIButton
-        pressedButton.isHidden = true
-    }
-    
-    
 }

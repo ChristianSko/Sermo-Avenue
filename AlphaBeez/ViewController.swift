@@ -27,9 +27,9 @@ class ViewController: UIViewController {
     let backButton = UIImage(named: "world")
     
     var backgroundImage : [UIImage] = [
-    UIImage(named: "background-home")!,
-    UIImage(named: "background-market")!,
-    UIImage(named: "background-park")!
+        UIImage(named: "background-home")!,
+        UIImage(named: "background-market")!,
+        UIImage(named: "background-park")!
     ]
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButton
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
     }
-
+    
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,12 +50,12 @@ class ViewController: UIViewController {
         navigationController!.hideNavigationItemBackground()
         
         
-//        set Menù background image
+        //        set Menù background image
         let backgroundMenuImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundMenuImage.image = UIImage(named: "background-menu")
         backgroundMenuImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundMenuImage, at: 0)
-
+        
     }
     
     // MARK: - PrepareForSegue
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
             controller.allFlashcards = chosenCategory
         }
     }
-
+    
     // Will transfer to the chosen category screen with the flashcards
     @IBAction func categoryButtonTapped(_ sender: UIButton) {
         performSegue(withIdentifier: "toCategory", sender: sender)
@@ -93,7 +93,7 @@ class ViewController: UIViewController {
     func loadFlashcards() {
         let request:NSFetchRequest<Flashcard> = Flashcard.fetchRequest()
         do {
-           allFlashcards = try context.fetch(request)
+            allFlashcards = try context.fetch(request)
         } catch {
             print("Error fetching data from context \(error)")
         }
@@ -108,7 +108,7 @@ class ViewController: UIViewController {
         }
         return array
     }
-
-    }
+    
+}
     
 

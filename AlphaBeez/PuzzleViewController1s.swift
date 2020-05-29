@@ -68,7 +68,7 @@ class PuzzleViewController1s: UIViewController {
         view.addSubview(starsImage)
         
         //Sets image for the puzzle piece
-         oneSyllablePuzzle1.setImage(UIImage(named: selectedFlashcard.image!), for: .normal)
+        oneSyllablePuzzle1.setImage(UIImage(named: selectedFlashcard.image!), for: .normal)
         
         // Hides label to make because we want it to appear after completing the puzzle
         flashcardWordLabel.isHidden = true
@@ -84,9 +84,9 @@ class PuzzleViewController1s: UIViewController {
         } else if selectedFlashcard.category == "market" {
             borderView.layer.borderColor = UIColor.marketColor.cgColor
         }
-       
         
-        }
+        
+    }
     
     // CreateEngine for Haptics
     func creteEngine() {
@@ -154,7 +154,7 @@ class PuzzleViewController1s: UIViewController {
         }
     }
     
-
+    
     
     @IBAction func oneSyllablePuzzleTapped(_ sender: UIButton) {
         
@@ -180,7 +180,7 @@ class PuzzleViewController1s: UIViewController {
                 
             // For Testing and repeating, only possible when sender isnt hidden
             case 1:
-//                self.oneSyllablePuzzle1.transform = .identity
+                //                self.oneSyllablePuzzle1.transform = .identity
                 print("Hi")
                 
             default:

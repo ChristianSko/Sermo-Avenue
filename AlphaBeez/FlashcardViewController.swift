@@ -48,7 +48,7 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         
         // Creating the HapticEngine
         creteEngine()
-
+        
         // Set the image and the label of the selected Flashcard
         flashcardImage.image = UIImage(named: selectedFlashcard.image!)
         hapticButton.setTitle(selectedFlashcard.name?.uppercased(), for: .normal)
@@ -61,7 +61,7 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         // Properties for the border and corner of the Flashcards
         flashcardImage.layer.borderWidth = 5
         flashcardImage.contentMode = .scaleAspectFill
-
+        
         puzzleButton.tintColor = .white
         cameraButton.tintColor = .white
         
@@ -101,40 +101,40 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
             return
         } else {
             // Create and configure a haptic engine.
-             do {
-                 engine = try CHHapticEngine()
-             } catch let error {
-                 print("Engine Creation Error: \(error)")
-             }
-             
-             if engine == nil {
-                 print("Failed to create engine!")
-             }
-             
-             // The stopped handler alerts you of engine stoppage due to external causes.
-             engine.stoppedHandler = { reason in
-                 print("The engine stopped for reason: \(reason.rawValue)")
-                 switch reason {
-                 case .audioSessionInterrupt: print("Audio session interrupt")
-                 case .applicationSuspended: print("Application suspended")
-                 case .idleTimeout: print("Idle timeout")
-                 case .systemError: print("System error")
-                 case .notifyWhenFinished: print("Playback finished")
-                 @unknown default:
-                     print("Unknown error")
-                 }
-             }
-             
-             // The reset handler provides an opportunity for your app to restart the engine in case of failure.
-             engine.resetHandler = {
-                 // Try restarting the engine.
-                 print("The engine reset --> Restarting now!")
-                 do {
-                     try self.engine.start()
-                 } catch {
-                     print("Failed to restart the engine: \(error)")
-                 }
-             }
+            do {
+                engine = try CHHapticEngine()
+            } catch let error {
+                print("Engine Creation Error: \(error)")
+            }
+            
+            if engine == nil {
+                print("Failed to create engine!")
+            }
+            
+            // The stopped handler alerts you of engine stoppage due to external causes.
+            engine.stoppedHandler = { reason in
+                print("The engine stopped for reason: \(reason.rawValue)")
+                switch reason {
+                case .audioSessionInterrupt: print("Audio session interrupt")
+                case .applicationSuspended: print("Application suspended")
+                case .idleTimeout: print("Idle timeout")
+                case .systemError: print("System error")
+                case .notifyWhenFinished: print("Playback finished")
+                @unknown default:
+                    print("Unknown error")
+                }
+            }
+            
+            // The reset handler provides an opportunity for your app to restart the engine in case of failure.
+            engine.resetHandler = {
+                // Try restarting the engine.
+                print("The engine reset --> Restarting now!")
+                do {
+                    try self.engine.start()
+                } catch {
+                    print("Failed to restart the engine: \(error)")
+                }
+            }
         }
     }
     
@@ -168,7 +168,7 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         // Will play haptics of the selected flashcard
         playHapticsFile(name: selectedFlashcard.hapticPath!)
     }
-
+    
     
     // Prepare for the segue and passing the selected Flashcard to one of the three puzzles
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -192,20 +192,20 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
             }
         }
     }
-
-
+    
+    
     @IBAction func puzzleTouched(_ sender: UIButton) {
-// sending to PuzzleViewController1s, PuzzleViewController2s or PuzzleViewController3s based on puzzleSyllableType
+        // sending to PuzzleViewController1s, PuzzleViewController2s or PuzzleViewController3s based on puzzleSyllableType
         let syllables: Int = Int(selectedFlashcard.syllables)
         
-            print(syllables)
-            if syllables == 1 {
-                performSegue(withIdentifier: "puzzleOne", sender: self)
-            } else if syllables == 2 {
-                performSegue(withIdentifier: "puzzleTwo", sender: self)
-            } else if syllables == 3 {
-                performSegue(withIdentifier: "puzzleThree", sender: self)
-            }
+        print(syllables)
+        if syllables == 1 {
+            performSegue(withIdentifier: "puzzleOne", sender: self)
+        } else if syllables == 2 {
+            performSegue(withIdentifier: "puzzleTwo", sender: self)
+        } else if syllables == 3 {
+            performSegue(withIdentifier: "puzzleThree", sender: self)
+        }
     }
     
     @IBAction func cameraTouched(_ sender: UIButton) {

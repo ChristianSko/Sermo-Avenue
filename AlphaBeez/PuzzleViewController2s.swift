@@ -225,7 +225,7 @@ class PuzzleViewController2s: UIViewController {
             switch self.currentAnimation {
             case 0:
                 
-                 self.leftPuzzlePiece1.isHidden = true
+                self.leftPuzzlePiece1.isHidden = true
                 
                 var concatinatedAnimation = CGAffineTransform.identity
                 concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)

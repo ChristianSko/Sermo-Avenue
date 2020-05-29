@@ -22,7 +22,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     // CustomFlowLayOut that will determine the
     let layout = UICollectionViewFlowLayout()
     
-   // category background
+    // category background
     var categoryBackground = UIImage()
     
     // Back Button Image
@@ -46,11 +46,11 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         collectionView.collectionViewLayout = layout
         collectionView.backgroundColor = .clear
         
-//        set category background
-         let categoryBackgroundImage = UIImageView(frame: UIScreen.main.bounds)
-               categoryBackgroundImage.image = categoryBackground
-               categoryBackgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-               self.view.insertSubview(categoryBackgroundImage, at: 0)
+        //        set category background
+        let categoryBackgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        categoryBackgroundImage.image = categoryBackground
+        categoryBackgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(categoryBackgroundImage, at: 0)
         
     }
     // MARK: - Required methods for the UICollectionViewDataSource Protocol
@@ -74,7 +74,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         cell.imageView.image = UIImage(named: flashcard.image!)
         return cell
     }
-   
+    
     // MARK: - PrepareForSegue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? FlashcardViewController,
@@ -82,7 +82,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
             destination.selectedFlashcard = allFlashcards[index.row]
         }
     }
-
+    
 }
 
 //func theme(for segue: UIStoryboardSegue, sender: Any?) {

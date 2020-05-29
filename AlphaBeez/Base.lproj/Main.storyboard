@@ -780,41 +780,50 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="SrP-qX-pBx">
                                 <rect key="frame" x="5" y="199.5" width="657" height="115"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="97e-jk-3bK">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7P-DV-8G8">
                                         <rect key="frame" x="0.0" y="0.0" width="197" height="115"/>
-                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <gestureRecognizers/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ji1-Pn-3h6">
+                                        <state key="normal" image="camera-faded"/>
+                                        <connections>
+                                            <action selector="addPhoto:" destination="zne-IW-B5U" eventType="touchUpInside" id="M3e-4h-cWG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoE-TX-ZXo">
                                         <rect key="frame" x="230" y="0.0" width="197" height="115"/>
-                                        <gestureRecognizers/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6RT-LX-aVP">
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" image="camera-faded"/>
+                                        <connections>
+                                            <action selector="addPhoto:" destination="zne-IW-B5U" eventType="touchUpInside" id="Kuq-HQ-nbB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzk-vQ-Ctr">
                                         <rect key="frame" x="460" y="0.0" width="197" height="115"/>
-                                        <gestureRecognizers/>
-                                    </imageView>
+                                        <state key="normal" image="camera-faded"/>
+                                        <connections>
+                                            <action selector="addPhoto:" destination="zne-IW-B5U" eventType="touchUpInside" id="S4m-FP-QJH"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="dI4-c8-aJd"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="188" translatesAutoresizingMaskIntoConstraints="NO" id="4O5-JC-MOw">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="4O5-JC-MOw">
                                 <rect key="frame" x="72" y="334.5" width="523" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shape" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aY7-Tg-FNv">
-                                        <rect key="frame" x="0.0" y="0.0" width="49" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="74.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtc-Sr-7St">
-                                        <rect key="frame" x="237" y="0.0" width="49" height="20.5"/>
+                                        <rect key="frame" x="224.5" y="0.0" width="74" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Texture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4K7-oJ-kJj">
-                                        <rect key="frame" x="474" y="0.0" width="49" height="20.5"/>
+                                        <rect key="frame" x="448.5" y="0.0" width="74.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -827,25 +836,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7P-DV-8G8">
-                                <rect key="frame" x="83" y="171" width="24" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="camera.fill" catalog="system"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoE-TX-ZXo">
-                                <rect key="frame" x="321" y="176" width="24" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="camera.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="addPhoto:" destination="zne-IW-B5U" eventType="touchUpInside" id="Kuq-HQ-nbB"/>
-                                    <action selector="didHide:" destination="zne-IW-B5U" eventType="touchUpInside" id="AWN-cc-8Xo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzk-vQ-Ctr">
-                                <rect key="frame" x="560" y="176" width="24" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="camera.fill" catalog="system"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -872,11 +862,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="colorImageView" destination="ji1-Pn-3h6" id="uGV-m2-orL"/>
+                        <outlet property="colorButton" destination="UoE-TX-ZXo" id="K6y-iM-zai"/>
                         <outlet property="colorLabel" destination="Xtc-Sr-7St" id="RxI-QY-QfR"/>
-                        <outlet property="shapeImageView" destination="97e-jk-3bK" id="Jt3-ld-1o1"/>
+                        <outlet property="shapeButton" destination="b7P-DV-8G8" id="mm4-QA-lN7"/>
                         <outlet property="shapeLabel" destination="aY7-Tg-FNv" id="QP6-t0-rrK"/>
-                        <outlet property="textureImageView" destination="6RT-LX-aVP" id="qtq-ND-4Bl"/>
+                        <outlet property="textureButton" destination="Rzk-vQ-Ctr" id="dQS-ax-onF"/>
                         <outlet property="textureLabel" destination="4K7-oJ-kJj" id="UQg-Hg-xPk"/>
                         <outlet property="titleLabel" destination="IlX-Ym-Amc" id="uw1-Vz-XkM"/>
                     </connections>
@@ -888,7 +878,7 @@
     </scenes>
     <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
-        <image name="camera.fill" catalog="system" width="128" height="96"/>
+        <image name="camera-faded" width="138" height="112"/>
         <image name="category-home" width="475.5" height="369"/>
         <image name="category-market" width="316" height="233"/>
         <image name="category-park" width="300" height="227"/>

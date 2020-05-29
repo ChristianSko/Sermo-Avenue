@@ -24,7 +24,7 @@ class PuzzleViewController3s: UIViewController {
     @IBOutlet weak var rightPuzzlePieceButton: UIButton!
     @IBOutlet weak var upperLeftPuzzlePieceButton: UIButton!
     @IBOutlet weak var bottomLeftPuzzlePieceButton: UIButton!
-   
+    
     
     // Images set programtically
     var starsImage: UIImageView!
@@ -47,7 +47,7 @@ class PuzzleViewController3s: UIViewController {
     
     //    To handle the playback
     var audioPlayer : AVAudioPlayer?
-
+    
     // Back Button Image
     let backButton = UIImage(named: "back")
     
@@ -93,7 +93,7 @@ class PuzzleViewController3s: UIViewController {
         maskBottomLeft.image = UIImage(named: "puzzle-3pc-3")
         maskBottomLeft.frame = bottomLeftPuzzlePiece.bounds
         bottomLeftPuzzlePiece.mask = maskBottomLeft
-                
+        
         //Stars hidden on top of the centered blurred image
         starsImage = UIImageView(image: UIImage(named: "stars-puzzle"))
         starsImage.contentMode = UIView.ContentMode.scaleAspectFit
@@ -186,7 +186,7 @@ class PuzzleViewController3s: UIViewController {
     
     @IBAction func tappedRightPuzzlePiece(_ sender: UIButton) {
         
-
+        
         UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
             
             switch self.currentAnimation {
@@ -233,50 +233,50 @@ class PuzzleViewController3s: UIViewController {
     }
     
     @IBAction func tappedUpperLeftPuzzlePiece(_ sender: UIButton) {
-
-         
-         UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
-             
-             switch self.currentAnimation {
-             case 0:
+        
+        
+        UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
+            
+            switch self.currentAnimation {
+            case 0:
                 
                 self.upperLeftPuzzlePieceButton.isHidden = true
                 
-                 // This merges two animations scale & mrove
-                 var concatinatedAnimation = CGAffineTransform.identity
-                 concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                 concatinatedAnimation = concatinatedAnimation.translatedBy(x: 132, y: 28)
-                 self.upperLeftPuzzlePiece.transform = concatinatedAnimation
-                 
-                 //Calls animation + haptic sound based on condition
-                 if self.syllableCounter == 1 {
-                     self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
-                     self.syllableCounter += 1
-                 } else if self.syllableCounter == 2 {
-                     self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s2")
-                     self.syllableCounter += 1
-                 } else {
-                     self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s3")
-                     self.starsImage.isHidden = false
-                     self.flashcardWordLabel.isHidden = false
-                     self.starsImage.transform = CGAffineTransform(rotationAngle: .pi)
-                 }
-                 
-             case 1:
-                 self.upperLeftPuzzlePiece.transform = .identity
-                 
-             default:
-                 break
-             }
-         }) { (finished) in
-             print("Test")
-         }
-         
-         currentAnimation += 1
-         
-         if currentAnimation > 1 {
-             currentAnimation = 0
-         }
+                // This merges two animations scale & mrove
+                var concatinatedAnimation = CGAffineTransform.identity
+                concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
+                concatinatedAnimation = concatinatedAnimation.translatedBy(x: 132, y: 28)
+                self.upperLeftPuzzlePiece.transform = concatinatedAnimation
+                
+                //Calls animation + haptic sound based on condition
+                if self.syllableCounter == 1 {
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
+                    self.syllableCounter += 1
+                } else if self.syllableCounter == 2 {
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s2")
+                    self.syllableCounter += 1
+                } else {
+                    self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s3")
+                    self.starsImage.isHidden = false
+                    self.flashcardWordLabel.isHidden = false
+                    self.starsImage.transform = CGAffineTransform(rotationAngle: .pi)
+                }
+                
+            case 1:
+                self.upperLeftPuzzlePiece.transform = .identity
+                
+            default:
+                break
+            }
+        }) { (finished) in
+            print("Test")
+        }
+        
+        currentAnimation += 1
+        
+        if currentAnimation > 1 {
+            currentAnimation = 0
+        }
     }
     
     @IBAction func tappedBottomLeftPuzzlePiece(_ sender: UIButton) {
