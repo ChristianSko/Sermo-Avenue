@@ -50,6 +50,9 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Hiding the custom back button
+        navigationItem.hidesBackButton = true
+        
         // text label
         titleLabel.text = """
         You just learned \(selectedFlashcard.name!).
@@ -141,5 +144,11 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
         
         present(alert, animated: true, completion: nil)
     }
+    
+    // MARK: - Action for the exit button
+    @IBAction func exitButtonPressed(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     
 }

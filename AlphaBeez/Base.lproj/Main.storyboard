@@ -496,7 +496,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IoH-NV-aF2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ine-xc-HL3"/>
+                    <navigationItem key="navigationItem" id="ine-xc-HL3">
+                        <barButtonItem key="rightBarButtonItem" image="exit" landscapeImage="exit" id="TqT-NA-i5J">
+                            <connections>
+                                <action selector="exitButtonPressed:" destination="syO-Qf-ldC" id="kbJ-Yf-h5b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="borderView" destination="g6l-YE-E3a" id="B7k-JS-mtR"/>
                         <outlet property="flashcardWordLabel" destination="K9K-QH-lbr" id="yzM-tU-qIM"/>
@@ -592,7 +598,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tc7-ge-t6z"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kIA-Qg-9uH"/>
+                    <navigationItem key="navigationItem" id="kIA-Qg-9uH">
+                        <barButtonItem key="rightBarButtonItem" image="exit" landscapeImage="exit" id="0br-1C-Gig">
+                            <connections>
+                                <action selector="exitButtonPressed:" destination="1mP-YR-Eha" id="szp-Z6-KiQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="borderView" destination="YXV-xC-oYJ" id="De8-YB-YSl"/>
                         <outlet property="flashcardWordLabel" destination="8GO-Hu-PeW" id="eaY-aI-Nw1"/>
@@ -710,7 +722,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gQM-gA-y4G"/>
                     </view>
-                    <navigationItem key="navigationItem" id="atO-UF-Qcr"/>
+                    <navigationItem key="navigationItem" id="atO-UF-Qcr">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="exit" landscapeImage="exit" id="nDc-xK-jQu">
+                            <connections>
+                                <action selector="exitButtonPressed:" destination="UFO-OY-pgl" id="4qu-aW-FFu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="borderView" destination="8VZ-AU-uzF" id="GiS-tV-sxk"/>
                         <outlet property="bottomLeftPuzzlePiece" destination="2vM-71-dmC" id="06y-YL-X2o"/>
@@ -732,7 +750,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BdV-ba-3pF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ANU-xe-p25">
+                    <navigationBar key="navigationBar" contentMode="bottom" insetsLayoutMarginsFromSafeArea="NO" id="ANU-xe-p25">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -828,7 +846,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0cK-J5-cGD"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zsH-rc-jX5"/>
+                    <navigationItem key="navigationItem" id="zsH-rc-jX5">
+                        <barButtonItem key="rightBarButtonItem" image="exit" landscapeImage="exit" id="xoL-UV-SFv">
+                            <connections>
+                                <action selector="exitButtonPressed:" destination="zne-IW-B5U" id="hJ6-gw-H3g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="colorGesture" destination="doz-xp-f3d" id="xCH-v2-9hg"/>
                         <outlet property="colorImageView" destination="ji1-Pn-3h6" id="uGV-m2-orL"/>
@@ -868,6 +892,7 @@
         <image name="category-home" width="317" height="245"/>
         <image name="category-market" width="316" height="233"/>
         <image name="category-park" width="300" height="227"/>
+        <image name="exit" width="40" height="40"/>
         <image name="puzzle-breaks-2pc" width="1125" height="1125"/>
         <image name="puzzle-breaks-3pc" width="1125" height="1125"/>
         <image name="puzzle-button" width="50" height="55"/>

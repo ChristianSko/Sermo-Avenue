@@ -60,6 +60,9 @@ class PuzzleViewController3s: UIViewController {
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButton
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         
+        // Hiding the custom back button
+        navigationItem.hidesBackButton = true
+        
         // Creating the HapticEngine
         creteEngine()
         
@@ -323,5 +326,9 @@ class PuzzleViewController3s: UIViewController {
         }
     }
     
+    // MARK: - Action for pressing the exit button
+    @IBAction func exitButtonPressed(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
+    }
     
 }
