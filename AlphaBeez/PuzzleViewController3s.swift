@@ -171,17 +171,18 @@ class PuzzleViewController3s: UIViewController {
     
     @IBAction func tappedRightPuzzlePiece(_ sender: UIButton) {
         
-//        sender.isHidden = true
-        
+
         UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
             
             switch self.currentAnimation {
             case 0:
                 
+                self.rightPuzzlePieceButton.isHidden = true
+                
                 // This merges two animations scale & move
                 var concatinatedAnimation = CGAffineTransform.identity
                 concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: 2.5)
+                concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: 0)
                 self.rightPuzzlePiece.transform = concatinatedAnimation
                 
                 //Calls animation + haptic sound based on condition
@@ -207,9 +208,6 @@ class PuzzleViewController3s: UIViewController {
         }) { (finished) in
             print("Test")
             
-            //Uncomment for testing animation several times in arow
-            sender.isHidden = false
-            
         }
         
         currentAnimation += 1
@@ -226,10 +224,13 @@ class PuzzleViewController3s: UIViewController {
              
              switch self.currentAnimation {
              case 0:
+                
+                self.upperLeftPuzzlePieceButton.isHidden = true
+                
                  // This merges two animations scale & move
                  var concatinatedAnimation = CGAffineTransform.identity
                  concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                 concatinatedAnimation = concatinatedAnimation.translatedBy(x: 132, y: 31)
+                 concatinatedAnimation = concatinatedAnimation.translatedBy(x: 132, y: 28)
                  self.upperLeftPuzzlePiece.transform = concatinatedAnimation
                  
                  //Calls animation + haptic sound based on condition
@@ -254,10 +255,6 @@ class PuzzleViewController3s: UIViewController {
              }
          }) { (finished) in
              print("Test")
-             
-             // Uncomment for testing animation several times in arow
-               sender.isHidden = false
-             
          }
          
          currentAnimation += 1
@@ -268,17 +265,20 @@ class PuzzleViewController3s: UIViewController {
     }
     
     @IBAction func tappedBottomLeftPuzzlePiece(_ sender: UIButton) {
-        sender.isHidden = true
         
         UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
             
             switch self.currentAnimation {
             case 0:
+                
+                self.bottomLeftPuzzlePieceButton.isHidden = true
+                
                 // This merges two animations scale & movea
                 var concatinatedAnimation = CGAffineTransform.identity
                 concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                concatinatedAnimation = concatinatedAnimation.translatedBy(x: 131, y: -43)
+                concatinatedAnimation = concatinatedAnimation.translatedBy(x: 131, y: -46.5)
                 self.bottomLeftPuzzlePiece.transform = concatinatedAnimation
+                
                 
                 if self.syllableCounter == 1 {
                     self.playHapticsFile(name: self.selectedFlashcard.hapticPath! + "-s1")
@@ -301,9 +301,6 @@ class PuzzleViewController3s: UIViewController {
             }
         }) { (finished) in
             print("Test")
-            
-            // Uncomment for testing animation several times in arow
-                        sender.isHidden = false
             
         }
         

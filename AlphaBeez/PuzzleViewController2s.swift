@@ -161,16 +161,17 @@ class PuzzleViewController2s: UIViewController {
     
     
     @IBAction func tappedRightPuzzlePiece(_ sender: UIButton) {
-        sender.isHidden = true
         
         UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
             
             switch self.currentAnimation {
             case 0:
                 
+                self.rightPuzzlePiece1.isHidden = true
+                
                 var concatinatedAnimation = CGAffineTransform.identity
                 concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: -6)
+                concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: 0)
                 self.rightPuzzlePiece.transform = concatinatedAnimation
                 
                 
@@ -194,9 +195,6 @@ class PuzzleViewController2s: UIViewController {
         }) { (finished) in
             print("Test")
             
-            // Uncomment for testing animation several times in arow
-             sender.isHidden = false
-            
         }
         
         currentAnimation += 1
@@ -204,21 +202,20 @@ class PuzzleViewController2s: UIViewController {
         if currentAnimation > 1 {
             currentAnimation = 0
         }
-
-        
     }
     
     @IBAction func tappedLeftPuzzlePiece(_ sender: UIButton) {
-        sender.isHidden = true
         
         UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
             
             switch self.currentAnimation {
             case 0:
                 
+                 self.leftPuzzlePiece1.isHidden = true
+                
                 var concatinatedAnimation = CGAffineTransform.identity
                 concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                concatinatedAnimation = concatinatedAnimation.translatedBy(x: 132, y: -6)
+                concatinatedAnimation = concatinatedAnimation.translatedBy(x: 132, y: 0)
                 self.leftPuzzlePiece.transform = concatinatedAnimation
                 
                 
@@ -243,10 +240,6 @@ class PuzzleViewController2s: UIViewController {
             }
         }) { (finished) in
             print("Test")
-            
-            //Uncomment for testing animation several times in arow
-            sender.isHidden = false
-            
         }
         
         currentAnimation += 1

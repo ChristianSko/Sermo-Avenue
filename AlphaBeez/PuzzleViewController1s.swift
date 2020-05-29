@@ -148,10 +148,12 @@ class PuzzleViewController1s: UIViewController {
             
             switch self.currentAnimation {
             case 0:
+                
+                
                 // This merges two animations scale & move
                 var concatinatedAnimation = CGAffineTransform.identity
                 concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: -6)
+                concatinatedAnimation = concatinatedAnimation.translatedBy(x: -131.5, y: 0)
                 
                 //Calls animation + haptic sound
                 self.oneSyllablePuzzle1.transform = concatinatedAnimation
@@ -164,7 +166,7 @@ class PuzzleViewController1s: UIViewController {
                 
             // For Testing and repeating, only possible when sender isnt hidden
             case 1:
-                self.oneSyllablePuzzle1.transform = .identity
+//                self.oneSyllablePuzzle1.transform = .identity
                 print("Hi")
                 
             default:
@@ -172,9 +174,6 @@ class PuzzleViewController1s: UIViewController {
             }
         }) { (finished) in
             print("Test")
-            
-            //                        Uncomment for testing animation several times in arow
-//            sender.isHidden = false
             
         }
     }
