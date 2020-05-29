@@ -13,15 +13,18 @@ import AVFoundation
 class PuzzleViewController3s: UIViewController {
     
     
+    
     //Image Outlets
     @IBOutlet weak var rightPuzzlePiece: UIImageView!
     @IBOutlet weak var upperLeftPuzzlePiece: UIImageView!
     @IBOutlet weak var bottomLeftPuzzlePiece: UIImageView!
     @IBOutlet weak var fullImagePuzzleThree: UIImageView!
+    @IBOutlet weak var borderView: UIImageView!
     @IBOutlet weak var flashcardWordLabel: UILabel!
     @IBOutlet weak var rightPuzzlePieceButton: UIButton!
     @IBOutlet weak var upperLeftPuzzlePieceButton: UIButton!
     @IBOutlet weak var bottomLeftPuzzlePieceButton: UIButton!
+   
     
     // Images set programtically
     var starsImage: UIImageView!
@@ -63,8 +66,6 @@ class PuzzleViewController3s: UIViewController {
         // Properties for centered blurred image of puzzle 1
         fullImagePuzzleThree.image = UIImage(named: selectedFlashcard.image!)
         fullImagePuzzleThree.alpha = 0.2
-        fullImagePuzzleThree.layer.borderWidth = 1
-        fullImagePuzzleThree.layer.borderColor =  UIColor.blue.cgColor
         
         // Image for right puzzle Piece
         rightPuzzlePiece.image = UIImage(named: selectedFlashcard.image!)
@@ -101,6 +102,17 @@ class PuzzleViewController3s: UIViewController {
         
         flashcardWordLabel.isHidden = true
         flashcardWordLabel.text = selectedFlashcard.name!.uppercased()
+        
+        borderView.layer.borderWidth = 15
+        borderView.layer.cornerRadius = 10
+        
+        if selectedFlashcard.category == "home" {
+            borderView.layer.borderColor = UIColor.homeColor.cgColor
+        } else if selectedFlashcard.category == "park" {
+            borderView.layer.borderColor = UIColor.parkColor.cgColor
+        } else if selectedFlashcard.category == "market" {
+            borderView.layer.borderColor = UIColor.marketColor.cgColor
+        }
         
     }
     

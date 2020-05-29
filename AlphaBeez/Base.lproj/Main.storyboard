@@ -516,6 +516,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YXV-xC-oYJ">
+                                <rect key="frame" x="315.5" y="74.5" width="265" height="265"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="265" id="2Mz-EM-oiM"/>
+                                    <constraint firstAttribute="width" constant="265" id="xpD-vS-A6E"/>
+                                </constraints>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Skm-Z8-4IB">
                                 <rect key="frame" x="323" y="82" width="250" height="250"/>
                                 <constraints>
@@ -566,14 +573,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="YXV-xC-oYJ" firstAttribute="centerX" secondItem="IJw-ii-NNc" secondAttribute="centerX" id="09l-17-UeF"/>
                             <constraint firstItem="Skm-Z8-4IB" firstAttribute="leading" secondItem="5r4-Ej-3Uh" secondAttribute="trailing" constant="76" id="3rB-LD-DRI"/>
                             <constraint firstItem="8GO-Hu-PeW" firstAttribute="centerY" secondItem="IJw-ii-NNc" secondAttribute="centerY" id="89c-fp-twu"/>
+                            <constraint firstItem="YXV-xC-oYJ" firstAttribute="centerX" secondItem="IJw-ii-NNc" secondAttribute="centerX" id="AgZ-GZ-GrW"/>
                             <constraint firstItem="iG5-bh-EZq" firstAttribute="centerY" secondItem="IJw-ii-NNc" secondAttribute="centerY" id="AgZ-V9-pEv"/>
                             <constraint firstItem="Skm-Z8-4IB" firstAttribute="centerX" secondItem="IJw-ii-NNc" secondAttribute="centerX" id="I0z-mD-uEX"/>
                             <constraint firstItem="Skm-Z8-4IB" firstAttribute="leading" secondItem="R7m-7T-xZP" secondAttribute="trailing" constant="76" id="IbY-yM-pRC"/>
                             <constraint firstItem="iG5-bh-EZq" firstAttribute="leading" secondItem="Skm-Z8-4IB" secondAttribute="trailing" constant="76" id="MTu-LZ-PS7"/>
+                            <constraint firstItem="YXV-xC-oYJ" firstAttribute="centerY" secondItem="IJw-ii-NNc" secondAttribute="centerY" id="Qg6-53-SmX"/>
                             <constraint firstItem="eJK-An-82Q" firstAttribute="leading" secondItem="Skm-Z8-4IB" secondAttribute="trailing" constant="76" id="Qti-pY-3if"/>
                             <constraint firstItem="eJK-An-82Q" firstAttribute="centerY" secondItem="IJw-ii-NNc" secondAttribute="centerY" id="SnG-i1-KO8"/>
+                            <constraint firstItem="YXV-xC-oYJ" firstAttribute="centerY" secondItem="IJw-ii-NNc" secondAttribute="centerY" id="hBj-1D-knr"/>
                             <constraint firstItem="8GO-Hu-PeW" firstAttribute="centerX" secondItem="IJw-ii-NNc" secondAttribute="centerX" id="iJj-dt-BEv"/>
                             <constraint firstItem="R7m-7T-xZP" firstAttribute="centerY" secondItem="IJw-ii-NNc" secondAttribute="centerY" id="kQ4-zf-ttw"/>
                             <constraint firstItem="5r4-Ej-3Uh" firstAttribute="centerY" secondItem="IJw-ii-NNc" secondAttribute="centerY" id="kQV-3G-7H0"/>
@@ -583,6 +594,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kIA-Qg-9uH"/>
                     <connections>
+                        <outlet property="borderView" destination="YXV-xC-oYJ" id="De8-YB-YSl"/>
                         <outlet property="flashcardWordLabel" destination="8GO-Hu-PeW" id="eaY-aI-Nw1"/>
                         <outlet property="fullImagePuzzleTwo" destination="Skm-Z8-4IB" id="MWA-ry-cLD"/>
                         <outlet property="leftPuzzlePiece" destination="5r4-Ej-3Uh" id="l7M-ym-Ddb"/>
@@ -603,6 +615,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8VZ-AU-uzF">
+                                <rect key="frame" x="315.5" y="74.5" width="265" height="265"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="265" id="B0A-2h-WGg"/>
+                                    <constraint firstAttribute="width" constant="265" id="NQS-78-szo"/>
+                                </constraints>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tTP-vw-zJu">
                                 <rect key="frame" x="323" y="82" width="250" height="250"/>
                                 <constraints>
@@ -685,12 +704,15 @@
                             <constraint firstItem="2vM-71-dmC" firstAttribute="top" secondItem="Ksq-2C-q9K" secondAttribute="bottom" constant="23" id="fOW-Wx-t2e"/>
                             <constraint firstItem="fOo-Dy-XfR" firstAttribute="centerY" secondItem="iZs-55-Pei" secondAttribute="centerY" id="iNb-YS-yf0"/>
                             <constraint firstItem="tTP-vw-zJu" firstAttribute="leading" secondItem="QKs-tl-XA9" secondAttribute="trailing" constant="76" id="ik0-wd-nGi"/>
+                            <constraint firstItem="8VZ-AU-uzF" firstAttribute="centerY" secondItem="iZs-55-Pei" secondAttribute="centerY" id="m36-An-icy"/>
+                            <constraint firstItem="8VZ-AU-uzF" firstAttribute="centerX" secondItem="iZs-55-Pei" secondAttribute="centerX" id="oxb-kH-njr"/>
                             <constraint firstItem="2vM-71-dmC" firstAttribute="top" secondItem="QKs-tl-XA9" secondAttribute="bottom" constant="23" id="ywF-M7-jho"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gQM-gA-y4G"/>
                     </view>
                     <navigationItem key="navigationItem" id="atO-UF-Qcr"/>
                     <connections>
+                        <outlet property="borderView" destination="8VZ-AU-uzF" id="GiS-tV-sxk"/>
                         <outlet property="bottomLeftPuzzlePiece" destination="2vM-71-dmC" id="06y-YL-X2o"/>
                         <outlet property="bottomLeftPuzzlePieceButton" destination="4P9-cn-coY" id="mw1-xv-X7a"/>
                         <outlet property="flashcardWordLabel" destination="fOo-Dy-XfR" id="SEa-n2-XMW"/>

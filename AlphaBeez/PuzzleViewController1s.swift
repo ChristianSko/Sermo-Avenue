@@ -18,9 +18,9 @@ class PuzzleViewController1s: UIViewController {
     var selectedFlashcard = Flashcard()
     
     @IBOutlet weak var fullImagePuzzleOne: UIImageView!
+    @IBOutlet weak var borderView: UIImageView!
     @IBOutlet weak var flashcardWordLabel: UILabel!
     @IBOutlet weak var oneSyllablePuzzle1: UIButton!
-    @IBOutlet weak var borderView: UIImageView!
     var starsImage: UIImageView!
     
     
@@ -54,8 +54,6 @@ class PuzzleViewController1s: UIViewController {
         // Properties for centered blurred image of puzzle 1
         fullImagePuzzleOne.image = UIImage(named: selectedFlashcard.image!)
         fullImagePuzzleOne.alpha = 0.2
-        fullImagePuzzleOne.layer.borderWidth = 1
-        fullImagePuzzleOne.layer.borderColor =  UIColor.blue.cgColor
         
         //Stars hidden on top of the centered blurred image
         starsImage = UIImageView(image: UIImage(named: "stars-puzzle"))
@@ -73,10 +71,8 @@ class PuzzleViewController1s: UIViewController {
         flashcardWordLabel.isHidden = true
         flashcardWordLabel.text = selectedFlashcard.name!.uppercased()
         
-        
-        
         borderView.layer.borderWidth = 15
-        borderView.layer.cornerRadius = 20
+        borderView.layer.cornerRadius = 10
         
         if selectedFlashcard.category == "home" {
             borderView.layer.borderColor = UIColor.homeColor.cgColor

@@ -19,6 +19,7 @@ class PuzzleViewController2s: UIViewController {
     @IBOutlet weak var flashcardWordLabel: UILabel!
     @IBOutlet weak var rightPuzzlePiece1: UIButton!
     @IBOutlet weak var leftPuzzlePiece1: UIButton!
+    @IBOutlet weak var borderView: UIImageView!
     
     
     var starsImage: UIImageView!
@@ -60,8 +61,7 @@ class PuzzleViewController2s: UIViewController {
         // Properties for centered blurred image of puzzle 1
         fullImagePuzzleTwo.image = UIImage(named: selectedFlashcard.image!)
         fullImagePuzzleTwo.alpha = 0.2
-        fullImagePuzzleTwo.layer.borderWidth = 1
-        fullImagePuzzleTwo.layer.borderColor =  UIColor.blue.cgColor
+        
         
         // Image for right puzzle Piece
         rightPuzzlePiece.image = UIImage(named: selectedFlashcard.image!)
@@ -90,6 +90,17 @@ class PuzzleViewController2s: UIViewController {
         
         flashcardWordLabel.isHidden = true
         flashcardWordLabel.text = selectedFlashcard.name!.uppercased()
+        
+        borderView.layer.borderWidth = 15
+        borderView.layer.cornerRadius = 10
+        
+        if selectedFlashcard.category == "home" {
+            borderView.layer.borderColor = UIColor.homeColor.cgColor
+        } else if selectedFlashcard.category == "park" {
+            borderView.layer.borderColor = UIColor.parkColor.cgColor
+        } else if selectedFlashcard.category == "market" {
+            borderView.layer.borderColor = UIColor.marketColor.cgColor
+        }
         
     }
     
@@ -171,7 +182,7 @@ class PuzzleViewController2s: UIViewController {
                 
                 var concatinatedAnimation = CGAffineTransform.identity
                 concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
-                concatinatedAnimation = concatinatedAnimation.translatedBy(x: -132, y: 0)
+                concatinatedAnimation = concatinatedAnimation.translatedBy(x: -131, y: 0)
                 self.rightPuzzlePiece.transform = concatinatedAnimation
                 
                 
