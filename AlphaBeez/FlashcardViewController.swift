@@ -69,29 +69,29 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         innerViewForFlashcard.layer.cornerRadius = 10
         innerViewForFlashcard.layer.borderWidth = 10
         if selectedFlashcard.category == "home" {
-            innerViewForFlashcard.layer.borderColor = UIColor.purple.cgColor
+            innerViewForFlashcard.layer.borderColor = UIColor.homeColor.cgColor
         } else if selectedFlashcard.category == "park" {
-            innerViewForFlashcard.layer.borderColor = UIColor.red.cgColor
+            innerViewForFlashcard.layer.borderColor = UIColor.parkColor.cgColor
         } else if selectedFlashcard.category == "market" {
-            innerViewForFlashcard.layer.borderColor = UIColor.orange.cgColor
+            innerViewForFlashcard.layer.borderColor = UIColor.marketColor.cgColor
         }
         
         
         if selectedFlashcard.category == "home" {
-            puzzleButton.backgroundColor = .purple
-            cameraButton.backgroundColor = .purple
-            hapticButton.backgroundColor = .purple
-            flashcardImage.layer.borderColor = UIColor.purple.cgColor
+            puzzleButton.backgroundColor = .homeColor
+            cameraButton.backgroundColor = .homeColor
+            hapticButton.backgroundColor = .homeColor
+            flashcardImage.layer.borderColor = UIColor.homeColor.cgColor
         } else if selectedFlashcard.category == "park" {
-            puzzleButton.backgroundColor = .red
-            cameraButton.backgroundColor = .red
-            hapticButton.backgroundColor = .red
-            flashcardImage.layer.borderColor = UIColor.red.cgColor
+            puzzleButton.backgroundColor = .parkColor
+            cameraButton.backgroundColor = .parkColor
+            hapticButton.backgroundColor = .parkColor
+            flashcardImage.layer.borderColor = UIColor.parkColor.cgColor
         } else {
-            puzzleButton.backgroundColor = .orange
-            cameraButton.backgroundColor = .orange
-            hapticButton.backgroundColor = .orange
-            flashcardImage.layer.borderColor = UIColor.orange.cgColor
+            puzzleButton.backgroundColor = .marketColor
+            cameraButton.backgroundColor = .marketColor
+            hapticButton.backgroundColor = .marketColor
+            flashcardImage.layer.borderColor = UIColor.marketColor.cgColor
         }
     }
     

@@ -61,22 +61,22 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
         shapeImageView.layer.cornerRadius = 20
         colorImageView.layer.cornerRadius = 20
         textureImageView.layer.cornerRadius = 20
-        shapeImageView.layer.borderWidth = 5
-        colorImageView.layer.borderWidth = 5
-        textureImageView.layer.borderWidth = 5
+//        shapeImageView.layer.borderWidth = 5
+//        colorImageView.layer.borderWidth = 5
+//        textureImageView.layer.borderWidth = 5
         
         if selectedFlashcard.category == "home" {
-            shapeImageView.layer.borderColor = UIColor.purple.cgColor
-            colorImageView.layer.borderColor = UIColor.purple.cgColor
-            textureImageView.layer.borderColor = UIColor.purple.cgColor
+            shapeImageView.backgroundColor = UIColor.homeColor
+            colorImageView.backgroundColor = UIColor.homeColor
+            textureImageView.backgroundColor = UIColor.homeColor
         } else if selectedFlashcard.category == "park" {
-            shapeImageView.layer.borderColor = UIColor.red.cgColor
-            colorImageView.layer.borderColor = UIColor.red.cgColor
-            textureImageView.layer.borderColor = UIColor.red.cgColor
+            shapeImageView.backgroundColor = UIColor.parkColor
+            colorImageView.backgroundColor = UIColor.parkColor
+            textureImageView.backgroundColor = UIColor.parkColor
         } else {
-            shapeImageView.layer.borderColor = UIColor.orange.cgColor
-            colorImageView.layer.borderColor = UIColor.orange.cgColor
-            textureImageView.layer.borderColor = UIColor.orange.cgColor
+            shapeImageView.backgroundColor = UIColor.marketColor
+            colorImageView.backgroundColor = UIColor.marketColor
+            textureImageView.backgroundColor = UIColor.marketColor
         }
         
         // show picker

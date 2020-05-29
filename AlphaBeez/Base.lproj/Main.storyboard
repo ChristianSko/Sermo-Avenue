@@ -240,7 +240,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGs-MP-wZW">
-                                <rect key="frame" x="257" y="64" width="391" height="227"/>
+                                <rect key="frame" x="257" y="64" width="391" height="193"/>
                                 <state key="normal" image="category-park">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -762,9 +762,9 @@
     <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="camera-faded" width="138" height="112"/>
-        <image name="category-home" width="317" height="245"/>
-        <image name="category-market" width="316" height="233"/>
-        <image name="category-park" width="300" height="227"/>
+        <image name="category-home" width="243" height="188"/>
+        <image name="category-market" width="237" height="191"/>
+        <image name="category-park" width="283" height="193"/>
         <image name="puzzle-button" width="50" height="55"/>
         <image name="search-button" width="50" height="50"/>
     </resources>

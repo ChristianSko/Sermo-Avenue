@@ -12,16 +12,17 @@ public extension UIColor {
     
 //    market = blue
     static var marketColor: UIColor {
-        return UIColor(red:38, green:184, blue:255, alpha:1.00)
+        return UIColor(red:38/255, green:184/255, blue:255/255, alpha:1.00)
     }
 
 //    park = red
     static var parkColor: UIColor {
-        return UIColor(red:242, green:46, blue:37, alpha:1.00)
+        return UIColor(red:242/255, green:46/255, blue:37/255, alpha:1.00)
     }
     
 //    home = purple
     static var homeColor: UIColor {
-        return UIColor(red:128, green:48, blue:255, alpha:1.00)
+        return UIColor(red:128/255, green:48/255, blue:255/255, alpha:1.00)
     }
 }
+

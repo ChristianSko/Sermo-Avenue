@@ -63,11 +63,11 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         let flashcard = allFlashcards[indexPath.row]
         
         if flashcard.category == "home" {
-            cell.layer.borderColor = UIColor.purple.cgColor
+            cell.layer.borderColor = UIColor.homeColor.cgColor
         } else if flashcard.category == "park" {
-            cell.layer.borderColor = UIColor.red.cgColor
+            cell.layer.borderColor = UIColor.parkColor.cgColor
         } else if flashcard.category == "market" {
-            cell.layer.borderColor = UIColor.orange.cgColor
+            cell.layer.borderColor = UIColor.marketColor.cgColor
         }
         cell.layer.cornerRadius = 20
         cell.layer.borderWidth = 10
