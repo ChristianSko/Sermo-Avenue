@@ -218,7 +218,7 @@ class PuzzleViewController3s: UIViewController {
     }
     
     @IBAction func tappedUpperLeftPuzzlePiece(_ sender: UIButton) {
-        sender.isHidden = true
+
          
          UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
              
@@ -227,7 +227,7 @@ class PuzzleViewController3s: UIViewController {
                 
                 self.upperLeftPuzzlePieceButton.isHidden = true
                 
-                 // This merges two animations scale & move
+                 // This merges two animations scale & mrove
                  var concatinatedAnimation = CGAffineTransform.identity
                  concatinatedAnimation = concatinatedAnimation.scaledBy(x: 2, y: 2)
                  concatinatedAnimation = concatinatedAnimation.translatedBy(x: 132, y: 28)
