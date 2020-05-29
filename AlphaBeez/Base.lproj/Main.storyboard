@@ -780,27 +780,18 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="SrP-qX-pBx">
                                 <rect key="frame" x="5" y="199.5" width="657" height="115"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="camera-faded" translatesAutoresizingMaskIntoConstraints="NO" id="97e-jk-3bK">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="97e-jk-3bK">
                                         <rect key="frame" x="0.0" y="0.0" width="197" height="115"/>
                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="9xz-3f-fBq" appends="YES" id="c4K-A1-Cdb"/>
-                                        </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-faded" translatesAutoresizingMaskIntoConstraints="NO" id="ji1-Pn-3h6">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ji1-Pn-3h6">
                                         <rect key="frame" x="230" y="0.0" width="197" height="115"/>
                                         <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="doz-xp-f3d" appends="YES" id="Ngh-7N-a2H"/>
-                                        </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-faded" translatesAutoresizingMaskIntoConstraints="NO" id="6RT-LX-aVP">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6RT-LX-aVP">
                                         <rect key="frame" x="460" y="0.0" width="197" height="115"/>
                                         <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="hk2-rB-jbA" appends="YES" id="RwU-oP-0kY"/>
-                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -836,6 +827,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7P-DV-8G8">
+                                <rect key="frame" x="83" y="171" width="24" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="camera.fill" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoE-TX-ZXo">
+                                <rect key="frame" x="321" y="176" width="24" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="camera.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="addPhoto:" destination="zne-IW-B5U" eventType="touchUpInside" id="Kuq-HQ-nbB"/>
+                                    <action selector="didHide:" destination="zne-IW-B5U" eventType="touchUpInside" id="AWN-cc-8Xo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzk-vQ-Ctr">
+                                <rect key="frame" x="560" y="176" width="24" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="camera.fill" catalog="system"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -862,42 +872,24 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="colorGesture" destination="doz-xp-f3d" id="xCH-v2-9hg"/>
                         <outlet property="colorImageView" destination="ji1-Pn-3h6" id="uGV-m2-orL"/>
                         <outlet property="colorLabel" destination="Xtc-Sr-7St" id="RxI-QY-QfR"/>
-                        <outlet property="shapeGesture" destination="9xz-3f-fBq" id="9Qa-ue-Vk5"/>
                         <outlet property="shapeImageView" destination="97e-jk-3bK" id="Jt3-ld-1o1"/>
                         <outlet property="shapeLabel" destination="aY7-Tg-FNv" id="QP6-t0-rrK"/>
-                        <outlet property="textureGesture" destination="hk2-rB-jbA" id="nCQ-O6-MDX"/>
                         <outlet property="textureImageView" destination="6RT-LX-aVP" id="qtq-ND-4Bl"/>
                         <outlet property="textureLabel" destination="4K7-oJ-kJj" id="UQg-Hg-xPk"/>
                         <outlet property="titleLabel" destination="IlX-Ym-Amc" id="uw1-Vz-XkM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5k1-7q-jDp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="9xz-3f-fBq">
-                    <connections>
-                        <action selector="tap:" destination="zne-IW-B5U" id="5kt-4j-pSW"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="doz-xp-f3d">
-                    <connections>
-                        <action selector="tap:" destination="zne-IW-B5U" id="P6R-Tk-tCV"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="hk2-rB-jbA">
-                    <connections>
-                        <action selector="tap:" destination="zne-IW-B5U" id="Izz-KQ-ljf"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2353" y="1073"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
-        <image name="camera-faded" width="138" height="112"/>
-        <image name="category-home" width="317" height="245"/>
+        <image name="camera.fill" catalog="system" width="128" height="96"/>
+        <image name="category-home" width="475.5" height="369"/>
         <image name="category-market" width="316" height="233"/>
         <image name="category-park" width="300" height="227"/>
         <image name="exit" width="40" height="40"/>

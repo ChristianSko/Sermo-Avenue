@@ -22,10 +22,10 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var colorImageView: UIImageView!
     @IBOutlet weak var textureImageView: UIImageView!
     
-    // Outlets of the Gesture regonizers
-    @IBOutlet var shapeGesture: UITapGestureRecognizer!
-    @IBOutlet var colorGesture: UITapGestureRecognizer!
-    @IBOutlet var textureGesture: UITapGestureRecognizer!
+//    // Outlets of the Gesture regonizers
+//    @IBOutlet var shapeGesture: UITapGestureRecognizer!
+//    @IBOutlet var colorGesture: UITapGestureRecognizer!
+//    @IBOutlet var textureGesture: UITapGestureRecognizer!
     
     // Will keep a record what of the 3 imageViews was tapped
     var whatImageView = 0
@@ -108,22 +108,25 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func tap(_ sender: UITapGestureRecognizer) {
+
         
+        
+    @IBAction func addPhoto(_ sender: Any) {
+    
         // Will switch to check after tap, which of the 3 imageViews was tapped
-        let gesture = sender
-        switch gesture {
-        case shapeGesture:
-            whatImageView = 1
-        case colorGesture:
-            whatImageView = 2
-        case textureGesture:
-            whatImageView = 3
-        default:
-            break
-        }
         
-        
+//        let tap = sender
+//        switch tap {
+//        case shapeGesture:
+//            whatImageView = 1
+//        case colorGesture:
+//            whatImageView = 2
+//        case textureGesture:
+//            whatImageView = 3
+//        default:
+//            break
+//        }
+    
         // create the alert with two buttons
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
@@ -148,6 +151,11 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     // MARK: - Action for the exit button
     @IBAction func exitButtonPressed(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func didHide(_ sender: Any) {
+        let pressedButton : UIButton = sender as! UIButton
+        pressedButton.isHidden = true
     }
     
     
