@@ -72,7 +72,6 @@ class PuzzleViewController1s: UIViewController {
         flashcardWordLabel.isHidden = true
         flashcardWordLabel.text = selectedFlashcard.name!.uppercased()
         
-       
         }
     
     // CreateEngine for Haptics
