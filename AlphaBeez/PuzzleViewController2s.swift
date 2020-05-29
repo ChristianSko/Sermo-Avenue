@@ -17,9 +17,10 @@ class PuzzleViewController2s: UIViewController {
     @IBOutlet weak var rightPuzzlePiece: UIImageView!
     @IBOutlet weak var leftPuzzlePiece: UIImageView!
     @IBOutlet weak var flashcardWordLabel: UILabel!
+    @IBOutlet weak var rightPuzzlePiece1: UIButton!
+    @IBOutlet weak var leftPuzzlePiece1: UIButton!
     
-    var leftPuzzlePieceButton: UIButton!
-    var rightPuzzlePieceButton: UIButton!
+    
     var starsImage: UIImageView!
     
     var currentAnimation = 0
@@ -78,28 +79,6 @@ class PuzzleViewController2s: UIViewController {
         maskLeft.frame = leftPuzzlePiece.bounds
         leftPuzzlePiece.mask = maskLeft
         
-        //Invisible Buttton behind the right puzzle Piece that triggers animation
-        rightPuzzlePieceButton = UIButton()
-        rightPuzzlePieceButton.frame.size.width = rightPuzzlePiece.frame.size.width
-        rightPuzzlePieceButton.frame.size.height = rightPuzzlePiece.frame.size.height
-        rightPuzzlePieceButton.center = rightPuzzlePiece.center
-        //Adding Border for testing purpose, uncomment for testing size
-        //        rightPuzzlePieceButton.layer.borderWidth = 3
-        //        rightPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
-        rightPuzzlePieceButton.addTarget(self, action: #selector(self.tappedRightPuzzlePiece(sender:)), for: .touchUpInside)
-        view.addSubview(rightPuzzlePieceButton)
-        
-        //Invisible Buttton behind the left puzzle Piece that triggers animation
-        leftPuzzlePieceButton = UIButton()
-        leftPuzzlePieceButton.frame.size.width = leftPuzzlePiece.frame.size.width
-        leftPuzzlePieceButton.frame.size.height = leftPuzzlePiece.frame.size.height
-        leftPuzzlePieceButton.center = leftPuzzlePiece.center
-        //Adding Border for testing purpose, uncomment for testing size
-        //        leftPuzzlePieceButton.layer.borderWidth = 3
-        //        leftPuzzlePieceButton.layer.borderColor = UIColor.blue.cgColor
-        leftPuzzlePieceButton.addTarget(self, action: #selector(self.tappedLeftPuzzlePiece(sender:)), for: .touchUpInside)
-        view.addSubview(leftPuzzlePieceButton)
-        
         //Stars hidden on top of the centered blurred image
         starsImage = UIImageView(image: UIImage(named: "stars-puzzle"))
         starsImage.contentMode = UIView.ContentMode.scaleAspectFit
@@ -111,7 +90,6 @@ class PuzzleViewController2s: UIViewController {
         
         flashcardWordLabel.isHidden = true
         flashcardWordLabel.text = selectedFlashcard.name!.uppercased()
-        
         
     }
     
@@ -182,10 +160,7 @@ class PuzzleViewController2s: UIViewController {
     }
     
     
-    
-    //       Animation function for right puzzle piece get triggered en tapping button
-    @objc func tappedRightPuzzlePiece(sender: UIButton) {
-        
+    @IBAction func tappedRightPuzzlePiece(_ sender: UIButton) {
         sender.isHidden = true
         
         UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
@@ -229,11 +204,11 @@ class PuzzleViewController2s: UIViewController {
         if currentAnimation > 1 {
             currentAnimation = 0
         }
+
+        
     }
     
-    // Animation function for left puzzle piece get triggered en tapping button
-    @objc func tappedLeftPuzzlePiece(sender: UIButton) {
-        
+    @IBAction func tappedLeftPuzzlePiece(_ sender: UIButton) {
         sender.isHidden = true
         
         UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations:  {
@@ -280,16 +255,5 @@ class PuzzleViewController2s: UIViewController {
             currentAnimation = 0
         }
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
