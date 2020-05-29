@@ -39,7 +39,7 @@
 		D6249AA324782629009B5BCB /* PuzzleViewController3s.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController3s.swift; sourceTree = "<group>"; };
 		FA020060246B534D00A2F0BD /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA020062246B53DC00A2F0BD /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		FA1A98E3246ADAEC0088B4E9 /* AlphaBeez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaBeez.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1A98E3246ADAEC0088B4E9 /* Sermo Avenue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sermo Avenue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1A98E6246ADAEC0088B4E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA1A98E8246ADAEC0088B4E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA1A98EA246ADAEC0088B4E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		FA1A98E4246ADAEC0088B4E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA1A98E3246ADAEC0088B4E9 /* AlphaBeez.app */,
+				FA1A98E3246ADAEC0088B4E9 /* Sermo Avenue.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,7 +134,7 @@
 			);
 			name = AlphaBeez;
 			productName = AlphaBeez;
-			productReference = FA1A98E3246ADAEC0088B4E9 /* AlphaBeez.app */;
+			productReference = FA1A98E3246ADAEC0088B4E9 /* Sermo Avenue.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -349,6 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = T7664565ZX;
 				INFOPLIST_FILE = AlphaBeez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -357,7 +358,7 @@
 				);
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.IvanTilev.AlphaBeez;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Sermo Avenue";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -368,6 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = T7664565ZX;
 				INFOPLIST_FILE = AlphaBeez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -376,7 +378,7 @@
 				);
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.IvanTilev.AlphaBeez;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Sermo Avenue";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
