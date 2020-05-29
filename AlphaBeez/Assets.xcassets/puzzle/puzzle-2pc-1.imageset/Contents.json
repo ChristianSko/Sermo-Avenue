@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "puzzle-2pc-3.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "puzzle-2pc-4.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
