@@ -240,7 +240,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGs-MP-wZW">
-                                <rect key="frame" x="257" y="64" width="391" height="193"/>
+                                <rect key="frame" x="257" y="64" width="391" height="227"/>
                                 <state key="normal" image="category-park">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -473,13 +473,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g6l-YE-E3a">
+                                <rect key="frame" x="315.5" y="74.5" width="265" height="265"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="HAC-M8-noR"/>
+                                    <constraint firstAttribute="height" constant="265" id="L0a-AG-UNL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="K9K-QH-lbr" firstAttribute="centerX" secondItem="gYL-7w-dJP" secondAttribute="centerX" id="4Yq-YL-QaH"/>
                             <constraint firstItem="Nzi-Ix-Zjh" firstAttribute="centerY" secondItem="gYL-7w-dJP" secondAttribute="centerY" id="CCC-d6-vJ3"/>
+                            <constraint firstItem="g6l-YE-E3a" firstAttribute="centerX" secondItem="gYL-7w-dJP" secondAttribute="centerX" id="CIo-Eq-Tfg"/>
                             <constraint firstItem="Zo6-kt-mPt" firstAttribute="leading" secondItem="Nzi-Ix-Zjh" secondAttribute="trailing" constant="76" id="dPM-hW-xY8"/>
+                            <constraint firstItem="g6l-YE-E3a" firstAttribute="centerX" secondItem="gYL-7w-dJP" secondAttribute="centerX" id="frK-vU-0aL"/>
                             <constraint firstItem="K9K-QH-lbr" firstAttribute="centerY" secondItem="gYL-7w-dJP" secondAttribute="centerY" id="j6e-N9-5Xr"/>
+                            <constraint firstItem="g6l-YE-E3a" firstAttribute="centerY" secondItem="gYL-7w-dJP" secondAttribute="centerY" id="mOJ-Uz-Sii"/>
+                            <constraint firstItem="g6l-YE-E3a" firstAttribute="centerY" secondItem="gYL-7w-dJP" secondAttribute="centerY" id="qfj-ky-D5l"/>
                             <constraint firstItem="Nzi-Ix-Zjh" firstAttribute="centerX" secondItem="gYL-7w-dJP" secondAttribute="centerX" id="yju-nQ-img"/>
                             <constraint firstItem="Zo6-kt-mPt" firstAttribute="centerY" secondItem="gYL-7w-dJP" secondAttribute="centerY" id="zrG-cK-XGu"/>
                         </constraints>
@@ -487,6 +498,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ine-xc-HL3"/>
                     <connections>
+                        <outlet property="borderView" destination="g6l-YE-E3a" id="B7k-JS-mtR"/>
                         <outlet property="flashcardWordLabel" destination="K9K-QH-lbr" id="yzM-tU-qIM"/>
                         <outlet property="fullImagePuzzleOne" destination="Nzi-Ix-Zjh" id="FvS-78-QvD"/>
                         <outlet property="oneSyllablePuzzle1" destination="Zo6-kt-mPt" id="OqH-PF-sb9"/>
@@ -831,10 +843,10 @@
     <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="camera-faded" width="138" height="112"/>
-        <image name="category-home" width="243" height="188"/>
-        <image name="category-market" width="237" height="191"/>
-        <image name="category-park" width="283" height="193"/>
+        <image name="category-home" width="317" height="245"/>
+        <image name="category-market" width="316" height="233"/>
+        <image name="category-park" width="300" height="227"/>
         <image name="puzzle-button" width="50" height="55"/>
-        <image name="search-button" width="50" height="50"/>
+        <image name="search-button" width="55" height="52"/>
     </resources>
 </document>

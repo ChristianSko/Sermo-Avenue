@@ -20,6 +20,7 @@ class PuzzleViewController1s: UIViewController {
     @IBOutlet weak var fullImagePuzzleOne: UIImageView!
     @IBOutlet weak var flashcardWordLabel: UILabel!
     @IBOutlet weak var oneSyllablePuzzle1: UIButton!
+    @IBOutlet weak var borderView: UIImageView!
     var starsImage: UIImageView!
     
     
@@ -71,6 +72,20 @@ class PuzzleViewController1s: UIViewController {
         // Hides label to make because we want it to appear after completing the puzzle
         flashcardWordLabel.isHidden = true
         flashcardWordLabel.text = selectedFlashcard.name!.uppercased()
+        
+        
+        
+        borderView.layer.borderWidth = 15
+        borderView.layer.cornerRadius = 20
+        
+        if selectedFlashcard.category == "home" {
+            borderView.layer.borderColor = UIColor.homeColor.cgColor
+        } else if selectedFlashcard.category == "park" {
+            borderView.layer.borderColor = UIColor.parkColor.cgColor
+        } else if selectedFlashcard.category == "market" {
+            borderView.layer.borderColor = UIColor.marketColor.cgColor
+        }
+       
         
         }
     
