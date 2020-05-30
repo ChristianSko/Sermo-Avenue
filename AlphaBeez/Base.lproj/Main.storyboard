@@ -11,7 +11,7 @@
         <!--Save To Core Data View Controller-->
         <scene sceneID="mjd-lb-spf">
             <objects>
-                <viewController id="wNL-4f-hrl" customClass="SaveToCoreDataViewController" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wNL-4f-hrl" customClass="SaveToCoreDataViewController" customModule="Sermo_Avenue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jv3-va-EIE">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,7 +207,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sermo_Avenue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,7 +282,7 @@
         <!--Category View Controller-->
         <scene sceneID="AGD-fk-CUZ">
             <objects>
-                <viewController id="Lr7-OM-ZfB" customClass="CategoryViewController" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Lr7-OM-ZfB" customClass="CategoryViewController" customModule="Sermo_Avenue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LoZ-Ug-KXn">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -297,7 +297,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="P53-xd-kab" customClass="CustomCollectionViewCell" customModule="AlphaBeez" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="P53-xd-kab" customClass="CustomCollectionViewCell" customModule="Sermo_Avenue" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KmP-QZ-Njq">
@@ -349,7 +349,7 @@
         <!--Flashcard View Controller-->
         <scene sceneID="1X2-rD-kHg">
             <objects>
-                <viewController id="5GO-ch-8Hf" customClass="FlashcardViewController" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5GO-ch-8Hf" customClass="FlashcardViewController" customModule="Sermo_Avenue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y6c-if-TE2">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -444,7 +444,7 @@
         <!--Puzzle View Controller 1s-->
         <scene sceneID="Zd6-fK-43O">
             <objects>
-                <viewController storyboardIdentifier="puzzle1" id="syO-Qf-ldC" customClass="PuzzleViewController1s" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="puzzle1" id="syO-Qf-ldC" customClass="PuzzleViewController1s" customModule="Sermo_Avenue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gYL-7w-dJP">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -519,7 +519,7 @@
         <!--Puzzle View Controller 2s-->
         <scene sceneID="gfN-eg-gJF">
             <objects>
-                <viewController storyboardIdentifier="puzzle2" id="1mP-YR-Eha" customClass="PuzzleViewController2s" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="puzzle2" id="1mP-YR-Eha" customClass="PuzzleViewController2s" customModule="Sermo_Avenue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IJw-ii-NNc">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -626,7 +626,7 @@
         <!--Puzzle View Controller 3s-->
         <scene sceneID="rmb-vS-V41">
             <objects>
-                <viewController storyboardIdentifier="puzzle3" id="UFO-OY-pgl" customClass="PuzzleViewController3s" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="puzzle3" id="UFO-OY-pgl" customClass="PuzzleViewController3s" customModule="Sermo_Avenue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iZs-55-Pei">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -772,7 +772,7 @@
         <!--Find Activity View Controller-->
         <scene sceneID="w7b-lz-372">
             <objects>
-                <viewController id="zne-IW-B5U" customClass="FindActivityViewController" customModule="AlphaBeez" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zne-IW-B5U" customClass="FindActivityViewController" customModule="Sermo_Avenue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="esy-fN-rfc">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

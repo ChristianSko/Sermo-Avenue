@@ -65,7 +65,6 @@ class ViewController: UIViewController {
             segue.identifier == "toCategory" {
             var chosenCategory = [Flashcard]()
             
-            
             switch button {
             case homeButton:
                 chosenCategory = getFlashcardsForCategory(category: "home")

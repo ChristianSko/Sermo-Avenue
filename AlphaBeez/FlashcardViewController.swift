@@ -28,11 +28,6 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
     
     // A haptic engine manages the connection to the haptic server and state
     var engine: CHHapticEngine!
-    var engineNeedsStart = true
-    
-    // Observers
-    private var foregroundToken: NSObjectProtocol?
-    private var backgroundToken: NSObjectProtocol?
     
     // Maintain a variable to check for Core Haptics compatibility on device.
     lazy var supportsHaptics: Bool = {
@@ -53,7 +48,6 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         
         // Creating the HapticEngine and adding the observers;
         creteEngine()
-        addObservers()
         
         // Set the image and the label of the selected Flashcard
         flashcardImage.image = UIImage(named: selectedFlashcard.image!)
@@ -131,23 +125,14 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
                 }
             }
             
-            // Indicate that the next time the app requires a haptic, the app must call engine.start().
-            self.engineNeedsStart = true
-            
             // The reset handler provides an opportunity for your app to restart the engine in case of failure.
             engine.resetHandler = {
                 // Try restarting the engine.
                 print("The engine reset --> Restarting now!")
-                
-                // Tell the rest of the app to start the engine the next time a haptic is necessary.
-                self.engineNeedsStart = true
             }
             
             do {
                 try engine.start()
-                
-                // Indicate that the next time the app requires a haptic, the app doesn't need to call engine.start().
-                engineNeedsStart = false
             } catch {
                 print("Failed to restart the engine: \(error)")
             }
@@ -226,54 +211,5 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
     
     @IBAction func cameraTouched(_ sender: UIButton) {
         performSegue(withIdentifier: "camera", sender: self)
-    }
-    
-    // MARK: - Memory Management for the Audio/Haptics and adding Observers:
-    override func viewWillDisappear(_ animated: Bool) {
-        selectedFlashcard = Flashcard()
-        
-        super.viewWillDisappear(animated)
-        // Stop the haptic engine.
-        self.engine.stop { error in
-            if let error = error {
-                print("Haptic Engine Shutdown Error: \(error)")
-                return
-            }
-        }
-    }
-    
-    
-    func addObservers() {
-
-        backgroundToken = NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification,
-                                                                 object: nil,
-                                                                 queue: nil) { [weak self] _ in
-            guard let self = self, self.supportsHaptics else { return }
-            
-            // Stop the haptic engine.
-            self.engine.stop { error in
-                if let error = error {
-                    print("Haptic Engine Shutdown Error: \(error)")
-                    return
-                }
-                self.engineNeedsStart = true
-            }
-
-        }
-
-        foregroundToken = NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification,
-                                                                 object: nil,
-                                                                 queue: nil) { [weak self] _ in
-            guard let self = self, self.supportsHaptics else { return }
-                                                                    
-            // Restart the haptic engine.
-            self.engine.start { error in
-                if let error = error {
-                    print("Haptic Engine Startup Error: \(error)")
-                    return
-                }
-                self.engineNeedsStart = false
-            }
-        }
     }
 }
