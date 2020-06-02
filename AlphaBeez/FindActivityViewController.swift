@@ -66,7 +66,7 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
         You just learned \(selectedFlashcard.name!).
         Now, find something that has the same:
         """
-        titleLabel.font = FontKit.roundedFont(ofSize: 25, weight: .regular)
+        titleLabel.font = FontKit.roundedFont(ofSize: 30, weight: .regular)
         
         // Giving rounded corners and borders to the 3 imageViews
         shapeButton.layer.cornerRadius = 20

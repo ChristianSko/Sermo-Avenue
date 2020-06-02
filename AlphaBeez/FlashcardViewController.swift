@@ -51,6 +51,7 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Changing the native back button with our custom one
         self.navigationController?.navigationBar.backIndicatorImage = backButton
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButton
@@ -74,6 +75,7 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         flashcardImage.image = UIImage(named: selectedFlashcard.image!)
         hapticButton.setTitle(selectedFlashcard.name?.uppercased(), for: .normal)
         hapticButton.titleLabel?.font = FontKit.roundedFont(ofSize: 30, weight: .bold)
+        
         // Giving rounder corners to the buttons
         hapticButton.layer.cornerRadius = 50
         cameraButton.layer.cornerRadius = cameraButton.frame.height * 0.40
@@ -82,6 +84,7 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         
         // Properties for the border and corner of the Flashcards
         flashcardImage.layer.borderWidth = 5
+        flashcardImage.layer.cornerRadius = 10
         flashcardImage.contentMode = .scaleAspectFill
         
         // Giving the inner view inside the flashcard a border and a color
