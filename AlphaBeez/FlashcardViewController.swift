@@ -193,20 +193,14 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
             
             let vc = segue.destination as! FindActivityViewController
             vc.selectedFlashcard = selectedFlashcard
-            
-            let destination = segue.destination as? FindActivityViewController
-                
+                            
             if selectedFlashcard.category == "home" {
-                
-                destination?.findBackground = findBackgroundImage[0]
-                
+                vc.findBackground = findBackgroundImage[0]
                       } else if selectedFlashcard.category == "park" {
-                       destination?.findBackground = findBackgroundImage[1]
-                
+                       vc.findBackground = findBackgroundImage[1]
                         } else if selectedFlashcard.category == "market" {
-                         destination?.findBackground = findBackgroundImage[2]
+                         vc.findBackground = findBackgroundImage[2]
                         }
-            
         } else {
             
             let syllables: Int = Int(selectedFlashcard.syllables)
