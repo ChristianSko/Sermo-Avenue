@@ -65,21 +65,24 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         // Creating the HapticEngine and adding the observers;
         creteEngine()
         
+        // Provide a visual feedback when the buttons are pressed
+        hapticButton.applyShadowAndVisualFeedback()
+        cameraButton.applyShadowAndVisualFeedback()
+        puzzleButton.applyShadowAndVisualFeedback()
+        
         // Set the image and the label of the selected Flashcard
         flashcardImage.image = UIImage(named: selectedFlashcard.image!)
         hapticButton.setTitle(selectedFlashcard.name?.uppercased(), for: .normal)
         hapticButton.titleLabel?.font = FontKit.roundedFont(ofSize: 30, weight: .bold)
         // Giving rounder corners to the buttons
         hapticButton.layer.cornerRadius = 50
-        puzzleButton.layer.cornerRadius = puzzleButton.frame.height * 0.40
         cameraButton.layer.cornerRadius = cameraButton.frame.height * 0.40
+        puzzleButton.layer.cornerRadius = puzzleButton.frame.height * 0.40
+        
         
         // Properties for the border and corner of the Flashcards
         flashcardImage.layer.borderWidth = 5
         flashcardImage.contentMode = .scaleAspectFill
-        
-        puzzleButton.tintColor = .white
-        cameraButton.tintColor = .white
         
         // Giving the inner view inside the flashcard a border and a color
         innerViewForFlashcard.layer.cornerRadius = 10
