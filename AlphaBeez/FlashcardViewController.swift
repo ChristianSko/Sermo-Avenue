@@ -38,7 +38,13 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
     // Flashcard background image
     var flashcardBackground = UIImage()
 
-    
+    // Array of find activity background images
+    var findBackgroundImage : [UIImage] = [
+        UIImage(named: "backgroundmixfind-home")!,
+        UIImage(named: "backgroundmixfind-park")!,
+        UIImage(named: "backgroundmixfind-market")!
+        
+    ]
     // Back Button Image
     let backButton = UIImage(named: "back")
         
@@ -50,7 +56,7 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButton
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         
-        // Set category background
+        // Set flashcard background
         let flashcardBackgroundImage = UIImageView(frame: UIScreen.main.bounds)
         flashcardBackgroundImage.image = flashcardBackground
         flashcardBackgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
@@ -187,6 +193,20 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
             
             let vc = segue.destination as! FindActivityViewController
             vc.selectedFlashcard = selectedFlashcard
+            
+            let destination = segue.destination as? FindActivityViewController
+                
+            if selectedFlashcard.category == "home" {
+                
+                destination?.findBackground = findBackgroundImage[0]
+                
+                      } else if selectedFlashcard.category == "park" {
+                       destination?.findBackground = findBackgroundImage[1]
+                
+                        } else if selectedFlashcard.category == "market" {
+                         destination?.findBackground = findBackgroundImage[2]
+                        }
+            
         } else {
             
             let syllables: Int = Int(selectedFlashcard.syllables)
@@ -221,5 +241,8 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
     
     @IBAction func cameraTouched(_ sender: UIButton) {
         performSegue(withIdentifier: "camera", sender: self)
+        
+        
+            }
     }
-}
+

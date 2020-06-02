@@ -37,6 +37,8 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     // Back Button Image
     let backButton = UIImage(named: "back")
     
+    // Find Activity background image
+      var findBackground = UIImage()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -50,6 +52,12 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Set find activity background
+         let findBackgroundImage = UIImageView(frame: UIScreen.main.bounds)
+         findBackgroundImage.image = findBackground
+         findBackgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+         self.view.insertSubview(findBackgroundImage, at: 0)
+        
         // Hiding the custom back button
         navigationItem.hidesBackButton = true
         

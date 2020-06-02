@@ -92,51 +92,12 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
          destination.selectedFlashcard = allFlashcards[index.row]
             
             if destination.selectedFlashcard.category == "home" {
-                
             destination.flashcardBackground = flashcardBackgroundImage[0]
-                
              } else if destination.selectedFlashcard.category == "park" {
-                
               destination.flashcardBackground = flashcardBackgroundImage[1]
-                
                } else if destination.selectedFlashcard.category == "market" {
-                
                 destination.flashcardBackground = flashcardBackgroundImage[2]
                }
         }
     }
-    
 }
-
-//func theme(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//       if let button = sender as? UIButton, let controller = segue.destination as? CategoryViewController,
-//           segue.identifier == "toCategory" {
-//
-//           let hBackground = UIImage(named: "background-home")!
-//           let pBackground = UIImage(named: "background-park")!
-//           let mBackground = UIImage(named: "background-market")!
-//
-//           var categoryBackground = UIImageView(frame: UIScreen.main.bounds)
-//           categoryBackground = UIImageView(frame: UIScreen.main.bounds)
-//                   categoryBackground.contentMode = UIView.ContentMode.scaleAspectFit
-//                   self.view.insertSubview(categoryBackground, at: 0)
-//
-//           switch button {
-//           case homeButton:
-//               categoryBackground.image = hBackground
-//           case marketButton:
-//               categoryBackground.image = pBackground
-//           case parkButton:
-//               categoryBackground.image = mBackground
-//           default:
-//               break
-//           }
-//           controller.allFlashcards = categoryBackground
-//       }
-//   }
-
-
-
-
-// }
