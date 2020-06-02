@@ -49,6 +49,7 @@ class PuzzleViewController2s: UIViewController {
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
         // Changing the native back button with our custom one
         self.navigationController?.navigationBar.backIndicatorImage = backButton

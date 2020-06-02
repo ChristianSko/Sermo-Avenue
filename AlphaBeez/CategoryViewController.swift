@@ -16,14 +16,24 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     // Initialize an empty array and will hold the chosen category arrays
     var allFlashcards = [Flashcard]()
     
+
+    
     // CollectionView Outlets, so I can add the custom FlowLayout
     @IBOutlet weak var collectionView: UICollectionView!
     
     // CustomFlowLayOut that will determine the
     let layout = UICollectionViewFlowLayout()
     
-    // category background
+    // Category background image
     var categoryBackground = UIImage()
+    
+    // Array of flashcard backgrounds
+    var flashcardBackgroundImage : [UIImage] = [
+        UIImage(named: "backgroundmixflashcard-home")!,
+        UIImage(named: "backgroundmixflashcard-park")!,
+        UIImage(named: "backgroundmixflashcard-market")!
+        
+    ]
     
     // Back Button Image
     let backButton = UIImage(named: "world")
@@ -46,7 +56,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         collectionView.collectionViewLayout = layout
         collectionView.backgroundColor = .clear
         
-        //        set category background
+        // Set category background
         let categoryBackgroundImage = UIImageView(frame: UIScreen.main.bounds)
         categoryBackgroundImage.image = categoryBackground
         categoryBackgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
@@ -79,7 +89,20 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? FlashcardViewController,
             let index = collectionView.indexPathsForSelectedItems?.first {
-            destination.selectedFlashcard = allFlashcards[index.row]
+         destination.selectedFlashcard = allFlashcards[index.row]
+            
+            if destination.selectedFlashcard.category == "home" {
+                
+            destination.flashcardBackground = flashcardBackgroundImage[0]
+                
+             } else if destination.selectedFlashcard.category == "park" {
+                
+              destination.flashcardBackground = flashcardBackgroundImage[1]
+                
+               } else if destination.selectedFlashcard.category == "market" {
+                
+                destination.flashcardBackground = flashcardBackgroundImage[2]
+               }
         }
     }
     

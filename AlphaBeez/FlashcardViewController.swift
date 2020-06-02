@@ -35,9 +35,13 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         return appDelegate.supportsHaptics
     }()
     
+    // Flashcard background image
+    var flashcardBackground = UIImage()
+
+    
     // Back Button Image
     let backButton = UIImage(named: "back")
-    
+        
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +49,12 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         self.navigationController?.navigationBar.backIndicatorImage = backButton
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButton
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+        
+        // Set category background
+        let flashcardBackgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        flashcardBackgroundImage.image = flashcardBackground
+        flashcardBackgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(flashcardBackgroundImage, at: 0)
         
         // Creating the HapticEngine and adding the observers;
         creteEngine()

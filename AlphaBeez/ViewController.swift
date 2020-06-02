@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     // Back Button Image
     let backButton = UIImage(named: "world")
     
+    // Array of category backgrounds
     var backgroundImage : [UIImage] = [
         UIImage(named: "background-home")!,
         UIImage(named: "background-market")!,

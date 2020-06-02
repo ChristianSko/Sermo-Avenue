@@ -37,6 +37,7 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     // Back Button Image
     let backButton = UIImage(named: "back")
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // Changing the native back button with our custom one
@@ -48,7 +49,7 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     // MARK: - ViewDiLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Hiding the custom back button
         navigationItem.hidesBackButton = true
         
