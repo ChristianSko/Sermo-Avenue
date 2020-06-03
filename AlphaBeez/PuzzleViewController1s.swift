@@ -73,6 +73,7 @@ class PuzzleViewController1s: UIViewController {
         // Hides label to make because we want it to appear after completing the puzzle
         flashcardWordLabel.isHidden = true
         flashcardWordLabel.text = selectedFlashcard.name!.uppercased()
+        flashcardWordLabel.font = FontKit.roundedFont(ofSize: 48, weight: .bold)
         
         borderView.layer.borderWidth = 15
         borderView.layer.cornerRadius = 10

@@ -105,6 +105,7 @@ class PuzzleViewController3s: UIViewController {
         
         flashcardWordLabel.isHidden = true
         flashcardWordLabel.text = selectedFlashcard.name!.uppercased()
+        flashcardWordLabel.font = FontKit.roundedFont(ofSize: 48, weight: .bold)
         
         borderView.layer.borderWidth = 15
         borderView.layer.cornerRadius = 10
