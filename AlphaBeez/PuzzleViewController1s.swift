@@ -68,7 +68,7 @@ class PuzzleViewController1s: UIViewController {
         fullImagePuzzleOne.alpha = 0.5
         
         //Stars hidden on top of the centered blurred image
-        starsImage = UIImageView(image: UIImage(named: "stars-puzzle"))
+        starsImage = UIImageView(image: UIImage(named: "star-puzzle-black"))
         starsImage.contentMode = UIView.ContentMode.scaleAspectFit
         starsImage.frame.size.width = fullImagePuzzleOne.frame.size.width * 1.5
         starsImage.frame.size.height = fullImagePuzzleOne.frame.size.height * 1.5

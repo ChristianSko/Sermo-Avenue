@@ -640,14 +640,6 @@
                                     <constraint firstAttribute="height" constant="250" id="MU3-w9-mYW"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puzzle-breaks-3pc" translatesAutoresizingMaskIntoConstraints="NO" id="8VZ-AU-uzF">
-                                <rect key="frame" x="315.66666666666669" y="74.666666666666686" width="265.00000000000006" height="265"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="265" id="B0A-2h-WGg"/>
-                                    <constraint firstAttribute="width" constant="265" id="NQS-78-szo"/>
-                                </constraints>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="336-ES-2Y3">
                                 <rect key="frame" x="649" y="144.66666666666666" width="125" height="124.99999999999997"/>
                                 <constraints>
@@ -677,6 +669,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="50I-Ki-6WV"/>
                                     <constraint firstAttribute="width" constant="125" id="82p-cC-JUT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8VZ-AU-uzF">
+                                <rect key="frame" x="315.66666666666669" y="74.666666666666686" width="265.00000000000006" height="265"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="265" id="B0A-2h-WGg"/>
+                                    <constraint firstAttribute="width" constant="265" id="NQS-78-szo"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOo-Dy-XfR">
@@ -887,7 +887,6 @@
         <image name="category-park" width="300" height="227"/>
         <image name="exit" width="40" height="40"/>
         <image name="puzzle-breaks-2pc" width="1125" height="1125"/>
-        <image name="puzzle-breaks-3pc" width="1125" height="1125"/>
         <image name="puzzle-button" width="50" height="55"/>
         <image name="search-button" width="55" height="52"/>
     </resources>

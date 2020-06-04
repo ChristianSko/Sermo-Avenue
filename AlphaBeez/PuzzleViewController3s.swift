@@ -104,7 +104,7 @@ class PuzzleViewController3s: UIViewController {
         bottomLeftPuzzlePiece.mask = maskBottomLeft
         
         //Stars hidden on top of the centered blurred image
-        starsImage = UIImageView(image: UIImage(named: "stars-puzzle"))
+        starsImage = UIImageView(image: UIImage(named: "star-puzzle-black"))
         starsImage.contentMode = UIView.ContentMode.scaleAspectFit
         starsImage.frame.size.width = fullImagePuzzleThree.frame.size.width * 1.5
         starsImage.frame.size.height = fullImagePuzzleThree.frame.size.height * 1.5
