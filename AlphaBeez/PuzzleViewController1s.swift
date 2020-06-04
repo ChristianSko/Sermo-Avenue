@@ -83,7 +83,7 @@ class PuzzleViewController1s: UIViewController {
         flashcardWordLabel.isHidden = true
         flashcardWordLabel.text = selectedFlashcard.name!.uppercased()
         
-        borderView.layer.borderWidth = 15
+        borderView.layer.borderWidth = 12
         borderView.layer.cornerRadius = 10
         
         if selectedFlashcard.category == "home" {

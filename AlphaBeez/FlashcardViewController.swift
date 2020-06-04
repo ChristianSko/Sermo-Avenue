@@ -231,8 +231,8 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
             }
             
             let category = selectedFlashcard.category as String?
-            let pv1 = segue.destination as! PuzzleViewController1s
             
+            if let pv1 = segue.destination as? PuzzleViewController1s {
             switch category {
             case "home":
                 pv1.puzzle1Background = puzzleBackgroundImage[0]
@@ -242,6 +242,33 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
                 pv1.puzzle1Background = puzzleBackgroundImage[2]
             default:
                 break
+            }
+            }
+            
+            if let pv2 = segue.destination as? PuzzleViewController2s {
+            switch category {
+            case "home":
+                pv2.puzzle2Background = puzzleBackgroundImage[0]
+            case "park":
+                pv2.puzzle2Background = puzzleBackgroundImage[1]
+            case "market":
+                pv2.puzzle2Background = puzzleBackgroundImage[2]
+            default:
+                break
+            }
+            }
+            
+            if let pv3 = segue.destination as? PuzzleViewController3s {
+            switch category {
+            case "home":
+            pv3.puzzle3Background = puzzleBackgroundImage[0]
+            case "park":
+            pv3.puzzle3Background = puzzleBackgroundImage[1]
+            case "market":
+            pv3.puzzle3Background = puzzleBackgroundImage[2]
+            default:
+            break
+            }
             }
         }
     }
