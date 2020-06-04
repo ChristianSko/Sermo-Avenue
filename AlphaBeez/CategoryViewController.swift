@@ -36,7 +36,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     ]
     
     // Back Button Image
-    let backButton = UIImage(named: "world")
+    let backButton = UIImage(named: "back")
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

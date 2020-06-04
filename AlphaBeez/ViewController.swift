@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     var allFlashcards = [Flashcard]()
     
     // Back Button Image
-    let backButton = UIImage(named: "world")
+    let backButton = UIImage(named: "back")
     
     // Array of category backgrounds
     var backgroundImage : [UIImage] = [

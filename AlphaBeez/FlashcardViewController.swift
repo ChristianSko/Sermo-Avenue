@@ -24,7 +24,7 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
     var selectedFlashcard = Flashcard()
     
     // Image that will replace the back button on the NavigationBar
-    let backImage = UIImage(named: "world")
+    let backImage = UIImage(named: "back")
     
     // A haptic engine manages the connection to the haptic server and state
     var engine: CHHapticEngine!
