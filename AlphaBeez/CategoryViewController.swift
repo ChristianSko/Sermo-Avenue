@@ -16,8 +16,6 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     // Initialize an empty array and will hold the chosen category arrays
     var allFlashcards = [Flashcard]()
     
-
-    
     // CollectionView Outlets, so I can add the custom FlowLayout
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -32,7 +30,6 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         UIImage(named: "backgroundmixflashcard-home")!,
         UIImage(named: "backgroundmixflashcard-park")!,
         UIImage(named: "backgroundmixflashcard-market")!
-        
     ]
     
     // Back Button Image

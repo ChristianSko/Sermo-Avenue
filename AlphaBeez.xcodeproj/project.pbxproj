@@ -24,6 +24,7 @@
 		FA1A98F1246ADAEC0088B4E9 /* AlphaBeez.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA1A98EF246ADAEC0088B4E9 /* AlphaBeez.xcdatamodeld */; };
 		FA1A98F3246ADAED0088B4E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1A98F2246ADAED0088B4E9 /* Assets.xcassets */; };
 		FA1A98F6246ADAED0088B4E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1A98F4246ADAED0088B4E9 /* LaunchScreen.storyboard */; };
+		FA7512CB2489B0030079241A /* HapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7512CA2489B0030079241A /* HapticEngine.swift */; };
 		FA90FCEB2479855C00E87B69 /* SaveToCoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90FCEA2479855C00E87B69 /* SaveToCoreDataViewController.swift */; };
 		FAA28E31247AC0AD00A2FCD2 /* database in Resources */ = {isa = PBXBuildFile; fileRef = FAA28E30247AC0AD00A2FCD2 /* database */; };
 		FABF36FB246CA42500F83300 /* FlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF36FA246CA42500F83300 /* FlashcardViewController.swift */; };
@@ -50,6 +51,7 @@
 		FA1A98F2246ADAED0088B4E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA1A98F5246ADAED0088B4E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA1A98F7246ADAED0088B4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA7512CA2489B0030079241A /* HapticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticEngine.swift; sourceTree = "<group>"; };
 		FA90FCEA2479855C00E87B69 /* SaveToCoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToCoreDataViewController.swift; sourceTree = "<group>"; };
 		FAA28E30247AC0AD00A2FCD2 /* database */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database; sourceTree = SOURCE_ROOT; };
 		FABF36FA246CA42500F83300 /* FlashcardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				FA1A98EC246ADAEC0088B4E9 /* Main.storyboard */,
 				FA1A98E6246ADAEC0088B4E9 /* AppDelegate.swift */,
 				FA1A98E8246ADAEC0088B4E9 /* SceneDelegate.swift */,
+				FA7512CA2489B0030079241A /* HapticEngine.swift */,
 				FA020060246B534D00A2F0BD /* CustomCollectionViewCell.swift */,
 				FA90FCEA2479855C00E87B69 /* SaveToCoreDataViewController.swift */,
 				FA1A98EA246ADAEC0088B4E9 /* ViewController.swift */,
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7512CB2489B0030079241A /* HapticEngine.swift in Sources */,
 				FABF36FB246CA42500F83300 /* FlashcardViewController.swift in Sources */,
 				28310EB3247D1DB0004BE772 /* ColourStruct.swift in Sources */,
 				28882C17247DBB710018EF0A /* Font.swift in Sources */,
@@ -354,7 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = 38AW9Y426V;
+				DEVELOPMENT_TEAM = T7664565ZX;
 				INFOPLIST_FILE = AlphaBeez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -374,7 +378,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = 38AW9Y426V;
+				DEVELOPMENT_TEAM = T7664565ZX;
 				INFOPLIST_FILE = AlphaBeez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
