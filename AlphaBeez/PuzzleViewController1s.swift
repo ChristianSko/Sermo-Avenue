@@ -65,7 +65,7 @@ class PuzzleViewController1s: UIViewController {
         
         // Properties for centered blurred image of puzzle 1
         fullImagePuzzleOne.image = UIImage(named: selectedFlashcard.image!)
-        fullImagePuzzleOne.alpha = 0.2
+        fullImagePuzzleOne.alpha = 0.5
         
         //Stars hidden on top of the centered blurred image
         starsImage = UIImageView(image: UIImage(named: "stars-puzzle"))

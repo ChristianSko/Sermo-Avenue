@@ -77,7 +77,7 @@ class PuzzleViewController3s: UIViewController {
         
         // Properties for centered blurred image of puzzle 1
         fullImagePuzzleThree.image = UIImage(named: selectedFlashcard.image!)
-        fullImagePuzzleThree.alpha = 0.2
+        fullImagePuzzleThree.alpha = 0.5
         
         // Image for right puzzle Piece
         rightPuzzlePiece.image = UIImage(named: selectedFlashcard.image!)
