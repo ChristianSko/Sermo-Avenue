@@ -43,8 +43,16 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
         UIImage(named: "backgroundmixfind-home")!,
         UIImage(named: "backgroundmixfind-park")!,
         UIImage(named: "backgroundmixfind-market")!
-        
     ]
+    
+    // Array of find activity background images
+      var puzzleBackgroundImage : [UIImage] = [
+          UIImage(named: "backgroundpuzzle-home")!,
+          UIImage(named: "backgroundpuzzle-park")!,
+          UIImage(named: "backgroundpuzzle-market")!
+      ]
+    
+    
     // Back Button Image
     let backButton = UIImage(named: "back")
         
@@ -220,6 +228,20 @@ class FlashcardViewController: UIViewController, AVAudioRecorderDelegate, AVAudi
             } else if syllables == 3 {
                 let vcThree = segue.destination as! PuzzleViewController3s
                 vcThree.selectedFlashcard = selectedFlashcard
+            }
+            
+            let category = selectedFlashcard.category as String?
+            let pv1 = segue.destination as! PuzzleViewController1s
+            
+            switch category {
+            case "home":
+                pv1.puzzle1Background = puzzleBackgroundImage[0]
+            case "park":
+                pv1.puzzle1Background = puzzleBackgroundImage[1]
+            case "market":
+                pv1.puzzle1Background = puzzleBackgroundImage[2]
+            default:
+                break
             }
         }
     }

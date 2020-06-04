@@ -38,7 +38,7 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     let backButton = UIImage(named: "back")
     
     // Find Activity background image
-      var findBackground = UIImage()
+    var findBackground = UIImage()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
