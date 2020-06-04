@@ -45,7 +45,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadFlashcards()
+        // Load All Flashcards
+        let request:NSFetchRequest<Flashcard> = Flashcard.fetchRequest()
+        do {
+            allFlashcards = try context.fetch(request)
+        } catch {
+            print("Error fetching data from context \(error)")
+        }
         
         // Will hide the navigationController and leave only the back button!
         navigationController!.hideNavigationItemBackground()
@@ -64,22 +70,24 @@ class ViewController: UIViewController {
         
         if let button = sender as? UIButton, let controller = segue.destination as? CategoryViewController,
             segue.identifier == "toCategory" {
-            var chosenCategory = [Flashcard]()
+//            var chosenCategory = [Flashcard]()
             
             switch button {
             case homeButton:
-                chosenCategory = getFlashcardsForCategory(category: "home")
+//                allFlashcards = getFlashcardsForCategory(category: "home")
                 controller.categoryBackground = backgroundImage[0]
+                controller.allFlashcards = getFlashcardsForCategory(category: "home")
             case marketButton:
-                chosenCategory = getFlashcardsForCategory(category: "market")
+//                allFlashcards = getFlashcardsForCategory(category: "market")
                 controller.categoryBackground = backgroundImage[1]
+                controller.allFlashcards = getFlashcardsForCategory(category: "market")
             case parkButton:
-                chosenCategory = getFlashcardsForCategory(category: "park")
+//                allFlashcards = getFlashcardsForCategory(category: "park")
                 controller.categoryBackground = backgroundImage[2]
+                controller.allFlashcards = getFlashcardsForCategory(category: "park")
             default:
                 break
             }
-            controller.allFlashcards = chosenCategory
         }
     }
     
@@ -90,14 +98,14 @@ class ViewController: UIViewController {
     }
     
     //MARK: -  Will load all the items from our Database
-    func loadFlashcards() {
-        let request:NSFetchRequest<Flashcard> = Flashcard.fetchRequest()
-        do {
-            allFlashcards = try context.fetch(request)
-        } catch {
-            print("Error fetching data from context \(error)")
-        }
-    }
+//    func loadFlashcards() {
+//        let request:NSFetchRequest<Flashcard> = Flashcard.fetchRequest()
+//        do {
+//            allFlashcards = try context.fetch(request)
+//        } catch {
+//            print("Error fetching data from context \(error)")
+//        }
+//    }
     
     func getFlashcardsForCategory(category: String) -> [Flashcard] {
         var array = [Flashcard]()

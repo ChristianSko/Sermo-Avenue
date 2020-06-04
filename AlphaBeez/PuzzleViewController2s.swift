@@ -46,6 +46,9 @@ class PuzzleViewController2s: UIViewController {
     // Back Button Image
     let backButton = UIImage(named: "back")
     
+    // Puzzle_2 Activity background image
+    var puzzle2Background = UIImage()
+    
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +61,12 @@ class PuzzleViewController2s: UIViewController {
         
         // Hiding the custom back button
         navigationItem.hidesBackButton = true
+        
+        // Set puzzle_2 activity background
+        let puzzle2BackgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        puzzle2BackgroundImage.image = puzzle2Background
+        puzzle2BackgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(puzzle2BackgroundImage, at: 0)
         
         // Creating the HapticEngine
         creteEngine()
