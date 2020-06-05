@@ -291,18 +291,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkf-A3-xAd">
-                                <rect key="frame" x="420" y="192" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="sbf-Vq-VrV" firstAttribute="leading" secondItem="Io9-qt-BrY" secondAttribute="leading" constant="-44" id="7SD-UE-K3X"/>
-                            <constraint firstItem="Io9-qt-BrY" firstAttribute="trailing" secondItem="sbf-Vq-VrV" secondAttribute="trailing" constant="-44" id="gR7-fg-LbD"/>
-                            <constraint firstItem="sbf-Vq-VrV" firstAttribute="top" secondItem="Io9-qt-BrY" secondAttribute="top" id="nkm-PR-zAz"/>
-                            <constraint firstItem="Io9-qt-BrY" firstAttribute="bottom" secondItem="sbf-Vq-VrV" secondAttribute="bottom" constant="-21" id="w2M-CB-cf3"/>
+                            <constraint firstItem="sbf-Vq-VrV" firstAttribute="leading" secondItem="3R2-o6-zfP" secondAttribute="leadingMargin" constant="-60" id="7OZ-lV-sJD"/>
+                            <constraint firstItem="sbf-Vq-VrV" firstAttribute="top" secondItem="Io9-qt-BrY" secondAttribute="top" id="aeh-Yr-kPR"/>
+                            <constraint firstItem="sbf-Vq-VrV" firstAttribute="centerX" secondItem="3R2-o6-zfP" secondAttribute="centerX" id="ckD-jE-Q52"/>
+                            <constraint firstItem="sbf-Vq-VrV" firstAttribute="centerY" secondItem="3R2-o6-zfP" secondAttribute="centerY" id="cxm-h5-NNi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Io9-qt-BrY"/>
                     </view>

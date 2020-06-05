@@ -39,7 +39,7 @@ class OnBoardingViewController: UIViewController {
             
 //            Title, image,
             let imageView = UIImageView(frame: UIScreen.main.bounds)
-            let button = UIButton(frame: CGRect(x: 10, y: pageView.frame.size.height-60, width: pageView.frame.size.width-20, height: 50))
+            let button = UIButton(frame: CGRect(x: pageView.frame.size.width-110, y: pageView.frame.size.height-60, width: 100, height: 50))
               
             imageView.contentMode = .scaleAspectFill
             imageView.image = UIImage(named: "onboarding_\(x+1)")
