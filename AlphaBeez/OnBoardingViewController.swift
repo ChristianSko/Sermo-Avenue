@@ -17,40 +17,34 @@ class OnBoardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        configure()
+        configureOnBoarding()
     }
 
-    private func configure() {
+    private func configureOnBoarding() {
         
-        scrollView.frame = holderView.bounds
+        scrollView.frame = holderView.frame
         holderView.addSubview(scrollView)
-        
         
         for x in 0..<4 {
             
-            let pageView = UIView(frame: CGRect(x: CGFloat(x) * (holderView.frame.size.width), y: 0, width: holderView.frame.size.width, height: holderView.frame.size.height))
+            let pageView = UIView(frame: CGRect(x: CGFloat(x) * holderView.frame.size.width, y: 0, width: holderView.frame.size.width, height: holderView.frame.size.height))
             scrollView.addSubview(pageView)
             
-//            Title, image,
-            let imageView = UIImageView(frame: UIScreen.main.bounds)
-            let button = UIButton(frame: CGRect(x: pageView.frame.size.width-110, y: pageView.frame.size.height-60, width: 100, height: 50))
-              
-            imageView.contentMode = .scaleAspectFill
+            let imageView = UIImageView(frame: holderView.bounds)
+            imageView.contentMode = .scaleToFill
             imageView.image = UIImage(named: "onboarding_\(x+1)")
             pageView.addSubview(imageView)
+    
             
-            
-            button.setTitleColor(.white, for: .normal)
-            button.backgroundColor = .black
-            button.setTitle( "Continue", for: .normal)
+            let nextImage = UIImage(named: "next")
+            let button = UIButton(frame: CGRect(x: pageView.frame.size.width-110, y: pageView.frame.size.height-60, width: 50, height: 50))
+            button.setBackgroundImage(nextImage, for: .normal   )
             if x == 3 {
-                button.setTitle( "Get Started", for: .normal)
+                print("Here I change the button")
             }
             button.tag = x + 1
             button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
@@ -59,7 +53,6 @@ class OnBoardingViewController: UIViewController {
         
         scrollView.contentSize = CGSize(width: holderView.frame.size.width, height: 0)
         scrollView.isPagingEnabled = true
-        
     }
     
     
@@ -72,7 +65,7 @@ class OnBoardingViewController: UIViewController {
             return
         }
         
-//        scroll to next page
+//        Scrolls to next page
         scrollView.setContentOffset(CGPoint(x: holderView.frame.size.width * CGFloat(button.tag), y: 0), animated: true)
         
     }

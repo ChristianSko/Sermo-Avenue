@@ -117,22 +117,25 @@ class ViewController: UIViewController {
         return array
     }
     
-    
-        override func viewDidLayoutSubviews() {
-            super.viewDidLayoutSubviews()
+    //    This calls the OnboardingViewController
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if Core.shared.isNewUser() {
             
-            if Core.shared.isNewUser() {
-                
-                let vc = storyboard?.instantiateViewController(identifier: "onboarding") as! OnBoardingViewController
-                vc.modalPresentationStyle = .fullScreen
-                present(vc, animated: true)
-                
-            }
+            let vc = storyboard?.instantiateViewController(identifier: "onboarding") as! OnBoardingViewController
+            
+            
+            //This makes sure the modal on-boarding cannot be swipe down
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true)
+            
         }
+    }
 
 }
     
-
+// This class is to make sure On-Boarding only appears once
 class Core {
     
     static let shared = Core()
