@@ -279,6 +279,41 @@
             </objects>
             <point key="canvasLocation" x="880.20989505247383" y="136.80000000000001"/>
         </scene>
+        <!--On Boarding View Controller-->
+        <scene sceneID="1Ty-B8-ACW">
+            <objects>
+                <viewController storyboardIdentifier="onboarding" id="cfR-DS-diV" customClass="OnBoardingViewController" customModule="Sermo_Avenue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3R2-o6-zfP">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbf-Vq-VrV">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkf-A3-xAd">
+                                <rect key="frame" x="420" y="192" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sbf-Vq-VrV" firstAttribute="leading" secondItem="Io9-qt-BrY" secondAttribute="leading" constant="-44" id="7SD-UE-K3X"/>
+                            <constraint firstItem="Io9-qt-BrY" firstAttribute="trailing" secondItem="sbf-Vq-VrV" secondAttribute="trailing" constant="-44" id="gR7-fg-LbD"/>
+                            <constraint firstItem="sbf-Vq-VrV" firstAttribute="top" secondItem="Io9-qt-BrY" secondAttribute="top" id="nkm-PR-zAz"/>
+                            <constraint firstItem="Io9-qt-BrY" firstAttribute="bottom" secondItem="sbf-Vq-VrV" secondAttribute="bottom" constant="-21" id="w2M-CB-cf3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Io9-qt-BrY"/>
+                    </view>
+                    <connections>
+                        <outlet property="holderView" destination="sbf-Vq-VrV" id="b9K-We-zdP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GeW-Eb-rCD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-771.42857142857144" y="134.78260869565219"/>
+        </scene>
         <!--Category View Controller-->
         <scene sceneID="AGD-fk-CUZ">
             <objects>
