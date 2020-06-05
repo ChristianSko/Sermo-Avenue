@@ -11,9 +11,6 @@ import UIKit
 class FindActivityViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // Outlets for the label
-    @IBOutlet weak var textureLabel: UILabel!
-    @IBOutlet weak var colorLabel: UILabel!
-    @IBOutlet weak var shapeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
     // Outlets for the imageViews
@@ -74,17 +71,17 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
         textureButton.layer.cornerRadius = 20
         
         if selectedFlashcard.category == "home" {
-            shapeButton.backgroundColor = UIColor.homeColor
-            colorButton.backgroundColor = UIColor.homeColor
-            textureButton.backgroundColor = UIColor.homeColor
+            shapeButton.setImage(UIImage(named:"home-shape"), for: .normal)
+            colorButton.setImage(UIImage(named:"home-color"), for: .normal)
+            textureButton.setImage(UIImage(named:"home-texture"), for: .normal)
         } else if selectedFlashcard.category == "park" {
-            shapeButton.backgroundColor = UIColor.parkColor
-            colorButton.backgroundColor = UIColor.parkColor
-            textureButton.backgroundColor = UIColor.parkColor
+            shapeButton.setImage(UIImage(named:"park-shape"), for: .normal)
+            colorButton.setImage(UIImage(named:"park-color"), for: .normal)
+            textureButton.setImage(UIImage(named:"park-texture"), for: .normal)
         } else {
-            shapeButton.backgroundColor = UIColor.marketColor
-            colorButton.backgroundColor = UIColor.marketColor
-            textureButton.backgroundColor = UIColor.marketColor
+            shapeButton.setImage(UIImage(named:"market-shape"), for: .normal)
+            colorButton.setImage(UIImage(named:"market-color"), for: .normal)
+            textureButton.setImage(UIImage(named:"market-texture"), for: .normal)
         }
         
         // show picker
@@ -92,11 +89,6 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
         
         // enable the editing of picked image (Why? since the phrase cards are squared, the image should fits them)
         imagePicker.allowsEditing = true
-        
-        // set font
-        shapeLabel   .font = FontKit.roundedFont(ofSize: 15, weight: .regular)
-        colorLabel   .font = FontKit.roundedFont(ofSize: 15, weight: .regular)
-        textureLabel .font = FontKit.roundedFont(ofSize: 15, weight: .regular)
     }
     
     // update the square image view with the image picked (from gallery or camera)
