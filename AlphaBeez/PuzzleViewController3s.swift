@@ -25,6 +25,7 @@ class PuzzleViewController3s: UIViewController {
     @IBOutlet weak var upperLeftPuzzlePieceButton: UIButton!
     @IBOutlet weak var bottomLeftPuzzlePieceButton: UIButton!
     
+    @IBOutlet weak var infoButton: UIButton!
     
     // Images set programtically
     var starsImage: UIImageView!
@@ -262,6 +263,12 @@ class PuzzleViewController3s: UIViewController {
     // MARK: - Action for pressing the exit button
     @IBAction func exitButtonPressed(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    // MARK: - Action for pressing the info button
+  
+    @IBAction func infoButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "puzzle3Alert", sender: sender)
     }
     
 }

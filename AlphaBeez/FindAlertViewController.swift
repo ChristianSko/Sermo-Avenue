@@ -69,10 +69,11 @@ class FindAlertViewController: UIViewController {
         fourthParagraph.font = FontKit.roundedFont(ofSize: 20, weight: .regular)
         fifthParagraph.font = FontKit.roundedFont(ofSize: 20, weight: .regular)
         
-        self.scrollView.layer.borderWidth = 12
-               self.scrollView.layer.borderColor = UIColor.green.cgColor
+        self.scrollView.layer.borderWidth = 10
+        self.scrollView.layer.borderColor = UIColor.green.cgColor
     }
     
+    // MARK: - Action for exit button
     @IBAction func exitButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

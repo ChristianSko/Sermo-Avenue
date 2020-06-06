@@ -1,5 +1,5 @@
 //
-//  PuzzleAlertViewController.swift
+//  Puzzle1AlertViewController.swift
 //  AlphaBeez
 //
 //  Created by Nadia Ruocco on 06/06/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PuzzleAlertViewController: UIViewController {
+class Puzzle1AlertViewController: UIViewController {
 
     // Outlets
     
@@ -49,7 +49,7 @@ class PuzzleAlertViewController: UIViewController {
         secondParagraph.font = FontKit.roundedFont(ofSize: 22, weight: .regular)
         thirdParagraph.font = FontKit.roundedFont(ofSize: 22, weight: .regular)
         
-        self.scrollView.layer.borderWidth = 12
+        self.scrollView.layer.borderWidth = 10
         self.scrollView.layer.borderColor = UIColor.green.cgColor
     }
     
