@@ -307,7 +307,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GeW-Eb-rCD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-673" y="136"/>
+            <point key="canvasLocation" x="-1025" y="138"/>
+        </scene>
+        <!--Animation View Controller-->
+        <scene sceneID="yWX-PZ-kyr">
+            <objects>
+                <viewController id="OmW-eF-vuP" customClass="AnimationViewController" customModule="Sermo_Avenue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JI5-h5-xTd">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sermo-world" translatesAutoresizingMaskIntoConstraints="NO" id="JKQ-Bz-07e">
+                                <rect key="frame" x="-2756" y="-6" width="6408" height="3199"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sermo-ball" translatesAutoresizingMaskIntoConstraints="NO" id="LMW-qE-N12">
+                                <rect key="frame" x="669" y="259" width="94" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="LA8-3l-F6j"/>
+                                    <constraint firstAttribute="height" constant="94" id="sdi-6q-QaR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pI2-qP-idI" firstAttribute="bottom" secondItem="JKQ-Bz-07e" secondAttribute="bottom" constant="-2800" id="3q9-Fu-Ayo"/>
+                            <constraint firstItem="JKQ-Bz-07e" firstAttribute="top" secondItem="pI2-qP-idI" secondAttribute="top" constant="-50" id="5qw-1N-Tjg"/>
+                            <constraint firstItem="pI2-qP-idI" firstAttribute="trailing" secondItem="LMW-qE-N12" secondAttribute="trailing" constant="89" id="LJu-Od-70e"/>
+                            <constraint firstItem="JKQ-Bz-07e" firstAttribute="centerX" secondItem="JI5-h5-xTd" secondAttribute="centerX" id="SiR-vK-OsL"/>
+                            <constraint firstItem="pI2-qP-idI" firstAttribute="trailing" secondItem="JKQ-Bz-07e" secondAttribute="trailing" constant="-2800" id="vzW-0u-8J9"/>
+                            <constraint firstItem="pI2-qP-idI" firstAttribute="bottom" secondItem="LMW-qE-N12" secondAttribute="bottom" constant="40" id="ylL-bv-dYF"/>
+                            <constraint firstItem="JKQ-Bz-07e" firstAttribute="leading" secondItem="pI2-qP-idI" secondAttribute="leading" constant="-2800" id="zi6-ll-SEL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pI2-qP-idI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kuF-QF-GcR"/>
+                    <connections>
+                        <outlet property="ballImageView" destination="LMW-qE-N12" id="twW-5G-KsS"/>
+                        <outlet property="sermoImageView" destination="JKQ-Bz-07e" id="Wm4-kd-0Lj"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toMainMenu" id="FYs-6b-gxw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8E-hC-UOH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-133" y="138"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="AGD-fk-CUZ">
@@ -563,11 +605,11 @@
         <scene sceneID="VtF-6W-173">
             <objects>
                 <viewController storyboardIdentifier="puzzleAlertVC" id="hdn-v6-I6Y" customClass="Puzzle1AlertViewController" customModule="Sermo_Avenue" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jvo-Pg-3ad">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="jvo-Pg-3ad">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGW-yF-Zy5">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGW-yF-Zy5">
                                 <rect key="frame" x="128" y="38" width="640" height="338"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eU9-1d-iyH">
@@ -781,11 +823,11 @@
         <scene sceneID="hcJ-OA-XW3">
             <objects>
                 <viewController storyboardIdentifier="puzzle2AlertVC" id="Smf-Q4-NsG" customClass="Puzzle2AlertViewController" customModule="Sermo_Avenue" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="atz-JR-JOb">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="atz-JR-JOb">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMq-aR-LnQ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMq-aR-LnQ">
                                 <rect key="frame" x="128" y="38" width="640" height="338"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aq0-dq-lgj">
@@ -1018,11 +1060,11 @@
         <scene sceneID="CBD-YQ-7QI">
             <objects>
                 <viewController storyboardIdentifier="Puzzle3AlertVC" id="dfs-RP-4CY" customClass="Puzzle3AlertViewController" customModule="Sermo_Avenue" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xdd-Ah-8fY">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="xdd-Ah-8fY">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbN-t7-qpQ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbN-t7-qpQ">
                                 <rect key="frame" x="128" y="38" width="640" height="338"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZf-D2-O0i">
@@ -1120,12 +1162,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kGD-dD-rvD"/>
+                        <segue destination="OmW-eF-vuP" kind="relationship" relationship="rootViewController" id="leu-i2-cbk"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUx-kE-mO1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.61607142857142" y="137.68115942028987"/>
+            <point key="canvasLocation" x="-133" y="-778"/>
         </scene>
         <!--Find Activity View Controller-->
         <scene sceneID="w7b-lz-372">
@@ -1220,11 +1262,11 @@
         <scene sceneID="J1Q-RG-IAJ">
             <objects>
                 <viewController id="Xv8-TK-Ppk" customClass="FindAlertViewController" customModule="Sermo_Avenue" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FvZ-qh-Q8C">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="FvZ-qh-Q8C">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yh9-h6-WBJ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yh9-h6-WBJ">
                                 <rect key="frame" x="128" y="38" width="640" height="338"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYh-Uv-sdu">
@@ -1345,5 +1387,7 @@
         <image name="info" width="40" height="40"/>
         <image name="puzzle-button" width="50" height="55"/>
         <image name="search-button" width="55" height="52"/>
+        <image name="sermo-ball" width="94" height="93"/>
+        <image name="sermo-world" width="3308" height="3204"/>
     </resources>
 </document>
