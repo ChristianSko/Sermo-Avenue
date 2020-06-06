@@ -22,6 +22,9 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var shapeButton: UIButton!
     @IBOutlet weak var colorButton: UIButton!
     @IBOutlet weak var textureButton: UIButton!
+    @IBOutlet weak var infoButton: UIButton!
+    
+    
     
     // Will keep a record what of the 3 imageViews was tapped
     var whatButtonPressed = 0
@@ -149,5 +152,10 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     // MARK: - Action for the exit button
     @IBAction func exitButtonPressed(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    // MARK: - Action for the info button
+    @IBAction func infoButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "findAlert", sender: sender)
     }
 }
