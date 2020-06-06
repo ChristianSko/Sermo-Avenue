@@ -22,9 +22,11 @@ class AnimationViewController: UIViewController {
         // Will hide the navigationController and leave only the back button!
          navigationController!.hideNavigationItemBackground()
         
-        UIView.animate(withDuration: 9.0) {
+        UIView.animate(withDuration: 9.0, animations: {
             self.sermoImageView.transform = CGAffineTransform(rotationAngle: -(CGFloat.pi * 0.999))
             self.ballImageView.transform = CGAffineTransform(rotationAngle: .pi)
+        }) { (finished: Bool) in
+            self.performSegue(withIdentifier: "toMainMenu", sender: self)
         }
     }
 }

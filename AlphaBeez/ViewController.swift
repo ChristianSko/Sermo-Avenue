@@ -36,9 +36,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // Changing the native back button with our custom one
-        self.navigationController?.navigationBar.backIndicatorImage = backButton
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButton
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
     // MARK: - ViewDidLoad
