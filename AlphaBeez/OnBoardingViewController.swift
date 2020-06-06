@@ -13,7 +13,7 @@ class OnBoardingViewController: UIViewController {
     @IBOutlet var holderView: UIView!
 
 
-    let scrollView = UIScrollView()
+    var scrollView = UIScrollView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,11 +40,14 @@ class OnBoardingViewController: UIViewController {
             pageView.addSubview(imageView)
     
             
-            let nextImage = UIImage(named: "next")
-            let button = UIButton(frame: CGRect(x: pageView.frame.size.width-110, y: pageView.frame.size.height-60, width: 50, height: 50))
+            var nextImage = UIImage(named: "next")
+            var button = UIButton(frame: CGRect(x: pageView.frame.size.width-110, y: pageView.frame.size.height-60, width: 50, height: 50))
             button.setBackgroundImage(nextImage, for: .normal   )
             if x == 3 {
-                print("Here I change the button")
+                button = UIButton(frame: CGRect(x: pageView.frame.size.width-160, y: pageView.frame.size.height-60, width: 140, height: 50))
+                nextImage = UIImage(named: "play")
+                button.setBackgroundImage(nextImage, for: .normal)
+    
             }
             button.tag = x + 1
             button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
@@ -52,7 +55,7 @@ class OnBoardingViewController: UIViewController {
         }
         
         scrollView.contentSize = CGSize(width: holderView.frame.size.width, height: 0)
-        scrollView.isPagingEnabled = true
+        scrollView.isPagingEnabled =  true
     }
     
     
