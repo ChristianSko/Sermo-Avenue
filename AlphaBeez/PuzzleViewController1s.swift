@@ -21,6 +21,10 @@ class PuzzleViewController1s: UIViewController {
     @IBOutlet weak var borderView: UIImageView!
     @IBOutlet weak var flashcardWordLabel: UILabel!
     @IBOutlet weak var oneSyllablePuzzle1: UIButton!
+    @IBOutlet weak var infoButton: UIButton!
+    
+    
+    
     var starsImage: UIImageView!
     
     // Back Button Image
@@ -125,6 +129,13 @@ class PuzzleViewController1s: UIViewController {
     @IBAction func exitButtonPressed(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
     }
+    
+    // MARK: - Action for pressing the info button
+    @IBAction func infoButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "puzzle1Alert", sender: sender)
+    }
+    
+    
     
     
 }

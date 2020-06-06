@@ -20,6 +20,7 @@ class FindAlertViewController: UIViewController {
     @IBOutlet weak var fifthParagraph: UILabel!
     
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var exitButton: UIButton!
     
     override func viewDidLoad() {
@@ -62,11 +63,14 @@ class FindAlertViewController: UIViewController {
         """
         
         titleLabel.font = FontKit.roundedFont(ofSize: 20, weight: .bold)
-        firstParagraph.font = FontKit.roundedFont(ofSize: 20, weight: .bold)
-        secondParagraph.font = FontKit.roundedFont(ofSize: 20, weight: .bold)
-        thirdParagraph.font = FontKit.roundedFont(ofSize: 20, weight: .bold)
-        fourthParagraph.font = FontKit.roundedFont(ofSize: 20, weight: .bold)
-        fifthParagraph.font = FontKit.roundedFont(ofSize: 20, weight: .bold)
+        firstParagraph.font = FontKit.roundedFont(ofSize: 20, weight: .regular)
+        secondParagraph.font = FontKit.roundedFont(ofSize: 20, weight: .regular)
+        thirdParagraph.font = FontKit.roundedFont(ofSize: 20, weight: .regular)
+        fourthParagraph.font = FontKit.roundedFont(ofSize: 20, weight: .regular)
+        fifthParagraph.font = FontKit.roundedFont(ofSize: 20, weight: .regular)
+        
+        self.scrollView.layer.borderWidth = 12
+               self.scrollView.layer.borderColor = UIColor.green.cgColor
     }
     
     @IBAction func exitButtonPressed(_ sender: Any) {

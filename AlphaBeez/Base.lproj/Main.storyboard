@@ -511,6 +511,17 @@
                                     <constraint firstAttribute="height" constant="265" id="L0a-AG-UNL"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOH-v3-60p">
+                                <rect key="frame" x="807" y="341" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="info"/>
+                                <connections>
+                                    <action selector="infoButtonPressed:" destination="syO-Qf-ldC" eventType="touchUpInside" id="PHe-p7-NQI"/>
+                                    <segue destination="hdn-v6-I6Y" kind="popoverPresentation" identifier="puzzle1Alert" popoverAnchorView="MOH-v3-60p" id="Mkp-wf-avB">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -540,12 +551,111 @@
                         <outlet property="borderView" destination="g6l-YE-E3a" id="B7k-JS-mtR"/>
                         <outlet property="flashcardWordLabel" destination="K9K-QH-lbr" id="yzM-tU-qIM"/>
                         <outlet property="fullImagePuzzleOne" destination="Nzi-Ix-Zjh" id="FvS-78-QvD"/>
+                        <outlet property="infoButton" destination="MOH-v3-60p" id="nmV-5U-uY7"/>
                         <outlet property="oneSyllablePuzzle1" destination="Zo6-kt-mPt" id="OqH-PF-sb9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXW-a9-VOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="930" y="2448"/>
+        </scene>
+        <!--Puzzle Alert View Controller-->
+        <scene sceneID="VtF-6W-173">
+            <objects>
+                <viewController storyboardIdentifier="puzzleAlertVC" id="hdn-v6-I6Y" customClass="PuzzleAlertViewController" customModule="Sermo_Avenue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jvo-Pg-3ad">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGW-yF-Zy5">
+                                <rect key="frame" x="128" y="38" width="640" height="338"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eU9-1d-iyH">
+                                        <rect key="frame" x="0.0" y="0.0" width="640" height="612"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFW-Ak-0X1">
+                                                <rect key="frame" x="299" y="8" width="42" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA8-sC-tEZ">
+                                                <rect key="frame" x="95" y="61" width="450" height="70"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvU-3f-fZ1">
+                                                <rect key="frame" x="95" y="392" width="450" height="196"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6a-pE-fZ2">
+                                                <rect key="frame" x="95" y="154" width="450" height="169"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="XvU-3f-fZ1" firstAttribute="leading" secondItem="eU9-1d-iyH" secondAttribute="leading" constant="95" id="0cK-Nf-8aD"/>
+                                            <constraint firstItem="dA8-sC-tEZ" firstAttribute="leading" secondItem="eU9-1d-iyH" secondAttribute="leading" constant="95" id="6nI-Zg-LA9"/>
+                                            <constraint firstAttribute="width" constant="640" id="AsE-dg-KKH"/>
+                                            <constraint firstItem="fFW-Ak-0X1" firstAttribute="top" secondItem="eU9-1d-iyH" secondAttribute="top" constant="8" id="Axb-04-BtT"/>
+                                            <constraint firstItem="dA8-sC-tEZ" firstAttribute="top" secondItem="fFW-Ak-0X1" secondAttribute="bottom" constant="32.5" id="E5H-BA-CTu"/>
+                                            <constraint firstItem="a6a-pE-fZ2" firstAttribute="top" secondItem="dA8-sC-tEZ" secondAttribute="bottom" constant="72" id="FNa-jq-A8J"/>
+                                            <constraint firstAttribute="height" constant="612" id="Jtz-cd-cIZ"/>
+                                            <constraint firstItem="XvU-3f-fZ1" firstAttribute="top" secondItem="a6a-pE-fZ2" secondAttribute="bottom" constant="29" id="N7b-j6-ZvJ"/>
+                                            <constraint firstItem="dA8-sC-tEZ" firstAttribute="centerX" secondItem="eU9-1d-iyH" secondAttribute="centerX" id="O89-yl-drZ"/>
+                                            <constraint firstItem="a6a-pE-fZ2" firstAttribute="leading" secondItem="eU9-1d-iyH" secondAttribute="leading" constant="95" id="RD9-ZS-7jo"/>
+                                            <constraint firstItem="XvU-3f-fZ1" firstAttribute="centerX" secondItem="eU9-1d-iyH" secondAttribute="centerX" id="csl-un-hWF"/>
+                                            <constraint firstAttribute="bottom" secondItem="XvU-3f-fZ1" secondAttribute="bottom" constant="24" id="imH-q1-zKW"/>
+                                            <constraint firstItem="fFW-Ak-0X1" firstAttribute="centerX" secondItem="eU9-1d-iyH" secondAttribute="centerX" id="iu9-Nb-0G5"/>
+                                            <constraint firstItem="a6a-pE-fZ2" firstAttribute="centerX" secondItem="eU9-1d-iyH" secondAttribute="centerX" id="jDw-nx-a3V"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="eU9-1d-iyH" secondAttribute="trailing" id="1M8-TL-z29"/>
+                                    <constraint firstItem="eU9-1d-iyH" firstAttribute="leading" secondItem="ZGW-yF-Zy5" secondAttribute="leading" id="Cmg-eS-g4f"/>
+                                    <constraint firstItem="eU9-1d-iyH" firstAttribute="top" secondItem="ZGW-yF-Zy5" secondAttribute="top" id="Sgv-Sa-na9"/>
+                                    <constraint firstAttribute="bottom" secondItem="eU9-1d-iyH" secondAttribute="bottom" id="ZrY-NZ-kSf"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="rGa-JY-MU4"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="fdZ-9x-8wy"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZK-K6-Nt2">
+                                <rect key="frame" x="789" y="33" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="exit"/>
+                                <connections>
+                                    <action selector="exitButtonPressed:" destination="hdn-v6-I6Y" eventType="touchUpInside" id="VsZ-tX-cM7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="QgS-fr-vHJ" firstAttribute="trailing" secondItem="ZGW-yF-Zy5" secondAttribute="trailing" constant="84" id="TyK-kR-Id8"/>
+                            <constraint firstItem="ZGW-yF-Zy5" firstAttribute="leading" secondItem="QgS-fr-vHJ" secondAttribute="leading" constant="84" id="bJL-O6-Zb6"/>
+                            <constraint firstItem="ZGW-yF-Zy5" firstAttribute="width" secondItem="QgS-fr-vHJ" secondAttribute="width" multiplier="0.792079" id="hmH-Be-UnA"/>
+                            <constraint firstItem="QgS-fr-vHJ" firstAttribute="bottom" secondItem="ZGW-yF-Zy5" secondAttribute="bottom" constant="17" id="qf6-J2-ixC"/>
+                            <constraint firstItem="ZGW-yF-Zy5" firstAttribute="top" secondItem="QgS-fr-vHJ" secondAttribute="top" constant="38" id="yZn-GQ-nzg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QgS-fr-vHJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="QZK-K6-Nt2" id="acB-hM-acc"/>
+                        <outlet property="firstParagraph" destination="dA8-sC-tEZ" id="FVk-hw-GkS"/>
+                        <outlet property="scrollView" destination="ZGW-yF-Zy5" id="zMB-SK-phV"/>
+                        <outlet property="secondParagraph" destination="a6a-pE-fZ2" id="lZ2-9P-0TC"/>
+                        <outlet property="thirdParagraph" destination="XvU-3f-fZ1" id="PiP-8N-ibB"/>
+                        <outlet property="titleLabel" destination="fFW-Ak-0X1" id="zwm-ny-jts"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTo-Fh-o3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="3484"/>
         </scene>
         <!--Puzzle View Controller 2s-->
         <scene sceneID="gfN-eg-gJF">
@@ -999,6 +1109,7 @@
                         <outlet property="fifthParagraph" destination="zFH-b8-hsC" id="fM2-V6-1ga"/>
                         <outlet property="firstParagraph" destination="gjj-sS-KTQ" id="LvK-Gw-maU"/>
                         <outlet property="fourthParagraph" destination="DpN-T8-ZHp" id="DLK-qM-PLx"/>
+                        <outlet property="scrollView" destination="Yh9-h6-WBJ" id="Xse-ip-zQm"/>
                         <outlet property="secondParagraph" destination="Vz0-jA-nIG" id="weC-Ce-aZx"/>
                         <outlet property="thirdParagraph" destination="Hd0-Yj-7B8" id="Ufe-RI-2TR"/>
                         <outlet property="titleLabel" destination="Gwx-pU-ORc" id="rWr-oD-64o"/>
