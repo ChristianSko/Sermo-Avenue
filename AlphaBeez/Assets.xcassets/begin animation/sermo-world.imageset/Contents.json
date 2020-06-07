@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "sermo-world.png",
+      "filename" : "sermo-world-full.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "sermo-world@2x.png",
+      "filename" : "sermo-world-full@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "sermo-world@3x.png",
+      "filename" : "sermo-world-full@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

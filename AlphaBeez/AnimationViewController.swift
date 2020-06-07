@@ -15,6 +15,15 @@ class AnimationViewController: UIViewController {
     @IBOutlet weak var sermoImageView: UIImageView!
     @IBOutlet weak var ballImageView: UIImageView!
     
+    let sermoWorldImage = UIImage(named: "sermo-world")
+    let ballImage = UIImage(named: "sermo-ball")
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        sermoImageView.image = sermoWorldImage
+        ballImageView.image = ballImage
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +31,7 @@ class AnimationViewController: UIViewController {
         // Will hide the navigationController and leave only the back button!
          navigationController!.hideNavigationItemBackground()
         
-        UIView.animate(withDuration: 9.0, animations: {
+        UIView.animate(withDuration: 7.0, animations: {
             self.sermoImageView.transform = CGAffineTransform(rotationAngle: -(CGFloat.pi * 0.999))
             self.ballImageView.transform = CGAffineTransform(rotationAngle: .pi)
         }) { (finished: Bool) in

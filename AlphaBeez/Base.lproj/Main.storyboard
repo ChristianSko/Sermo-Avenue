@@ -344,7 +344,7 @@
                     <connections>
                         <outlet property="ballImageView" destination="LMW-qE-N12" id="twW-5G-KsS"/>
                         <outlet property="sermoImageView" destination="JKQ-Bz-07e" id="Wm4-kd-0Lj"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="toMainMenu" id="FYs-6b-gxw"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toMainMenu" animates="NO" id="FYs-6b-gxw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8E-hC-UOH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1388,6 +1388,6 @@
         <image name="puzzle-button" width="50" height="55"/>
         <image name="search-button" width="55" height="52"/>
         <image name="sermo-ball" width="94" height="93"/>
-        <image name="sermo-world" width="3308" height="3204"/>
+        <image name="sermo-world" width="3233" height="3232"/>
     </resources>
 </document>
