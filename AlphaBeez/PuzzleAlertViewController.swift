@@ -14,8 +14,6 @@ class PuzzleAlertViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var firstParagraph: UILabel!
-    @IBOutlet weak var secondParagraph: UILabel!
-    @IBOutlet weak var thirdParagraph: UILabel!
     
     @IBOutlet weak var exitButton: UIButton!
     
@@ -27,27 +25,16 @@ class PuzzleAlertViewController: UIViewController {
         titleLabel.text = "Parent Zone!"
         
         firstParagraph.text = """
-        The puzzle activity here can be used to help
-        break up and slow down a word for better
-        comprehension.
-        """
+        The puzzle activity here can be used to help break up and slow down a word for better comprehension.
         
-        secondParagraph.text = """
-        Make sure your child is holding the phone to
-        ensure that they feel the vibrotactile
-        representation of the word.
-        """
+        Make sure your child is holding the phone to ensure that they feel the vibrotactile representation of the word.
         
-        thirdParagraph.text = """
-        Remember that repition is an important part of
-        learning a new word. It never hurts to revisit a
-        word for extra verification!
+        Remember that repition is an important part of learning a new word. It never hurts to revisit a word for extra verification!
         """
         
         titleLabel.font = FontKit.roundedFont(ofSize: 28, weight: .bold)
         firstParagraph.font = FontKit.roundedFont(ofSize: 28, weight: .regular)
-        secondParagraph.font = FontKit.roundedFont(ofSize: 28, weight: .regular)
-        thirdParagraph.font = FontKit.roundedFont(ofSize: 28, weight: .regular)
+
         
         self.scrollView.layer.borderWidth = 10
         self.scrollView.layer.borderColor = UIColor.green.cgColor

@@ -25,19 +25,11 @@ class FindAlertViewController: UIViewController {
         titleLabel.text = "Parent Zone!"
         
         firstParagraph.text = """
-        Take this time to explore more characteristics and descriptive words that can be used to categorize the word on the flashcard. This search and find activity provides you and
-        your child with the opportunity to communicate and create a narrative
-        around the word you just learned together.
+        Take this time to explore more characteristics and descriptive words that can be used to categorize the word on the flashcard. This search and find activity provides you and your child with the opportunity to communicate and create a narrative around the word you just learned together.
         
-        Talk through why certain objects have the
-        same characteristics and why they don’t and try to incorporate other words that you may have learned recently with your child.
+        Talk through why certain objects have the same characteristics and why they don’t and try to incorporate other words that you may have learned recently with your child.
         
-        Encourage creativity and help him/her
-        observe your environment by talking about
-        what you discover together. Create stories
-        with the elements and objects that you find
-        during your hunt. Remember that every moment is a teachable moment and to raise curiosity in learning new
-        words!
+        Encourage creativity and help him/her observe your environment by talking about what you discover together. Create stories with the elements and objects that you find during your hunt. Remember that every moment is a teachable moment and to raise curiosity in learning new words!
         """
         
         titleLabel.font = FontKit.roundedFont(ofSize: 28, weight: .bold)

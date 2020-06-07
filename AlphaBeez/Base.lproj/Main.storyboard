@@ -615,8 +615,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eU9-1d-iyH">
                                         <rect key="frame" x="0.0" y="0.0" width="640" height="612"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA8-sC-tEZ">
+                                                <rect key="frame" x="95" y="97" width="450" height="494"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFW-Ak-0X1">
-                                                <rect key="frame" x="268" y="38" width="104" height="21"/>
+                                                <rect key="frame" x="222" y="36" width="197" height="21"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
@@ -627,38 +633,18 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA8-sC-tEZ">
-                                                <rect key="frame" x="95" y="97" width="450" height="121"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6a-pE-fZ2">
-                                                <rect key="frame" x="95" y="251" width="450" height="145"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvU-3f-fZ1">
-                                                <rect key="frame" x="95" y="432" width="450" height="145"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="XvU-3f-fZ1" firstAttribute="centerX" secondItem="eU9-1d-iyH" secondAttribute="centerX" id="49P-yU-dGJ"/>
-                                            <constraint firstItem="fFW-Ak-0X1" firstAttribute="top" secondItem="eU9-1d-iyH" secondAttribute="top" constant="38" id="6wm-G6-rEk"/>
-                                            <constraint firstItem="fFW-Ak-0X1" firstAttribute="centerX" secondItem="eU9-1d-iyH" secondAttribute="centerX" id="Agb-aH-1Dm"/>
+                                            <constraint firstItem="fFW-Ak-0X1" firstAttribute="centerX" secondItem="eU9-1d-iyH" secondAttribute="centerX" id="6MR-hF-Ai9"/>
                                             <constraint firstAttribute="width" constant="640" id="AsE-dg-KKH"/>
                                             <constraint firstAttribute="height" constant="612" id="Jtz-cd-cIZ"/>
-                                            <constraint firstItem="dA8-sC-tEZ" firstAttribute="top" secondItem="fFW-Ak-0X1" secondAttribute="bottom" constant="38" id="KhL-5o-pGV"/>
-                                            <constraint firstItem="a6a-pE-fZ2" firstAttribute="centerX" secondItem="eU9-1d-iyH" secondAttribute="centerX" id="OsY-e5-mFd"/>
-                                            <constraint firstAttribute="bottom" secondItem="XvU-3f-fZ1" secondAttribute="bottom" constant="35" id="QLt-rc-hGG"/>
-                                            <constraint firstItem="a6a-pE-fZ2" firstAttribute="top" secondItem="dA8-sC-tEZ" secondAttribute="bottom" constant="33" id="aTb-dt-JHG"/>
-                                            <constraint firstItem="XvU-3f-fZ1" firstAttribute="top" secondItem="a6a-pE-fZ2" secondAttribute="bottom" constant="36" id="h7V-CC-Mvz"/>
-                                            <constraint firstItem="dA8-sC-tEZ" firstAttribute="centerX" secondItem="eU9-1d-iyH" secondAttribute="centerX" id="nxE-EQ-S6T"/>
+                                            <constraint firstItem="dA8-sC-tEZ" firstAttribute="centerX" secondItem="eU9-1d-iyH" secondAttribute="centerX" id="PCL-jt-rjO"/>
+                                            <constraint firstItem="dA8-sC-tEZ" firstAttribute="leading" secondItem="eU9-1d-iyH" secondAttribute="leading" constant="95" id="Zbz-iN-brc"/>
+                                            <constraint firstItem="dA8-sC-tEZ" firstAttribute="top" secondItem="fFW-Ak-0X1" secondAttribute="bottom" constant="40" id="bzA-vx-8OX"/>
+                                            <constraint firstItem="fFW-Ak-0X1" firstAttribute="top" secondItem="eU9-1d-iyH" secondAttribute="top" constant="36" id="dpm-zR-47O"/>
+                                            <constraint firstItem="fFW-Ak-0X1" firstAttribute="leading" secondItem="eU9-1d-iyH" secondAttribute="leading" constant="222" id="emp-VJ-eK1"/>
+                                            <constraint firstAttribute="bottom" secondItem="dA8-sC-tEZ" secondAttribute="bottom" constant="21" id="i5z-yX-FzY"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -693,14 +679,12 @@
                         <outlet property="exitButton" destination="QZK-K6-Nt2" id="acB-hM-acc"/>
                         <outlet property="firstParagraph" destination="dA8-sC-tEZ" id="FVk-hw-GkS"/>
                         <outlet property="scrollView" destination="ZGW-yF-Zy5" id="zMB-SK-phV"/>
-                        <outlet property="secondParagraph" destination="a6a-pE-fZ2" id="lZ2-9P-0TC"/>
-                        <outlet property="thirdParagraph" destination="XvU-3f-fZ1" id="PiP-8N-ibB"/>
                         <outlet property="titleLabel" destination="fFW-Ak-0X1" id="zwm-ny-jts"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cTo-Fh-o3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1678" y="3835"/>
+            <point key="canvasLocation" x="1677.4553571428571" y="3834.7826086956525"/>
         </scene>
         <!--Puzzle View Controller 2s-->
         <scene sceneID="gfN-eg-gJF">
