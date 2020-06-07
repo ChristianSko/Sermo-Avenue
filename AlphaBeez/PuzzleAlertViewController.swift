@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Puzzle1AlertViewController: UIViewController {
+class PuzzleAlertViewController: UIViewController {
 
     // Outlets
     
@@ -29,7 +29,7 @@ class Puzzle1AlertViewController: UIViewController {
         firstParagraph.text = """
         The puzzle activity here can be used to help
         break up and slow down a word for better
-        comprehension 
+        comprehension.
         """
         
         secondParagraph.text = """
@@ -44,13 +44,14 @@ class Puzzle1AlertViewController: UIViewController {
         word for extra verification!
         """
         
-        titleLabel.font = FontKit.roundedFont(ofSize: 22, weight: .bold)
-        firstParagraph.font = FontKit.roundedFont(ofSize: 22, weight: .regular)
-        secondParagraph.font = FontKit.roundedFont(ofSize: 22, weight: .regular)
-        thirdParagraph.font = FontKit.roundedFont(ofSize: 22, weight: .regular)
+        titleLabel.font = FontKit.roundedFont(ofSize: 28, weight: .bold)
+        firstParagraph.font = FontKit.roundedFont(ofSize: 28, weight: .regular)
+        secondParagraph.font = FontKit.roundedFont(ofSize: 28, weight: .regular)
+        thirdParagraph.font = FontKit.roundedFont(ofSize: 28, weight: .regular)
         
         self.scrollView.layer.borderWidth = 10
         self.scrollView.layer.borderColor = UIColor.green.cgColor
+        self.scrollView.layer.cornerRadius = 10
     }
     
     @IBAction func exitButtonPressed(_ sender: Any) {

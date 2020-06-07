@@ -20,7 +20,6 @@ class PuzzleViewController2s: UIViewController {
     @IBOutlet weak var rightPuzzlePiece1: UIButton!
     @IBOutlet weak var leftPuzzlePiece1: UIButton!
     @IBOutlet weak var borderView: UIImageView!
-    
     @IBOutlet weak var infoButton: UIButton!
     
     var starsImage: UIImageView!
@@ -202,6 +201,6 @@ class PuzzleViewController2s: UIViewController {
     
     // MARK: - Action for pressing the exit button
     @IBAction func infoButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "puzzle2Alert", sender: sender)
+        performSegue(withIdentifier: "puzzleAlert", sender: sender)
     }
 }

@@ -24,7 +24,6 @@ class PuzzleViewController3s: UIViewController {
     @IBOutlet weak var rightPuzzlePieceButton: UIButton!
     @IBOutlet weak var upperLeftPuzzlePieceButton: UIButton!
     @IBOutlet weak var bottomLeftPuzzlePieceButton: UIButton!
-    
     @IBOutlet weak var infoButton: UIButton!
     
     // Images set programtically
@@ -266,9 +265,9 @@ class PuzzleViewController3s: UIViewController {
     }
     
     // MARK: - Action for pressing the info button
-  
     @IBAction func infoButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "puzzle3Alert", sender: sender)
+        performSegue(withIdentifier: "puzzleAlert", sender: sender)
     }
+
     
 }

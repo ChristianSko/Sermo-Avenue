@@ -132,7 +132,7 @@ class PuzzleViewController1s: UIViewController {
     
     // MARK: - Action for pressing the info button
     @IBAction func infoButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "puzzle1Alert", sender: sender)
+        performSegue(withIdentifier: "puzzleAlert", sender: sender)
     }
     
     

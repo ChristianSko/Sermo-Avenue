@@ -10,9 +10,7 @@
 		28310EB3247D1DB0004BE772 /* ColourStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28310EB2247D1DB0004BE772 /* ColourStruct.swift */; };
 		28410934247BFD16006959A9 /* FindActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28410933247BFD16006959A9 /* FindActivityViewController.swift */; };
 		287DC991248B8C4E000225CF /* FindAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287DC990248B8C4E000225CF /* FindAlertViewController.swift */; };
-		287DC993248B998B000225CF /* Puzzle1AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287DC992248B998B000225CF /* Puzzle1AlertViewController.swift */; };
-		287DC995248B9D94000225CF /* Puzzle2AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287DC994248B9D94000225CF /* Puzzle2AlertViewController.swift */; };
-		287DC997248BA216000225CF /* Puzzle3AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287DC996248BA216000225CF /* Puzzle3AlertViewController.swift */; };
+		287DC993248B998B000225CF /* PuzzleAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287DC992248B998B000225CF /* PuzzleAlertViewController.swift */; };
 		28882C17247DBB710018EF0A /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28882C16247DBB710018EF0A /* Font.swift */; };
 		D61350BF2489716B0081BDFA /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61350BE2489716B0081BDFA /* OnBoardingViewController.swift */; };
 		D62373E1246C7BC7004652CA /* AHAP in Resources */ = {isa = PBXBuildFile; fileRef = D62373E0246C7BC7004652CA /* AHAP */; };
@@ -41,9 +39,7 @@
 		28310EB2247D1DB0004BE772 /* ColourStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourStruct.swift; sourceTree = "<group>"; };
 		28410933247BFD16006959A9 /* FindActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindActivityViewController.swift; sourceTree = "<group>"; };
 		287DC990248B8C4E000225CF /* FindAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAlertViewController.swift; sourceTree = "<group>"; };
-		287DC992248B998B000225CF /* Puzzle1AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puzzle1AlertViewController.swift; sourceTree = "<group>"; };
-		287DC994248B9D94000225CF /* Puzzle2AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puzzle2AlertViewController.swift; sourceTree = "<group>"; };
-		287DC996248BA216000225CF /* Puzzle3AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puzzle3AlertViewController.swift; sourceTree = "<group>"; };
+		287DC992248B998B000225CF /* PuzzleAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleAlertViewController.swift; sourceTree = "<group>"; };
 		28882C16247DBB710018EF0A /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		D61350BE2489716B0081BDFA /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		D62373E0246C7BC7004652CA /* AHAP */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AHAP; sourceTree = "<group>"; };
@@ -115,9 +111,7 @@
 				D6249AA124782613009B5BCB /* PuzzleViewController2s.swift */,
 				D6249AA324782629009B5BCB /* PuzzleViewController3s.swift */,
 				28410933247BFD16006959A9 /* FindActivityViewController.swift */,
-				287DC992248B998B000225CF /* Puzzle1AlertViewController.swift */,
-				287DC994248B9D94000225CF /* Puzzle2AlertViewController.swift */,
-				287DC996248BA216000225CF /* Puzzle3AlertViewController.swift */,
+				287DC992248B998B000225CF /* PuzzleAlertViewController.swift */,
 				287DC990248B8C4E000225CF /* FindAlertViewController.swift */,
 				FAF3B495247D7C5A00D2EE7E /* Extentions */,
 				FA1A98F2246ADAED0088B4E9 /* Assets.xcassets */,
@@ -220,7 +214,6 @@
 				287DC991248B8C4E000225CF /* FindAlertViewController.swift in Sources */,
 				28882C17247DBB710018EF0A /* Font.swift in Sources */,
 				FA0A53032486F9EE006EFCC2 /* UIButton.swift in Sources */,
-				287DC997248BA216000225CF /* Puzzle3AlertViewController.swift in Sources */,
 				D6249AA0247825FE009B5BCB /* PuzzleViewController1s.swift in Sources */,
 				FA1A98EB246ADAEC0088B4E9 /* ViewController.swift in Sources */,
 				FAF3B497247D809000D2EE7E /* NavigationBarExtention.swift in Sources */,
@@ -231,12 +224,11 @@
 				D6249AA424782629009B5BCB /* PuzzleViewController3s.swift in Sources */,
 				FA1A98F1246ADAEC0088B4E9 /* AlphaBeez.xcdatamodeld in Sources */,
 				28410934247BFD16006959A9 /* FindActivityViewController.swift in Sources */,
-				287DC993248B998B000225CF /* Puzzle1AlertViewController.swift in Sources */,
+				287DC993248B998B000225CF /* PuzzleAlertViewController.swift in Sources */,
 				FA020063246B53DC00A2F0BD /* CategoryViewController.swift in Sources */,
 				FA1A98E9246ADAEC0088B4E9 /* SceneDelegate.swift in Sources */,
 				D6249AA224782613009B5BCB /* PuzzleViewController2s.swift in Sources */,
 				D61350BF2489716B0081BDFA /* OnBoardingViewController.swift in Sources */,
-				287DC995248B9D94000225CF /* Puzzle2AlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
