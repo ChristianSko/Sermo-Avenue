@@ -522,12 +522,25 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCe-jz-klI">
+                                <rect key="frame" x="60" y="341.5" width="40" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="PwJ-Lo-90m"/>
+                                    <constraint firstAttribute="width" constant="40" id="kZO-JG-0L9"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="arrow.clockwise.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="restartTapped:" destination="syO-Qf-ldC" eventType="touchUpInside" id="rJn-WX-oyR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="yCe-jz-klI" firstAttribute="leading" secondItem="IoH-NV-aF2" secondAttribute="leading" constant="16" id="2BX-Nr-NdS"/>
                             <constraint firstItem="K9K-QH-lbr" firstAttribute="centerX" secondItem="gYL-7w-dJP" secondAttribute="centerX" id="4Yq-YL-QaH"/>
                             <constraint firstItem="Nzi-Ix-Zjh" firstAttribute="centerY" secondItem="gYL-7w-dJP" secondAttribute="centerY" id="CCC-d6-vJ3"/>
                             <constraint firstItem="g6l-YE-E3a" firstAttribute="centerX" secondItem="gYL-7w-dJP" secondAttribute="centerX" id="CIo-Eq-Tfg"/>
+                            <constraint firstItem="IoH-NV-aF2" firstAttribute="bottom" secondItem="yCe-jz-klI" secondAttribute="bottom" constant="12" id="Z5f-Ev-Rz2"/>
                             <constraint firstItem="Zo6-kt-mPt" firstAttribute="leading" secondItem="Nzi-Ix-Zjh" secondAttribute="trailing" constant="76" id="dPM-hW-xY8"/>
                             <constraint firstItem="g6l-YE-E3a" firstAttribute="centerX" secondItem="gYL-7w-dJP" secondAttribute="centerX" id="frK-vU-0aL"/>
                             <constraint firstItem="K9K-QH-lbr" firstAttribute="centerY" secondItem="gYL-7w-dJP" secondAttribute="centerY" id="j6e-N9-5Xr"/>
@@ -553,6 +566,7 @@
                         <outlet property="fullImagePuzzleOne" destination="Nzi-Ix-Zjh" id="FvS-78-QvD"/>
                         <outlet property="infoButton" destination="MOH-v3-60p" id="nmV-5U-uY7"/>
                         <outlet property="oneSyllablePuzzle1" destination="Zo6-kt-mPt" id="OqH-PF-sb9"/>
+                        <outlet property="restartButton" destination="yCe-jz-klI" id="ln7-C8-HcY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXW-a9-VOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -718,6 +732,17 @@
                                     <segue destination="hdn-v6-I6Y" kind="popoverPresentation" identifier="puzzleAlert" popoverAnchorView="X4Y-5A-sp7" id="JMl-0E-1qa">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZzK-ei-lcM">
+                                <rect key="frame" x="60" y="335.5" width="40" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="HyD-rM-PJJ"/>
+                                    <constraint firstAttribute="height" constant="40" id="vJM-jf-6ik"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="arrow.clockwise.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="restartTapped:" destination="syO-Qf-ldC" eventType="touchUpInside" id="Fwa-LP-xG8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1097,10 +1122,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Mkp-wf-avB"/>
+        <segue reference="JMl-0E-1qa"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
+        <image name="arrow.clockwise.circle.fill" catalog="system" width="128" height="121"/>
         <image name="camera-faded" width="138" height="112"/>
         <image name="category-home" width="475.5" height="369"/>
         <image name="category-market" width="316" height="233"/>
