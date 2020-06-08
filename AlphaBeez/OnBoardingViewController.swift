@@ -15,21 +15,25 @@ class OnBoardingViewController: UIViewController {
     var scrollView = UIScrollView()
     
     
-    // Maintain a variable to check for Core Haptics compatibility on device.
-       lazy var supportsHaptics: Bool = {
-           let appDelegate = UIApplication.shared.delegate as! AppDelegate
-           return appDelegate.supportsHaptics
-       }()
+//    // Maintain a variable to check for Core Haptics compatibility on device.
+//       lazy var supportsHaptics: Bool = {
+//           let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//           return appDelegate.supportsHaptics
+//       }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Presents an alert Controller if device is not supported
-        if !supportsHaptics {
-        let ac = UIAlertController(title: "Unsupported Device", message: "The Custom Vibrations used in this app are only supported by iPhone 8 and up.", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Ok", style: .default))
-        present(ac, animated: true)
-        }
+//        // Presents an alert Controller if device is not supported
+//        if !supportsHaptics {
+//        let ac = UIAlertController(title: "Unsupported Device", message: "The Custom Vibrations used in this app are only supported by iPhone 8 and up.", preferredStyle: .alert)
+//        ac.addAction(UIAlertAction(title: "Ok", style: .default))
+//        present(ac, animated: true)
+//        }
+        
+        
+        // Creating the HapticEngine
+        HapticEngine.shared.creteEngine()
     }
     
     override func viewDidLayoutSubviews() {
@@ -65,20 +69,21 @@ class OnBoardingViewController: UIViewController {
             button.setBackgroundImage(nextImage, for: .normal)
             button.applyShadowAndVisualFeedback()
             
-//            let bananaImage = UIImage("banana-button")
-//
-//            let bananaButton = UIButton(frame: CGRect(x: <#T##CGFloat#>, y: <#T##CGFloat#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>))
-//            bananaButton.setImage(bananaImage, for: .normal)
-//            bananaButton.isHidden = true
-//
-//            if x == 2 {
-//                bananaButton.isHidden = false
-//            }
+            let bananaImage = UIImage(named: "banana-button")
+
+            let bananaButton = UIButton(frame: CGRect(x: pageView.frame.size.width / 2, y: pageView.frame.height / 6 , width: 280, height: 140))
+            bananaButton.contentMode = .scaleToFill
+            bananaButton.setImage(bananaImage, for: .normal)
+            bananaButton.isHidden = true
+
+            if x == 2 {
+                bananaButton.isHidden = false
+            }
             
             //makes sure the buttton of the 4th screen is
             if x == 3 {
                 
-//                bananaButton.isHidden = true
+                bananaButton.isHidden = true
                 
                 button = UIButton(frame: CGRect(x: pageView.frame.size.width-160, y: pageView.frame.size.height-60, width: 140, height: 50))
                 nextImage = UIImage(named: "play")
@@ -89,7 +94,9 @@ class OnBoardingViewController: UIViewController {
             //Adding 1 extra to each tag so we can track if the flow was completed in didTapButton
             button.tag = x + 1
             button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
+            bananaButton.addTarget(self, action: #selector(didTapBananaButton(_:)), for: .touchUpInside)
             pageView.addSubview(button)
+            pageView.addSubview(bananaButton)
         }
         
         // This should make the view scrollable -> Currently not working, trying to fix
@@ -113,4 +120,12 @@ class OnBoardingViewController: UIViewController {
         scrollView.setContentOffset(CGPoint(x: holderView.frame.size.width * CGFloat(button.tag), y: 0), animated: true)
         
     }
+    
+    //This should play the Banana Haptic file
+    @objc func didTapBananaButton(_ sender: UIButton) {
+        print("PLease say BANANAAAA")
+        HapticEngine.shared.playHapticsFile(name: "banana")
+    }
+    
+    
 }
