@@ -266,6 +266,7 @@ class PuzzleViewController3s: UIViewController {
         rightPuzzlePiece.transform = .identity
         upperLeftPuzzlePiece.transform = .identity
         bottomLeftPuzzlePiece.transform = .identity
+        starsImage.transform = .identity
         
         self.starsImage.isHidden = true
         self.flashcardWordLabel.isHidden = true

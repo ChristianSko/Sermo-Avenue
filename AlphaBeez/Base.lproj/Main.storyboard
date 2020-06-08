@@ -525,6 +525,17 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeM-gm-ho5">
+                                <rect key="frame" x="60" y="360" width="40" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Zcm-Gp-jtx"/>
+                                    <constraint firstAttribute="width" constant="40" id="od3-29-mjy"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="arrow.counterclockwise.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="restartTapped:" destination="syO-Qf-ldC" eventType="touchUpInside" id="Uh4-tr-Wki"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -538,6 +549,8 @@
                             <constraint firstItem="K9K-QH-lbr" firstAttribute="centerY" secondItem="gYL-7w-dJP" secondAttribute="centerY" id="j6e-N9-5Xr"/>
                             <constraint firstItem="g6l-YE-E3a" firstAttribute="centerY" secondItem="gYL-7w-dJP" secondAttribute="centerY" id="mOJ-Uz-Sii"/>
                             <constraint firstItem="g6l-YE-E3a" firstAttribute="centerY" secondItem="gYL-7w-dJP" secondAttribute="centerY" id="qfj-ky-D5l"/>
+                            <constraint firstAttribute="bottom" secondItem="aeM-gm-ho5" secondAttribute="bottom" constant="14.5" id="vGz-bw-tJ9"/>
+                            <constraint firstItem="aeM-gm-ho5" firstAttribute="leading" secondItem="IoH-NV-aF2" secondAttribute="leading" constant="16" id="xbJ-A6-eyR"/>
                             <constraint firstItem="Nzi-Ix-Zjh" firstAttribute="centerX" secondItem="gYL-7w-dJP" secondAttribute="centerX" id="yju-nQ-img"/>
                             <constraint firstItem="Zo6-kt-mPt" firstAttribute="centerY" secondItem="gYL-7w-dJP" secondAttribute="centerY" id="zrG-cK-XGu"/>
                         </constraints>
@@ -558,6 +571,7 @@
                         <outlet property="fullImagePuzzleOne" destination="Nzi-Ix-Zjh" id="FvS-78-QvD"/>
                         <outlet property="infoButton" destination="MOH-v3-60p" id="nmV-5U-uY7"/>
                         <outlet property="oneSyllablePuzzle1" destination="Zo6-kt-mPt" id="OqH-PF-sb9"/>
+                        <outlet property="restartButton" destination="aeM-gm-ho5" id="Bvq-28-8zA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXW-a9-VOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -733,6 +747,17 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nz-Wf-m8y">
+                                <rect key="frame" x="60" y="354.5" width="40" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="6Yk-x5-LM5"/>
+                                    <constraint firstAttribute="height" constant="40" id="h5g-sj-xrn"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="arrow.counterclockwise.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="restartTapped:" destination="1mP-YR-Eha" eventType="touchUpInside" id="cY2-Ow-zBd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -742,6 +767,7 @@
                             <constraint firstItem="YXV-xC-oYJ" firstAttribute="centerX" secondItem="IJw-ii-NNc" secondAttribute="centerX" id="AgZ-GZ-GrW"/>
                             <constraint firstItem="iG5-bh-EZq" firstAttribute="centerY" secondItem="IJw-ii-NNc" secondAttribute="centerY" id="AgZ-V9-pEv"/>
                             <constraint firstItem="Skm-Z8-4IB" firstAttribute="centerX" secondItem="IJw-ii-NNc" secondAttribute="centerX" id="I0z-mD-uEX"/>
+                            <constraint firstItem="5nz-Wf-m8y" firstAttribute="leading" secondItem="tc7-ge-t6z" secondAttribute="leading" constant="16" id="IIb-hK-aej"/>
                             <constraint firstItem="Skm-Z8-4IB" firstAttribute="leading" secondItem="R7m-7T-xZP" secondAttribute="trailing" constant="76" id="IbY-yM-pRC"/>
                             <constraint firstItem="tc7-ge-t6z" firstAttribute="trailing" secondItem="X4Y-5A-sp7" secondAttribute="trailing" constant="16" id="JTC-St-lsD"/>
                             <constraint firstItem="iG5-bh-EZq" firstAttribute="leading" secondItem="Skm-Z8-4IB" secondAttribute="trailing" constant="76" id="MTu-LZ-PS7"/>
@@ -754,6 +780,7 @@
                             <constraint firstItem="5r4-Ej-3Uh" firstAttribute="centerY" secondItem="IJw-ii-NNc" secondAttribute="centerY" id="kQV-3G-7H0"/>
                             <constraint firstItem="tc7-ge-t6z" firstAttribute="bottom" secondItem="X4Y-5A-sp7" secondAttribute="bottom" id="oAo-Sq-ZPc"/>
                             <constraint firstItem="Skm-Z8-4IB" firstAttribute="centerY" secondItem="IJw-ii-NNc" secondAttribute="centerY" id="sc1-aQ-kfV"/>
+                            <constraint firstAttribute="bottom" secondItem="5nz-Wf-m8y" secondAttribute="bottom" constant="20" id="tzv-IJ-S3f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tc7-ge-t6z"/>
                     </view>
@@ -773,6 +800,7 @@
                         <outlet property="infoButton" destination="X4Y-5A-sp7" id="4IV-A6-E4i"/>
                         <outlet property="leftPuzzlePiece" destination="5r4-Ej-3Uh" id="l7M-ym-Ddb"/>
                         <outlet property="leftPuzzlePiece1" destination="R7m-7T-xZP" id="HEL-E6-ht8"/>
+                        <outlet property="restartButton" destination="5nz-Wf-m8y" id="EQ4-Dv-fCY"/>
                         <outlet property="rightPuzzlePiece" destination="eJK-An-82Q" id="0ZP-hr-VkW"/>
                         <outlet property="rightPuzzlePiece1" destination="iG5-bh-EZq" id="ao8-aR-tX4"/>
                     </connections>
@@ -875,6 +903,17 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewA-Sr-Wh7">
+                                <rect key="frame" x="60" y="351.5" width="40" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="ESy-fy-22c"/>
+                                    <constraint firstAttribute="height" constant="40" id="nEf-Gh-MqX"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="arrow.counterclockwise.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="restartTapepd:" destination="UFO-OY-pgl" eventType="touchUpInside" id="dk1-Uk-iTp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -885,6 +924,7 @@
                             <constraint firstItem="336-ES-2Y3" firstAttribute="centerY" secondItem="iZs-55-Pei" secondAttribute="centerY" id="D83-kq-53h"/>
                             <constraint firstItem="Ksq-2C-q9K" firstAttribute="top" secondItem="gQM-gA-y4G" secondAttribute="top" constant="38" id="E8H-Gr-QbP"/>
                             <constraint firstItem="336-ES-2Y3" firstAttribute="leading" secondItem="tTP-vw-zJu" secondAttribute="trailing" constant="76" id="Fqs-TH-l9O"/>
+                            <constraint firstItem="gQM-gA-y4G" firstAttribute="bottom" secondItem="ewA-Sr-Wh7" secondAttribute="bottom" constant="2" id="JFE-Pf-TUs"/>
                             <constraint firstItem="y37-7K-Fdn" firstAttribute="centerY" secondItem="iZs-55-Pei" secondAttribute="centerY" id="MS3-aB-sw5"/>
                             <constraint firstItem="gQM-gA-y4G" firstAttribute="trailing" secondItem="k83-xo-Dab" secondAttribute="trailing" constant="16" id="Ml2-B1-3wy"/>
                             <constraint firstItem="4P9-cn-coY" firstAttribute="top" secondItem="Ksq-2C-q9K" secondAttribute="bottom" constant="23" id="QtK-tC-R1i"/>
@@ -897,6 +937,7 @@
                             <constraint firstItem="tTP-vw-zJu" firstAttribute="leading" secondItem="QKs-tl-XA9" secondAttribute="trailing" constant="76" id="ik0-wd-nGi"/>
                             <constraint firstItem="8VZ-AU-uzF" firstAttribute="centerY" secondItem="iZs-55-Pei" secondAttribute="centerY" id="m36-An-icy"/>
                             <constraint firstItem="8VZ-AU-uzF" firstAttribute="centerX" secondItem="iZs-55-Pei" secondAttribute="centerX" id="oxb-kH-njr"/>
+                            <constraint firstItem="ewA-Sr-Wh7" firstAttribute="leading" secondItem="gQM-gA-y4G" secondAttribute="leading" constant="16" id="vTC-1v-8Eu"/>
                             <constraint firstItem="2vM-71-dmC" firstAttribute="top" secondItem="QKs-tl-XA9" secondAttribute="bottom" constant="23" id="ywF-M7-jho"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gQM-gA-y4G"/>
@@ -917,6 +958,7 @@
                         <outlet property="flashcardWordLabel" destination="fOo-Dy-XfR" id="SEa-n2-XMW"/>
                         <outlet property="fullImagePuzzleThree" destination="tTP-vw-zJu" id="kyh-5V-wAw"/>
                         <outlet property="infoButton" destination="k83-xo-Dab" id="X3t-Cr-KoH"/>
+                        <outlet property="restartButton" destination="ewA-Sr-Wh7" id="hUY-w4-fSI"/>
                         <outlet property="rightPuzzlePiece" destination="336-ES-2Y3" id="Qlh-ik-tnc"/>
                         <outlet property="rightPuzzlePieceButton" destination="y37-7K-Fdn" id="N7n-LV-tgy"/>
                         <outlet property="upperLeftPuzzlePiece" destination="Ksq-2C-q9K" id="maK-wr-nWu"/>
@@ -1122,10 +1164,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wIH-QZ-2IX"/>
+        <segue reference="JMl-0E-1qa"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
+        <image name="arrow.counterclockwise.circle.fill" catalog="system" width="128" height="121"/>
         <image name="camera-faded" width="138" height="112"/>
         <image name="category-home" width="475.5" height="369"/>
         <image name="category-market" width="316" height="233"/>

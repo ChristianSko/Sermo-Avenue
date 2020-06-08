@@ -136,6 +136,7 @@ class PuzzleViewController1s: UIViewController {
         self.starsImage.isHidden = true
         self.flashcardWordLabel.isHidden = true
         oneSyllablePuzzle1.transform = .identity
+        starsImage.transform = .identity
         
     }
     

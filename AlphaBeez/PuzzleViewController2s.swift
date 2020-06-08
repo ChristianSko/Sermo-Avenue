@@ -201,6 +201,7 @@ class PuzzleViewController2s: UIViewController {
         self.flashcardWordLabel.isHidden = true
         rightPuzzlePiece.transform = .identity
         leftPuzzlePiece.transform = .identity
+        starsImage.transform = .identity
         self.leftPuzzlePiece1.isHidden = false
         self.rightPuzzlePiece1.isHidden = false
         syllableCounter = 1
