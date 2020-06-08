@@ -63,8 +63,7 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
         
         // text label
         titleLabel.text = """
-        You just learned \(selectedFlashcard.name!).
-        Now, find something that has the same:
+        You just learned \(selectedFlashcard.name!). Now, find something that has the same:
         """
         titleLabel.font = FontKit.roundedFont(ofSize: 30, weight: .regular)
         

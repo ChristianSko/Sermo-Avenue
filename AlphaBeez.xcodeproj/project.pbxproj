@@ -97,9 +97,9 @@
 				FA1A98EC246ADAEC0088B4E9 /* Main.storyboard */,
 				FA1A98E6246ADAEC0088B4E9 /* AppDelegate.swift */,
 				FA1A98E8246ADAEC0088B4E9 /* SceneDelegate.swift */,
-				FA7512CA2489B0030079241A /* HapticEngine.swift */,
 				FA020060246B534D00A2F0BD /* CustomCollectionViewCell.swift */,
 				FA90FCEA2479855C00E87B69 /* SaveToCoreDataViewController.swift */,
+				FA7512CA2489B0030079241A /* HapticEngine.swift */,
 				D61350BE2489716B0081BDFA /* OnBoardingViewController.swift */,
 				FA1A98EA246ADAEC0088B4E9 /* ViewController.swift */,
 				FA020062246B53DC00A2F0BD /* CategoryViewController.swift */,
@@ -370,7 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = T7664565ZX;
+				DEVELOPMENT_TEAM = U68AWG975G;
 				INFOPLIST_FILE = AlphaBeez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -390,7 +390,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = T7664565ZX;
+				DEVELOPMENT_TEAM = U68AWG975G;
 				INFOPLIST_FILE = AlphaBeez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

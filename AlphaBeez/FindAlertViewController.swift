@@ -38,8 +38,10 @@ class FindAlertViewController: UIViewController {
         self.scrollView.layer.borderWidth = 10
         self.scrollView.layer.borderColor = UIColor.green.cgColor
         self.scrollView.layer.cornerRadius = 10
-
+        
+       
     }
+
     
     // MARK: - Action for exit button
     @IBAction func exitButtonPressed(_ sender: Any) {
