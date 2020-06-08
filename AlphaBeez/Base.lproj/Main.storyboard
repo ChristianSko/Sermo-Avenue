@@ -734,7 +734,7 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZzK-ei-lcM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZzK-ei-lcM">
                                 <rect key="frame" x="60" y="335.5" width="40" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="HyD-rM-PJJ"/>
@@ -743,12 +743,14 @@
                                 <state key="normal" backgroundImage="arrow.clockwise.circle.fill" catalog="system"/>
                                 <connections>
                                     <action selector="restartTapped:" destination="syO-Qf-ldC" eventType="touchUpInside" id="Fwa-LP-xG8"/>
+                                    <action selector="restartTapped:" destination="1mP-YR-Eha" eventType="touchUpInside" id="ffT-d8-8tI"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="YXV-xC-oYJ" firstAttribute="centerX" secondItem="IJw-ii-NNc" secondAttribute="centerX" id="09l-17-UeF"/>
+                            <constraint firstItem="ZzK-ei-lcM" firstAttribute="leading" secondItem="tc7-ge-t6z" secondAttribute="leading" constant="16" id="0Ys-6A-PXV"/>
                             <constraint firstItem="Skm-Z8-4IB" firstAttribute="leading" secondItem="5r4-Ej-3Uh" secondAttribute="trailing" constant="76" id="3rB-LD-DRI"/>
                             <constraint firstItem="8GO-Hu-PeW" firstAttribute="centerY" secondItem="IJw-ii-NNc" secondAttribute="centerY" id="89c-fp-twu"/>
                             <constraint firstItem="YXV-xC-oYJ" firstAttribute="centerX" secondItem="IJw-ii-NNc" secondAttribute="centerX" id="AgZ-GZ-GrW"/>
@@ -759,6 +761,7 @@
                             <constraint firstItem="YXV-xC-oYJ" firstAttribute="centerY" secondItem="IJw-ii-NNc" secondAttribute="centerY" id="Qg6-53-SmX"/>
                             <constraint firstItem="eJK-An-82Q" firstAttribute="leading" secondItem="Skm-Z8-4IB" secondAttribute="trailing" constant="76" id="Qti-pY-3if"/>
                             <constraint firstItem="eJK-An-82Q" firstAttribute="centerY" secondItem="IJw-ii-NNc" secondAttribute="centerY" id="SnG-i1-KO8"/>
+                            <constraint firstItem="tc7-ge-t6z" firstAttribute="bottom" secondItem="ZzK-ei-lcM" secondAttribute="bottom" constant="18" id="ajM-Ym-25y"/>
                             <constraint firstItem="YXV-xC-oYJ" firstAttribute="centerY" secondItem="IJw-ii-NNc" secondAttribute="centerY" id="hBj-1D-knr"/>
                             <constraint firstItem="8GO-Hu-PeW" firstAttribute="centerX" secondItem="IJw-ii-NNc" secondAttribute="centerX" id="iJj-dt-BEv"/>
                             <constraint firstItem="R7m-7T-xZP" firstAttribute="centerY" secondItem="IJw-ii-NNc" secondAttribute="centerY" id="kQ4-zf-ttw"/>
@@ -783,6 +786,7 @@
                         <outlet property="infoButton" destination="X4Y-5A-sp7" id="4IV-A6-E4i"/>
                         <outlet property="leftPuzzlePiece" destination="5r4-Ej-3Uh" id="l7M-ym-Ddb"/>
                         <outlet property="leftPuzzlePiece1" destination="R7m-7T-xZP" id="HEL-E6-ht8"/>
+                        <outlet property="restartButton" destination="ZzK-ei-lcM" id="Duc-Cb-38Y"/>
                         <outlet property="rightPuzzlePiece" destination="eJK-An-82Q" id="0ZP-hr-VkW"/>
                         <outlet property="rightPuzzlePiece1" destination="iG5-bh-EZq" id="ao8-aR-tX4"/>
                     </connections>
