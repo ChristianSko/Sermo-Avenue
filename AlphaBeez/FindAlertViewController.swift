@@ -30,6 +30,7 @@ class FindAlertViewController: UIViewController {
         Talk through why certain objects have the same characteristics and why they don’t and try to incorporate other words that you may have learned recently with your child.
         
         Encourage creativity and help him/her observe your environment by talking about what you discover together. Create stories with the elements and objects that you find during your hunt. Remember that every moment is a teachable moment and to raise curiosity in learning new words!
+        
         """
         
         titleLabel.font = FontKit.roundedFont(ofSize: 28, weight: .bold)
