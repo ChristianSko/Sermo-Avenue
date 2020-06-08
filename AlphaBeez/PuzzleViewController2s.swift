@@ -21,6 +21,7 @@ class PuzzleViewController2s: UIViewController {
     @IBOutlet weak var leftPuzzlePiece1: UIButton!
     @IBOutlet weak var borderView: UIImageView!
     @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var restartButton: UIButton!
     
     var starsImage: UIImageView!
     
@@ -193,6 +194,20 @@ class PuzzleViewController2s: UIViewController {
             currentAnimation = 0
         }
     }
+    
+    
+    @IBAction func restartTapped(_ sender: UIButton) {
+        self.starsImage.isHidden = true
+        self.flashcardWordLabel.isHidden = true
+        rightPuzzlePiece.transform = .identity
+        leftPuzzlePiece.transform = .identity
+        starsImage.transform = .identity
+        self.leftPuzzlePiece1.isHidden = false
+        self.rightPuzzlePiece1.isHidden = false
+        syllableCounter = 1
+
+    }
+    
     
     // MARK: - Action for pressing the exit button
     @IBAction func exitButtonPressed(_ sender: UIBarButtonItem) {

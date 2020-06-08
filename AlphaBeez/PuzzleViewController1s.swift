@@ -22,6 +22,7 @@ class PuzzleViewController1s: UIViewController {
     @IBOutlet weak var flashcardWordLabel: UILabel!
     @IBOutlet weak var oneSyllablePuzzle1: UIButton!
     @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var restartButton: UIButton!
     
     
     
@@ -129,6 +130,16 @@ class PuzzleViewController1s: UIViewController {
     @IBAction func exitButtonPressed(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
     }
+    
+    
+    @IBAction func restartTapped(_ sender: UIButton) {
+        self.starsImage.isHidden = true
+        self.flashcardWordLabel.isHidden = true
+        oneSyllablePuzzle1.transform = .identity
+        starsImage.transform = .identity
+        
+    }
+    
     
     // MARK: - Action for pressing the info button
     @IBAction func infoButtonPressed(_ sender: Any) {

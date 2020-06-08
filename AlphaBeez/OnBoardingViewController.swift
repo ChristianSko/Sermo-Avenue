@@ -14,12 +14,27 @@ class OnBoardingViewController: UIViewController {
     @IBOutlet var holderView: UIView!
     var scrollView = UIScrollView()
     
+    
+    // Maintain a variable to check for Core Haptics compatibility on device.
+       lazy var supportsHaptics: Bool = {
+           let appDelegate = UIApplication.shared.delegate as! AppDelegate
+           return appDelegate.supportsHaptics
+       }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Presents an alert Controller if device is not supported
+        if !supportsHaptics {
+        let ac = UIAlertController(title: "Unsupported Device", message: "The Custom Vibrations used in this app are only supported by iPhone 8 and up.", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(ac, animated: true)
+        }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
         
         //This creates the whole onboarding
         configureOnBoarding()
@@ -50,8 +65,21 @@ class OnBoardingViewController: UIViewController {
             button.setBackgroundImage(nextImage, for: .normal)
             button.applyShadowAndVisualFeedback()
             
+//            let bananaImage = UIImage("banana-button")
+//
+//            let bananaButton = UIButton(frame: CGRect(x: <#T##CGFloat#>, y: <#T##CGFloat#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>))
+//            bananaButton.setImage(bananaImage, for: .normal)
+//            bananaButton.isHidden = true
+//
+//            if x == 2 {
+//                bananaButton.isHidden = false
+//            }
+            
             //makes sure the buttton of the 4th screen is
             if x == 3 {
+                
+//                bananaButton.isHidden = true
+                
                 button = UIButton(frame: CGRect(x: pageView.frame.size.width-160, y: pageView.frame.size.height-60, width: 140, height: 50))
                 nextImage = UIImage(named: "play")
                 button.setBackgroundImage(nextImage, for: .normal)

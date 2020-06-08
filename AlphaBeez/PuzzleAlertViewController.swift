@@ -33,7 +33,7 @@ class PuzzleAlertViewController: UIViewController {
         """
         
         titleLabel.font = FontKit.roundedFont(ofSize: 28, weight: .bold)
-        firstParagraph.font = FontKit.roundedFont(ofSize: 28, weight: .regular)
+        firstParagraph.font = FontKit.roundedFont(ofSize: 26, weight: .regular)
 
         
         self.scrollView.layer.borderWidth = 10
