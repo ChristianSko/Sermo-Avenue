@@ -2,7 +2,7 @@
 //  HapticEngine.swift
 //  AlphaBeez
 //
-//  Created by Ivan Tilev on 05/06/2020.
+//  Created by Extremely International Team on 05/06/2020.
 //  Copyright © 2020 Ivan Tilev. All rights reserved.
 //
 
