@@ -25,6 +25,7 @@ class PuzzleViewController3s: UIViewController {
     @IBOutlet weak var upperLeftPuzzlePieceButton: UIButton!
     @IBOutlet weak var bottomLeftPuzzlePieceButton: UIButton!
     @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var restartButton: UIButton!
     
     // Images set programtically
     var starsImage: UIImageView!
@@ -258,6 +259,24 @@ class PuzzleViewController3s: UIViewController {
             currentAnimation = 0
         }
     }
+    
+    
+    @IBAction func restartTapepd(_ sender: UIButton) {
+       
+        rightPuzzlePiece.transform = .identity
+        upperLeftPuzzlePiece.transform = .identity
+        bottomLeftPuzzlePiece.transform = .identity
+        
+        self.starsImage.isHidden = true
+        self.flashcardWordLabel.isHidden = true
+        self.upperLeftPuzzlePieceButton.isHidden = false
+        self.bottomLeftPuzzlePieceButton.isHidden = false
+        self.rightPuzzlePieceButton.isHidden = false
+        
+        syllableCounter = 1
+        
+    }
+    
     
     // MARK: - Action for pressing the exit button
     @IBAction func exitButtonPressed(_ sender: UIBarButtonItem) {
