@@ -57,6 +57,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         let categoryBackgroundImage = UIImageView(frame: UIScreen.main.bounds)
         categoryBackgroundImage.image = categoryBackground
         categoryBackgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        categoryBackgroundImage.clipsToBounds = true
         self.view.insertSubview(categoryBackgroundImage, at: 0)
         
     }
