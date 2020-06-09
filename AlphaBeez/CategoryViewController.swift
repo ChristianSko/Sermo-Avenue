@@ -71,14 +71,22 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         let flashcard = allFlashcards[indexPath.row]
         
         if flashcard.category == "home" {
-            cell.layer.borderColor = UIColor.homeColor.cgColor
+            cell.contentView.layer.borderColor = UIColor.homeColor.cgColor
         } else if flashcard.category == "park" {
-            cell.layer.borderColor = UIColor.parkColor.cgColor
+            cell.contentView.layer.borderColor = UIColor.parkColor.cgColor
         } else if flashcard.category == "market" {
-            cell.layer.borderColor = UIColor.marketColor.cgColor
+            cell.contentView.layer.borderColor = UIColor.marketColor.cgColor
         }
-        cell.layer.cornerRadius = 20
-        cell.layer.borderWidth = 10
+        cell.contentView.layer.cornerRadius = 20
+        cell.contentView.layer.borderWidth = 10
+        cell.contentView.layer.masksToBounds = true
+        // Adding a shadow to each cell
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowRadius = 4
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.masksToBounds = false
+        cell.layer.shadowOffset = CGSize(width: 2, height: 1)
+        // Assign the image of the flashcards to each cell
         cell.imageView.image = UIImage(named: flashcard.image!)
         return cell
     }

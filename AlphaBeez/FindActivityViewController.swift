@@ -72,6 +72,11 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
         colorButton.layer.cornerRadius = 20
         textureButton.layer.cornerRadius = 20
         
+        // Adding a feedback and shadow to the info and reset buttons
+        shapeButton.applyShadowAndVisualFeedback()
+        colorButton.applyShadowAndVisualFeedback()
+        textureButton.applyShadowAndVisualFeedback()
+        
         if selectedFlashcard.category == "home" {
             shapeButton.setImage(UIImage(named:"home-shape"), for: .normal)
             colorButton.setImage(UIImage(named:"home-color"), for: .normal)
