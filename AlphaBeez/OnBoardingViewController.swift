@@ -86,8 +86,8 @@ class OnBoardingViewController: UIViewController {
             let wallButton =  UIButton()
             wallButton.frame.size.width = walkButton.frame.size.width
             wallButton.frame.size.height = walkButton.frame.size.height
-            wallButton.center.x = pageView.center.y
-            wallButton.center.y = pageView.center.x
+            wallButton.center.x = holderView.center.x + holderView.frame.size.width / 4
+            wallButton.center.y = walkButton.center.y
             wallButton.setImage(wallImage, for: .normal)
             wallButton.isHidden = true
             
@@ -160,11 +160,13 @@ class OnBoardingViewController: UIViewController {
     
     @objc func didTapWalkButton(_ sender: UIButton){
         HapticEngine.shared.playHapticsFile(name: "AHAP/walk")
+        print("test")
         
     }
     
     @objc func didTapWallButton(_ sender: UIButton){
         HapticEngine.shared.playHapticsFile(name: "AHAP/walk")
+        print("test")
     }
     
     
