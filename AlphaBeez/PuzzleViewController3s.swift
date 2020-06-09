@@ -40,6 +40,9 @@ class PuzzleViewController3s: UIViewController {
     // Back Button Image
     let backButton = UIImage(named: "back")
     
+    // Configuration and name of the SF Symbols
+    let configurator = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .large)
+    
     // Puzzle_3 Activity background image
     var puzzle3Background = UIImage()
     
@@ -48,8 +51,9 @@ class PuzzleViewController3s: UIViewController {
         super.viewDidLoad()
         
         // Changing the native back button with our custom one
-        self.navigationController?.navigationBar.backIndicatorImage = backButton
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButton
+        let systemButton = UIImage(systemName: "arrow.left.circle", withConfiguration: configurator)
+        self.navigationController?.navigationBar.backIndicatorImage = systemButton
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = systemButton
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         
         // Hiding the custom back button

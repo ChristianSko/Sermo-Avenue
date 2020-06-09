@@ -35,11 +35,15 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     // Back Button Image
     let backButton = UIImage(named: "back")
     
+    // Configuration and name of the SF Symbols
+    let configurator = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .large)
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // Changing the native back button with our custom one
-        self.navigationController?.navigationBar.backIndicatorImage = backButton
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButton
+        let systemButton = UIImage(systemName: "arrow.left.circle", withConfiguration: configurator)
+        self.navigationController?.navigationBar.backIndicatorImage = systemButton
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = systemButton
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
     }
     

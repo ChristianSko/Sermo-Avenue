@@ -26,6 +26,10 @@ class ViewController: UIViewController {
     // Back Button Image
     let backButton = UIImage(named: "back")
     
+    // Configuration and name of the SF Symbols
+    let configurator = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .large)
+    let exitImage = UIImage(systemName: "xmark.circle")!
+    
     // Array of category backgrounds
     var backgroundImage : [UIImage] = [
         UIImage(named: "background-home")!,
@@ -39,8 +43,9 @@ class ViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: true)
         
         // Changing the native back button with our custom one
-        self.navigationController?.navigationBar.backIndicatorImage = backButton
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButton
+        let systemButton = UIImage(systemName: "arrow.left.circle", withConfiguration: configurator)
+        self.navigationController?.navigationBar.backIndicatorImage = systemButton
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = systemButton
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
     }
     

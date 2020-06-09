@@ -557,7 +557,7 @@
                         <viewLayoutGuide key="safeArea" id="IoH-NV-aF2"/>
                     </view>
                     <navigationItem key="navigationItem" id="ine-xc-HL3">
-                        <barButtonItem key="rightBarButtonItem" image="exit" landscapeImage="exit" id="TqT-NA-i5J">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="exit" landscapeImage="exit" id="TqT-NA-i5J">
                             <inset key="imageInsets" minX="2" minY="3" maxX="0.0" maxY="2"/>
                             <inset key="landscapeImageInsets" minX="0.0" minY="4" maxX="-3" maxY="2"/>
                             <connections>
@@ -784,7 +784,7 @@
                         <viewLayoutGuide key="safeArea" id="tc7-ge-t6z"/>
                     </view>
                     <navigationItem key="navigationItem" id="kIA-Qg-9uH">
-                        <barButtonItem key="rightBarButtonItem" image="exit" landscapeImage="exit" id="0br-1C-Gig">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="exit" landscapeImage="exit" id="0br-1C-Gig">
                             <inset key="imageInsets" minX="2" minY="3" maxX="2" maxY="2"/>
                             <inset key="landscapeImageInsets" minX="2" minY="4" maxX="-3" maxY="1"/>
                             <connections>
@@ -1164,7 +1164,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Mkp-wf-avB"/>
+        <segue reference="wIH-QZ-2IX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
