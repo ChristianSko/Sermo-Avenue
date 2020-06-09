@@ -292,12 +292,12 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.58039599659999996" green="0.57640296219999998" blue="0.58039301629999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="sbf-Vq-VrV" firstAttribute="leading" secondItem="3R2-o6-zfP" secondAttribute="leading" id="ezF-rY-2Ed"/>
-                            <constraint firstAttribute="trailing" secondItem="sbf-Vq-VrV" secondAttribute="trailing" id="j8V-ld-RwO"/>
-                            <constraint firstAttribute="bottom" secondItem="sbf-Vq-VrV" secondAttribute="bottom" id="sWn-yk-ffS"/>
-                            <constraint firstItem="sbf-Vq-VrV" firstAttribute="top" secondItem="3R2-o6-zfP" secondAttribute="top" id="tQv-f1-e59"/>
+                            <constraint firstItem="sbf-Vq-VrV" firstAttribute="top" secondItem="3R2-o6-zfP" secondAttribute="top" id="1tg-mb-0X7"/>
+                            <constraint firstItem="sbf-Vq-VrV" firstAttribute="leading" secondItem="3R2-o6-zfP" secondAttribute="leading" id="4sZ-RN-LM6"/>
+                            <constraint firstAttribute="trailing" secondItem="sbf-Vq-VrV" secondAttribute="trailing" id="P6H-UX-blJ"/>
+                            <constraint firstAttribute="bottom" secondItem="sbf-Vq-VrV" secondAttribute="bottom" id="fS2-35-pFU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Io9-qt-BrY"/>
                     </view>

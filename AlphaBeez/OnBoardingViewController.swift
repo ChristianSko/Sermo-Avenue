@@ -131,8 +131,13 @@ class OnBoardingViewController: UIViewController {
         }
         
         // This should make the view scrollable -> Currently not working, trying to fix
-        scrollView.contentSize = CGSize(width: holderView.frame.size.width, height: 0)
+        scrollView.contentSize = CGSize(width: holderView.frame.size.width * 5, height: 0)
+        scrollView.contentOffset = CGPoint(x: 0, y: 0)
+        scrollView.scrollsToTop = false
         scrollView.isPagingEnabled =  true
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.bounces = false
+        
     }
     
     
