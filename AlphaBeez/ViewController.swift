@@ -47,6 +47,7 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.backIndicatorImage = systemButton
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = systemButton
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+        
     }
     
     // MARK: - ViewDidLoad
@@ -157,4 +158,5 @@ class Core {
         UserDefaults.standard.set(true, forKey: "isNewUser")
     }
 }
+
 

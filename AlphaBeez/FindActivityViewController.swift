@@ -24,6 +24,7 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var textureButton: UIButton!
     @IBOutlet weak var infoButton: UIButton!
     
+    @IBOutlet weak var baseView: UIView!
     
     
     // Will keep a record what of the 3 imageViews was tapped
@@ -60,7 +61,7 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
          let findBackgroundImage = UIImageView(frame: UIScreen.main.bounds)
          findBackgroundImage.image = findBackground
          findBackgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-         self.view.insertSubview(findBackgroundImage, at: 0)
+                 self.view.insertSubview(findBackgroundImage, at: 0)
         
         // Hiding the custom back button
         navigationItem.hidesBackButton = true
@@ -75,6 +76,10 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
         shapeButton.layer.cornerRadius = 20
         colorButton.layer.cornerRadius = 20
         textureButton.layer.cornerRadius = 20
+        
+//        shapeButton.layer.masksToBounds = true
+//        colorButton.layer.masksToBounds = true
+//        textureButton.layer.masksToBounds = true
         
         // Adding a feedback and shadow to the info and reset buttons
         shapeButton.applyShadowAndVisualFeedback()

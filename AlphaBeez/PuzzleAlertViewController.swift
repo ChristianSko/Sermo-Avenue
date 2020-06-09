@@ -37,7 +37,7 @@ class PuzzleAlertViewController: UIViewController {
 
         
         self.scrollView.layer.borderWidth = 10
-        self.scrollView.layer.borderColor = UIColor.green.cgColor
+        self.scrollView.layer.borderColor = UIColor.greenElement.cgColor
         self.scrollView.layer.cornerRadius = 10
     }
     
