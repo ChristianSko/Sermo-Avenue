@@ -1041,10 +1041,6 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iPm-TH-A0P">
-                                <rect key="frame" x="64" y="161" width="241" height="232"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -1070,7 +1066,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="baseView" destination="iPm-TH-A0P" id="yFV-5m-ZmZ"/>
                         <outlet property="colorButton" destination="UoE-TX-ZXo" id="K6y-iM-zai"/>
                         <outlet property="infoButton" destination="S0X-g8-60c" id="2q5-jc-1Y8"/>
                         <outlet property="shapeButton" destination="b7P-DV-8G8" id="mm4-QA-lN7"/>
