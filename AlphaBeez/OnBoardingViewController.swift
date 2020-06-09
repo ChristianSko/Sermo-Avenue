@@ -59,8 +59,9 @@ class OnBoardingViewController: UIViewController {
             
             //Set bounds of each image inside of each page view
             let imageView = UIImageView(frame: holderView.bounds)
-            imageView.contentMode = .scaleToFill
+            imageView.contentMode = UIView.ContentMode.scaleAspectFill
             imageView.image = UIImage(named: "onboarding_\(x+1)")
+            imageView.clipsToBounds = true
             pageView.addSubview(imageView)
     
             //adds a button to each page
@@ -72,23 +73,21 @@ class OnBoardingViewController: UIViewController {
             let bananaImage = UIImage(named: "banana-button")
 
             let bananaButton = UIButton(frame: CGRect(x: pageView.frame.size.width / 2, y: pageView.frame.height / 6 , width: 280, height: 140))
-            bananaButton.contentMode = .scaleToFill
+            bananaButton.contentMode = .scaleAspectFill
             bananaButton.setImage(bananaImage, for: .normal)
             bananaButton.isHidden = true
             
             let walkImage = UIImage(named: "walk-button")
-            let walkButton = UIButton(frame: CGRect(x: pageView.center.y - 100, y: pageView.frame.height / 3 , width: 280, height: 140))
+            let walkButton = UIButton(frame: CGRect(x: pageView.center.y - 145, y: pageView.frame.height / 3 , width: 280, height: 140))
             walkButton.setImage(walkImage, for: .normal)
             walkButton.isHidden = true
-            
-            
             
             let wallImage = UIImage(named: "wall-button")
             let wallButton =  UIButton()
             wallButton.frame.size.width = walkButton.frame.size.width
             wallButton.frame.size.height = walkButton.frame.size.height
-            wallButton.center.x = walkButton.center.x + 280
-            wallButton.center.y = walkButton.center.y
+            wallButton.center.x = pageView.center.y
+            wallButton.center.y = pageView.center.x
             wallButton.setImage(wallImage, for: .normal)
             wallButton.isHidden = true
             
@@ -156,16 +155,16 @@ class OnBoardingViewController: UIViewController {
     //This should play the Banana Haptic file
     @objc func didTapBananaButton(_ sender: UIButton) {
         print("PLease say BANANAAAA")
-        HapticEngine.shared.playHapticsFile(name: "banana")
+        HapticEngine.shared.playHapticsFile(name: "AHAP/banana")
     }
     
     @objc func didTapWalkButton(_ sender: UIButton){
-        print("Walk it off dawg!")
+        HapticEngine.shared.playHapticsFile(name: "AHAP/walk")
         
     }
     
     @objc func didTapWallButton(_ sender: UIButton){
-        print("Did I just hit wall?")
+        HapticEngine.shared.playHapticsFile(name: "AHAP/walk")
     }
     
     
