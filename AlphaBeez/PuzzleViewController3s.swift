@@ -108,6 +108,9 @@ class PuzzleViewController3s: UIViewController {
         borderView.layer.borderWidth = 15
         borderView.layer.cornerRadius = 10
         
+        //      Gives restrart button custom green
+        restartButton.tintColor = UIColor.greenElement
+        
         if selectedFlashcard.category == "home" {
             borderView.layer.borderColor = UIColor.homeColor.cgColor
         } else if selectedFlashcard.category == "park" {
