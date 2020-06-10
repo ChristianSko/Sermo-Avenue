@@ -72,13 +72,13 @@ class OnBoardingViewController: UIViewController {
             
             let bananaImage = UIImage(named: "banana-button")
 
-            let bananaButton = UIButton(frame: CGRect(x: pageView.frame.size.width / 2, y: pageView.frame.height / 6 , width: 280, height: 140))
+            let bananaButton = UIButton(frame: CGRect(x: pageView.frame.size.width / 2, y: pageView.frame.height / 6 , width: 280, height: 70))
             bananaButton.contentMode = .scaleAspectFill
             bananaButton.setImage(bananaImage, for: .normal)
             bananaButton.isHidden = true
             
             let walkImage = UIImage(named: "walk-button")
-            let walkButton = UIButton(frame: CGRect(x: pageView.center.y - 145, y: pageView.frame.height / 3 , width: 280, height: 140))
+            let walkButton = UIButton(frame: CGRect(x: pageView.center.y - 125, y: pageView.frame.height / 4 , width: 280, height: 70))
             walkButton.setImage(walkImage, for: .normal)
             walkButton.isHidden = true
             
@@ -93,19 +93,23 @@ class OnBoardingViewController: UIViewController {
             
             
             // Shows the haptic banana button for onboarding screen 2
-            if x == 2 {
-                bananaButton.isHidden = false
-            }
+//            if x == 2 {
+//                bananaButton.isHidden = false
+//            }
             
             if x == 3 {
                 bananaButton.isHidden = true
-                wallButton.isHidden = false
-                walkButton.isHidden = false
+//                wallButton.isHidden = false
+//                walkButton.isHidden = false
+                bananaButton.isHidden = false
                 
             }
             
             //makes sure the play button appears on the last onboarding screen
             if x == 4 {
+                
+                wallButton.isHidden = false
+                walkButton.isHidden = false
                 
                 button = UIButton(frame: CGRect(x: pageView.frame.size.width-160, y: pageView.frame.size.height-60, width: 140, height: 50))
                 nextImage = UIImage(named: "play")
@@ -130,7 +134,7 @@ class OnBoardingViewController: UIViewController {
             pageView.addSubview(wallButton)
         }
         
-        // This should make the view scrollable -> Currently not working, trying to fix
+        // This makes the view scrollable
         scrollView.contentSize = CGSize(width: holderView.frame.size.width * 5, height: 0)
         scrollView.contentOffset = CGPoint(x: 0, y: 0)
         scrollView.scrollsToTop = false
