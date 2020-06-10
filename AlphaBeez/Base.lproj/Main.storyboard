@@ -527,13 +527,12 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeM-gm-ho5">
-                                <rect key="frame" x="16" y="321" width="40" height="39"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeM-gm-ho5">
+                                <rect key="frame" x="16" y="320.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Zcm-Gp-jtx"/>
                                     <constraint firstAttribute="width" constant="40" id="od3-29-mjy"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="arrow.counterclockwise.circle" catalog="system"/>
                                 <connections>
                                     <action selector="restartTapped:" destination="syO-Qf-ldC" eventType="touchUpInside" id="Uh4-tr-Wki"/>
                                 </connections>
@@ -734,13 +733,12 @@
                                     <action selector="tappedLeftPuzzlePiece:" destination="1mP-YR-Eha" eventType="touchUpInside" id="PI9-yz-Idw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nz-Wf-m8y">
-                                <rect key="frame" x="16" y="315.5" width="40" height="39"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nz-Wf-m8y">
+                                <rect key="frame" x="16" y="315" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="6Yk-x5-LM5"/>
                                     <constraint firstAttribute="height" constant="40" id="h5g-sj-xrn"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="arrow.counterclockwise.circle" catalog="system"/>
                                 <connections>
                                     <action selector="restartTapped:" destination="1mP-YR-Eha" eventType="touchUpInside" id="cY2-Ow-zBd"/>
                                 </connections>
@@ -890,13 +888,12 @@
                                     <action selector="tappedUpperLeftPuzzlePiece:" destination="UFO-OY-pgl" eventType="touchUpInside" id="0dV-Pd-hzC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewA-Sr-Wh7">
-                                <rect key="frame" x="16" y="333.5" width="40" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewA-Sr-Wh7">
+                                <rect key="frame" x="16" y="333" width="40" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="ESy-fy-22c"/>
                                     <constraint firstAttribute="height" constant="41" id="nEf-Gh-MqX"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="arrow.counterclockwise.circle" catalog="system"/>
                                 <connections>
                                     <action selector="restartTapepd:" destination="UFO-OY-pgl" eventType="touchUpInside" id="dk1-Uk-iTp"/>
                                 </connections>
@@ -1170,7 +1167,6 @@
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
-        <image name="arrow.counterclockwise.circle" catalog="system" width="128" height="121"/>
         <image name="camera-faded" width="138" height="112"/>
         <image name="category-home" width="316" height="233"/>
         <image name="category-market" width="316" height="233"/>

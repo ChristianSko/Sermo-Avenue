@@ -34,6 +34,9 @@ class PuzzleViewController1s: UIViewController {
     // Configuration and name of the SF Symbols
     let configurator = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .large)
     
+    // Pointsize is set to 40 because with the restart button is half the size of the other buttons
+    let configuratorRestartButton = UIImage.SymbolConfiguration(pointSize: 40, weight: .heavy, scale: .large)
+    
     // Puzzle_1 Activity background image
     var puzzle1Background = UIImage()
     
@@ -87,8 +90,7 @@ class PuzzleViewController1s: UIViewController {
         borderView.layer.borderWidth = 12
         borderView.layer.cornerRadius = 10
         
-//      Gives restrart button custom green
-        restartButton.tintColor = UIColor.greenElement
+       
         
         if selectedFlashcard.category == "home" {
             borderView.layer.borderColor = UIColor.homeColor.cgColor
@@ -98,7 +100,11 @@ class PuzzleViewController1s: UIViewController {
             borderView.layer.borderColor = UIColor.marketColor.cgColor
         }
         
-        
+        // Configures color & SFSymbol properties
+        let systemRestartButton = UIImage(systemName: "arrow.counterclockwise.circle", withConfiguration: configuratorRestartButton)
+        restartButton.setImage(systemRestartButton, for: .normal)
+        restartButton.tintColor = UIColor.greenElement
+
     }
     
     @IBAction func oneSyllablePuzzleTapped(_ sender: UIButton) {
