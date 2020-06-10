@@ -66,19 +66,27 @@ class OnBoardingViewController: UIViewController {
     
             //adds a button to each page
             var nextImage = UIImage(named: "next")
-            var button = UIButton(frame: CGRect(x: pageView.frame.size.width-110, y: pageView.frame.size.height-60, width: 50, height: 50))
+            var button = UIButton(frame: CGRect(x: pageView.frame.size.width-130, y: pageView.frame.size.height-80, width: 50, height: 50))
             button.setBackgroundImage(nextImage, for: .normal)
             button.applyShadowAndVisualFeedback()
             
             let bananaImage = UIImage(named: "banana-button")
-
-            let bananaButton = UIButton(frame: CGRect(x: pageView.frame.size.width / 2, y: pageView.frame.height / 6 , width: 280, height: 70))
-            bananaButton.contentMode = .scaleAspectFill
+            let bananaButton = UIButton()
+            bananaButton.frame.size.width = 400
+            bananaButton.frame.size.height = 100
+            bananaButton.center.x = holderView.center.x + holderView.frame.size.width / 5
+            bananaButton.center.y = holderView.center.y - holderView.frame.size.height / 5
             bananaButton.setImage(bananaImage, for: .normal)
+            bananaButton.imageView?.contentMode = .scaleToFill
             bananaButton.isHidden = true
             
+            
             let walkImage = UIImage(named: "walk-button")
-            let walkButton = UIButton(frame: CGRect(x: pageView.center.y - 125, y: pageView.frame.height / 4 , width: 280, height: 70))
+            let walkButton = UIButton()
+            walkButton.frame.size.width = 300
+            walkButton.frame.size.height = 60
+            walkButton.center.x = holderView.center.x - 125
+            walkButton.center.y = holderView.center.y
             walkButton.setImage(walkImage, for: .normal)
             walkButton.isHidden = true
             
@@ -86,23 +94,15 @@ class OnBoardingViewController: UIViewController {
             let wallButton =  UIButton()
             wallButton.frame.size.width = walkButton.frame.size.width
             wallButton.frame.size.height = walkButton.frame.size.height
-            wallButton.center.x = holderView.center.x + holderView.frame.size.width / 4
+            wallButton.center.x = holderView.center.x + 125
             wallButton.center.y = walkButton.center.y
             wallButton.setImage(wallImage, for: .normal)
             wallButton.isHidden = true
             
             
-            // Shows the haptic banana button for onboarding screen 2
-//            if x == 2 {
-//                bananaButton.isHidden = false
-//            }
-            
+            // Shows the haptic banana button for onboarding screen 3
             if x == 3 {
-                bananaButton.isHidden = true
-//                wallButton.isHidden = false
-//                walkButton.isHidden = false
                 bananaButton.isHidden = false
-                
             }
             
             //makes sure the play button appears on the last onboarding screen
@@ -111,7 +111,7 @@ class OnBoardingViewController: UIViewController {
                 wallButton.isHidden = false
                 walkButton.isHidden = false
                 
-                button = UIButton(frame: CGRect(x: pageView.frame.size.width-160, y: pageView.frame.size.height-60, width: 140, height: 50))
+                button = UIButton(frame: CGRect(x: pageView.frame.size.width-180, y: pageView.frame.size.height-80, width: 140, height: 50))
                 nextImage = UIImage(named: "play")
                 button.setBackgroundImage(nextImage, for: .normal)
                 button.applyShadowAndVisualFeedback()
