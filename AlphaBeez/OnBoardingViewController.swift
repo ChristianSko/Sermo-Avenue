@@ -140,7 +140,7 @@ class OnBoardingViewController: UIViewController {
         scrollView.scrollsToTop = false
         scrollView.isPagingEnabled =  true
         scrollView.showsHorizontalScrollIndicator = false
-        scrollView.bounces = false
+        scrollView.bounces = true
         
     }
     
