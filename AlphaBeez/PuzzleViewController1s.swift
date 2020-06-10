@@ -50,6 +50,10 @@ class PuzzleViewController1s: UIViewController {
         // Hiding the custom back button
         navigationItem.hidesBackButton = true
         
+        // Giving a visual feedback to the info and the restart buttons
+        infoButton.showsTouchWhenHighlighted = true
+        restartButton.showsTouchWhenHighlighted = true
+        
         // Set puzzle_1 activity background
         let puzzle1BackgroundImage = UIImageView(frame: UIScreen.main.bounds)
         puzzle1BackgroundImage.image = puzzle1Background
