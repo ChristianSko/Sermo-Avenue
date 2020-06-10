@@ -79,10 +79,13 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
 //        colorButton.layer.masksToBounds = true
 //        textureButton.layer.masksToBounds = true
         
-        // Adding a feedback and shadow to the info and reset buttons
+        // Adding a feedback and shadow to the three buttons
         shapeButton.applyShadowAndVisualFeedback()
         colorButton.applyShadowAndVisualFeedback()
         textureButton.applyShadowAndVisualFeedback()
+        
+        // Adding a feedback to the info button
+        infoButton.showsTouchWhenHighlighted = true
         
         if selectedFlashcard.category == "home" {
             shapeButton.setImage(UIImage(named:"home-shape"), for: .normal)
