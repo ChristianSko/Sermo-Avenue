@@ -43,7 +43,7 @@ class PuzzleViewController1s: UIViewController {
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Changing the native back button with our custom one
         let systemButton = UIImage(systemName: "arrow.left.circle", withConfiguration: configurator)
         self.navigationController?.navigationBar.backIndicatorImage = systemButton
