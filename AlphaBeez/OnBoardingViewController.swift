@@ -174,7 +174,7 @@ class OnBoardingViewController: UIViewController {
     }
     
     @objc func didTapWallButton(_ sender: UIButton){
-        HapticEngine.shared.playHapticsFile(name: "AHAP/walk")
+        HapticEngine.shared.playHapticsFile(name: "AHAP/wall")
         print("test")
     }
     
