@@ -1,9 +1,9 @@
 //
 //  CustomCollectionViewCell.swift
-//  AlphaBeez
+//  Sermo Avenue
 //
-//  Created by Ivan Tilev on 12/05/2020.
-//  Copyright © 2020 Ivan Tilev. All rights reserved.
+//  Created by Extremely International Team on 12/05/2020.
+//  Copyright © 2020 Extremely International Team. All rights reserved.
 //
 // This is the custom class that will hold the image property of the cell
 import UIKit

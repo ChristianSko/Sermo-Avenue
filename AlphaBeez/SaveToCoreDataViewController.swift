@@ -2,8 +2,8 @@
 //  SaveToCoreDataViewController.swift
 //  AlphaBeez
 //
-//  Created by Ivan Tilev on 23/05/2020.
-//  Copyright © 2020 Ivan Tilev. All rights reserved.
+//  Created by Extremely International Team on 23/05/2020.
+//  Copyright © 2020 Extremely International Team. All rights reserved.
 //
 
 import UIKit
