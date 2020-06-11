@@ -14,7 +14,7 @@ extension UIButton {
         self.showsTouchWhenHighlighted = true
         self.tintColor = .white
         self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowRadius = 5
+        self.layer.shadowRadius = 4
         self.layer.shadowOpacity = 1
         self.layer.shadowOffset = CGSize(width: 2, height: 2)
     }

@@ -49,7 +49,7 @@ class PuzzleViewController2s: UIViewController {
     
         
         // Changing the native back button with our custom one
-        let systemButton = UIImage(systemName: "arrow.left.circle", withConfiguration: configurator)
+        let systemButton = UIImage(systemName: "arrow.left.circle", withConfiguration: configurator)?.withTintColor(UIColor.blackElement, renderingMode: .alwaysOriginal)
         self.navigationController?.navigationBar.backIndicatorImage = systemButton
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = systemButton
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
