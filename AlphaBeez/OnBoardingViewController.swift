@@ -66,7 +66,7 @@ class OnBoardingViewController: UIViewController {
     
             //adds a button to each page
             var nextImage = UIImage(named: "next")
-            var button = UIButton(frame: CGRect(x: pageView.frame.size.width-130, y: pageView.frame.size.height-80, width: 50, height: 50))
+            var button = UIButton(frame: CGRect(x: pageView.frame.size.width-120, y: pageView.frame.size.height-60, width: 50, height: 50))
             button.setBackgroundImage(nextImage, for: .normal)
             button.applyShadowAndVisualFeedback()
             
@@ -99,6 +99,19 @@ class OnBoardingViewController: UIViewController {
             wallButton.setImage(wallImage, for: .normal)
             wallButton.isHidden = true
             
+            let skipImage = UIImage(named: "skip")
+            let skipButton = UIButton()
+            skipButton.frame.size.width = 70
+            skipButton.frame.size.height = 30
+            skipButton.center.x = button.center.x
+            skipButton.center.y = 40
+            skipButton.isHidden = true
+            skipButton.setImage(skipImage, for: .normal)
+            
+            if x == 0 {
+                skipButton.isHidden = false
+            }
+            
             
             // Shows the haptic banana button for onboarding screen 3
             if x == 3 {
@@ -111,7 +124,7 @@ class OnBoardingViewController: UIViewController {
                 wallButton.isHidden = false
                 walkButton.isHidden = false
                 
-                button = UIButton(frame: CGRect(x: pageView.frame.size.width-180, y: pageView.frame.size.height-80, width: 140, height: 50))
+                button = UIButton(frame: CGRect(x: pageView.frame.size.width-180, y: pageView.frame.size.height-60, width: 140, height: 50))
                 nextImage = UIImage(named: "play")
                 button.setBackgroundImage(nextImage, for: .normal)
                 button.applyShadowAndVisualFeedback()
@@ -126,12 +139,14 @@ class OnBoardingViewController: UIViewController {
             bananaButton.addTarget(self, action: #selector(didTapBananaButton(_:)), for: .touchUpInside)
             walkButton.addTarget(self, action:  #selector(didTapWalkButton(_:)), for: .touchUpInside)
             wallButton.addTarget(self, action:  #selector(didTapWallButton), for: .touchUpInside)
+            skipButton.addTarget(self, action: #selector(didTapSkip), for: .touchUpInside)
             
             //Adding buttons
             pageView.addSubview(button)
             pageView.addSubview(bananaButton)
             pageView.addSubview(walkButton)
             pageView.addSubview(wallButton)
+            pageView.addSubview(skipButton)
         }
         
         // This makes the view scrollable
@@ -176,6 +191,11 @@ class OnBoardingViewController: UIViewController {
     @objc func didTapWallButton(_ sender: UIButton){
         HapticEngine.shared.playHapticsFile(name: "AHAP/wall")
         print("test")
+    }
+    
+    @objc func didTapSkip(_ sender: UIButton) {
+        Core.shared.setIsNotNewUser()
+        dismiss(animated: true, completion: nil)
     }
     
     
