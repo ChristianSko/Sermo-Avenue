@@ -20,12 +20,8 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>“Sermo Avenue” would like to access the photos
-This will let you choose photos for the activity.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like to access the camera.
-This will let you take photos for the activity. No photos will be saved in your device.</string>
+	<string>This will let you take photos for the activity. No photos will be saved in your device.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Allow the use of microphone</string>
 	<key>UIApplicationSceneManifest</key>
