@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreHaptics
+
 
 class OnBoardingViewController: UIViewController {
 
@@ -14,6 +16,7 @@ class OnBoardingViewController: UIViewController {
     @IBOutlet var holderView: UIView!
     var scrollView = UIScrollView()
     
+    private var engine: CHHapticEngine!
     
     // Maintain a variable to check for Core Haptics compatibility on device.
        lazy var supportsHaptics: Bool = {
@@ -24,16 +27,18 @@ class OnBoardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Creating the HapticEngine
+        HapticEngine.shared.creteEngine()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
         // Presents an alert Controller if device is not supported
         if !supportsHaptics {
         let ac = UIAlertController(title: "Unsupported Device", message: "The Custom Vibrations used in this app are only supported by iPhone 8 and up.", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Ok", style: .default))
         present(ac, animated: true)
         }
-        
-        
-        // Creating the HapticEngine
-        HapticEngine.shared.creteEngine()
     }
     
     override func viewDidLayoutSubviews() {
