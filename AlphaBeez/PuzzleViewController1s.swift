@@ -50,9 +50,6 @@ class PuzzleViewController1s: UIViewController {
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = systemButton
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         
-        // Hiding the custom back button
-        navigationItem.hidesBackButton = true
-        
         // Giving a visual feedback to the info and the restart buttons
         infoButton.showsTouchWhenHighlighted = true
         restartButton.showsTouchWhenHighlighted = true
@@ -143,18 +140,11 @@ class PuzzleViewController1s: UIViewController {
         }
     }
     
-    // MARK: - Action for pressing the exit button
-    @IBAction func exitButtonPressed(_ sender: UIBarButtonItem) {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    
     @IBAction func restartTapped(_ sender: UIButton) {
         self.starsImage.isHidden = true
         self.flashcardWordLabel.isHidden = true
         oneSyllablePuzzle1.transform = .identity
         starsImage.transform = .identity
-        
     }
     
     
@@ -162,8 +152,4 @@ class PuzzleViewController1s: UIViewController {
     @IBAction func infoButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "puzzleAlert", sender: sender)
     }
-    
-    
-    
-    
 }

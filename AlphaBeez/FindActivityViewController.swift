@@ -61,9 +61,6 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
          findBackgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
          self.view.insertSubview(findBackgroundImage, at: 0)
         
-        // Hiding the custom back button
-        navigationItem.hidesBackButton = true
-        
         // text label
         titleLabel.text = """
         You just learned \(selectedFlashcard.name!). Now, find something that has the same:
@@ -161,11 +158,6 @@ class FindActivityViewController: UIViewController, UIImagePickerControllerDeleg
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         present(alert, animated: true, completion: nil)
-    }
-    
-    // MARK: - Action for the exit button
-    @IBAction func exitButtonPressed(_ sender: UIBarButtonItem) {
-        navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Action for the info button

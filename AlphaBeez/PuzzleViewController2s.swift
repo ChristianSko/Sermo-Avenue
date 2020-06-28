@@ -54,9 +54,6 @@ class PuzzleViewController2s: UIViewController {
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = systemButton
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         
-        // Hiding the custom back button
-        navigationItem.hidesBackButton = true
-        
         // Giving a visual feedback to the info and the restart buttons
         infoButton.showsTouchWhenHighlighted = true
         restartButton.showsTouchWhenHighlighted = true
@@ -222,13 +219,6 @@ class PuzzleViewController2s: UIViewController {
         self.leftPuzzlePiece1.isHidden = false
         self.rightPuzzlePiece1.isHidden = false
         syllableCounter = 1
-
-    }
-    
-    
-    // MARK: - Action for pressing the exit button
-    @IBAction func exitButtonPressed(_ sender: UIBarButtonItem) {
-        navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Action for pressing the exit button
