@@ -49,5 +49,14 @@ class FindAlertViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // MARK: - Dismiss view when touch outside
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+       {
+           let touch = touches.first
+           if touch?.view != self.scrollView
+           {
+            self.dismiss(animated: true, completion: nil) }
+       }
+    
 
 }
